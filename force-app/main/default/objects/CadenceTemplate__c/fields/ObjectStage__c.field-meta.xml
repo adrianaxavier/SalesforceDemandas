@@ -8,10 +8,15 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <controllingField>Object__c</controllingField>
+        <controllingField>ObjectRecordType__c</controllingField>
         <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
+            <value>
+                <fullName>Novo</fullName>
+                <default>false</default>
+                <label>Novo (Lead)</label>
+            </value>
             <value>
                 <fullName>New</fullName>
                 <default>false</default>
@@ -108,22 +113,155 @@
                 <label>Contato Futuro</label>
             </value>
             <value>
-                <fullName>Novo</fullName>
+                <fullName>Prospecção</fullName>
                 <default>false</default>
-                <label>Novo (Lead)</label>
+                <label>Prospecção</label>
+            </value>
+            <value>
+                <fullName>Produto Apresentado</fullName>
+                <default>false</default>
+                <label>Produto Apresentado</label>
+            </value>
+            <value>
+                <fullName>Diagnóstico</fullName>
+                <default>false</default>
+                <label>Diagnóstico</label>
+            </value>
+            <value>
+                <fullName>Negociação Parceiro</fullName>
+                <default>false</default>
+                <label>Negociação Parceiro</label>
+            </value>
+            <value>
+                <fullName>Analise Contrato</fullName>
+                <default>false</default>
+                <label>Analise Contrato</label>
+            </value>
+            <value>
+                <fullName>Apresentação de Estudo</fullName>
+                <default>false</default>
+                <label>Apresentação de Estudo</label>
+            </value>
+            <value>
+                <fullName>Dúvidas e Ajustes</fullName>
+                <default>false</default>
+                <label>Dúvidas e Ajustes</label>
+            </value>
+            <value>
+                <fullName>Reengajamento</fullName>
+                <default>false</default>
+                <label>Reengajamento</label>
+            </value>
+            <value>
+                <fullName>Assinatura Termo de Adesão</fullName>
+                <default>false</default>
+                <label>Assinatura Termo de Adesão</label>
+            </value>
+            <value>
+                <fullName>Convertido</fullName>
+                <default>false</default>
+                <label>Convertido</label>
+            </value>
+            <value>
+                <fullName>Fechado/Ganho</fullName>
+                <default>false</default>
+                <label>Fechado/Ganho</label>
+            </value>
+            <value>
+                <fullName>Desqualificado</fullName>
+                <default>false</default>
+                <label>Desqualificado</label>
+            </value>
+            <value>
+                <fullName>Fechado/Perdido</fullName>
+                <default>false</default>
+                <label>Fechado/Perdido</label>
+            </value>
+            <value>
+                <fullName>Cancelado</fullName>
+                <default>false</default>
+                <label>Cancelado</label>
+            </value>
+            <value>
+                <fullName>Encerrado</fullName>
+                <default>false</default>
+                <label>Encerrado</label>
+            </value>
+            <value>
+                <fullName>Convertido em Oportunidade</fullName>
+                <default>false</default>
+                <label>Convertido em Oportunidade</label>
             </value>
         </valueSetDefinition>
         <valueSettings>
-            <controllingFieldValue>Pré-Lead</controllingFieldValue>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <controllingFieldValue>Pre_lead_LUZ</controllingFieldValue>
+            <controllingFieldValue>Pre_Lead_DELTA</controllingFieldValue>
             <valueName>New</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Lead</controllingFieldValue>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Estudo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Prospecção</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Produto Apresentado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Diagnóstico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Apresentação de Estudo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Dúvidas e Ajustes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Reengajamento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Assinatura Termo de Adesão</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LeadPF</controllingFieldValue>
+            <controllingFieldValue>LeadPJ</controllingFieldValue>
+            <valueName>Novo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LeadPF</controllingFieldValue>
+            <controllingFieldValue>LeadPJ</controllingFieldValue>
+            <controllingFieldValue>Pre_Lead_DELTA</controllingFieldValue>
             <valueName>Em Andamento</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Lead</controllingFieldValue>
-            <valueName>Novo</valueName>
+            <controllingFieldValue>Pre_Lead_DELTA</controllingFieldValue>
+            <valueName>Aguardando Conta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre_Lead_DELTA</controllingFieldValue>
+            <valueName>Qualificado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre_Lead_DELTA</controllingFieldValue>
+            <valueName>Desqualificado</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>
