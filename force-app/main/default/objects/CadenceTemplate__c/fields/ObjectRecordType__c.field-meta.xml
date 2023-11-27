@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ObjectRecordType__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo do Objeto</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Object__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PFDelta</fullName>
+                <default>false</default>
+                <label>Delta Parceiros</label>
+            </value>
+            <value>
+                <fullName>PJDelta</fullName>
+                <default>false</default>
+                <label>Delta Inside Sales</label>
+            </value>
+            <value>
+                <fullName>LeadPF</fullName>
+                <default>false</default>
+                <label>LUZ PF</label>
+            </value>
+            <value>
+                <fullName>LeadPJ</fullName>
+                <default>false</default>
+                <label>LUZ PJ</label>
+            </value>
+            <value>
+                <fullName>Prospecção Marketing</fullName>
+                <default>false</default>
+                <label>Prospecção Marketing</label>
+            </value>
+            <value>
+                <fullName>Prospecção Própria</fullName>
+                <default>false</default>
+                <label>Prospecção Própria</label>
+            </value>
+            <value>
+                <fullName>Thymos</fullName>
+                <default>false</default>
+                <label>Thymos</label>
+            </value>
+            <value>
+                <fullName>Pre_lead_LUZ</fullName>
+                <default>false</default>
+                <label>Pre lead LUZ</label>
+            </value>
+            <value>
+                <fullName>Pre_Lead_DELTA</fullName>
+                <default>false</default>
+                <label>Pre Lead DELTA</label>
+            </value>
+            <value>
+                <fullName>Opportunity_Delta</fullName>
+                <default>false</default>
+                <label>Oportunidade Delta</label>
+            </value>
+            <value>
+                <fullName>Oportunidade_Lead</fullName>
+                <default>false</default>
+                <label>Oportunidade Luz</label>
+            </value>
+            <value>
+                <fullName>Oportunidade_Thymos</fullName>
+                <default>false</default>
+                <label>Oportunidade Thymos</label>
+            </value>
+            <value>
+                <fullName>OportunidadeThymos_Consultoria</fullName>
+                <default>false</default>
+                <label>OportunidadeThymos Consultoria</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Pré-Lead</controllingFieldValue>
+            <valueName>Pre_lead_LUZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pré-Lead</controllingFieldValue>
+            <valueName>Pre_Lead_DELTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <valueName>PFDelta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <valueName>PJDelta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <valueName>LeadPF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <valueName>LeadPJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <valueName>Thymos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oportunidade</controllingFieldValue>
+            <valueName>Opportunity_Delta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oportunidade</controllingFieldValue>
+            <valueName>Oportunidade_Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oportunidade</controllingFieldValue>
+            <valueName>Oportunidade_Thymos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oportunidade</controllingFieldValue>
+            <valueName>OportunidadeThymos_Consultoria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Conta</controllingFieldValue>
+            <valueName>Prospecção Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Conta</controllingFieldValue>
+            <valueName>Prospecção Própria</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
