@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ObjectStage__c</fullName>
+    <externalId>false</externalId>
+    <label>Status do Objeto</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Object__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>Novo</label>
+            </value>
+            <value>
+                <fullName>Estudo</fullName>
+                <default>false</default>
+                <label>Estudo</label>
+            </value>
+            <value>
+                <fullName>Inicio de Contato</fullName>
+                <default>false</default>
+                <label>Inicio de Contato</label>
+            </value>
+            <value>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+                <label>Follow Up</label>
+            </value>
+            <value>
+                <fullName>Aguardando Conta</fullName>
+                <default>false</default>
+                <label>Aguardando Conta</label>
+            </value>
+            <value>
+                <fullName>Em Agendamento</fullName>
+                <default>false</default>
+                <label>Em Agendamento</label>
+            </value>
+            <value>
+                <fullName>Agendado</fullName>
+                <default>false</default>
+                <label>Agendado</label>
+            </value>
+            <value>
+                <fullName>Atualização de estudos</fullName>
+                <default>false</default>
+                <label>Atualização de estudos</label>
+            </value>
+            <value>
+                <fullName>Em Andamento</fullName>
+                <default>false</default>
+                <label>Em Andamento</label>
+            </value>
+            <value>
+                <fullName>Qualificado</fullName>
+                <default>false</default>
+                <label>Qualificado</label>
+            </value>
+            <value>
+                <fullName>Contrato Gerado</fullName>
+                <default>false</default>
+                <label>Contrato Gerado</label>
+            </value>
+            <value>
+                <fullName>Em Negociação</fullName>
+                <default>false</default>
+                <label>Em Negociação</label>
+            </value>
+            <value>
+                <fullName>Proposta</fullName>
+                <default>false</default>
+                <label>Proposta</label>
+            </value>
+            <value>
+                <fullName>Negociação</fullName>
+                <default>false</default>
+                <label>Negociação</label>
+            </value>
+            <value>
+                <fullName>Ganho</fullName>
+                <default>false</default>
+                <label>Ganho</label>
+            </value>
+            <value>
+                <fullName>Perdido</fullName>
+                <default>false</default>
+                <label>Perdido</label>
+            </value>
+            <value>
+                <fullName>Oportunidade</fullName>
+                <default>false</default>
+                <label>Oportunidade</label>
+            </value>
+            <value>
+                <fullName>Integrar</fullName>
+                <default>false</default>
+                <label>Integrar</label>
+            </value>
+            <value>
+                <fullName>Contato Futuro</fullName>
+                <default>false</default>
+                <label>Contato Futuro</label>
+            </value>
+            <value>
+                <fullName>Novo</fullName>
+                <default>false</default>
+                <label>Novo (Lead)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Pré-Lead</controllingFieldValue>
+            <valueName>New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <valueName>Em Andamento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <valueName>Novo</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
