@@ -283,14 +283,14 @@
             <name>Luz</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>leadRecordTypeDeveloperName</leftValueReference>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>LeadPF</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>leadRecordTypeDeveloperName</leftValueReference>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>LeadPJ</stringValue>
@@ -305,8 +305,8 @@
             <name>Delta</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>leadRecordTypeDeveloperName</leftValueReference>
-                <operator>Contains</operator>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Delta</stringValue>
                 </rightValue>
@@ -327,14 +327,14 @@
             <name>Luz_Email_Lead</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>leadRecordTypeDeveloperName</leftValueReference>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>LeadPF</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>leadRecordTypeDeveloperName</leftValueReference>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>LeadPJ</stringValue>
@@ -349,8 +349,8 @@
             <name>Delta_Email_Lead</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>leadRecordTypeDeveloperName</leftValueReference>
-                <operator>Contains</operator>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Delta</stringValue>
                 </rightValue>
@@ -371,14 +371,14 @@
             <name>Luz_Whats_Lead</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>leadRecordTypeDeveloperName</leftValueReference>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>LeadPF</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>leadRecordTypeDeveloperName</leftValueReference>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>LeadPJ</stringValue>
@@ -393,8 +393,8 @@
             <name>Delta_Whats_Lead</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>leadRecordTypeDeveloperName</leftValueReference>
-                <operator>Contains</operator>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Delta</stringValue>
                 </rightValue>
