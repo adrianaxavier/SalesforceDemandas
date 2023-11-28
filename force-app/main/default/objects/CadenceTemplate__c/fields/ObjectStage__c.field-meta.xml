@@ -196,6 +196,8 @@
         <valueSettings>
             <controllingFieldValue>PFDelta</controllingFieldValue>
             <controllingFieldValue>PJDelta</controllingFieldValue>
+            <controllingFieldValue>LeadPF</controllingFieldValue>
+            <controllingFieldValue>LeadPJ</controllingFieldValue>
             <controllingFieldValue>Pre_lead_LUZ</controllingFieldValue>
             <controllingFieldValue>Pre_Lead_DELTA</controllingFieldValue>
             <valueName>New</valueName>
@@ -239,11 +241,6 @@
             <controllingFieldValue>PFDelta</controllingFieldValue>
             <controllingFieldValue>PJDelta</controllingFieldValue>
             <valueName>Assinatura Termo de Adesão</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>LeadPF</controllingFieldValue>
-            <controllingFieldValue>LeadPJ</controllingFieldValue>
-            <valueName>Novo</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>LeadPF</controllingFieldValue>
