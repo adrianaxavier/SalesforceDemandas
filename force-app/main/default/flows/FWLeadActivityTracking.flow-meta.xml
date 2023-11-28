@@ -20,8 +20,8 @@
     <assignments>
         <name>Assign_Lead_Task_Done</name>
         <label>Assign Lead Task Done</label>
-        <locationX>4187</locationX>
-        <locationY>544</locationY>
+        <locationX>4340</locationX>
+        <locationY>542</locationY>
         <assignmentItems>
             <assignToReference>varLead.TaskCadDone__c</assignToReference>
             <operator>Assign</operator>
@@ -164,8 +164,8 @@
     <assignments>
         <name>Assign_TaskCadDone</name>
         <label>Assign TaskCadDone</label>
-        <locationX>3765</locationX>
-        <locationY>719</locationY>
+        <locationX>3918</locationX>
+        <locationY>717</locationY>
         <assignmentItems>
             <assignToReference>varLead.TaskCadDone__c</assignToReference>
             <operator>Assign</operator>
@@ -180,8 +180,8 @@
     <assignments>
         <name>Assign_TaskCadDone2</name>
         <label>Assign TaskCadDone</label>
-        <locationX>4011</locationX>
-        <locationY>713</locationY>
+        <locationX>4164</locationX>
+        <locationY>711</locationY>
         <assignmentItems>
             <assignToReference>varLead.TaskCadDone__c</assignToReference>
             <operator>Assign</operator>
@@ -297,8 +297,8 @@
     <decisions>
         <name>FindCadence</name>
         <label>FindCadence?</label>
-        <locationX>4179</locationX>
-        <locationY>746</locationY>
+        <locationX>4332</locationX>
+        <locationY>744</locationY>
         <defaultConnector>
             <targetReference>UpdateLeadFieldTaskCadDoneTaskCompleted</targetReference>
         </defaultConnector>
@@ -347,8 +347,8 @@
     <decisions>
         <name>HasCadence</name>
         <label>HasCadence?</label>
-        <locationX>3879</locationX>
-        <locationY>1091</locationY>
+        <locationX>4032</locationX>
+        <locationY>1089</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_HasCadence</name>
@@ -389,105 +389,12 @@
         </rules>
     </decisions>
     <decisions>
-        <name>TaskAndLeadEmAndamento</name>
-        <label>Se a Tarefa e o Lead estão em Andamento</label>
-        <locationX>4004</locationX>
-        <locationY>342</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>TaskDoneButNotCompleted</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>varTask.IsClosed</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>varTask.TaskStageLead__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Em Andamento</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>varLead.Status</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Em Andamento</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>varTask.Status</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Completed</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>varTask.Source__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Cadence</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>VerifyFieldTaskDoneEOne</targetReference>
-            </connector>
-            <label>Tarefa finalizada e não concluída!</label>
-        </rules>
-        <rules>
-            <name>TaskDoneAndCompleted</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>varTask.IsClosed</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>varTask.TaskStageLead__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Em Andamento</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>varLead.Status</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Em Andamento</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>varTask.Status</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Completed</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>varTask.Source__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Cadence</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Assign_Lead_Task_Done</targetReference>
-            </connector>
-            <label>Tarefa finalizada e concluída!</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>TaskAndLeadNew</name>
         <label>Se a Tarefa e o Lead estão em New</label>
-        <locationX>3162</locationX>
+        <locationX>3164</locationX>
         <locationY>346</locationY>
         <defaultConnector>
-            <targetReference>TaskAndLeadEmAndamento</targetReference>
+            <targetReference>TaskAndLeadOtherStatus</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -578,6 +485,85 @@
         </rules>
     </decisions>
     <decisions>
+        <name>TaskAndLeadOtherStatus</name>
+        <label>Se a Tarefa e o Lead estão em Outros Status</label>
+        <locationX>4159</locationX>
+        <locationY>340</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>TaskDoneButNotCompletedOtherStatus</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varTask.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varTask.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varTask.Source__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cadence</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varTask.TaskStageLead__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>varLead.Status</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>VerifyFieldTaskDoneEOne</targetReference>
+            </connector>
+            <label>Tarefa finalizada e não concluída!</label>
+        </rules>
+        <rules>
+            <name>TaskDoneAndCompleted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varTask.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varTask.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varTask.Source__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cadence</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varTask.TaskStageLead__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>varLead.Status</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Lead_Task_Done</targetReference>
+            </connector>
+            <label>Tarefa finalizada e concluída!</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>TemplateFound</name>
         <label>TemplateFound?</label>
         <locationX>1658</locationX>
@@ -602,8 +588,8 @@
     <decisions>
         <name>VerifyFieldTaskDoneEOne</name>
         <label>Verifica se a variável addTaskDone = 1</label>
-        <locationX>3881</locationX>
-        <locationY>538</locationY>
+        <locationX>4034</locationX>
+        <locationY>536</locationY>
         <defaultConnector>
             <targetReference>Assign_TaskCadDone2</targetReference>
         </defaultConnector>
@@ -896,8 +882,8 @@
     <recordUpdates>
         <name>UpdateCadenceFieldTaskCadDone</name>
         <label>Atualizar cadência campo TaskCadDone</label>
-        <locationX>3888</locationX>
-        <locationY>1253</locationY>
+        <locationX>4041</locationX>
+        <locationY>1251</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -938,8 +924,8 @@
     <recordUpdates>
         <name>UpdateCadenceFieldTaskCadDoneCompleted</name>
         <label>Atualizar cadência campo TaskCadDone</label>
-        <locationX>4417</locationX>
-        <locationY>835</locationY>
+        <locationX>4570</locationX>
+        <locationY>833</locationY>
         <connector>
             <targetReference>UpdateLeadFieldTaskCadDoneTaskCompleted</targetReference>
         </connector>
@@ -998,8 +984,8 @@
     <recordUpdates>
         <name>UpdateLeadFieldTaskCadDoneTaskCompleted</name>
         <label>Atualizar Lead campo TaskCadDone</label>
-        <locationX>4189</locationX>
-        <locationY>952</locationY>
+        <locationX>4342</locationX>
+        <locationY>950</locationY>
         <inputReference>varLead</inputReference>
     </recordUpdates>
     <recordUpdates>
@@ -1012,8 +998,8 @@
     <recordUpdates>
         <name>UpdateLeadFieldTaskCadDoneTaskNotCompleted</name>
         <label>Atualizar Lead campo TaskCadDone</label>
-        <locationX>3887</locationX>
-        <locationY>912</locationY>
+        <locationX>4040</locationX>
+        <locationY>910</locationY>
         <connector>
             <targetReference>HasCadence</targetReference>
         </connector>
