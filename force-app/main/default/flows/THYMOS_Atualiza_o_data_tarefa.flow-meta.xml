@@ -26,6 +26,7 @@
             <label>Não</label>
         </rules>
     </decisions>
+    <description>Versao Oficial</description>
     <environments>Default</environments>
     <interviewLabel>THYMOS - Atualiza {!$Flow.CurrentDateTime}</interviewLabel>
     <label>THYMOS - Atualização data tarefa</label>
@@ -91,7 +92,7 @@
         <object>Lead</object>
     </recordUpdates>
     <start>
-        <locationX>658</locationX>
+        <locationX>659</locationX>
         <locationY>50</locationY>
         <connector>
             <targetReference>J_completa</targetReference>
