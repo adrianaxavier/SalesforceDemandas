@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OperationSource__c</fullName>
+    <externalId>false</externalId>
+    <label>Origem da Operação</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>ObjectRecordType__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SiteLuz</fullName>
+                <default>false</default>
+                <label>SiteLuz</label>
+            </value>
+            <value>
+                <fullName>AreaLogada</fullName>
+                <default>false</default>
+                <label>AreaLogada</label>
+            </value>
+            <value>
+                <fullName>Apollo</fullName>
+                <default>false</default>
+                <label>Apollo</label>
+            </value>
+            <value>
+                <fullName>Indicação</fullName>
+                <default>false</default>
+                <label>Indicação</label>
+            </value>
+            <value>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+                <label>Outbound</label>
+            </value>
+            <value>
+                <fullName>Parceiros</fullName>
+                <default>false</default>
+                <label>Parceiros</label>
+            </value>
+            <value>
+                <fullName>ADS</fullName>
+                <default>false</default>
+                <label>ADS</label>
+            </value>
+            <value>
+                <fullName>Chat Web</fullName>
+                <default>false</default>
+                <label>Chat Web</label>
+            </value>
+            <value>
+                <fullName>LISTA SPEEDIO</fullName>
+                <default>false</default>
+                <label>LISTA SPEEDIO</label>
+            </value>
+            <value>
+                <fullName>Whatsapp</fullName>
+                <default>false</default>
+                <label>Whatsapp</label>
+            </value>
+            <value>
+                <fullName>WhatsApp Receptivo</fullName>
+                <default>false</default>
+                <label>WhatsApp Receptivo</label>
+            </value>
+            <value>
+                <fullName>UNITY</fullName>
+                <default>false</default>
+                <label>UNITY</label>
+            </value>
+            <value>
+                <fullName>Campanha WhatsApp</fullName>
+                <default>false</default>
+                <label>Campanha WhatsApp</label>
+            </value>
+            <value>
+                <fullName>Prospecção Própria</fullName>
+                <default>false</default>
+                <label>Prospecção Própria</label>
+            </value>
+            <value>
+                <fullName>Luciano Princess</fullName>
+                <default>false</default>
+                <label>Luciano Princess</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>SiteLuz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>AreaLogada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Apollo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Indicação</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Outbound</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Parceiros</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>ADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Chat Web</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>LISTA SPEEDIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Whatsapp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>WhatsApp Receptivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>UNITY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Campanha WhatsApp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Prospecção Própria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PFDelta</controllingFieldValue>
+            <controllingFieldValue>PJDelta</controllingFieldValue>
+            <valueName>Luciano Princess</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -303,12 +303,19 @@
         </rules>
         <rules>
             <name>Delta</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Delta</stringValue>
+                    <stringValue>PJDelta</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PFDelta</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -347,12 +354,19 @@
         </rules>
         <rules>
             <name>Delta_Email_Lead</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Delta</stringValue>
+                    <stringValue>PFDelta</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PJDelta</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -391,12 +405,19 @@
         </rules>
         <rules>
             <name>Delta_Whats_Lead</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Delta</stringValue>
+                    <stringValue>PFDelta</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PJDelta</stringValue>
                 </rightValue>
             </conditions>
             <connector>
