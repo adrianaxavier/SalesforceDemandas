@@ -4,8 +4,7 @@
     <assignments>
         <name>AtributeAmountDaysInformConfigCadence</name>
         <label>Atribuir a quantidade de dias informado na configuração da cadência</label>
-        <locationX>2816</locationX>
-        <locationY>304</locationY>
+
         <assignmentItems>
             <assignToReference>varCadAddDays</assignToReference>
             <operator>Assign</operator>
@@ -20,8 +19,7 @@
     <assignments>
         <name>SetCadence</name>
         <label>SetCadence</label>
-        <locationX>3004</locationX>
-        <locationY>304</locationY>
+
         <assignmentItems>
             <assignToReference>cadence.AmountTasksBeforeStepCadence__c</assignToReference>
             <operator>Assign</operator>
@@ -125,7 +123,7 @@
         <locationX>1100</locationX>
         <locationY>644</locationY>
         <defaultConnector>
-            <targetReference>SearchCadenceTemplate</targetReference>
+
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -145,13 +143,7 @@
         </rules>
     </decisions>
     <decisions>
-        <name>FindCadenceTemplate</name>
-        <label>FindCadenceTemplate</label>
-        <locationX>1363</locationX>
-        <locationY>296</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Yes_FindCadTemplate</name>
+
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>modeloCadencia</leftValueReference>
@@ -172,7 +164,7 @@
         <locationX>973</locationX>
         <locationY>295</locationY>
         <defaultConnector>
-            <targetReference>SearchCadenceTemplate</targetReference>
+
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -194,8 +186,7 @@
     <decisions>
         <name>VerifyAnyCadenceInProgress</name>
         <label>VerifyAnyCadenceInProgress</label>
-        <locationX>2412</locationX>
-        <locationY>302</locationY>
+
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>DontAnyCadenceInProgressSameStatusLead</name>
@@ -216,8 +207,7 @@
     <decisions>
         <name>VerifyTemplateCadence</name>
         <label>VerifyTemplateCadence</label>
-        <locationX>1798</locationX>
-        <locationY>300</locationY>
+
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>TemplateCadenceRulesInLead</name>
@@ -260,6 +250,7 @@
         <dataType>String</dataType>
         <expression>{!lead.Company__r.Name}</expression>
     </formulas>
+
     <interviewLabel>Fluxo de Cadência {!$Flow.CurrentDateTime}</interviewLabel>
     <label>[Lead] Fluxo de Cadência</label>
     <processMetadataValues>
@@ -284,8 +275,7 @@
     <recordCreates>
         <name>CreateCadenceRegister</name>
         <label>CreateCadenceRegister</label>
-        <locationX>3177</locationX>
-        <locationY>304</locationY>
+
         <connector>
             <targetReference>UpdateLeadFieldsTemplateConfigCadence</targetReference>
         </connector>
@@ -345,8 +335,7 @@
     <recordLookups>
         <name>SearchCadenceLeadAndTemplate</name>
         <label>Verifica se há um registro Cadência está em execução com o mesmo Status</label>
-        <locationX>2247</locationX>
-        <locationY>300</locationY>
+
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>VerifyAnyCadenceInProgress</targetReference>
@@ -378,13 +367,7 @@
         <queriedFields>Id</queriedFields>
     </recordLookups>
     <recordLookups>
-        <name>SearchCadenceTemplate</name>
-        <label>SearchCadenceTemplate</label>
-        <locationX>1170</locationX>
-        <locationY>294</locationY>
-        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>FindCadenceTemplate</targetReference>
+
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -415,6 +398,7 @@
                 <elementReference>forCompany</elementReference>
             </value>
         </filters>
+
         <object>CadenceTemplate__c</object>
         <outputReference>modeloCadencia</outputReference>
         <queriedFields>Id</queriedFields>
@@ -425,39 +409,12 @@
         <queriedFields>ObjectRecordType__c</queriedFields>
     </recordLookups>
     <recordLookups>
-        <name>SearchCadenceTemplateConfig</name>
-        <label>SearchCadenceTemplateConfig</label>
-        <locationX>2092</locationX>
-        <locationY>300</locationY>
-        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>SearchCadenceLeadAndTemplate</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Template__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>modeloCadencia.Id</elementReference>
-            </value>
-        </filters>
-        <object>CadenceTemplateConfig__c</object>
-        <outputReference>cadenceTemplateConfig</outputReference>
-        <queriedFields>Id</queriedFields>
-        <queriedFields>AmountTaskStep__c</queriedFields>
-        <queriedFields>CadenceStep__c</queriedFields>
-        <queriedFields>CadLeadStage__c</queriedFields>
-        <queriedFields>N_Calls__c</queriedFields>
-        <queriedFields>N_Emails__c</queriedFields>
-        <queriedFields>AddDays__c</queriedFields>
-        <queriedFields>N_Whatsapp__c</queriedFields>
-        <queriedFields>CadOppStage__c</queriedFields>
+
     </recordLookups>
     <recordLookups>
         <name>SearchInitialCadenceTemplateConfig</name>
         <label>Obter registro inicial da configuração da Cadência</label>
-        <locationX>2653</locationX>
-        <locationY>304</locationY>
+
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>AtributeAmountDaysInformConfigCadence</targetReference>
@@ -510,12 +467,10 @@
         <queriedFields>Name</queriedFields>
         <queriedFields>Company__c</queriedFields>
         <queriedFields>RecordTypeId</queriedFields>
+
     </recordLookups>
     <recordLookups>
         <name>SearchUserFieldLeadOwnerIdIsUserOrQueue</name>
-        <label>SearchUserFieldLeadOwnerIdIsUserOrQueue</label>
-        <locationX>1624</locationX>
-        <locationY>298</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>VerifyTemplateCadence</targetReference>
@@ -538,15 +493,14 @@
         <locationX>1260</locationX>
         <locationY>510</locationY>
         <connector>
-            <targetReference>SearchCadenceTemplate</targetReference>
+
         </connector>
         <inputReference>cadence</inputReference>
     </recordUpdates>
     <recordUpdates>
         <name>UpdateLeadFieldsTemplateConfigCadence</name>
         <label>Atualizar Lead com dados de configuração de cadência</label>
-        <locationX>3381</locationX>
-        <locationY>304</locationY>
+
         <connector>
             <targetReference>FWCadenceTasks</targetReference>
         </connector>
@@ -613,8 +567,7 @@
     <subflows>
         <name>FWCadenceTasks</name>
         <label>[Cadência] Subflow - Criação de tarefas</label>
-        <locationX>3608</locationX>
-        <locationY>304</locationY>
+
         <flowName>FWCadenceTasks</flowName>
         <inputAssignments>
             <name>leadRecordTypeDeveloperName</name>

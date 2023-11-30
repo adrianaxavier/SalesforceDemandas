@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>forConfigCadenceTemplateName</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Template__r.Object__c})+TEXT({!$Record.Template__r.ObjectStage__c})+TEXT({!$Record.Template__r.ObjectRecordType__c})+TEXT({!$Record.Template__r.CompanyGroup__c})+TEXT({!$Record.CadenceStep__c})+TEXT({!$Record.Template__r.OperationSource__c})+TEXT({!$Record.Template__r.Source__c})</expression>
+    </formulas>
+    <interviewLabel>[Config Modelo Cadência] Before Created Updated {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Config Modelo Cadência] Before Created Updated</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>SetUniqueID</name>
+        <label>SetUniqueID</label>
+        <locationX>780</locationX>
+        <locationY>360</locationY>
+        <inputAssignments>
+            <field>UniqueID__c</field>
+            <value>
+                <elementReference>forConfigCadenceTemplateName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>654</locationX>
+        <locationY>40</locationY>
+        <connector>
+            <targetReference>SetUniqueID</targetReference>
+        </connector>
+        <object>CadenceTemplateConfig__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

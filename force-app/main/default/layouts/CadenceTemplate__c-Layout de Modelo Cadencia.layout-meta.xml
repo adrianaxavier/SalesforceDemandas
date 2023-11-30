@@ -27,6 +27,7 @@
                 <behavior>Edit</behavior>
                 <field>CompanyGroup__c</field>
             </layoutItems>
+<<<
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
