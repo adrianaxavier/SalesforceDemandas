@@ -4,8 +4,8 @@
     <decisions>
         <name>FindPreLead</name>
         <label>FindPreLead?</label>
-        <locationX>766</locationX>
-        <locationY>1048</locationY>
+        <locationX>768</locationX>
+        <locationY>1218</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Find</name>
@@ -26,8 +26,8 @@
     <decisions>
         <name>HasEconomicGroup</name>
         <label>HasEconomicGroup?</label>
-        <locationX>765</locationX>
-        <locationY>1248</locationY>
+        <locationX>767</locationX>
+        <locationY>1400</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>YesEconomicGroup</name>
@@ -62,9 +62,46 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>GetPreLead</targetReference>
+                <targetReference>ObjectRelated</targetReference>
             </connector>
             <label>New</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>ObjectRelated</name>
+        <label>ObjectRelated</label>
+        <locationX>767</locationX>
+        <locationY>864</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.WhatId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>a1N</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetPreLead</targetReference>
+            </connector>
+            <label>PreLead</label>
+        </rules>
+        <rules>
+            <name>GrupoEconomico</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.WhatId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>a1H</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetEconomicGroup1</targetReference>
+            </connector>
+            <label>GrupoEconomico</label>
         </rules>
     </decisions>
     <decisions>
@@ -120,6 +157,12 @@
     </decisions>
     <environments>Default</environments>
     <formulas>
+        <name>forQtdContato</name>
+        <dataType>Number</dataType>
+        <expression>{!GetEconomicGroup1.ContactNumber__c}+1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
         <name>isNew</name>
         <dataType>Boolean</dataType>
         <expression>isnew()</expression>
@@ -148,8 +191,8 @@
     <recordLookups>
         <name>GetEconomicGroup</name>
         <label>GetEconomicGroup</label>
-        <locationX>772</locationX>
-        <locationY>1441</locationY>
+        <locationX>774</locationX>
+        <locationY>1593</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Grupo_Economico_Pre_Lead_Updates</targetReference>
@@ -167,10 +210,31 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>GetEconomicGroup1</name>
+        <label>GetEconomicGroup1</label>
+        <locationX>1029</locationX>
+        <locationY>863</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>UpdateEconomicGroup</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>EconomicGroup__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>GetPreLead</name>
         <label>GetPreLead</label>
-        <locationX>774</locationX>
-        <locationY>874</locationY>
+        <locationX>776</locationX>
+        <locationY>1054</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>FindPreLead</targetReference>
@@ -187,6 +251,27 @@
         <object>PreLead__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>UpdateEconomicGroup</name>
+        <label>UpdateEconomicGroup</label>
+        <locationX>1235</locationX>
+        <locationY>863</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>ContactNumber__c</field>
+            <value>
+                <elementReference>forQtdContato</elementReference>
+            </value>
+        </inputAssignments>
+        <object>EconomicGroup__c</object>
+    </recordUpdates>
     <start>
         <locationX>650</locationX>
         <locationY>48</locationY>
@@ -202,7 +287,7 @@
         <name>Grupo_Economico_Pre_Lead_Updates</name>
         <label>[Grupo Economico] Pré-Lead Updates</label>
         <locationX>772</locationX>
-        <locationY>1639</locationY>
+        <locationY>1736</locationY>
         <flowName>FWEconomicGroupPreLeadUpdates</flowName>
         <inputAssignments>
             <name>idEconomicGroup</name>
