@@ -195,7 +195,7 @@
         <locationY>1593</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Grupo_Economico_Pre_Lead_Updates</targetReference>
+            <targetReference>UpdateTask</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -272,6 +272,22 @@
         </inputAssignments>
         <object>EconomicGroup__c</object>
     </recordUpdates>
+    <recordUpdates>
+        <name>UpdateTask</name>
+        <label>UpdateTask</label>
+        <locationX>774</locationX>
+        <locationY>1754</locationY>
+        <connector>
+            <targetReference>Grupo_Economico_Pre_Lead_Updates</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>EconomicGroup__c</field>
+            <value>
+                <elementReference>GetEconomicGroup.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>650</locationX>
         <locationY>48</locationY>
@@ -286,8 +302,8 @@
     <subflows>
         <name>Grupo_Economico_Pre_Lead_Updates</name>
         <label>[Grupo Economico] Pré-Lead Updates</label>
-        <locationX>772</locationX>
-        <locationY>1736</locationY>
+        <locationX>774</locationX>
+        <locationY>1921</locationY>
         <flowName>FWEconomicGroupPreLeadUpdates</flowName>
         <inputAssignments>
             <name>idEconomicGroup</name>
