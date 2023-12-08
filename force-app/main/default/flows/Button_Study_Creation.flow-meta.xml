@@ -359,6 +359,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>SCORE__c</field>
+            <value>
+                <elementReference>Dados_do_Lead.Score_SERASA__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Solicitante_do_Estudo__c</field>
             <value>
                 <elementReference>Dados_do_Lead.OwnerId</elementReference>
@@ -538,6 +544,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>SCORE__c</field>
+            <value>
+                <elementReference>Dados_do_Lead.Score_SERASA__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Solicitante_do_Estudo__c</field>
             <value>
                 <elementReference>Dados_do_Lead.OwnerId</elementReference>
@@ -702,6 +714,12 @@
             <field>Redu_o_Custo__c</field>
             <value>
                 <elementReference>Dados_do_Lead.Redu_o_Custo__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SCORE__c</field>
+            <value>
+                <elementReference>Dados_do_Lead.Score_SERASA__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -881,6 +899,12 @@
             <field>Redu_o_Custo__c</field>
             <value>
                 <elementReference>Dados_do_Lead.Redu_o_Custo__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SCORE__c</field>
+            <value>
+                <elementReference>Dados_do_Lead.Score_SERASA__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
