@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Layout_Estudo</fullName>
+    <fields>Name</fields>
+    <fields>Tipo_de_Estudo__c</fields>
+    <fields>Solicitante_do_Estudo__c</fields>
+    <fields>Status_Prioridade__c</fields>
+    <label>Layout Estudo</label>
+</CompactLayout>
