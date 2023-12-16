@@ -27,7 +27,14 @@
                 <behavior>Edit</behavior>
                 <field>CompanyGroup__c</field>
             </layoutItems>
-<<<
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>OperationSource__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Source__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
