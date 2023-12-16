@@ -258,7 +258,28 @@
         </connector>
     </assignments>
     <decisions>
-
+        <name>CadenceFound</name>
+        <label>CadenceFound?</label>
+        <locationX>1958</locationX>
+        <locationY>363</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>YesCadenceFound</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varCadence</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AddMoreOneTaskDone</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>CheckActivity</name>
         <label>CheckActivity</label>
         <locationX>2520</locationX>
@@ -390,7 +411,28 @@
         </rules>
     </decisions>
     <decisions>
-
+        <name>LeadFound</name>
+        <label>LeadFound?</label>
+        <locationX>1286</locationX>
+        <locationY>361</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>YesLeadFound</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varLead</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetCadenceTemplate</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>TaskAndLeadNew</name>
         <label>Se a Tarefa e o Lead estão em New</label>
         <locationX>3164</locationX>
@@ -568,7 +610,7 @@
     <decisions>
         <name>TemplateFound</name>
         <label>TemplateFound?</label>
-
+        <locationX>1610</locationX>
         <locationY>361</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -640,7 +682,7 @@
     <decisions>
         <name>VerifyTaskFieldWhoIdIsLead</name>
         <label>Verifica se na tarefa o campo: WhoId é um Lead</label>
-
+        <locationX>933</locationX>
         <locationY>361</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -688,7 +730,9 @@
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
         <description>Obter o template da cadência Parametrizado.</description>
-
+        <name>GetCadenceTemplate</name>
+        <label>GetCadenceTemplate</label>
+        <locationX>1444</locationX>
         <locationY>359</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -696,7 +740,10 @@
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varTask.CadenceTemplate__c</elementReference>
             </value>
         </filters>
         <object>CadenceTemplate__c</object>
@@ -705,7 +752,12 @@
     </recordLookups>
     <recordLookups>
         <name>GetLead</name>
-
+        <label>GetLead</label>
+        <locationX>1144</locationX>
+        <locationY>359</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>LeadFound</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -730,11 +782,18 @@
         <queriedFields>NextActivityDueDate__c</queriedFields>
         <queriedFields>RecordTypeId</queriedFields>
         <queriedFields>Company__c</queriedFields>
-
+        <queriedFields>Origem_da_Opera_o__c</queriedFields>
+        <queriedFields>Fonte__c</queriedFields>
+        <queriedFields>Recordtype_Name__c</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>GetLeadCadence</name>
-
+        <label>GetLeadCadence</label>
+        <locationX>1808</locationX>
+        <locationY>361</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CadenceFound</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -778,7 +837,7 @@
     <recordLookups>
         <name>GetOpenTasks</name>
         <label>GetOpenTasks</label>
-
+        <locationX>2278</locationX>
         <locationY>361</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -845,7 +904,7 @@
         <queriedFields>WhatId</queriedFields>
         <queriedFields>WhoId</queriedFields>
         <queriedFields>Source__c</queriedFields>
-
+        <queriedFields>CadenceTemplate__c</queriedFields>
     </recordLookups>
     <recordUpdates>
         <name>UpdateCadenceFieldTaskCadDone</name>
@@ -983,7 +1042,7 @@
         </connector>
         <inputReference>varLead</inputReference>
     </recordUpdates>
-
+    <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
         <locationX>650</locationX>
         <locationY>48</locationY>
