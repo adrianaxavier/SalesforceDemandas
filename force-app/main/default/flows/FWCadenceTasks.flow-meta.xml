@@ -303,12 +303,19 @@
         </rules>
         <rules>
             <name>Delta</name>
-
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-
+                    <stringValue>PJDelta</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PFDelta</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -347,12 +354,19 @@
         </rules>
         <rules>
             <name>Delta_Email_Lead</name>
-
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-
+                    <stringValue>PFDelta</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PJDelta</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -391,12 +405,19 @@
         </rules>
         <rules>
             <name>Delta_Whats_Lead</name>
-
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-
+                    <stringValue>PFDelta</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLead.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PJDelta</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -1552,6 +1573,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Task criada para motor de cadências</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>IsReminderSet</field>
             <value>
                 <booleanValue>true</booleanValue>
@@ -1644,6 +1671,12 @@
             <field>CustomReminderTime__c</field>
             <value>
                 <elementReference>forDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Task criada para motor de cadências</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1745,6 +1778,12 @@
             <field>CustomReminderTime__c</field>
             <value>
                 <elementReference>forDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Task criada para motor de cadências</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>

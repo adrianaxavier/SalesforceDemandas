@@ -4,7 +4,8 @@
     <assignments>
         <name>AtributeAmountDaysInformConfigCadence</name>
         <label>Atribuir a quantidade de dias informado na configuração da cadência</label>
-
+        <locationX>3436</locationX>
+        <locationY>302</locationY>
         <assignmentItems>
             <assignToReference>varCadAddDays</assignToReference>
             <operator>Assign</operator>
@@ -19,7 +20,8 @@
     <assignments>
         <name>SetCadence</name>
         <label>SetCadence</label>
-
+        <locationX>3624</locationX>
+        <locationY>302</locationY>
         <assignmentItems>
             <assignToReference>cadence.AmountTasksBeforeStepCadence__c</assignToReference>
             <operator>Assign</operator>
@@ -123,7 +125,7 @@
         <locationX>1100</locationX>
         <locationY>644</locationY>
         <defaultConnector>
-
+            <targetReference>SearchCadenceTemplateParametrized1</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -143,7 +145,63 @@
         </rules>
     </decisions>
     <decisions>
-
+        <name>FindCadenceTemplate1</name>
+        <label>FindCadenceTemplate1</label>
+        <locationX>1399</locationX>
+        <locationY>296</locationY>
+        <defaultConnector>
+            <targetReference>SearchCadenceTemplateParametrized2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_FindCadTemplate1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>modeloCadencia</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SearchUserFieldLeadOwnerIdIsUserOrQueue</targetReference>
+            </connector>
+            <label>Yes FindCadTemplate</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>FindCadenceTemplate2</name>
+        <label>FindCadenceTemplate2</label>
+        <locationX>1640</locationX>
+        <locationY>479</locationY>
+        <defaultConnector>
+            <targetReference>SearchCadenceTemplateParametrized3</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_FindCadTemplate2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>modeloCadencia</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SearchUserFieldLeadOwnerIdIsUserOrQueue</targetReference>
+            </connector>
+            <label>Yes FindCadTemplate</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>FindCadenceTemplate3</name>
+        <label>FindCadenceTemplate3</label>
+        <locationX>2077</locationX>
+        <locationY>601</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_FindCadTemplate3</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>modeloCadencia</leftValueReference>
@@ -164,7 +222,7 @@
         <locationX>973</locationX>
         <locationY>295</locationY>
         <defaultConnector>
-
+            <targetReference>SearchCadenceTemplateParametrized1</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -186,7 +244,8 @@
     <decisions>
         <name>VerifyAnyCadenceInProgress</name>
         <label>VerifyAnyCadenceInProgress</label>
-
+        <locationX>3032</locationX>
+        <locationY>300</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>DontAnyCadenceInProgressSameStatusLead</name>
@@ -207,7 +266,8 @@
     <decisions>
         <name>VerifyTemplateCadence</name>
         <label>VerifyTemplateCadence</label>
-
+        <locationX>2418</locationX>
+        <locationY>298</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>TemplateCadenceRulesInLead</name>
@@ -250,7 +310,11 @@
         <dataType>String</dataType>
         <expression>{!lead.Company__r.Name}</expression>
     </formulas>
-
+    <formulas>
+        <name>forOperation</name>
+        <dataType>String</dataType>
+        <expression>{!lead.Origem_da_Opera_o__c}</expression>
+    </formulas>
     <interviewLabel>Fluxo de Cadência {!$Flow.CurrentDateTime}</interviewLabel>
     <label>[Lead] Fluxo de Cadência</label>
     <processMetadataValues>
@@ -275,7 +339,8 @@
     <recordCreates>
         <name>CreateCadenceRegister</name>
         <label>CreateCadenceRegister</label>
-
+        <locationX>3797</locationX>
+        <locationY>302</locationY>
         <connector>
             <targetReference>UpdateLeadFieldsTemplateConfigCadence</targetReference>
         </connector>
@@ -335,7 +400,8 @@
     <recordLookups>
         <name>SearchCadenceLeadAndTemplate</name>
         <label>Verifica se há um registro Cadência está em execução com o mesmo Status</label>
-
+        <locationX>2867</locationX>
+        <locationY>298</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>VerifyAnyCadenceInProgress</targetReference>
@@ -367,7 +433,42 @@
         <queriedFields>Id</queriedFields>
     </recordLookups>
     <recordLookups>
-
+        <name>SearchCadenceTemplateConfig</name>
+        <label>SearchCadenceTemplateConfig</label>
+        <locationX>2712</locationX>
+        <locationY>298</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>SearchCadenceLeadAndTemplate</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Template__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>modeloCadencia.Id</elementReference>
+            </value>
+        </filters>
+        <object>CadenceTemplateConfig__c</object>
+        <outputReference>cadenceTemplateConfig</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>AmountTaskStep__c</queriedFields>
+        <queriedFields>CadenceStep__c</queriedFields>
+        <queriedFields>CadLeadStage__c</queriedFields>
+        <queriedFields>N_Calls__c</queriedFields>
+        <queriedFields>N_Emails__c</queriedFields>
+        <queriedFields>AddDays__c</queriedFields>
+        <queriedFields>N_Whatsapp__c</queriedFields>
+        <queriedFields>CadOppStage__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>SearchCadenceTemplateParametrized1</name>
+        <label>SearchCadenceTemplateParametrized1</label>
+        <locationX>1194</locationX>
+        <locationY>294</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>FindCadenceTemplate1</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -398,7 +499,20 @@
                 <elementReference>forCompany</elementReference>
             </value>
         </filters>
-
+        <filters>
+            <field>OperationSource__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>forOperation</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Source__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>lead.Fonte__c</elementReference>
+            </value>
+        </filters>
         <object>CadenceTemplate__c</object>
         <outputReference>modeloCadencia</outputReference>
         <queriedFields>Id</queriedFields>
@@ -409,12 +523,111 @@
         <queriedFields>ObjectRecordType__c</queriedFields>
     </recordLookups>
     <recordLookups>
-
+        <name>SearchCadenceTemplateParametrized2</name>
+        <label>SearchCadenceTemplateParametrized2</label>
+        <locationX>1410</locationX>
+        <locationY>604</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>FindCadenceTemplate2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ObjectStage__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>lead.Status</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Object__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Lead</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ObjectRecordType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GetLeadRecordTypeName.DeveloperName</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CompanyGroup__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>forCompany</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>OperationSource__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>forOperation</elementReference>
+            </value>
+        </filters>
+        <object>CadenceTemplate__c</object>
+        <outputReference>modeloCadencia</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Code__c</queriedFields>
+        <queriedFields>CountCad__c</queriedFields>
+        <queriedFields>ObjectStage__c</queriedFields>
+        <queriedFields>CompanyGroup__c</queriedFields>
+        <queriedFields>ObjectRecordType__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>SearchCadenceTemplateParametrized3</name>
+        <label>SearchCadenceTemplateParametrized3</label>
+        <locationX>1859</locationX>
+        <locationY>599</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>FindCadenceTemplate3</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ObjectStage__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>lead.Status</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Object__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Lead</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ObjectRecordType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GetLeadRecordTypeName.DeveloperName</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CompanyGroup__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>forCompany</elementReference>
+            </value>
+        </filters>
+        <object>CadenceTemplate__c</object>
+        <outputReference>modeloCadencia</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Code__c</queriedFields>
+        <queriedFields>CountCad__c</queriedFields>
+        <queriedFields>ObjectStage__c</queriedFields>
+        <queriedFields>CompanyGroup__c</queriedFields>
+        <queriedFields>ObjectRecordType__c</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>SearchInitialCadenceTemplateConfig</name>
         <label>Obter registro inicial da configuração da Cadência</label>
-
+        <locationX>3273</locationX>
+        <locationY>302</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>AtributeAmountDaysInformConfigCadence</targetReference>
@@ -467,10 +680,15 @@
         <queriedFields>Name</queriedFields>
         <queriedFields>Company__c</queriedFields>
         <queriedFields>RecordTypeId</queriedFields>
-
+        <queriedFields>Origem_da_Opera_o__c</queriedFields>
+        <queriedFields>Fonte__c</queriedFields>
+        <queriedFields>Recordtype_Name__c</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>SearchUserFieldLeadOwnerIdIsUserOrQueue</name>
+        <label>SearchUserFieldLeadOwnerIdIsUserOrQueue</label>
+        <locationX>2244</locationX>
+        <locationY>296</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>VerifyTemplateCadence</targetReference>
@@ -493,14 +711,15 @@
         <locationX>1260</locationX>
         <locationY>510</locationY>
         <connector>
-
+            <targetReference>SearchCadenceTemplateParametrized1</targetReference>
         </connector>
         <inputReference>cadence</inputReference>
     </recordUpdates>
     <recordUpdates>
         <name>UpdateLeadFieldsTemplateConfigCadence</name>
         <label>Atualizar Lead com dados de configuração de cadência</label>
-
+        <locationX>4001</locationX>
+        <locationY>302</locationY>
         <connector>
             <targetReference>FWCadenceTasks</targetReference>
         </connector>
@@ -557,8 +776,8 @@
         <object>Lead</object>
     </recordUpdates>
     <start>
-        <locationX>154</locationX>
-        <locationY>276</locationY>
+        <locationX>153</locationX>
+        <locationY>275</locationY>
         <connector>
             <targetReference>SearchLeadFields</targetReference>
         </connector>
@@ -567,7 +786,8 @@
     <subflows>
         <name>FWCadenceTasks</name>
         <label>[Cadência] Subflow - Criação de tarefas</label>
-
+        <locationX>4228</locationX>
+        <locationY>302</locationY>
         <flowName>FWCadenceTasks</flowName>
         <inputAssignments>
             <name>leadRecordTypeDeveloperName</name>
