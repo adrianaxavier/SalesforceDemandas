@@ -784,6 +784,7 @@
         <queriedFields>Company__c</queriedFields>
         <queriedFields>Origem_da_Opera_o__c</queriedFields>
         <queriedFields>Fonte__c</queriedFields>
+        <queriedFields>Recordtype_Name__c</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>GetLeadCadence</name>

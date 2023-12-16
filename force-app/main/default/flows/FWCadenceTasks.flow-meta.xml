@@ -1573,6 +1573,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Task criada para motor de cadências</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>IsReminderSet</field>
             <value>
                 <booleanValue>true</booleanValue>
@@ -1665,6 +1671,12 @@
             <field>CustomReminderTime__c</field>
             <value>
                 <elementReference>forDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Task criada para motor de cadências</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1766,6 +1778,12 @@
             <field>CustomReminderTime__c</field>
             <value>
                 <elementReference>forDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Task criada para motor de cadências</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>

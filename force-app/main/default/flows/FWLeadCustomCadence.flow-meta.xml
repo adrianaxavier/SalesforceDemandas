@@ -682,6 +682,7 @@
         <queriedFields>RecordTypeId</queriedFields>
         <queriedFields>Origem_da_Opera_o__c</queriedFields>
         <queriedFields>Fonte__c</queriedFields>
+        <queriedFields>Recordtype_Name__c</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>SearchUserFieldLeadOwnerIdIsUserOrQueue</name>
@@ -775,8 +776,8 @@
         <object>Lead</object>
     </recordUpdates>
     <start>
-        <locationX>154</locationX>
-        <locationY>276</locationY>
+        <locationX>153</locationX>
+        <locationY>275</locationY>
         <connector>
             <targetReference>SearchLeadFields</targetReference>
         </connector>
