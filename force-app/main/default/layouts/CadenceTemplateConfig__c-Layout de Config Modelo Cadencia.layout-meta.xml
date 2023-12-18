@@ -19,6 +19,10 @@
                 <behavior>Edit</behavior>
                 <field>AddDays__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>TemplateTextoWhats__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

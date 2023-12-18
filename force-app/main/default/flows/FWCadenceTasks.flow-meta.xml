@@ -1193,6 +1193,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Observacao__c</field>
+            <value>
+                <elementReference>varCadenceTemplateConfigLead.TemplateTextoWhats__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>OwnerId</field>
             <value>
                 <elementReference>varLead.OwnerId</elementReference>
@@ -1481,6 +1487,12 @@
             <field>IsReminderSet</field>
             <value>
                 <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Observacao__c</field>
+            <value>
+                <elementReference>varCadenceTemplateConfigLead.TemplateTextoWhats__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

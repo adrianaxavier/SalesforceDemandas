@@ -460,6 +460,7 @@
         <queriedFields>AddDays__c</queriedFields>
         <queriedFields>N_Whatsapp__c</queriedFields>
         <queriedFields>CadOppStage__c</queriedFields>
+        <queriedFields>TemplateTextoWhats__c</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>SearchCadenceTemplateParametrized1</name>
@@ -652,6 +653,7 @@
         <queriedFields>CadLeadStage__c</queriedFields>
         <queriedFields>CadOppStage__c</queriedFields>
         <queriedFields>N_Whatsapp__c</queriedFields>
+        <queriedFields>TemplateTextoWhats__c</queriedFields>
         <sortField>CadenceStep__c</sortField>
         <sortOrder>Asc</sortOrder>
     </recordLookups>
