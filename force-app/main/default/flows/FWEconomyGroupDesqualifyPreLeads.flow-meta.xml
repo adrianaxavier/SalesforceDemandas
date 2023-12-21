@@ -128,26 +128,12 @@
         <connector>
             <targetReference>Screen_Select_Pre_Leads</targetReference>
         </connector>
-        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>EconomicGroup__c</field>
             <operator>EqualTo</operator>
             <value>
                 <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Status__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Novo</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Status__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Em andamento</stringValue>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
@@ -374,7 +360,7 @@
             <inputParameters>
                 <name>columns</name>
                 <value>
-                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-08c6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Nome do contato&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FantasyName__c&quot;,&quot;guid&quot;:&quot;column-24fc&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Nome da UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;PhoneNumber__c&quot;,&quot;guid&quot;:&quot;column-0cdd&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Telefone/Celular&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Email__c&quot;,&quot;guid&quot;:&quot;column-51f8&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;}]</stringValue>
+                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-08c6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Nome do contato&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FantasyName__c&quot;,&quot;guid&quot;:&quot;column-24fc&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Nome da UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;PhoneNumber__c&quot;,&quot;guid&quot;:&quot;column-0cdd&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Telefone/Celular&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Email__c&quot;,&quot;guid&quot;:&quot;column-51f8&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;Status__c&quot;,&quot;guid&quot;:&quot;column-efe7&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
