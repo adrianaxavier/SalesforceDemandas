@@ -262,6 +262,16 @@
                 <identifier>RecordN_o_Incomodar_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.EconomicGroup__c</fieldItem>
+                <identifier>RecordEconomicGroup_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-5c7be33f-95b4-452d-b82d-84cb61acf792</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -1264,16 +1274,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.EconomicGroup__c</fieldItem>
-                <identifier>RecordEconomicGroup_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.StateRegistration__c</fieldItem>
                 <identifier>RecordStateRegistration_cField</identifier>
             </fieldInstance>
@@ -1996,7 +1996,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListApiName</name>
-                    <value>OpenActivities</value>
+                    <value>Activities__r</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListComponentOverride</name>
@@ -2011,7 +2011,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer4</identifier>
+                <identifier>force_relatedListSingleContainer9</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.EconomicGroup__r.Name}</leftValue>

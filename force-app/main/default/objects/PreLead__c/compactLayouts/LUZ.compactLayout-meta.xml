@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LUZ</fullName>
+    <fields>Name</fields>
+    <fields>FantasyName__c</fields>
+    <fields>PhoneNumber__c</fields>
+    <fields>CPFCNPJ__c</fields>
+    <fields>Email__c</fields>
+    <fields>EconomicGroup__c</fields>
+    <label>LUZ</label>
+</CompactLayout>
