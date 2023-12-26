@@ -50,6 +50,10 @@
                 <elementReference>DesqualifyingObsTxt</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>LoopPreLeads.Tarefa_Horario__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
         <connector>
             <targetReference>AddToList</targetReference>
         </connector>
