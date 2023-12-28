@@ -37,7 +37,7 @@
             <field>ID_de_Unidade__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.Unidades__r.Id</elementReference>
+                <elementReference>$Record.Unidade_Id__c</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
