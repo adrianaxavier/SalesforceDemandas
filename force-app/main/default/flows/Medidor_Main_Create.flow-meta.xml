@@ -56,6 +56,30 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Desconto__c</field>
+            <value>
+                <elementReference>Obter_a_Unidade.Desconto__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Distribuidora__c</field>
+            <value>
+                <elementReference>Obter_a_Unidade.Distributor__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Plano__c</field>
+            <value>
+                <elementReference>Obter_a_Unidade.Plano__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Tipo_de_Cliente__c</field>
+            <value>
+                <elementReference>Obter_a_Unidade.Account__r.AccountType__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Unidades__c</field>
             <value>
                 <elementReference>Obter_a_Unidade.Id</elementReference>
@@ -73,5 +97,5 @@
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
 </Flow>
