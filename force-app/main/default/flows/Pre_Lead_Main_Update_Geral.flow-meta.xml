@@ -264,6 +264,13 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.InformationSource__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ADS</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Fluxo_Area_Atendidaa</targetReference>
             </connector>
