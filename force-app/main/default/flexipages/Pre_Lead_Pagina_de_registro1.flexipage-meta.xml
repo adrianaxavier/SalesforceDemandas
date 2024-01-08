@@ -560,6 +560,46 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.Edicao_CPFCNPJ__c</fieldItem>
+                <identifier>RecordEdicao_CPFCNPJ_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.DataAlteracao_CPFCNPJ__c</fieldItem>
+                <identifier>RecordDataAlteracao_CPFCNPJ_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Edicao_Instalacao__c</fieldItem>
+                <identifier>RecordEdicao_Instalacao_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.DataAlteracao_Instalacao__c</fieldItem>
+                <identifier>RecordDataAlteracao_Instalacao_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Classifica_o__c</fieldItem>
                 <identifier>RecordClassifica_o_cField</identifier>
             </fieldInstance>
