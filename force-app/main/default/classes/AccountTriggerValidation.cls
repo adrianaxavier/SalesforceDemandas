@@ -727,6 +727,7 @@ public class AccountTriggerValidation {
                 i++;
                 i++;
                 i++;
+                i++;
             }       
     //------------------------------------------------------------------------------------------------
     // FIM Validar dados Formatados
