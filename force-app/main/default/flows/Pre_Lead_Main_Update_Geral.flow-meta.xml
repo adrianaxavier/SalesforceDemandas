@@ -264,6 +264,7 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+
             <connector>
                 <targetReference>Fluxo_Area_Atendidaa</targetReference>
             </connector>
