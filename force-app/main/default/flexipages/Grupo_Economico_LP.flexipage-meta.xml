@@ -88,10 +88,6 @@
                 <identifier>RecordPhone_cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <name>Facet-b4636ac4-2f24-4a88-bf61-cd5cee918449</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
@@ -102,6 +98,10 @@
                 <identifier>RecordProduct_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <name>Facet-b4636ac4-2f24-4a88-bf61-cd5cee918449</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
@@ -120,6 +120,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.UCQuantity__c</fieldItem>
                 <identifier>RecordUCQuantity_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Observacao__c</fieldItem>
+                <identifier>RecordObservacao_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-3216a1ac-6ef3-4849-baf8-702a8a942cba</name>
