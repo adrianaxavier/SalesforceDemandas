@@ -1122,6 +1122,36 @@
                 <identifier>RecordComercial_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Etapa__c</fieldItem>
+                <identifier>RecordEtapa_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Mensagem__c</fieldItem>
+                <identifier>RecordMensagem_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Link_Download__c</fieldItem>
+                <identifier>RecordLink_Download_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-ece05387-49b1-446d-9528-6a8e48b55e63</name>
         <type>Facet</type>
     </flexiPageRegions>
