@@ -451,7 +451,7 @@
         <object>Cadence__c</object>
         <schedule>
             <frequency>Daily</frequency>
-            <startDate>2023-12-16</startDate>
+            <startDate>2024-01-12</startDate>
             <startTime>06:00:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
