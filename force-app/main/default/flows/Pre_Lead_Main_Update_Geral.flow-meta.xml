@@ -264,15 +264,8 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.InformationSource__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>ADS</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
-                <targetReference>Fluxo_Area_Atendidaa</targetReference>
+                <targetReference>Buscar_dados_CEP</targetReference>
             </connector>
             <label>Sim</label>
         </rules>
@@ -380,6 +373,46 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
+        <name>Atualizar_com_novos_Dados</name>
+        <label>Atualizar com novos Dados</label>
+        <locationX>776</locationX>
+        <locationY>1457</locationY>
+        <connector>
+            <targetReference>Cupom_Alterado</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Address__c</field>
+            <value>
+                <elementReference>Buscar_dados_CEP.logradouro</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>City__c</field>
+            <value>
+                <elementReference>Buscar_dados_CEP.cidade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Distribuidora__c</field>
+            <value>
+                <elementReference>Buscar_dados_CEP.Distribuidora</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>District__c</field>
+            <value>
+                <elementReference>Buscar_dados_CEP.bairro</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UF__c</field>
+            <value>
+                <elementReference>Buscar_dados_CEP.UF</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Atualizar_Status</name>
         <label>Atualizar Status</label>
         <locationX>182</locationX>
@@ -417,26 +450,21 @@
     </start>
     <status>Active</status>
     <subflows>
-        <name>Fluxo_Area_Atendidaa</name>
-        <label>Fluxo Area Atendida</label>
-        <locationX>831</locationX>
-        <locationY>1369</locationY>
+        <name>Buscar_dados_CEP</name>
+        <label>Buscar dados CEP</label>
+        <locationX>777</locationX>
+        <locationY>1356</locationY>
         <connector>
-            <targetReference>Cupom_Alterado</targetReference>
+            <targetReference>Atualizar_com_novos_Dados</targetReference>
         </connector>
-        <flowName>SUBFLOW_preLead_areaAtendida</flowName>
+        <flowName>Subfluxo_Buscar_CEP</flowName>
         <inputAssignments>
-            <name>Cep</name>
+            <name>CEP</name>
             <value>
                 <elementReference>$Record.CEP__c</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <name>RecorId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
     <subflows>
         <name>Fluxo_de_Convers_o</name>
