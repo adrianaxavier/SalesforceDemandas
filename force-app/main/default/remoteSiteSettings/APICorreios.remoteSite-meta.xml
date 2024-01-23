@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <disableProtocolSecurity>true</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>http://k8s-albprod-60b8b4a033-392428929.us-east-1.elb.amazonaws.com</url>
+</RemoteSiteSetting>
