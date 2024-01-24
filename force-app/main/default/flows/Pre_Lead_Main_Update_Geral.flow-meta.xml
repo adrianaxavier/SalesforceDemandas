@@ -83,7 +83,7 @@
         <locationX>963</locationX>
         <locationY>769</locationY>
         <defaultConnector>
-            <targetReference>Houve_Altera_o_de_CEP</targetReference>
+            <targetReference>Cupom_Alterado</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
@@ -246,38 +246,13 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Houve_Altera_o_de_CEP</name>
-        <label>Houve Alteração de CEP</label>
-        <locationX>963</locationX>
-        <locationY>1261</locationY>
-        <defaultConnector>
-            <targetReference>Cupom_Alterado</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Não</defaultConnectorLabel>
-        <rules>
-            <name>Sim3</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.CEP__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
 
-            <connector>
-                <targetReference>Fluxo_Area_Atendidaa</targetReference>
-            </connector>
-            <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>MGM</name>
         <label>é MGM</label>
         <locationX>809</locationX>
         <locationY>877</locationY>
         <defaultConnector>
-            <targetReference>Houve_Altera_o_de_CEP</targetReference>
+            <targetReference>Cupom_Alterado</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
@@ -401,7 +376,7 @@
     </recordUpdates>
     <start>
         <locationX>846</locationX>
-        <locationY>50</locationY>
+        <locationY>49</locationY>
         <connector>
             <targetReference>Grupo_Economico_Alterado</targetReference>
         </connector>
@@ -410,28 +385,6 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
-    <subflows>
-        <name>Fluxo_Area_Atendidaa</name>
-        <label>Fluxo Area Atendida</label>
-        <locationX>831</locationX>
-        <locationY>1369</locationY>
-        <connector>
-            <targetReference>Cupom_Alterado</targetReference>
-        </connector>
-        <flowName>SUBFLOW_preLead_areaAtendida</flowName>
-        <inputAssignments>
-            <name>Cep</name>
-            <value>
-                <elementReference>$Record.CEP__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>RecorId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-    </subflows>
     <subflows>
         <name>Fluxo_de_Convers_o</name>
         <label>Fluxo de Conversão</label>
@@ -480,7 +433,7 @@
         <locationX>677</locationX>
         <locationY>985</locationY>
         <connector>
-            <targetReference>Houve_Altera_o_de_CEP</targetReference>
+            <targetReference>Cupom_Alterado</targetReference>
         </connector>
         <flowName>Atualizar_MGM</flowName>
         <inputAssignments>
