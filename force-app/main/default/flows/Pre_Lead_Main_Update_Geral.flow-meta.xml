@@ -83,7 +83,7 @@
         <locationX>963</locationX>
         <locationY>769</locationY>
         <defaultConnector>
-            <targetReference>Houve_Altera_o_de_CEP</targetReference>
+            <targetReference>Cupom_Alterado</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
@@ -246,37 +246,12 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Houve_Altera_o_de_CEP</name>
-        <label>Houve Alteração de CEP</label>
-        <locationX>963</locationX>
-        <locationY>1261</locationY>
-        <defaultConnector>
-            <targetReference>Cupom_Alterado</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Não</defaultConnectorLabel>
-        <rules>
-            <name>Sim3</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.CEP__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Buscar_dados_CEP</targetReference>
-            </connector>
-            <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>MGM</name>
         <label>é MGM</label>
         <locationX>809</locationX>
         <locationY>877</locationY>
         <defaultConnector>
-            <targetReference>Houve_Altera_o_de_CEP</targetReference>
+            <targetReference>Cupom_Alterado</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
@@ -373,46 +348,6 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
-        <name>Atualizar_com_novos_Dados</name>
-        <label>Atualizar com novos Dados</label>
-        <locationX>776</locationX>
-        <locationY>1457</locationY>
-        <connector>
-            <targetReference>Cupom_Alterado</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Address__c</field>
-            <value>
-                <elementReference>Buscar_dados_CEP.logradouro</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>City__c</field>
-            <value>
-                <elementReference>Buscar_dados_CEP.cidade</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Distribuidora__c</field>
-            <value>
-                <elementReference>Buscar_dados_CEP.Distribuidora</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>District__c</field>
-            <value>
-                <elementReference>Buscar_dados_CEP.bairro</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>UF__c</field>
-            <value>
-                <elementReference>Buscar_dados_CEP.UF</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
         <name>Atualizar_Status</name>
         <label>Atualizar Status</label>
         <locationX>182</locationX>
@@ -440,7 +375,7 @@
     </recordUpdates>
     <start>
         <locationX>846</locationX>
-        <locationY>50</locationY>
+        <locationY>49</locationY>
         <connector>
             <targetReference>Grupo_Economico_Alterado</targetReference>
         </connector>
@@ -449,23 +384,6 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
-    <subflows>
-        <name>Buscar_dados_CEP</name>
-        <label>Buscar dados CEP</label>
-        <locationX>777</locationX>
-        <locationY>1356</locationY>
-        <connector>
-            <targetReference>Atualizar_com_novos_Dados</targetReference>
-        </connector>
-        <flowName>Subfluxo_Buscar_CEP</flowName>
-        <inputAssignments>
-            <name>CEP</name>
-            <value>
-                <elementReference>$Record.CEP__c</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
     <subflows>
         <name>Fluxo_de_Convers_o</name>
         <label>Fluxo de Conversão</label>
@@ -514,7 +432,7 @@
         <locationX>677</locationX>
         <locationY>985</locationY>
         <connector>
-            <targetReference>Houve_Altera_o_de_CEP</targetReference>
+            <targetReference>Cupom_Alterado</targetReference>
         </connector>
         <flowName>Atualizar_MGM</flowName>
         <inputAssignments>
