@@ -3,12 +3,12 @@
     <actionCalls>
         <name>Obter_Cep</name>
         <label>Obter Cep</label>
-        <locationX>842</locationX>
+        <locationX>1172</locationX>
         <locationY>276</locationY>
         <actionName>BuscaCep.ObterCep</actionName>
         <actionType>externalService</actionType>
         <connector>
-            <targetReference>Atualizar_PreLead</targetReference>
+            <targetReference>Localizou_Distribuidora</targetReference>
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -95,6 +95,59 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Distribuidora_Atendida</name>
+        <label>Distribuidora Atendida</label>
+        <locationX>974</locationX>
+        <locationY>492</locationY>
+        <defaultConnector>
+            <targetReference>Atualizar_PreLead_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Não</defaultConnectorLabel>
+        <rules>
+            <name>Sim4</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Obter_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1246.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Obter_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1251.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Obter_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1232.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Obter_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1261.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Obter_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1067.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Atualizar_PreLead</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Empresa</name>
         <label>Empresa</label>
         <locationX>182</locationX>
@@ -131,6 +184,31 @@
                 <targetReference>Atualizar_Delta_Inside_Sales</targetReference>
             </connector>
             <label>Delta Inside Sales</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Localizou_Distribuidora</name>
+        <label>Localizou Distribuidora</label>
+        <locationX>1172</locationX>
+        <locationY>384</locationY>
+        <defaultConnector>
+            <targetReference>Atualiza_PreLeaad</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Não</defaultConnectorLabel>
+        <rules>
+            <name>Sim2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obter_Cep.2XX.nomeFantasia</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Distribuidora_Atendida</targetReference>
+            </connector>
+            <label>Sim</label>
         </rules>
     </decisions>
     <decisions>
@@ -284,6 +362,19 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>Atualiza_PreLeaad</name>
+        <label>Atualiza Pré-Leaad</label>
+        <locationX>1370</locationX>
+        <locationY>492</locationY>
+        <inputAssignments>
+            <field>Distribuidora__c</field>
+            <value>
+                <stringValue>Não Localizada</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Atualizar_Delta_Inside_Sales</name>
         <label>Atualizar Delta Inside Sales</label>
         <locationX>50</locationX>
@@ -334,7 +425,7 @@
         <name>Atualizar_PreLead</name>
         <label>Atualizar Pré-Lead</label>
         <locationX>842</locationX>
-        <locationY>384</locationY>
+        <locationY>600</locationY>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -345,6 +436,49 @@
             <field>City__c</field>
             <value>
                 <elementReference>Obter_Cep.2XX.cidade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Distribuidora__c</field>
+            <value>
+                <elementReference>Obter_Cep.2XX.nomeFantasia</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>District__c</field>
+            <value>
+                <elementReference>Obter_Cep.2XX.bairro</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UF__c</field>
+            <value>
+                <elementReference>Obter_Cep.2XX.uf</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Atualizar_PreLead_0</name>
+        <label>Atualizar Pré-Lead</label>
+        <locationX>1106</locationX>
+        <locationY>600</locationY>
+        <inputAssignments>
+            <field>Address__c</field>
+            <value>
+                <elementReference>Obter_Cep.2XX.logradouroCompleto</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>City__c</field>
+            <value>
+                <elementReference>Obter_Cep.2XX.cidade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DistribuidoraNaoAtendida__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -384,7 +518,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>485</locationX>
+        <locationX>650</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>GetCompany</targetReference>
