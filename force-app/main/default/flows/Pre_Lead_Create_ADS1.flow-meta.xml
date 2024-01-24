@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Obter_Cep</name>
+        <label>Obter Cep</label>
+        <locationX>842</locationX>
+        <locationY>276</locationY>
+        <actionName>BuscaCep.ObterCep</actionName>
+        <actionType>externalService</actionType>
+        <connector>
+            <targetReference>Atualizar_PreLead</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>cep</name>
+            <value>
+                <elementReference>$Record.CEP__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>BuscaCep.ObterCep</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
     <apiVersion>58.0</apiVersion>
     <assignments>
         <name>SetDelta</name>
         <label>SetDelta</label>
         <locationX>468</locationX>
-        <locationY>647</locationY>
+        <locationY>600</locationY>
         <assignmentItems>
             <assignToReference>idDeltaCompany</assignToReference>
             <operator>Assign</operator>
@@ -21,7 +42,7 @@
         <name>SetLUZ</name>
         <label>SetLUZ</label>
         <locationX>732</locationX>
-        <locationY>647</locationY>
+        <locationY>600</locationY>
         <assignmentItems>
             <assignToReference>idLuzCompany</assignToReference>
             <operator>Assign</operator>
@@ -37,7 +58,7 @@
         <name>Company_Name</name>
         <label>Company Name</label>
         <locationX>732</locationX>
-        <locationY>539</locationY>
+        <locationY>492</locationY>
         <defaultConnector>
             <targetReference>LoopCompany</targetReference>
         </defaultConnector>
@@ -77,7 +98,7 @@
         <name>Empresa</name>
         <label>Empresa</label>
         <locationX>182</locationX>
-        <locationY>2147</locationY>
+        <locationY>1884</locationY>
         <defaultConnector>
             <targetReference>Atualizar_LUZ</targetReference>
         </defaultConnector>
@@ -116,9 +137,9 @@
         <name>MGM</name>
         <label>MGM</label>
         <locationX>182</locationX>
-        <locationY>1331</locationY>
+        <locationY>1284</locationY>
         <defaultConnector>
-            <targetReference>Busca_dados_do_Cep</targetReference>
+            <targetReference>Possui_Numero_de_Instala_o</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
@@ -141,7 +162,7 @@
         <name>Parceiro</name>
         <label>É Parceiro?</label>
         <locationX>182</locationX>
-        <locationY>1031</locationY>
+        <locationY>984</locationY>
         <defaultConnector>
             <targetReference>MGM</targetReference>
         </defaultConnector>
@@ -166,7 +187,7 @@
         <name>Possui_Numero_de_Instala_o</name>
         <label>Possui Numero de Instalação</label>
         <locationX>182</locationX>
-        <locationY>1847</locationY>
+        <locationY>1584</locationY>
         <defaultConnector>
             <targetReference>Insere_0_na_Instal_o</targetReference>
         </defaultConnector>
@@ -191,7 +212,7 @@
         <name>Tipo_de_Atualiza_o</name>
         <label>Tipo de Atualização</label>
         <locationX>380</locationX>
-        <locationY>923</locationY>
+        <locationY>876</locationY>
         <defaultConnectorLabel>Geral</defaultConnectorLabel>
         <rules>
             <name>Novo</name>
@@ -220,7 +241,7 @@
         <name>LoopCompany</name>
         <label>LoopCompany</label>
         <locationX>380</locationX>
-        <locationY>431</locationY>
+        <locationY>384</locationY>
         <collectionReference>GetCompany</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -253,7 +274,7 @@
         <name>GetCompany</name>
         <label>GetCompany</label>
         <locationX>380</locationX>
-        <locationY>323</locationY>
+        <locationY>276</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>LoopCompany</targetReference>
@@ -263,50 +284,10 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Atualiza_dados_do_CEP</name>
-        <label>Atualiza dados do CEP</label>
-        <locationX>182</locationX>
-        <locationY>1739</locationY>
-        <connector>
-            <targetReference>Possui_Numero_de_Instala_o</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Address__c</field>
-            <value>
-                <elementReference>Busca_dados_do_Cep.logradouro</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>City__c</field>
-            <value>
-                <elementReference>Busca_dados_do_Cep.cidade</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Distribuidora__c</field>
-            <value>
-                <elementReference>Busca_dados_do_Cep.Distribuidora</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>District__c</field>
-            <value>
-                <elementReference>Busca_dados_do_Cep.bairro</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>UF__c</field>
-            <value>
-                <elementReference>Busca_dados_do_Cep.UF</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
         <name>Atualizar_Delta_Inside_Sales</name>
         <label>Atualizar Delta Inside Sales</label>
         <locationX>50</locationX>
-        <locationY>2255</locationY>
+        <locationY>1992</locationY>
         <inputAssignments>
             <field>Company__c</field>
             <value>
@@ -331,7 +312,7 @@
         <name>Atualizar_LUZ</name>
         <label>Atualizar LUZ</label>
         <locationX>314</locationX>
-        <locationY>2255</locationY>
+        <locationY>1992</locationY>
         <connector>
             <targetReference>Criar_o_Contato</targetReference>
         </connector>
@@ -350,10 +331,47 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
+        <name>Atualizar_PreLead</name>
+        <label>Atualizar Pré-Lead</label>
+        <locationX>842</locationX>
+        <locationY>384</locationY>
+        <inputAssignments>
+            <field>Address__c</field>
+            <value>
+                <elementReference>Obter_Cep.2XX.logradouroCompleto</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>City__c</field>
+            <value>
+                <elementReference>Obter_Cep.2XX.cidade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Distribuidora__c</field>
+            <value>
+                <elementReference>Obter_Cep.2XX.nomeFantasia</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>District__c</field>
+            <value>
+                <elementReference>Obter_Cep.2XX.bairro</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UF__c</field>
+            <value>
+                <elementReference>Obter_Cep.2XX.uf</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Insere_0_na_Instal_o</name>
         <label>Insere 0 na Instalção</label>
         <locationX>270</locationX>
-        <locationY>1955</locationY>
+        <locationY>1692</locationY>
         <connector>
             <targetReference>Empresa</targetReference>
         </connector>
@@ -366,7 +384,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>254</locationX>
+        <locationX>485</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>GetCompany</targetReference>
@@ -381,31 +399,20 @@
         </filters>
         <object>PreLead__c</object>
         <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Obter_Cep</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
     <subflows>
-        <name>Busca_dados_do_Cep</name>
-        <label>Busca dados do Cep</label>
-        <locationX>182</locationX>
-        <locationY>1631</locationY>
-        <connector>
-            <targetReference>Atualiza_dados_do_CEP</targetReference>
-        </connector>
-        <flowName>Subfluxo_Buscar_CEP</flowName>
-        <inputAssignments>
-            <name>CEP</name>
-            <value>
-                <elementReference>$Record.CEP__c</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <subflows>
         <name>Criar_o_Contato</name>
         <label>Criar o Contato</label>
         <locationX>314</locationX>
-        <locationY>2363</locationY>
+        <locationY>2100</locationY>
         <flowName>Subfluxo_prelead_cricao_de_contato</flowName>
         <inputAssignments>
             <name>Record_Id</name>
@@ -418,9 +425,9 @@
         <name>FLUXO_MGM</name>
         <label>FLUXO MGM</label>
         <locationX>50</locationX>
-        <locationY>1439</locationY>
+        <locationY>1392</locationY>
         <connector>
-            <targetReference>Busca_dados_do_Cep</targetReference>
+            <targetReference>Possui_Numero_de_Instala_o</targetReference>
         </connector>
         <flowName>Atualizar_MGM</flowName>
         <inputAssignments>
@@ -434,7 +441,7 @@
         <name>Fluxo_Parceiros</name>
         <label>Fluxo Parceiros</label>
         <locationX>50</locationX>
-        <locationY>1139</locationY>
+        <locationY>1092</locationY>
         <connector>
             <targetReference>MGM</targetReference>
         </connector>
