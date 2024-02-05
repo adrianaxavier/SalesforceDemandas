@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Disparo_Assinou_contrato_primeiro_acesso</name>
+        <label>Disparo Assinou contrato / primeiro acesso</label>
+        <locationX>578</locationX>
+        <locationY>492</locationY>
+        <actionName>Units__c.Disparo_Assinou_contrato_primeiro_acesso</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Units__c.Disparo_Assinou_contrato_primeiro_acesso</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Disparo_documentos_validados</name>
+        <label>Disparo documentos validados</label>
+        <locationX>1106</locationX>
+        <locationY>492</locationY>
+        <actionName>Units__c.Disparo_documentos_validados</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Units__c.Disparo_documentos_validados</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Disparo_troca_de_titularidade_em_andamento</name>
+        <label>Disparo troca de titularidade em andamento</label>
+        <locationX>1634</locationX>
+        <locationY>492</locationY>
+        <actionName>Units__c.Disparo_troca_de_titularidade_em_andamento</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Units__c.Disparo_troca_de_titularidade_em_andamento</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Disparo_troca_de_titularidade_finalizada</name>
+        <label>Disparo troca de titularidade finalizada</label>
+        <locationX>50</locationX>
+        <locationY>384</locationY>
+        <actionName>Units__c.Disparo_troca_de_titularidade_finalizada</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Units__c.Disparo_troca_de_titularidade_finalizada</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>C_pia_1_de_Onboarding</name>
+        <label>Onboarding</label>
+        <locationX>710</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>C_pia_1_de_Troca_de_titularidade_finalizada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PassoAtual__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Assinou Contrato</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PassoAtual__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Primeiro Acesso</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Atualiza_Controller</targetReference>
+            </connector>
+            <label>Assinou contrato / primeiro acesso</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>C_pia_2_de_Onboarding</name>
+        <label>Onboarding</label>
+        <locationX>1238</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>C_pia_2_de_Troca_de_titularidade_finalizada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PassoAtual__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Documentos validados</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C_pia_1_de_Atualiza_Controller</targetReference>
+            </connector>
+            <label>documentos validados</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>C_pia_3_de_Onboarding</name>
+        <label>Onboarding</label>
+        <locationX>1766</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>C_pia_3_de_Troca_de_titularidade_finalizada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PassoAtual__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Troca de Titularidade em Andamento</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C_pia_2_de_Atualiza_Controller</targetReference>
+            </connector>
+            <label>troca de titularidade em andamento</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Onbdng</name>
+        <label>Onboarding</label>
+        <locationX>182</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>Troca_de_titularidade_finalizad</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PassoAtual__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Troca de Titularidade Finalizada</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Disparo_troca_de_titularidade_finalizada</targetReference>
+            </connector>
+            <label>Troca de titularidade finalizada</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>[UNIDADES] - Main Create/Update After {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[UNIDADES] - Main Create/Update After</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Atualiza_Controller</name>
+        <label>Atualiza Controller</label>
+        <locationX>578</locationX>
+        <locationY>384</locationY>
+        <connector>
+            <targetReference>Disparo_Assinou_contrato_primeiro_acesso</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>control_Assinou_contrato_primeiro_aces__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>C_pia_1_de_Atualiza_Controller</name>
+        <label>Atualiza Controller</label>
+        <locationX>1106</locationX>
+        <locationY>384</locationY>
+        <connector>
+            <targetReference>Disparo_documentos_validados</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>control_documentos_validados__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>C_pia_2_de_Atualiza_Controller</name>
+        <label>Atualiza Controller</label>
+        <locationX>1634</locationX>
+        <locationY>384</locationY>
+        <connector>
+            <targetReference>Disparo_troca_de_titularidade_em_andamento</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>control_troca_de_titularidade_em_anda__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>848</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Onbdng</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>PassoAtual__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Assinou Contrato</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PassoAtual__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Documentos validados</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PassoAtual__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Troca de Titularidade em Andamento</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PassoAtual__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Primeiro Acesso</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PassoAtual__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Troca de Titularidade Finalizada</stringValue>
+            </value>
+        </filters>
+        <object>Units__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Assinou_contrato</name>
+            <connector>
+                <targetReference>C_pia_1_de_Onboarding</targetReference>
+            </connector>
+            <label>Assinou contrato/primeiro acesso</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>LastModifiedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Documentos_Validados</name>
+            <connector>
+                <targetReference>C_pia_2_de_Onboarding</targetReference>
+            </connector>
+            <label>Documentos Validados</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>LastModifiedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Troca_de_titularidade_em_Andamento</name>
+            <connector>
+                <targetReference>C_pia_3_de_Onboarding</targetReference>
+            </connector>
+            <label>Troca de titularidade em Andamento</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>LastModifiedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,6 @@
+Olá.
+
+A Unidade {!Units__c.Name} entrou no Status de troca de titularidade finalizada
+
+Por favor, verifique a mesma no link abaixo:
+{!Units__c.Link}
