@@ -31,6 +31,10 @@
                 <behavior>Edit</behavior>
                 <field>Observacao__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Ultima_tarefa__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>

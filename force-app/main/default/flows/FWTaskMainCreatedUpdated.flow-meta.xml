@@ -313,6 +313,12 @@
                 <elementReference>forQtdContato</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>Ultima_tarefa__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
         <object>EconomicGroup__c</object>
     </recordUpdates>
     <recordUpdates>
