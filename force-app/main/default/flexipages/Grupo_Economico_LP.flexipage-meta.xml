@@ -98,10 +98,6 @@
                 <identifier>RecordProduct_cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <name>Facet-b4636ac4-2f24-4a88-bf61-cd5cee918449</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
@@ -112,6 +108,10 @@
                 <identifier>RecordContactNumber_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <name>Facet-b4636ac4-2f24-4a88-bf61-cd5cee918449</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
@@ -120,6 +120,46 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.UCQuantity__c</fieldItem>
                 <identifier>RecordUCQuantity_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Ultima_tarefa__c</fieldItem>
+                <identifier>RecordUltima_tarefa_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Pre_Leads_Convertidos__c</fieldItem>
+                <identifier>RecordPre_Leads_Convertidos_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Pre_Leads_Desqualificados__c</fieldItem>
+                <identifier>RecordPre_Leads_Desqualificados_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Pre_Leads_Em_Andamento__c</fieldItem>
+                <identifier>RecordPre_Leads_Em_Andamento_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
