@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AQUISIÇÃO</fullName>
+                <default>false</default>
+                <label>AQUISIÇÃO</label>
+            </value>
+            <value>
+                <fullName>INTERESSE LUZ</fullName>
+                <default>false</default>
+                <label>INTERESSE LUZ</label>
+            </value>
+            <value>
+                <fullName>OUTROS</fullName>
+                <default>false</default>
+                <label>OUTROS</label>
+            </value>
+            <value>
+                <fullName>VISITA TÉCNICA</fullName>
+                <default>false</default>
+                <label>VISITA TÉCNICA</label>
+            </value>
+            <value>
+                <fullName>APP</fullName>
+                <default>false</default>
+                <label>APP</label>
+            </value>
+            <value>
+                <fullName>CONTRATO</fullName>
+                <default>false</default>
+                <label>CONTRATO</label>
+            </value>
+            <value>
+                <fullName>FATURA</fullName>
+                <default>false</default>
+                <label>FATURA</label>
+            </value>
+            <value>
+                <fullName>PAGAMENTO</fullName>
+                <default>false</default>
+                <label>PAGAMENTO</label>
+            </value>
+            <value>
+                <fullName>UPLOAD DOCUMENTAÇÃO</fullName>
+                <default>false</default>
+                <label>UPLOAD DOCUMENTAÇÃO</label>
+            </value>
+            <value>
+                <fullName>MIGRAÇÃO</fullName>
+                <default>false</default>
+                <label>MIGRAÇÃO</label>
+            </value>
+            <value>
+                <fullName>MEDIDOR</fullName>
+                <default>false</default>
+                <label>MEDIDOR</label>
+            </value>
+            <value>
+                <fullName>BOAS VINDAS</fullName>
+                <default>false</default>
+                <label>BOAS VINDAS</label>
+            </value>
+            <value>
+                <fullName>DISTRIBUIDORA</fullName>
+                <default>false</default>
+                <label>DISTRIBUIDORA</label>
+            </value>
+            <value>
+                <fullName>CADASTRO</fullName>
+                <default>false</default>
+                <label>CADASTRO</label>
+            </value>
+            <value>
+                <fullName>RECLAMAÇÃO</fullName>
+                <default>false</default>
+                <label>RECLAMAÇÃO</label>
+            </value>
+            <value>
+                <fullName>CHAMADO</fullName>
+                <default>false</default>
+                <label>CHAMADO</label>
+            </value>
+            <value>
+                <fullName>AÇÃO ISOLADA</fullName>
+                <default>false</default>
+                <label>AÇÃO ISOLADA</label>
+            </value>
+            <value>
+                <fullName>MEMBER GET MEMBER</fullName>
+                <default>false</default>
+                <label>MEMBER GET MEMBER</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
