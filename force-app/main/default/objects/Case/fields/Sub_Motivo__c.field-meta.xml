@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Motivo__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Motivo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Motivo__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AGENDAMENTO INSTALAÇÃO</fullName>
+                <default>false</default>
+                <label>AGENDAMENTO INSTALAÇÃO</label>
+            </value>
+            <value>
+                <fullName>AGENDAMENTO MANUTENÇÃO</fullName>
+                <default>false</default>
+                <label>AGENDAMENTO MANUTENÇÃO</label>
+            </value>
+            <value>
+                <fullName>APARELHOS DANIFICADOS</fullName>
+                <default>false</default>
+                <label>APARELHOS DANIFICADOS</label>
+            </value>
+            <value>
+                <fullName>APP</fullName>
+                <default>false</default>
+                <label>APP</label>
+            </value>
+            <value>
+                <fullName>AQUISIÇÃO ACL</fullName>
+                <default>false</default>
+                <label>AQUISIÇÃO ACL</label>
+            </value>
+            <value>
+                <fullName>ATUALIZAÇÃO APP</fullName>
+                <default>false</default>
+                <label>ATUALIZAÇÃO APP</label>
+            </value>
+            <value>
+                <fullName>CANCELAMENTO DE CONTRATO</fullName>
+                <default>false</default>
+                <label>CANCELAMENTO DE CONTRATO</label>
+            </value>
+            <value>
+                <fullName>CANCELAMENTO FATURA LUZ</fullName>
+                <default>false</default>
+                <label>CANCELAMENTO FATURA LUZ</label>
+            </value>
+            <value>
+                <fullName>COM MEDIDOR INSTALADO</fullName>
+                <default>false</default>
+                <label>COM MEDIDOR INSTALADO</label>
+            </value>
+            <value>
+                <fullName>CONSULTA DE CHAMADO</fullName>
+                <default>false</default>
+                <label>CONSULTA DE CHAMADO</label>
+            </value>
+            <value>
+                <fullName>CONTRATO GERADO</fullName>
+                <default>false</default>
+                <label>CONTRATO GERADO</label>
+            </value>
+            <value>
+                <fullName>DADOS CADASTRAIS</fullName>
+                <default>false</default>
+                <label>DADOS CADASTRAIS</label>
+            </value>
+            <value>
+                <fullName>DESQUALIFICADO</fullName>
+                <default>false</default>
+                <label>DESQUALIFICADO</label>
+            </value>
+            <value>
+                <fullName>DIVERSOS</fullName>
+                <default>false</default>
+                <label>DIVERSOS</label>
+            </value>
+            <value>
+                <fullName>DUPLICIDADE DE PAGAMENTOS</fullName>
+                <default>false</default>
+                <label>DUPLICIDADE DE PAGAMENTOS</label>
+            </value>
+            <value>
+                <fullName>DÚVIDAS SOBRE A MIGRAÇÃO</fullName>
+                <default>false</default>
+                <label>DÚVIDAS SOBRE A MIGRAÇÃO</label>
+            </value>
+            <value>
+                <fullName>DÚVIDAS SOBRE A VISITA</fullName>
+                <default>false</default>
+                <label>DÚVIDAS SOBRE A VISITA</label>
+            </value>
+            <value>
+                <fullName>DÚVIDAS SOBRE CONTRATO</fullName>
+                <default>false</default>
+                <label>DÚVIDAS SOBRE CONTRATO</label>
+            </value>
+            <value>
+                <fullName>DÚVIDAS SOBRE DOCUMENTAÇÃO</fullName>
+                <default>false</default>
+                <label>DÚVIDAS SOBRE DOCUMENTAÇÃO</label>
+            </value>
+            <value>
+                <fullName>DÚVIDAS SOBRE FATURA/PAGAMENTOS</fullName>
+                <default>false</default>
+                <label>DÚVIDAS SOBRE FATURA/PAGAMENTOS</label>
+            </value>
+            <value>
+                <fullName>DÚVIDAS SOBRE MEDIDOR</fullName>
+                <default>false</default>
+                <label>DÚVIDAS SOBRE MEDIDOR</label>
+            </value>
+            <value>
+                <fullName>DÚVIDAS SOBRE O APP</fullName>
+                <default>false</default>
+                <label>DÚVIDAS SOBRE O APP</label>
+            </value>
+            <value>
+                <fullName>DÚVIDAS SOBRE PRODUTO/EMPRESA</fullName>
+                <default>false</default>
+                <label>DÚVIDAS SOBRE PRODUTO/EMPRESA</label>
+            </value>
+            <value>
+                <fullName>ENGANO</fullName>
+                <default>false</default>
+                <label>ENGANO</label>
+            </value>
+            <value>
+                <fullName>ENVIO/ENTREGA DO MEDIDOR</fullName>
+                <default>false</default>
+                <label>ENVIO/ENTREGA DO MEDIDOR</label>
+            </value>
+            <value>
+                <fullName>ERRO DE UPLOAD</fullName>
+                <default>false</default>
+                <label>ERRO DE UPLOAD</label>
+            </value>
+            <value>
+                <fullName>ERRO NO CÓDIGO DE BARRAS</fullName>
+                <default>false</default>
+                <label>ERRO NO CÓDIGO DE BARRAS</label>
+            </value>
+            <value>
+                <fullName>ERROS NO APP</fullName>
+                <default>false</default>
+                <label>ERROS NO APP</label>
+            </value>
+            <value>
+                <fullName>FALHAS NO MEDIDOR</fullName>
+                <default>false</default>
+                <label>FALHAS NO MEDIDOR</label>
+            </value>
+            <value>
+                <fullName>FALTA DE ENERGIA</fullName>
+                <default>false</default>
+                <label>FALTA DE ENERGIA</label>
+            </value>
+            <value>
+                <fullName>FATURA INDISPONIVEL</fullName>
+                <default>false</default>
+                <label>FATURA INDISPONIVEL</label>
+            </value>
+            <value>
+                <fullName>FATURAS/CONTAS DISTRIBUIDORA</fullName>
+                <default>false</default>
+                <label>FATURAS/CONTAS DISTRIBUIDORA</label>
+            </value>
+            <value>
+                <fullName>FOLLOW UP</fullName>
+                <default>false</default>
+                <label>FOLLOW UP</label>
+            </value>
+            <value>
+                <fullName>INTERESSE SEM FATURA</fullName>
+                <default>false</default>
+                <label>INTERESSE SEM FATURA</label>
+            </value>
+            <value>
+                <fullName>INVIABILIDADE TÉCNICA</fullName>
+                <default>false</default>
+                <label>INVIABILIDADE TÉCNICA</label>
+            </value>
+            <value>
+                <fullName>LEMBRETE DE PAGAMENTO CPFL</fullName>
+                <default>false</default>
+                <label>LEMBRETE DE PAGAMENTO CPFL</label>
+            </value>
+            <value>
+                <fullName>LEMBRETE DE PAGAMENTO LUZ</fullName>
+                <default>false</default>
+                <label>LEMBRETE DE PAGAMENTO LUZ</label>
+            </value>
+            <value>
+                <fullName>MEDIDOR</fullName>
+                <default>false</default>
+                <label>MEDIDOR</label>
+            </value>
+            <value>
+                <fullName>MIGRAÇÃO</fullName>
+                <default>false</default>
+                <label>MIGRAÇÃO</label>
+            </value>
+            <value>
+                <fullName>MUDANÇA DE ENDEREÇO</fullName>
+                <default>false</default>
+                <label>MUDANÇA DE ENDEREÇO</label>
+            </value>
+            <value>
+                <fullName>PARCERIA</fullName>
+                <default>false</default>
+                <label>PARCERIA</label>
+            </value>
+            <value>
+                <fullName>PROBLEMAS COM A DISTRIBUIDORA</fullName>
+                <default>false</default>
+                <label>PROBLEMAS COM A DISTRIBUIDORA</label>
+            </value>
+            <value>
+                <fullName>PROBLEMAS COM A FATURA</fullName>
+                <default>false</default>
+                <label>PROBLEMAS COM A FATURA</label>
+            </value>
+            <value>
+                <fullName>PROBLEMAS COM A VISITA</fullName>
+                <default>false</default>
+                <label>PROBLEMAS COM A VISITA</label>
+            </value>
+            <value>
+                <fullName>REENVIO DO CONTRATO</fullName>
+                <default>false</default>
+                <label>REENVIO DO CONTRATO</label>
+            </value>
+            <value>
+                <fullName>RETORNO AGENDADO</fullName>
+                <default>false</default>
+                <label>RETORNO AGENDADO</label>
+            </value>
+            <value>
+                <fullName>SEGUNDA VIA</fullName>
+                <default>false</default>
+                <label>SEGUNDA VIA</label>
+            </value>
+            <value>
+                <fullName>SEM INTERAÇÃO</fullName>
+                <default>false</default>
+                <label>SEM INTERAÇÃO</label>
+            </value>
+            <value>
+                <fullName>SEM MEDIDOR INSTALADO</fullName>
+                <default>false</default>
+                <label>SEM MEDIDOR INSTALADO</label>
+            </value>
+            <value>
+                <fullName>SIMULAÇÃO</fullName>
+                <default>false</default>
+                <label>SIMULAÇÃO</label>
+            </value>
+            <value>
+                <fullName>SITE</fullName>
+                <default>false</default>
+                <label>SITE</label>
+            </value>
+            <value>
+                <fullName>SOLICITAÇÃO DE UPLOAD</fullName>
+                <default>false</default>
+                <label>SOLICITAÇÃO DE UPLOAD</label>
+            </value>
+            <value>
+                <fullName>SPAM</fullName>
+                <default>false</default>
+                <label>SPAM</label>
+            </value>
+            <value>
+                <fullName>SUGESTÃO</fullName>
+                <default>false</default>
+                <label>SUGESTÃO</label>
+            </value>
+            <value>
+                <fullName>TRABALHE CONOSCO</fullName>
+                <default>false</default>
+                <label>TRABALHE CONOSCO</label>
+            </value>
+            <value>
+                <fullName>TRANSFERENCIA INSIDE SALES</fullName>
+                <default>false</default>
+                <label>TRANSFERENCIA INSIDE SALES</label>
+            </value>
+            <value>
+                <fullName>TROCA DE TITULARIDADE</fullName>
+                <default>false</default>
+                <label>TROCA DE TITULARIDADE</label>
+            </value>
+            <value>
+                <fullName>UPGRADE DE PLANO</fullName>
+                <default>false</default>
+                <label>UPGRADE DE PLANO</label>
+            </value>
+            <value>
+                <fullName>UPLOAD INTERNO</fullName>
+                <default>false</default>
+                <label>UPLOAD INTERNO</label>
+            </value>
+            <value>
+                <fullName>AQUISIÇÃO</fullName>
+                <default>false</default>
+                <label>AQUISIÇÃO</label>
+            </value>
+            <value>
+                <fullName>INTERESSE LUZ</fullName>
+                <default>false</default>
+                <label>INTERESSE LUZ</label>
+            </value>
+            <value>
+                <fullName>OUTROS</fullName>
+                <default>false</default>
+                <label>OUTROS</label>
+            </value>
+            <value>
+                <fullName>VISITA TÉCNICA</fullName>
+                <default>false</default>
+                <label>VISITA TÉCNICA</label>
+            </value>
+            <value>
+                <fullName>CONTRATO</fullName>
+                <default>false</default>
+                <label>CONTRATO</label>
+            </value>
+            <value>
+                <fullName>FATURA</fullName>
+                <default>false</default>
+                <label>FATURA</label>
+            </value>
+            <value>
+                <fullName>PAGAMENTO</fullName>
+                <default>false</default>
+                <label>PAGAMENTO</label>
+            </value>
+            <value>
+                <fullName>UPLOAD DOCUMENTAÇÃO</fullName>
+                <default>false</default>
+                <label>UPLOAD DOCUMENTAÇÃO</label>
+            </value>
+            <value>
+                <fullName>BOAS VINDAS</fullName>
+                <default>false</default>
+                <label>BOAS VINDAS</label>
+            </value>
+            <value>
+                <fullName>DISTRIBUIDORA</fullName>
+                <default>false</default>
+                <label>DISTRIBUIDORA</label>
+            </value>
+            <value>
+                <fullName>CADASTRO</fullName>
+                <default>false</default>
+                <label>CADASTRO</label>
+            </value>
+            <value>
+                <fullName>RECLAMAÇÃO</fullName>
+                <default>false</default>
+                <label>RECLAMAÇÃO</label>
+            </value>
+            <value>
+                <fullName>INTERNO</fullName>
+                <default>false</default>
+                <label>INTERNO</label>
+            </value>
+            <value>
+                <fullName>FORA DA ÁREA DE COBERTURA</fullName>
+                <default>false</default>
+                <label>FORA DA ÁREA DE COBERTURA</label>
+            </value>
+            <value>
+                <fullName>FATURAS REEMITIDAS</fullName>
+                <default>false</default>
+                <label>FATURAS REEMITIDAS</label>
+            </value>
+            <value>
+                <fullName>MARKETING</fullName>
+                <default>false</default>
+                <label>MARKETING</label>
+            </value>
+            <value>
+                <fullName>CONSULTA MGM</fullName>
+                <default>false</default>
+                <label>CONSULTA MGM</label>
+            </value>
+            <value>
+                <fullName>DÚVIDAS SOBRE MGM</fullName>
+                <default>false</default>
+                <label>DÚVIDAS SOBRE MGM</label>
+            </value>
+            <value>
+                <fullName>ERROS DO MGM</fullName>
+                <default>false</default>
+                <label>ERROS DO MGM</label>
+            </value>
+            <value>
+                <fullName>TI</fullName>
+                <default>false</default>
+                <label>TI</label>
+            </value>
+            <value>
+                <fullName>MEMBER GET MEMBER</fullName>
+                <default>false</default>
+                <label>MEMBER GET MEMBER</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>MIGRAÇÃO</controllingFieldValue>
+            <valueName>FOLLOW UP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MIGRAÇÃO</controllingFieldValue>
+            <valueName>LEMBRETE DE PAGAMENTO CPFL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MIGRAÇÃO</controllingFieldValue>
+            <valueName>TROCA DE TITULARIDADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MEDIDOR</controllingFieldValue>
+            <valueName>DÚVIDAS SOBRE MEDIDOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MEDIDOR</controllingFieldValue>
+            <valueName>ENVIO/ENTREGA DO MEDIDOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MEDIDOR</controllingFieldValue>
+            <valueName>FALHAS NO MEDIDOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MEDIDOR</controllingFieldValue>
+            <valueName>INVIABILIDADE TÉCNICA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOAS VINDAS</controllingFieldValue>
+            <valueName>COM MEDIDOR INSTALADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOAS VINDAS</controllingFieldValue>
+            <valueName>SEM MEDIDOR INSTALADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DISTRIBUIDORA</controllingFieldValue>
+            <valueName>APARELHOS DANIFICADOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DISTRIBUIDORA</controllingFieldValue>
+            <valueName>FALTA DE ENERGIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DISTRIBUIDORA</controllingFieldValue>
+            <valueName>FATURAS/CONTAS DISTRIBUIDORA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DISTRIBUIDORA</controllingFieldValue>
+            <valueName>PROBLEMAS COM A DISTRIBUIDORA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CADASTRO</controllingFieldValue>
+            <valueName>DADOS CADASTRAIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CADASTRO</controllingFieldValue>
+            <valueName>MUDANÇA DE ENDEREÇO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CADASTRO</controllingFieldValue>
+            <valueName>UPGRADE DE PLANO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RECLAMAÇÃO</controllingFieldValue>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>APP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RECLAMAÇÃO</controllingFieldValue>
+            <controllingFieldValue>INTERESSE LUZ</controllingFieldValue>
+            <valueName>DIVERSOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RECLAMAÇÃO</controllingFieldValue>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>MEDIDOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RECLAMAÇÃO</controllingFieldValue>
+            <valueName>MIGRAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RECLAMAÇÃO</controllingFieldValue>
+            <valueName>SITE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RECLAMAÇÃO</controllingFieldValue>
+            <valueName>SUGESTÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>CONSULTA DE CHAMADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <controllingFieldValue>AÇÃO ISOLADA</controllingFieldValue>
+            <valueName>OUTROS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>CONTRATO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>FATURA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>PAGAMENTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>UPLOAD DOCUMENTAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>DISTRIBUIDORA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>CADASTRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>TI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHAMADO</controllingFieldValue>
+            <valueName>MEMBER GET MEMBER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AÇÃO ISOLADA</controllingFieldValue>
+            <valueName>FATURAS REEMITIDAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AÇÃO ISOLADA</controllingFieldValue>
+            <valueName>MARKETING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MEMBER GET MEMBER</controllingFieldValue>
+            <valueName>CONSULTA MGM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MEMBER GET MEMBER</controllingFieldValue>
+            <valueName>DÚVIDAS SOBRE MGM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MEMBER GET MEMBER</controllingFieldValue>
+            <valueName>ERROS DO MGM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AQUISIÇÃO</controllingFieldValue>
+            <valueName>AQUISIÇÃO ACL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AQUISIÇÃO</controllingFieldValue>
+            <valueName>CONTRATO GERADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AQUISIÇÃO</controllingFieldValue>
+            <valueName>DESQUALIFICADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AQUISIÇÃO</controllingFieldValue>
+            <valueName>DÚVIDAS SOBRE PRODUTO/EMPRESA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AQUISIÇÃO</controllingFieldValue>
+            <valueName>INTERESSE SEM FATURA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AQUISIÇÃO</controllingFieldValue>
+            <valueName>RETORNO AGENDADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AQUISIÇÃO</controllingFieldValue>
+            <valueName>SIMULAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AQUISIÇÃO</controllingFieldValue>
+            <valueName>TRANSFERENCIA INSIDE SALES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERESSE LUZ</controllingFieldValue>
+            <valueName>PARCERIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERESSE LUZ</controllingFieldValue>
+            <valueName>TRABALHE CONOSCO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OUTROS</controllingFieldValue>
+            <valueName>ENGANO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OUTROS</controllingFieldValue>
+            <valueName>SEM INTERAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OUTROS</controllingFieldValue>
+            <valueName>SPAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OUTROS</controllingFieldValue>
+            <valueName>INTERNO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISITA TÉCNICA</controllingFieldValue>
+            <valueName>AGENDAMENTO INSTALAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISITA TÉCNICA</controllingFieldValue>
+            <valueName>AGENDAMENTO MANUTENÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISITA TÉCNICA</controllingFieldValue>
+            <valueName>DÚVIDAS SOBRE A VISITA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISITA TÉCNICA</controllingFieldValue>
+            <valueName>PROBLEMAS COM A VISITA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APP</controllingFieldValue>
+            <valueName>ATUALIZAÇÃO APP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APP</controllingFieldValue>
+            <valueName>DÚVIDAS SOBRE O APP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APP</controllingFieldValue>
+            <valueName>ERROS NO APP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONTRATO</controllingFieldValue>
+            <valueName>CANCELAMENTO DE CONTRATO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONTRATO</controllingFieldValue>
+            <valueName>DÚVIDAS SOBRE CONTRATO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONTRATO</controllingFieldValue>
+            <valueName>REENVIO DO CONTRATO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FATURA</controllingFieldValue>
+            <valueName>DÚVIDAS SOBRE FATURA/PAGAMENTOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FATURA</controllingFieldValue>
+            <valueName>FATURA INDISPONIVEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FATURA</controllingFieldValue>
+            <valueName>PROBLEMAS COM A FATURA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FATURA</controllingFieldValue>
+            <valueName>SEGUNDA VIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAGAMENTO</controllingFieldValue>
+            <valueName>CANCELAMENTO FATURA LUZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAGAMENTO</controllingFieldValue>
+            <valueName>DUPLICIDADE DE PAGAMENTOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAGAMENTO</controllingFieldValue>
+            <valueName>ERRO NO CÓDIGO DE BARRAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAGAMENTO</controllingFieldValue>
+            <valueName>LEMBRETE DE PAGAMENTO LUZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UPLOAD DOCUMENTAÇÃO</controllingFieldValue>
+            <valueName>DÚVIDAS SOBRE DOCUMENTAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UPLOAD DOCUMENTAÇÃO</controllingFieldValue>
+            <valueName>ERRO DE UPLOAD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UPLOAD DOCUMENTAÇÃO</controllingFieldValue>
+            <valueName>SOLICITAÇÃO DE UPLOAD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UPLOAD DOCUMENTAÇÃO</controllingFieldValue>
+            <valueName>UPLOAD INTERNO</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
