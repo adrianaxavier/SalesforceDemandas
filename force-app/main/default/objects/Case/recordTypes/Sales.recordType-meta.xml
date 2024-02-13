@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales</fullName>
+    <active>true</active>
+    <businessProcess>Central Atendimento</businessProcess>
+    <label>Vendas</label>
+    <picklistValues>
+        <picklist>AcessPlatform__c</picklist>
+        <values>
+            <fullName>Chamado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Softphone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WhatsApp Bidirecional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WhatsApp Marketing Clound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WhatsApp Receptivo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Área logada</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CallboxTypeCall__c</picklist>
+        <values>
+            <fullName>Entrada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saída</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transferência</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Backoffice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dúvida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financeiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sistema</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ContactPlatform__c</picklist>
+        <values>
+            <fullName>Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Softphone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Área logada</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CustomerSegment__c</picklist>
+        <values>
+            <fullName>Alimentício</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comércio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indústria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turismo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LighthouseState__c</picklist>
+        <values>
+            <fullName>Amarelo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermelho</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motivo__c</picklist>
+        <values>
+            <fullName>APP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AQUISIÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AÇÃO ISOLADA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOAS VINDAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CADASTRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHAMADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONTRATO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISTRIBUIDORA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FATURA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTERESSE LUZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIDOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEMBER GET MEMBER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIGRAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OUTROS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAGAMENTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RECLAMAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPLOAD DOCUMENTAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISITA TÉCNICA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>AreaLogada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mídia Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WhatsApp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>2a via do boleto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alterar meus dados</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aumento%2Fdiminuição de demanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chamado aberto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Código da fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data do fim do contrato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Devec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dúvida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Histórico de consumo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outros assuntos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prorrogar data de vencimento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reclamação</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relatório de consumo do mês</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Status da migração</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sugestão</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SatisfactionforProblemsolving__c</picklist>
+        <values>
+            <fullName>Não</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sim</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ServiceChannel__c</picklist>
+        <values>
+            <fullName>Chatbot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midia social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whatsapp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Motivo__c</picklist>
+        <values>
+            <fullName>AGENDAMENTO INSTALAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGENDAMENTO MANUTENÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APARELHOS DANIFICADOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AQUISIÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AQUISIÇÃO ACL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ATUALIZAÇÃO APP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOAS VINDAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CADASTRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CANCELAMENTO DE CONTRATO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CANCELAMENTO FATURA LUZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COM MEDIDOR INSTALADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSULTA DE CHAMADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSULTA MGM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONTRATO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONTRATO GERADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DADOS CADASTRAIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DESQUALIFICADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISTRIBUIDORA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIVERSOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DUPLICIDADE DE PAGAMENTOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DÚVIDAS SOBRE A MIGRAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DÚVIDAS SOBRE A VISITA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DÚVIDAS SOBRE CONTRATO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DÚVIDAS SOBRE DOCUMENTAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DÚVIDAS SOBRE FATURA%2FPAGAMENTOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DÚVIDAS SOBRE MEDIDOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DÚVIDAS SOBRE MGM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DÚVIDAS SOBRE O APP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DÚVIDAS SOBRE PRODUTO%2FEMPRESA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGANO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENVIO%2FENTREGA DO MEDIDOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ERRO DE UPLOAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ERRO NO CÓDIGO DE BARRAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ERROS DO MGM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ERROS NO APP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FALHAS NO MEDIDOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FALTA DE ENERGIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FATURA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FATURA INDISPONIVEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FATURAS REEMITIDAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FATURAS%2FCONTAS DISTRIBUIDORA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOLLOW UP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FORA DA ÁREA DE COBERTURA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTERESSE LUZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTERESSE SEM FATURA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTERNO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INVIABILIDADE TÉCNICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEMBRETE DE PAGAMENTO CPFL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEMBRETE DE PAGAMENTO LUZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MARKETING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIDOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEMBER GET MEMBER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIGRAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUDANÇA DE ENDEREÇO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OUTROS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAGAMENTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PARCERIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROBLEMAS COM A DISTRIBUIDORA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROBLEMAS COM A FATURA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROBLEMAS COM A VISITA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RECLAMAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REENVIO DO CONTRATO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETORNO AGENDADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEGUNDA VIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEM INTERAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEM MEDIDOR INSTALADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIMULAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SITE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOLICITAÇÃO DE UPLOAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUGESTÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRABALHE CONOSCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSFERENCIA INSIDE SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TROCA DE TITULARIDADE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPGRADE DE PLANO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPLOAD DOCUMENTAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPLOAD INTERNO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISITA TÉCNICA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tp_Contato__c</picklist>
+        <values>
+            <fullName>Ativo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receptivo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TransferTo__c</picklist>
+        <values>
+            <fullName>Atendimento N1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atendimento N2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BackOffice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
