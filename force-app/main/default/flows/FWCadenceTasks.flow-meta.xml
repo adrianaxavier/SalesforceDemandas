@@ -4,8 +4,8 @@
     <assignments>
         <name>Atribuicao_Loop_Call</name>
         <label>Atribuição Loop Call</label>
-        <locationX>2373</locationX>
-        <locationY>1785</locationY>
+        <locationX>3508</locationX>
+        <locationY>1770</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Add</operator>
@@ -20,8 +20,8 @@
     <assignments>
         <name>Atribuicao_Loop_Call_Opp</name>
         <label>Atribuição Loop Call</label>
-        <locationX>1060</locationX>
-        <locationY>1606</locationY>
+        <locationX>1500</locationX>
+        <locationY>2361</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Add</operator>
@@ -34,10 +34,26 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Atribuicao_Loop_Call_PreLead</name>
+        <label>Atribuição Loop Call</label>
+        <locationX>3053</locationX>
+        <locationY>3235</locationY>
+        <assignmentItems>
+            <assignToReference>iLoop</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>VerifyAmountTaskInformCall_PreLead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Atribuicao_Loop_Email</name>
         <label>Atribuição Loop Email</label>
-        <locationX>3430</locationX>
-        <locationY>2089</locationY>
+        <locationX>4565</locationX>
+        <locationY>2074</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Add</operator>
@@ -52,8 +68,8 @@
     <assignments>
         <name>Atribuicao_Loop_Email_Opp</name>
         <label>Atribuição Loop Call</label>
-        <locationX>50</locationX>
-        <locationY>2040</locationY>
+        <locationX>490</locationX>
+        <locationY>2795</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Add</operator>
@@ -66,10 +82,26 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Atribuicao_Loop_Email_PreLead</name>
+        <label>Atribuição Loop Email</label>
+        <locationX>4110</locationX>
+        <locationY>3539</locationY>
+        <assignmentItems>
+            <assignToReference>iLoop</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>VerifyAmountTaskInformEmail_PreLead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Atribuicao_Loop_Whats</name>
         <label>Atribuição Loop Whats</label>
-        <locationX>2875</locationX>
-        <locationY>1981</locationY>
+        <locationX>4010</locationX>
+        <locationY>1966</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Add</operator>
@@ -84,8 +116,8 @@
     <assignments>
         <name>Atribuicao_Loop_Whats_Opp</name>
         <label>Atribuição Loop Whats</label>
-        <locationX>562</locationX>
-        <locationY>1845</locationY>
+        <locationX>1002</locationX>
+        <locationY>2600</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Add</operator>
@@ -98,10 +130,26 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Atribuicao_Loop_Whats_PreLead</name>
+        <label>Atribuição Loop Whats</label>
+        <locationX>3555</locationX>
+        <locationY>3431</locationY>
+        <assignmentItems>
+            <assignToReference>iLoop</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>VerifyAmountTaskInformWhats_PreLead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Atribuir_loop_Chamada</name>
         <label>Atribuir loop Chamada</label>
-        <locationX>2031</locationX>
-        <locationY>1199</locationY>
+        <locationX>3166</locationX>
+        <locationY>1184</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Assign</operator>
@@ -116,8 +164,8 @@
     <assignments>
         <name>Atribuir_loop_Chamada_Opp</name>
         <label>Atribuir loop Chamada</label>
-        <locationX>1248</locationX>
-        <locationY>1198</locationY>
+        <locationX>1688</locationX>
+        <locationY>1953</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Assign</operator>
@@ -130,10 +178,26 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Atribuir_loop_Chamada_PreLead</name>
+        <label>Atribuir loop Chamada</label>
+        <locationX>2711</locationX>
+        <locationY>2649</locationY>
+        <assignmentItems>
+            <assignToReference>iLoop</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>VerifyAmountTaskInformCall_PreLead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Atribuir_loop_Email</name>
         <label>Atribuir loop Email</label>
-        <locationX>3055</locationX>
-        <locationY>1515</locationY>
+        <locationX>4190</locationX>
+        <locationY>1500</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Assign</operator>
@@ -148,8 +212,8 @@
     <assignments>
         <name>Atribuir_loop_Email_Opp</name>
         <label>Atribuir loop Email</label>
-        <locationX>251</locationX>
-        <locationY>1639</locationY>
+        <locationX>691</locationX>
+        <locationY>2394</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Assign</operator>
@@ -162,10 +226,26 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Atribuir_loop_Email_PreLead</name>
+        <label>Atribuir loop Email</label>
+        <locationX>3735</locationX>
+        <locationY>2965</locationY>
+        <assignmentItems>
+            <assignToReference>iLoop</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>VerifyAmountTaskInformEmail_PreLead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Atribuir_loop_Whats</name>
         <label>Atribuir loop Whats</label>
-        <locationX>2547</locationX>
-        <locationY>1400</locationY>
+        <locationX>3682</locationX>
+        <locationY>1385</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Assign</operator>
@@ -180,8 +260,8 @@
     <assignments>
         <name>Atribuir_loop_Whats_Opp</name>
         <label>Atribuir loop Whats</label>
-        <locationX>767</locationX>
-        <locationY>1404</locationY>
+        <locationX>1207</locationX>
+        <locationY>2159</locationY>
         <assignmentItems>
             <assignToReference>iLoop</assignToReference>
             <operator>Assign</operator>
@@ -194,9 +274,25 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Atribuir_loop_Whats_PreLead</name>
+        <label>Atribuir loop Whats</label>
+        <locationX>3227</locationX>
+        <locationY>2850</locationY>
+        <assignmentItems>
+            <assignToReference>iLoop</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>VerifyAmountTaskInformWhats_PreLead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>SetDefault</name>
         <label>SetDefault</label>
-        <locationX>1126</locationX>
+        <locationX>1611</locationX>
         <locationY>465</locationY>
         <assignmentItems>
             <assignToReference>idDefault</assignToReference>
@@ -212,7 +308,7 @@
     <assignments>
         <name>SetDeltaCadenceCall</name>
         <label>SetDeltaCadenceCall</label>
-        <locationX>2392</locationX>
+        <locationX>2877</locationX>
         <locationY>645</locationY>
         <assignmentItems>
             <assignToReference>idDeltaCadenceCall</assignToReference>
@@ -228,7 +324,7 @@
     <assignments>
         <name>SetDeltaCadenceMessage</name>
         <label>SetDeltaCadenceMessage</label>
-        <locationX>1927</locationX>
+        <locationX>2412</locationX>
         <locationY>542</locationY>
         <assignmentItems>
             <assignToReference>idDeltaCadenceMessage</assignToReference>
@@ -244,7 +340,7 @@
     <assignments>
         <name>SetLuzCadenceCall</name>
         <label>SetLuzCadenceCall</label>
-        <locationX>1313</locationX>
+        <locationX>1798</locationX>
         <locationY>549</locationY>
         <assignmentItems>
             <assignToReference>idLuzCadenceCall</assignToReference>
@@ -260,7 +356,7 @@
     <assignments>
         <name>SetLuzCadenceMessage</name>
         <label>SetLuzCadenceMessage</label>
-        <locationX>2346</locationX>
+        <locationX>2831</locationX>
         <locationY>377</locationY>
         <assignmentItems>
             <assignToReference>idLuzCadenceMessage</assignToReference>
@@ -276,8 +372,8 @@
     <decisions>
         <name>Luz_or_Delta_Call_Lead</name>
         <label>Luz or Delta</label>
-        <locationX>2027</locationX>
-        <locationY>1623</locationY>
+        <locationX>3162</locationX>
+        <locationY>1608</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Luz</name>
@@ -327,8 +423,8 @@
     <decisions>
         <name>Luz_or_Delta_Email_Lead</name>
         <label>Luz or Delta</label>
-        <locationX>3049</locationX>
-        <locationY>1918</locationY>
+        <locationX>4184</locationX>
+        <locationY>1903</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Luz_Email_Lead</name>
@@ -378,8 +474,8 @@
     <decisions>
         <name>Luz_or_Delta_Whats_Lead</name>
         <label>Luz or Delta</label>
-        <locationX>2539</locationX>
-        <locationY>1832</locationY>
+        <locationX>3674</locationX>
+        <locationY>1817</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Luz_Whats_Lead</name>
@@ -427,10 +523,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Opportunity_or_Lead</name>
-        <label>Opportunity or Lead?</label>
-        <locationX>1639</locationX>
-        <locationY>1209</locationY>
+        <name>Object_Decision</name>
+        <label>Object Decision</label>
+        <locationX>2124</locationX>
+        <locationY>1689</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Opp</name>
@@ -476,11 +572,33 @@
             </connector>
             <label>Lead</label>
         </rules>
+        <rules>
+            <name>PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varPreLead</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varPreLead.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>VerifyAmountTaskCalls_PreLead</targetReference>
+            </connector>
+            <label>PreLead</label>
+        </rules>
     </decisions>
     <decisions>
         <name>RecordTypeDecision</name>
         <label>RecordTypeDecision</label>
-        <locationX>1611</locationX>
+        <locationX>2096</locationX>
         <locationY>758</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -562,8 +680,8 @@
     <decisions>
         <name>VerifyAmountTaskCalls</name>
         <label>Verifica se há números de Chamadas</label>
-        <locationX>2022</locationX>
-        <locationY>933</locationY>
+        <locationX>3157</locationX>
+        <locationY>918</locationY>
         <defaultConnector>
             <targetReference>VerifyAmountTaskWhats</targetReference>
         </defaultConnector>
@@ -591,8 +709,8 @@
     <decisions>
         <name>VerifyAmountTaskCalls_Opp</name>
         <label>Verifica se há números de Chamadas</label>
-        <locationX>1239</locationX>
-        <locationY>934</locationY>
+        <locationX>1679</locationX>
+        <locationY>1689</locationY>
         <defaultConnector>
             <targetReference>VerifyAmountTaskWhats_Opp</targetReference>
         </defaultConnector>
@@ -618,10 +736,39 @@
         </rules>
     </decisions>
     <decisions>
+        <name>VerifyAmountTaskCalls_PreLead</name>
+        <label>Verifica se há números de Chamadas</label>
+        <locationX>2702</locationX>
+        <locationY>2383</locationY>
+        <defaultConnector>
+            <targetReference>VerifyAmountTaskWhats_PreLead</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Maior_que_zero2_PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varCadenceTemplateConfigPreLead.N_Calls__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>varCadenceTemplateConfigPreLead.N_Calls__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Atribuir_loop_Chamada_PreLead</targetReference>
+            </connector>
+            <label>Maior que zero</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>VerifyAmountTaskEmail</name>
         <label>Verifica se há números de Emails</label>
-        <locationX>3048</locationX>
-        <locationY>1311</locationY>
+        <locationX>4183</locationX>
+        <locationY>1296</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Maior_que_zero3</name>
@@ -646,8 +793,8 @@
     <decisions>
         <name>VerifyAmountTaskEmail_Opp</name>
         <label>Verifica se há números de Emails</label>
-        <locationX>244</locationX>
-        <locationY>1435</locationY>
+        <locationX>684</locationX>
+        <locationY>2190</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Maior_que_zero3_Opp</name>
@@ -670,10 +817,36 @@
         </rules>
     </decisions>
     <decisions>
+        <name>VerifyAmountTaskEmail_PreLead</name>
+        <label>Verifica se há números de Emails</label>
+        <locationX>3728</locationX>
+        <locationY>2761</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Maior_que_zero3_PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varCadenceTemplateConfigPreLead.N_Emails__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>varCadenceTemplateConfigPreLead.N_Emails__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Atribuir_loop_Email_PreLead</targetReference>
+            </connector>
+            <label>Maior que zero</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>VerifyAmountTaskInformCall</name>
         <label>Verifica se o iloop é menor do que a quantidade informada em chamada</label>
-        <locationX>2023</locationX>
-        <locationY>1379</locationY>
+        <locationX>3158</locationX>
+        <locationY>1364</locationY>
         <defaultConnector>
             <targetReference>VerifyAmountTaskWhats</targetReference>
         </defaultConnector>
@@ -697,8 +870,8 @@
     <decisions>
         <name>VerifyAmountTaskInformCall_Opp</name>
         <label>Verifica se o iloop é menor do que a quantidade informada em chamada</label>
-        <locationX>1240</locationX>
-        <locationY>1396</locationY>
+        <locationX>1680</locationX>
+        <locationY>2151</locationY>
         <defaultConnector>
             <targetReference>VerifyAmountTaskWhats_Opp</targetReference>
         </defaultConnector>
@@ -720,10 +893,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>VerifyAmountTaskInformCall_PreLead</name>
+        <label>Verifica se o iloop é menor do que a quantidade informada em chamada</label>
+        <locationX>2703</locationX>
+        <locationY>2829</locationY>
+        <defaultConnector>
+            <targetReference>VerifyAmountTaskWhats_PreLead</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>iLoop_Calls_PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>iLoop</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>varCadenceTemplateConfigPreLead.N_Calls__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>createLuzPreLeadTaskCall</targetReference>
+            </connector>
+            <label>iLoop &lt; Calls</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>VerifyAmountTaskInformEmail</name>
         <label>Verifica se o iloop é menor do que a quantidade informada em Email</label>
-        <locationX>3047</locationX>
-        <locationY>1706</locationY>
+        <locationX>4182</locationX>
+        <locationY>1691</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>iLoop_Email</name>
@@ -744,8 +942,8 @@
     <decisions>
         <name>VerifyAmountTaskInformEmail_Opp</name>
         <label>Verifica se o iloop é menor do que a quantidade informada em Email</label>
-        <locationX>243</locationX>
-        <locationY>1830</locationY>
+        <locationX>683</locationX>
+        <locationY>2585</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>iLoop_Email_Opp</name>
@@ -764,10 +962,32 @@
         </rules>
     </decisions>
     <decisions>
+        <name>VerifyAmountTaskInformEmail_PreLead</name>
+        <label>Verifica se o iloop é menor do que a quantidade informada em Email</label>
+        <locationX>3727</locationX>
+        <locationY>3156</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>iLoop_Email_PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>iLoop</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>varCadenceTemplateConfigPreLead.N_Emails__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>createLuzTaskEmail_PreLead</targetReference>
+            </connector>
+            <label>iLoop &lt; Email</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>VerifyAmountTaskInformWhats</name>
         <label>Verifica se o iloop é menor do que a quantidade informada em whats</label>
-        <locationX>2539</locationX>
-        <locationY>1579</locationY>
+        <locationX>3674</locationX>
+        <locationY>1564</locationY>
         <defaultConnector>
             <targetReference>VerifyAmountTaskEmail</targetReference>
         </defaultConnector>
@@ -791,8 +1011,8 @@
     <decisions>
         <name>VerifyAmountTaskInformWhats_Opp</name>
         <label>Verifica se o iloop é menor do que a quantidade informada em whats</label>
-        <locationX>759</locationX>
-        <locationY>1583</locationY>
+        <locationX>1199</locationX>
+        <locationY>2338</locationY>
         <defaultConnector>
             <targetReference>VerifyAmountTaskEmail_Opp</targetReference>
         </defaultConnector>
@@ -814,10 +1034,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>VerifyAmountTaskInformWhats_PreLead</name>
+        <label>Verifica se o iloop é menor do que a quantidade informada em whats</label>
+        <locationX>3219</locationX>
+        <locationY>3029</locationY>
+        <defaultConnector>
+            <targetReference>VerifyAmountTaskEmail_PreLead</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>iLoop_Whats_PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>iLoop</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>varCadenceTemplateConfigPreLead.N_Whatsapp__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>createLuzTaskWhats_PreLead</targetReference>
+            </connector>
+            <label>iLoop &lt; Whats</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>VerifyAmountTaskWhats</name>
         <label>Verifica se há números de Whats</label>
-        <locationX>2536</locationX>
-        <locationY>1167</locationY>
+        <locationX>3671</locationX>
+        <locationY>1152</locationY>
         <defaultConnector>
             <targetReference>VerifyAmountTaskEmail</targetReference>
         </defaultConnector>
@@ -845,8 +1090,8 @@
     <decisions>
         <name>VerifyAmountTaskWhats_Opp</name>
         <label>Verifica se há números de Whats</label>
-        <locationX>756</locationX>
-        <locationY>1171</locationY>
+        <locationX>1196</locationX>
+        <locationY>1926</locationY>
         <defaultConnector>
             <targetReference>VerifyAmountTaskEmail_Opp</targetReference>
         </defaultConnector>
@@ -867,6 +1112,35 @@
             </conditions>
             <connector>
                 <targetReference>Atribuir_loop_Whats_Opp</targetReference>
+            </connector>
+            <label>Maior que zero</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>VerifyAmountTaskWhats_PreLead</name>
+        <label>Verifica se há números de Whats</label>
+        <locationX>3216</locationX>
+        <locationY>2617</locationY>
+        <defaultConnector>
+            <targetReference>VerifyAmountTaskEmail_PreLead</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Maior_que_zero_PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varCadenceTemplateConfigPreLead.N_Whatsapp__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>varCadenceTemplateConfigPreLead.N_Whatsapp__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Atribuir_loop_Whats_PreLead</targetReference>
             </connector>
             <label>Maior que zero</label>
         </rules>
@@ -928,7 +1202,7 @@
     <loops>
         <name>LoopRecordTypes</name>
         <label>LoopRecordTypes</label>
-        <locationX>1640</locationX>
+        <locationX>2125</locationX>
         <locationY>465</locationY>
         <collectionReference>GetTasksRecordTypes</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -936,7 +1210,7 @@
             <targetReference>RecordTypeDecision</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Opportunity_or_Lead</targetReference>
+            <targetReference>Object_Decision</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -961,8 +1235,8 @@
     <recordCreates>
         <name>createDeltaTaskCall</name>
         <label>createDeltaTaskCall</label>
-        <locationX>2036</locationX>
-        <locationY>1922</locationY>
+        <locationX>3171</locationX>
+        <locationY>1907</locationY>
         <connector>
             <targetReference>Atribuicao_Loop_Call</targetReference>
         </connector>
@@ -1056,8 +1330,8 @@
     <recordCreates>
         <name>createDeltaTaskEmail</name>
         <label>createDeltaTaskEmail</label>
-        <locationX>3058</locationX>
-        <locationY>2089</locationY>
+        <locationX>4193</locationX>
+        <locationY>2074</locationY>
         <connector>
             <targetReference>Atribuicao_Loop_Email</targetReference>
         </connector>
@@ -1157,8 +1431,8 @@
     <recordCreates>
         <name>createDeltaTaskWhats</name>
         <label>createDeltaTaskWhats</label>
-        <locationX>2545</locationX>
-        <locationY>2078</locationY>
+        <locationX>3680</locationX>
+        <locationY>2063</locationY>
         <connector>
             <targetReference>Atribuicao_Loop_Whats</targetReference>
         </connector>
@@ -1258,8 +1532,8 @@
     <recordCreates>
         <name>createLuzLeadTaskCall</name>
         <label>createLuzLeadTaskCall</label>
-        <locationX>2216</locationX>
-        <locationY>1620</locationY>
+        <locationX>3351</locationX>
+        <locationY>1605</locationY>
         <connector>
             <targetReference>Atribuicao_Loop_Call</targetReference>
         </connector>
@@ -1351,10 +1625,105 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
+        <name>createLuzPreLeadTaskCall</name>
+        <label>createLuzPreLeadTaskCall</label>
+        <locationX>2714</locationX>
+        <locationY>3235</locationY>
+        <connector>
+            <targetReference>Atribuicao_Loop_Call_PreLead</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CadenceDay__c</field>
+            <value>
+                <elementReference>varCadenceTemplateConfigPreLead.CadenceStep__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CadenceTemplate__c</field>
+            <value>
+                <elementReference>varCadence.TemplateCadence__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CustomReminderTime__c</field>
+            <value>
+                <elementReference>forDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsReminderSet</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>varPreLead.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>idLuzCadenceCall</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ReminderDateTime</field>
+            <value>
+                <elementReference>forDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Source__c</field>
+            <value>
+                <stringValue>Cadence</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Open</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>subjectChamada</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TaskStagePreLead__c</field>
+            <value>
+                <elementReference>varPreLead.Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>varPreLead.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>createLuzTaskEmail</name>
         <label>createLuzTaskEmail</label>
-        <locationX>3257</locationX>
-        <locationY>1914</locationY>
+        <locationX>4392</locationX>
+        <locationY>1899</locationY>
         <connector>
             <targetReference>Atribuicao_Loop_Email</targetReference>
         </connector>
@@ -1452,10 +1821,111 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
+        <name>createLuzTaskEmail_PreLead</name>
+        <label>createLuzTaskEmail</label>
+        <locationX>3740</locationX>
+        <locationY>3539</locationY>
+        <connector>
+            <targetReference>Atribuicao_Loop_Email_PreLead</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CadenceDay__c</field>
+            <value>
+                <elementReference>varCadenceTemplateConfigPreLead.CadenceStep__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CadenceTemplate__c</field>
+            <value>
+                <elementReference>varCadence.TemplateCadence__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CustomReminderTime__c</field>
+            <value>
+                <elementReference>forDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsReminderSet</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>varPreLead.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>idLuzCadenceMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ReminderDateTime</field>
+            <value>
+                <elementReference>forDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Source__c</field>
+            <value>
+                <stringValue>Cadence</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Open</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>subjectEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TaskStagePreLead__c</field>
+            <value>
+                <elementReference>varPreLead.Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TaskSubtype</field>
+            <value>
+                <stringValue>Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>varPreLead.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>createLuzTaskWhats</name>
         <label>createLuzTaskWhats</label>
-        <locationX>2719</locationX>
-        <locationY>1828</locationY>
+        <locationX>3854</locationX>
+        <locationY>1813</locationY>
         <connector>
             <targetReference>Atribuicao_Loop_Whats</targetReference>
         </connector>
@@ -1553,10 +2023,105 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
+        <name>createLuzTaskWhats_PreLead</name>
+        <label>createLuzTaskWhats</label>
+        <locationX>3232</locationX>
+        <locationY>3431</locationY>
+        <connector>
+            <targetReference>Atribuicao_Loop_Whats_PreLead</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CadenceDay__c</field>
+            <value>
+                <elementReference>varCadenceTemplateConfigPreLead.CadenceStep__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CadenceTemplate__c</field>
+            <value>
+                <elementReference>varCadence.TemplateCadence__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CustomReminderTime__c</field>
+            <value>
+                <elementReference>forDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsReminderSet</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>varPreLead.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>idLuzCadenceMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ReminderDateTime</field>
+            <value>
+                <elementReference>forDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Source__c</field>
+            <value>
+                <stringValue>Cadence</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Open</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>subjectWhats</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TaskStagePreLead__c</field>
+            <value>
+                <elementReference>varPreLead.Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>varPreLead.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>createTaskCall_Opp</name>
         <label>createTaskCall</label>
-        <locationX>1250</locationX>
-        <locationY>1606</locationY>
+        <locationX>1690</locationX>
+        <locationY>2361</locationY>
         <connector>
             <targetReference>Atribuicao_Loop_Call_Opp</targetReference>
         </connector>
@@ -1656,8 +2221,8 @@
     <recordCreates>
         <name>createTaskEmail_Opp</name>
         <label>createTaskEmail</label>
-        <locationX>250</locationX>
-        <locationY>2040</locationY>
+        <locationX>690</locationX>
+        <locationY>2795</locationY>
         <connector>
             <targetReference>Atribuicao_Loop_Email_Opp</targetReference>
         </connector>
@@ -1763,8 +2328,8 @@
     <recordCreates>
         <name>createTaskWhats_Opp</name>
         <label>createTaskWhats</label>
-        <locationX>766</locationX>
-        <locationY>1845</locationY>
+        <locationX>1206</locationX>
+        <locationY>2600</locationY>
         <connector>
             <targetReference>Atribuicao_Loop_Whats_Opp</targetReference>
         </connector>
@@ -1864,7 +2429,7 @@
     <recordLookups>
         <name>GetTasksRecordTypes</name>
         <label>GetTasksRecordTypes</label>
-        <locationX>1640</locationX>
+        <locationX>2125</locationX>
         <locationY>255</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1920,7 +2485,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>1514</locationX>
+        <locationX>1999</locationX>
         <locationY>50</locationY>
         <connector>
             <targetReference>GetTasksRecordTypes</targetReference>

@@ -241,14 +241,14 @@
         <name>OpenTasksLuz</name>
         <label>Tarefas em aberto (Luz)</label>
         <locationX>768</locationX>
-        <locationY>839</locationY>
+        <locationY>837</locationY>
         <defaultConnector>
             <targetReference>GetAllCadenceTemplateConfigs</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Tarefasemaberto</name>
-            <conditionLogic>1 AND 2 AND (3 OR 4)</conditionLogic>
+            <name>TarefasemabertoLUZ</name>
+            <conditionLogic>1 AND 2 AND (3 OR 4 OR 5)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.AmountTasksBeforeStepCadence__c</leftValueReference>
                 <operator>GreaterThanOrEqualTo</operator>
@@ -277,10 +277,17 @@
                     <stringValue>LeadPJ</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Pre_Lead__r.Recordtype_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Pre_lead_LUZ</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>SetCadStedDueDate</targetReference>
             </connector>
-            <label>Tarefas em aberto</label>
+            <label>Tarefas em aberto (LUZ)</label>
         </rules>
     </decisions>
     <environments>Default</environments>

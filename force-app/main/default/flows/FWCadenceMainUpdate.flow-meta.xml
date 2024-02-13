@@ -4,8 +4,8 @@
     <assignments>
         <name>setCadenceLead</name>
         <label>setCadenceLead</label>
-        <locationX>2010</locationX>
-        <locationY>1149</locationY>
+        <locationX>2187</locationX>
+        <locationY>1548</locationY>
         <assignmentItems>
             <assignToReference>varLead.CurrentCadenceDone__c</assignToReference>
             <operator>Assign</operator>
@@ -21,14 +21,37 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Lead_or_Opp2</targetReference>
+            <targetReference>Object_Decision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>setCadencePreLead</name>
+        <label>setCadencePreLead</label>
+        <locationX>238</locationX>
+        <locationY>1660</locationY>
+        <assignmentItems>
+            <assignToReference>varPreLead.CurrentCadenceDone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.CadenceSize__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.TemplateCadence__r.CountCad__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Object_Decision</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>setDueDate</name>
         <label>setDueDate</label>
-        <locationX>1874</locationX>
-        <locationY>1046</locationY>
+        <locationX>1988</locationX>
+        <locationY>1413</locationY>
         <assignmentItems>
             <assignToReference>varLead.NextActivityDueDateCadence__c</assignToReference>
             <operator>Assign</operator>
@@ -44,14 +67,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Lead_or_Opp2</targetReference>
+            <targetReference>Object_Decision</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>setDueDate2</name>
         <label>setDueDate</label>
-        <locationX>1571</locationX>
-        <locationY>1116</locationY>
+        <locationX>1326</locationX>
+        <locationY>1362</locationY>
         <assignmentItems>
             <assignToReference>varLead.NextActivityDueDateCadence__c</assignToReference>
             <operator>Assign</operator>
@@ -95,14 +118,88 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Lead_or_Opp2</targetReference>
+            <targetReference>Object_Decision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>setDueDate2_PreLead</name>
+        <label>setDueDate</label>
+        <locationX>745</locationX>
+        <locationY>1393</locationY>
+        <assignmentItems>
+            <assignToReference>varPreLead.NextActivityDueDateCadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CadStepDueDate__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.CurrentCadenceDone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.AmountTasksStepCadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.AmountTasksStepCadence__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.CadenceSize__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CadenceSize__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.CadenceStepDate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CadenceStepDate__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.CadenceStep__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CadenceStep__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Object_Decision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>setDueDate_PreLead</name>
+        <label>setDueDate</label>
+        <locationX>368</locationX>
+        <locationY>1528</locationY>
+        <assignmentItems>
+            <assignToReference>varPreLead.NextActivityDueDateCadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CadStepDueDate__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.CurrentCadenceDone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Object_Decision</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>SetLeadVariable</name>
         <label>Atribui Lead em variável</label>
-        <locationX>1219</locationX>
-        <locationY>885</locationY>
+        <locationX>1465</locationX>
+        <locationY>884</locationY>
         <assignmentItems>
             <assignToReference>varLead</assignToReference>
             <operator>Assign</operator>
@@ -124,15 +221,73 @@
                 <booleanValue>false</booleanValue>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.CurrentCadenceDone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>ChangeDecision</targetReference>
         </connector>
     </assignments>
     <assignments>
+        <name>SetPreLeadVariable</name>
+        <label>Atribui PreLead em variável</label>
+        <locationX>672</locationX>
+        <locationY>890</locationY>
+        <assignmentItems>
+            <assignToReference>varPreLead</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>getPreLead</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpp.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpp.CurrentCadenceDone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varLead.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varLead.CurrentCadenceDone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ChangeDecisionPreLead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>setStatusClosedCadence</name>
         <label>setStatusClosedCadence</label>
-        <locationX>2141</locationX>
-        <locationY>1391</locationY>
+        <locationX>2312</locationX>
+        <locationY>1854</locationY>
         <assignmentItems>
             <assignToReference>varOpp.CurrentCadenceDone__c</assignToReference>
             <operator>Assign</operator>
@@ -147,15 +302,66 @@
                 <elementReference>$Record.TemplateCadence__r.CountCad__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.CurrentCadenceDone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreLead.CadenceSize__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.TemplateCadence__r.CountCad__c</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
-            <targetReference>Lead_or_Opp2</targetReference>
+            <targetReference>Object_Decision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>setStatusClosedCadence2</name>
+        <label>setStatusClosedCadence</label>
+        <locationX>50</locationX>
+        <locationY>1853</locationY>
+        <assignmentItems>
+            <assignToReference>varOpp.CurrentCadenceDone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpp.CadenceSize__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.TemplateCadence__r.CountCad__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varLead.CurrentCadenceDone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varLead.CadenceSize__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.TemplateCadence__r.CountCad__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Object_Decision</targetReference>
         </connector>
     </assignments>
     <decisions>
         <name>CadenceDayChangedDecision</name>
         <label>Dia da Cadencia Alterado</label>
-        <locationX>885</locationX>
-        <locationY>1867</locationY>
+        <locationX>1250</locationX>
+        <locationY>2580</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_CadenceDayChanged</name>
@@ -174,10 +380,32 @@
         </rules>
     </decisions>
     <decisions>
+        <name>CadenceDayChangedDecision2</name>
+        <label>Dia da Cadencia Alterado</label>
+        <locationX>828</locationX>
+        <locationY>2580</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_CadenceDayChanged2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CadenceDayChanged</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>FWCadenceTasksPreLead</targetReference>
+            </connector>
+            <label>Alterado</label>
+        </rules>
+    </decisions>
+    <decisions>
         <description>Verifica se a cadencia foi mudado o status e esta concluida</description>
         <name>CadenceDone</name>
         <label>Cadência Concluída?</label>
-        <locationX>768</locationX>
+        <locationX>1068</locationX>
         <locationY>516</locationY>
         <defaultConnector>
             <targetReference>Object</targetReference>
@@ -209,8 +437,8 @@
     <decisions>
         <name>ChangeDecision</name>
         <label>ChangeDecision</label>
-        <locationX>1513</locationX>
-        <locationY>887</locationY>
+        <locationX>1737</locationX>
+        <locationY>1038</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>CadenceDayChanged</name>
@@ -266,10 +494,69 @@
         </rules>
     </decisions>
     <decisions>
+        <name>ChangeDecisionPreLead</name>
+        <label>ChangeDecision</label>
+        <locationX>471</locationX>
+        <locationY>1039</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CadenceDayChanged_PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CadenceStep__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>setDueDate2_PreLead</targetReference>
+            </connector>
+            <label>Dia da Cadencia Alterado</label>
+        </rules>
+        <rules>
+            <name>ChangedStatus_PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Não conseguiu contato</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ConseguiuContato_PreLead</targetReference>
+            </connector>
+            <label>Status Alterado</label>
+        </rules>
+        <rules>
+            <name>NextCadenceChanged_PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CadStepDueDate__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>setDueDate_PreLead</targetReference>
+            </connector>
+            <label>Proxima Cadencia Alterado</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>ConseguiuContato</name>
         <label>Conseguiu Contato?</label>
-        <locationX>1856</locationX>
-        <locationY>699</locationY>
+        <locationX>2024</locationX>
+        <locationY>1032</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Nao</name>
@@ -288,58 +575,32 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Lead_or_Opp2</name>
-        <label>Lead or Opp?</label>
-        <locationX>929</locationX>
-        <locationY>1386</locationY>
+        <name>ConseguiuContato_PreLead</name>
+        <label>Conseguiu Contato?</label>
+        <locationX>261</locationX>
+        <locationY>1039</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Lead2</name>
+            <name>Nao_PreLead</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>varLead</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>varOpp.Id</leftValueReference>
+                <leftValueReference>$Record.Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue></stringValue>
+                    <stringValue>Não conseguiu contato</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>updateLead</targetReference>
+                <targetReference>Status_do_PreLead</targetReference>
             </connector>
-            <label>Lead</label>
-        </rules>
-        <rules>
-            <name>Opp2</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>varOpp</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>varLead.Id</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue></stringValue>
-                </rightValue>
-            </conditions>
-            <label>Opp</label>
+            <label>Não</label>
         </rules>
     </decisions>
     <decisions>
         <name>Object</name>
         <label>Object</label>
-        <locationX>768</locationX>
-        <locationY>886</locationY>
+        <locationX>1068</locationX>
+        <locationY>891</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Lead</name>
@@ -368,11 +629,117 @@
             </conditions>
             <label>Opp</label>
         </rules>
+        <rules>
+            <name>PreLead1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Pre_Lead__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>getPreLead</targetReference>
+            </connector>
+            <label>PreLead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Object_Decision</name>
+        <label>Object Decision</label>
+        <locationX>1027</locationX>
+        <locationY>1845</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Lead2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varLead</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varOpp.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varPreLead.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>updateLead</targetReference>
+            </connector>
+            <label>Lead</label>
+        </rules>
+        <rules>
+            <name>Opp2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varOpp</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLead.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varPreLead.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <label>Opp</label>
+        </rules>
+        <rules>
+            <name>PreLead2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varPreLead</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLead.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varOpp.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>updatePreLead</targetReference>
+            </connector>
+            <label>PreLead</label>
+        </rules>
     </decisions>
     <decisions>
         <name>Open_Tasks</name>
         <label>Open Tasks?</label>
-        <locationX>1235</locationX>
+        <locationX>1535</locationX>
         <locationY>517</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -394,8 +761,8 @@
     <decisions>
         <name>Status_do_Lead</name>
         <label>Status do Lead</label>
-        <locationX>2123</locationX>
-        <locationY>697</locationY>
+        <locationX>2291</locationX>
+        <locationY>1030</locationY>
         <defaultConnector>
             <targetReference>setStatusClosedCadence</targetReference>
         </defaultConnector>
@@ -416,11 +783,49 @@
             <label>Status Ok</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Status_do_PreLead</name>
+        <label>Status do PreLead</label>
+        <locationX>57</locationX>
+        <locationY>1044</locationY>
+        <defaultConnector>
+            <targetReference>setStatusClosedCadence2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Status_Ok_PreLead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varPreLead.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Em andamento</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>setCadencePreLead</targetReference>
+            </connector>
+            <label>Status Ok</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>forFakeId</name>
         <dataType>String</dataType>
-        <expression>IF(NOT(ISBLANK({!$Record.Lead__c})),{!$Record.Lead__c},IF(NOT(ISBLANK({!$Record.Opportunity__c})),{!$Record.Opportunity__c},&apos;0010500000YLjMvAAL&apos;))</expression>
+        <expression>IF(
+NOT(ISBLANK({!$Record.Lead__c})),{!$Record.Lead__c},
+
+IF(
+NOT(ISBLANK({!$Record.Opportunity__c})),{!$Record.Opportunity__c},
+
+IF(
+NOT(ISBLANK({!$Record.Pre_Lead__c})),{!$Record.Pre_Lead__c},
+
+&apos;0010500000YLjMvAAL&apos;
+
+)
+)
+)</expression>
     </formulas>
     <interviewLabel>[Cadência] Main Created Updated {!$Flow.CurrentDateTime}</interviewLabel>
     <label>[Cadência] Main Update</label>
@@ -446,15 +851,15 @@
     <recordDeletes>
         <name>deleteTasks</name>
         <label>deleteTasks</label>
-        <locationX>1469</locationX>
+        <locationX>1769</locationX>
         <locationY>516</locationY>
         <inputReference>getOpenTasks</inputReference>
     </recordDeletes>
     <recordLookups>
         <name>getLead</name>
         <label>getLead</label>
-        <locationX>1004</locationX>
-        <locationY>885</locationY>
+        <locationX>1284</locationX>
+        <locationY>884</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>SetLeadVariable</targetReference>
@@ -474,7 +879,7 @@
     <recordLookups>
         <name>getOpenTasks</name>
         <label>getOpenTasks</label>
-        <locationX>1024</locationX>
+        <locationX>1324</locationX>
         <locationY>515</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -515,10 +920,31 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>getPreLead</name>
+        <label>getPreLead</label>
+        <locationX>883</locationX>
+        <locationY>890</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>SetPreLeadVariable</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Pre_Lead__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PreLead__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>getTemplateConfigLead</name>
         <label>getTemplateConfigLead</label>
-        <locationX>1091</locationX>
-        <locationY>1745</locationY>
+        <locationX>1258</locationX>
+        <locationY>2359</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>CadenceDayChangedDecision</targetReference>
@@ -542,18 +968,56 @@
         <object>CadenceTemplateConfig__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>getTemplateConfigPreLead</name>
+        <label>getTemplateConfigPreLead</label>
+        <locationX>836</locationX>
+        <locationY>2381</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CadenceDayChangedDecision2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Template__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.TemplateCadence__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CadenceStep__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.CadenceStep__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CadenceTemplateConfig__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>updateLead</name>
         <label>updateLead</label>
-        <locationX>1091</locationX>
-        <locationY>1596</locationY>
+        <locationX>1258</locationX>
+        <locationY>2210</locationY>
         <connector>
             <targetReference>getTemplateConfigLead</targetReference>
         </connector>
         <inputReference>varLead</inputReference>
     </recordUpdates>
+    <recordUpdates>
+        <name>updatePreLead</name>
+        <label>updatePreLead</label>
+        <locationX>836</locationX>
+        <locationY>2214</locationY>
+        <connector>
+            <targetReference>getTemplateConfigPreLead</targetReference>
+        </connector>
+        <inputReference>varPreLead</inputReference>
+    </recordUpdates>
     <start>
-        <locationX>651</locationX>
+        <locationX>951</locationX>
         <locationY>50</locationY>
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>or</filterLogic>
@@ -566,6 +1030,13 @@
         </filters>
         <filters>
             <field>Opportunity__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Pre_Lead__c</field>
             <operator>IsNull</operator>
             <value>
                 <booleanValue>false</booleanValue>
@@ -590,8 +1061,8 @@
     <subflows>
         <name>FWCadenceTasks</name>
         <label>FWCadenceTasks</label>
-        <locationX>891</locationX>
-        <locationY>2101</locationY>
+        <locationX>1256</locationX>
+        <locationY>2814</locationY>
         <flowName>FWCadenceTasks</flowName>
         <inputAssignments>
             <name>varCadence</name>
@@ -613,6 +1084,32 @@
         </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
+    <subflows>
+        <name>FWCadenceTasksPreLead</name>
+        <label>FWCadenceTasks</label>
+        <locationX>841</locationX>
+        <locationY>2794</locationY>
+        <flowName>FWCadenceTasks</flowName>
+        <inputAssignments>
+            <name>varCadence</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varCadenceTemplateConfigPreLead</name>
+            <value>
+                <elementReference>getTemplateConfigPreLead</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varPreLead</name>
+            <value>
+                <elementReference>varPreLead</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
     <variables>
         <name>varLead</name>
         <dataType>SObject</dataType>
@@ -628,5 +1125,13 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>varPreLead</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PreLead__c</objectType>
     </variables>
 </Flow>
