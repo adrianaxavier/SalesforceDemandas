@@ -195,6 +195,28 @@
             </conditions>
             <label>Opp Cadence</label>
         </rules>
+        <rules>
+            <name>PreLead_Cadence</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.WhatId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>a1N</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Source__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cadence</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Tasks_Subflow_PreLeadActivityTracking</targetReference>
+            </connector>
+            <label>PreLead Cadence</label>
+        </rules>
     </decisions>
     <environments>Default</environments>
     <formulas>
@@ -322,6 +344,27 @@
         <object>EconomicGroup__c</object>
     </recordUpdates>
     <recordUpdates>
+        <name>UpdateEconomicGroup2</name>
+        <label>UpdateEconomicGroup</label>
+        <locationX>775</locationX>
+        <locationY>2389</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varPreLead.EconomicGroup__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Ultima_tarefa__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>EconomicGroup__c</object>
+    </recordUpdates>
+    <recordUpdates>
         <name>UpdatePreLead</name>
         <label>UpdatePreLead</label>
         <locationX>535</locationX>
@@ -362,7 +405,10 @@
         <name>Grupo_Economico_Pre_Lead_Updates</name>
         <label>[Grupo Economico] Pré-Lead Updates</label>
         <locationX>775</locationX>
-        <locationY>2213</locationY>
+        <locationY>2222</locationY>
+        <connector>
+            <targetReference>UpdateEconomicGroup2</targetReference>
+        </connector>
         <flowName>FWEconomicGroupPreLeadUpdates</flowName>
         <inputAssignments>
             <name>idEconomicGroup</name>
@@ -390,6 +436,34 @@
             <name>varWhoId</name>
             <value>
                 <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Tasks_Subflow_PreLeadActivityTracking</name>
+        <label>[Tasks] Subflow - PreLeadActivityTracking</label>
+        <locationX>1107</locationX>
+        <locationY>545</locationY>
+        <connector>
+            <targetReference>IsNewDecision</targetReference>
+        </connector>
+        <flowName>FWPreLeadActivityTracking</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varWhatId</name>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varWhoId</name>
+            <value>
+                <stringValue></stringValue>
             </value>
         </inputAssignments>
     </subflows>
