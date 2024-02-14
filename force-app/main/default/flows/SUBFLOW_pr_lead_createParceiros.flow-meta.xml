@@ -4,8 +4,8 @@
     <decisions>
         <name>FindAccount</name>
         <label>FindAccount?</label>
-        <locationX>957</locationX>
-        <locationY>580</locationY>
+        <locationX>710</locationX>
+        <locationY>458</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>YesFindAccount</name>
@@ -24,10 +24,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Possui_Vendedor</name>
+        <label>Possui Vendedor?</label>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Compartilhar_Community_Parceiro</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Sim_Possui_Vendedor</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obter_cupom.Vendedor__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Compartilhar_Community_Vendedor</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>validar_cupom</name>
         <label>validar cupom</label>
-        <locationX>769</locationX>
-        <locationY>405</locationY>
+        <locationX>446</locationX>
+        <locationY>242</locationY>
         <defaultConnector>
             <targetReference>GetAccountWithMGM</targetReference>
         </defaultConnector>
@@ -48,6 +73,7 @@
             <label>Sim</label>
         </rules>
     </decisions>
+    <description>Flow Parceiros x Vendedores</description>
     <environments>Default</environments>
     <interviewLabel>SUBFLOW{ pré-lead}-createParceiros {!$Flow.CurrentDateTime}</interviewLabel>
     <label>SUBFLOW{ pré-lead}-createParceiros</label>
@@ -60,7 +86,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -71,10 +97,10 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
-        <name>Compartilhar_Community</name>
-        <label>Compartilhar Community</label>
-        <locationX>644</locationX>
-        <locationY>670</locationY>
+        <name>Compartilhar_Community_Parceiro</name>
+        <label>Compartilhar Community Parceiro</label>
+        <locationX>314</locationX>
+        <locationY>566</locationY>
         <inputAssignments>
             <field>AccessLevel</field>
             <value>
@@ -102,11 +128,43 @@
         <object>PreLead__Share</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordCreates>
+        <name>Compartilhar_Community_Vendedor</name>
+        <label>Compartilhar Community Vendedor</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <inputAssignments>
+            <field>AccessLevel</field>
+            <value>
+                <stringValue>Edit</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>Record_id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RowCause</field>
+            <value>
+                <stringValue>Manual</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UserOrGroupId</field>
+            <value>
+                <elementReference>Obter_cupom.Vendedor__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>PreLead__Share</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
     <recordLookups>
         <name>GetAccountWithMGM</name>
         <label>GetAccountWithMGM</label>
-        <locationX>965</locationX>
-        <locationY>402</locationY>
+        <locationX>710</locationX>
+        <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>FindAccount</targetReference>
@@ -126,8 +184,8 @@
     <recordLookups>
         <name>Obter_cupom</name>
         <label>Obter cupom</label>
-        <locationX>777</locationX>
-        <locationY>246</locationY>
+        <locationX>446</locationX>
+        <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>validar_cupom</targetReference>
@@ -147,10 +205,10 @@
     <recordUpdates>
         <name>atualizar_pr_lead</name>
         <label>atualizar pré lead</label>
-        <locationX>644</locationX>
-        <locationY>504</locationY>
+        <locationX>182</locationX>
+        <locationY>350</locationY>
         <connector>
-            <targetReference>Compartilhar_Community</targetReference>
+            <targetReference>Possui_Vendedor</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -189,8 +247,8 @@
     <recordUpdates>
         <name>UpdatePreLead</name>
         <label>UpdatePreLead</label>
-        <locationX>965</locationX>
-        <locationY>777</locationY>
+        <locationX>578</locationX>
+        <locationY>566</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -220,8 +278,8 @@
         <object>PreLead__c</object>
     </recordUpdates>
     <start>
-        <locationX>651</locationX>
-        <locationY>50</locationY>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Obter_cupom</targetReference>
         </connector>
