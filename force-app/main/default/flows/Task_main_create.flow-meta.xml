@@ -623,7 +623,6 @@
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
     <subflows>
         <name>Nota_Automatica</name>
         <label>Nota Automatica</label>
