@@ -52,13 +52,6 @@
                     <numberValue>0.0</numberValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.InitialDiscount__c</leftValueReference>
-                <operator>GreaterThan</operator>
-                <rightValue>
-                    <numberValue>0.0</numberValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>PreLead_Fluxo_de_Cadencia</targetReference>
             </connector>
