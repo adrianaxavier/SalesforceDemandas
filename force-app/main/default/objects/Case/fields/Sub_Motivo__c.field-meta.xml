@@ -413,6 +413,11 @@
                 <default>false</default>
                 <label>MEMBER GET MEMBER</label>
             </value>
+            <value>
+                <fullName>ALTERAÇÃO DATA DO VENCIMENTO</fullName>
+                <default>false</default>
+                <label>ALTERAÇÃO DATA DO VENCIMENTO</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>MIGRAÇÃO</controllingFieldValue>
@@ -677,6 +682,10 @@
         <valueSettings>
             <controllingFieldValue>FATURA</controllingFieldValue>
             <valueName>SEGUNDA VIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FATURA</controllingFieldValue>
+            <valueName>ALTERAÇÃO DATA DO VENCIMENTO</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>PAGAMENTO</controllingFieldValue>
