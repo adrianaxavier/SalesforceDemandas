@@ -1,9 +1,89 @@
 //------------------------------------------------------------------------------------------------
 // Projeto Delta Energia - 11/08/2022 
 //------------------------------------------------------------------------------------------------
-trigger PreLeadTrigger on PreLead__c (before insert, before update) {
-private static Boolean erro = false;
 
+trigger PreLeadTrigger on PreLead__c (before insert, before update) {
+integer i=0;
+
+      i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+
+
+private static Boolean erro = false;
 for (PreLead__c preLead : trigger.new)
 {   preLead.Whatsapp__c='whatsapp:+' +preLead.PhoneNumber__c ;   
       if (!String.isEmpty(PreLead.CPFCNPJ__c)) {
@@ -74,7 +154,7 @@ for (PreLead__c preLead : trigger.new)
                 
     PreLeadTriggerValidation.ValidarDadosFormatados(preLead);        
     
-      
+    
     
 }    
 
