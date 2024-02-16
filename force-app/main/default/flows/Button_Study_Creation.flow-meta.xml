@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <apiVersion>59.0</apiVersion>
     <assignments>
         <name>Id_Estudo_Novo</name>
         <label>Id_Estudo_Novo</label>
-        <locationX>314</locationX>
-        <locationY>890</locationY>
+        <locationX>930</locationX>
+        <locationY>1046</locationY>
         <assignmentItems>
             <assignToReference>Id_Estudo</assignToReference>
             <operator>Assign</operator>
@@ -20,8 +20,8 @@
     <assignments>
         <name>Id_Estudo_Novo_0</name>
         <label>Id_Estudo_up</label>
-        <locationX>930</locationX>
-        <locationY>890</locationY>
+        <locationX>1546</locationX>
+        <locationY>1046</locationY>
         <assignmentItems>
             <assignToReference>Id_Estudo</assignToReference>
             <operator>Assign</operator>
@@ -36,8 +36,8 @@
     <assignments>
         <name>Id_Estudo_Novo_0_0</name>
         <label>Id_Estudo_up</label>
-        <locationX>666</locationX>
-        <locationY>1082</locationY>
+        <locationX>1282</locationX>
+        <locationY>1238</locationY>
         <assignmentItems>
             <assignToReference>Id_Estudo</assignToReference>
             <operator>Assign</operator>
@@ -52,8 +52,8 @@
     <assignments>
         <name>Id_Estudo_Novo_0_0_0</name>
         <label>Id_Estudo_Novo</label>
-        <locationX>50</locationX>
-        <locationY>1082</locationY>
+        <locationX>666</locationX>
+        <locationY>1238</locationY>
         <assignmentItems>
             <assignToReference>Id_Estudo</assignToReference>
             <operator>Assign</operator>
@@ -66,10 +66,57 @@
         </connector>
     </assignments>
     <decisions>
+        <name>Tem_CNPJ</name>
+        <label>Tem CNPJ</label>
+        <locationX>578</locationX>
+        <locationY>290</locationY>
+        <defaultConnector>
+            <targetReference>Gerar_Estudo</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Sim</defaultConnectorLabel>
+        <rules>
+            <name>N_o</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Dados_do_Lead.CNPJ__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Dados_do_Lead.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Delta Inside Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Sem_CNPJ</targetReference>
+            </connector>
+            <label>Não</label>
+        </rules>
+        <rules>
+            <name>Sem_Score</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Dados_do_Lead.Score_SERASA__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Sem_ScoreSerasa</targetReference>
+            </connector>
+            <label>Sem Score</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Tem_Unidade_Consumidora</name>
         <label>Tem Unidade Consumidora</label>
-        <locationX>798</locationX>
-        <locationY>674</locationY>
+        <locationX>1414</locationX>
+        <locationY>830</locationY>
         <defaultConnector>
             <targetReference>Estudo_Update</targetReference>
         </defaultConnector>
@@ -93,8 +140,8 @@
     <decisions>
         <name>Tem_Unidade_Consumidora_0</name>
         <label>Tem Unidade Consumidora</label>
-        <locationX>182</locationX>
-        <locationY>674</locationY>
+        <locationX>798</locationX>
+        <locationY>830</locationY>
         <defaultConnector>
             <targetReference>Estudo_New</targetReference>
         </defaultConnector>
@@ -118,8 +165,8 @@
     <decisions>
         <name>Tipo_de_Estudo</name>
         <label>Tipo de Estudo</label>
-        <locationX>490</locationX>
-        <locationY>458</locationY>
+        <locationX>1106</locationX>
+        <locationY>614</locationY>
         <defaultConnector>
             <targetReference>Obter_Unidade_Consumidora</targetReference>
         </defaultConnector>
@@ -140,14 +187,22 @@
             <label>Novo</label>
         </rules>
     </decisions>
+    <dynamicChoiceSets>
+        <name>Motivo</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Prioridade__c</picklistField>
+        <picklistObject>Estudos__c</picklistObject>
+    </dynamicChoiceSets>
     <environments>Default</environments>
     <interviewLabel>[BOTTON {!$Flow.CurrentDateTime}</interviewLabel>
     <label>[Button]  Study Creation</label>
     <loops>
         <name>Atualiza</name>
         <label>Atualiza</label>
-        <locationX>490</locationX>
-        <locationY>1574</locationY>
+        <locationX>1106</locationX>
+        <locationY>1730</locationY>
         <collectionReference>Obter_Anexos</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -157,8 +212,8 @@
     <loops>
         <name>Loop_Update</name>
         <label>Loop Update</label>
-        <locationX>666</locationX>
-        <locationY>782</locationY>
+        <locationX>1282</locationX>
+        <locationY>938</locationY>
         <collectionReference>Obter_Unidade_Consumidora</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -171,8 +226,8 @@
     <loops>
         <name>Loop_Update_0</name>
         <label>Loop Update</label>
-        <locationX>50</locationX>
-        <locationY>782</locationY>
+        <locationX>666</locationX>
+        <locationY>938</locationY>
         <collectionReference>Obter_Unidade_Consumidora</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -191,7 +246,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -204,8 +259,8 @@
     <recordCreates>
         <name>Criar_Anexo</name>
         <label>Criar Anexo</label>
-        <locationX>578</locationX>
-        <locationY>1682</locationY>
+        <locationX>1194</locationX>
+        <locationY>1838</locationY>
         <connector>
             <targetReference>Atualiza</targetReference>
         </connector>
@@ -227,8 +282,8 @@
     <recordCreates>
         <name>Estudo_New</name>
         <label>Estudo New</label>
-        <locationX>314</locationX>
-        <locationY>782</locationY>
+        <locationX>930</locationX>
+        <locationY>938</locationY>
         <connector>
             <targetReference>Id_Estudo_Novo</targetReference>
         </connector>
@@ -329,6 +384,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Prioridade__c</field>
+            <value>
+                <elementReference>Prioridade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Produto_Escolhido_Pelo_Cliente__c</field>
             <value>
                 <elementReference>Dados_do_Lead.Produto_escolhido_pelo_cliente__c</elementReference>
@@ -400,8 +461,8 @@
     <recordCreates>
         <name>Estudo_New_0</name>
         <label>Estudo New</label>
-        <locationX>138</locationX>
-        <locationY>890</locationY>
+        <locationX>754</locationX>
+        <locationY>1046</locationY>
         <connector>
             <targetReference>Loop_Update_0</targetReference>
         </connector>
@@ -514,6 +575,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Prioridade__c</field>
+            <value>
+                <elementReference>Prioridade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Produto_Escolhido_Pelo_Cliente__c</field>
             <value>
                 <elementReference>Dados_do_Lead.Produto_escolhido_pelo_cliente__c</elementReference>
@@ -585,8 +652,8 @@
     <recordCreates>
         <name>Estudo_Update</name>
         <label>Estudo Update</label>
-        <locationX>930</locationX>
-        <locationY>782</locationY>
+        <locationX>1546</locationX>
+        <locationY>938</locationY>
         <connector>
             <targetReference>Id_Estudo_Novo_0</targetReference>
         </connector>
@@ -687,6 +754,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Prioridade__c</field>
+            <value>
+                <elementReference>Prioridade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Produto_Escolhido_Pelo_Cliente__c</field>
             <value>
                 <elementReference>Dados_do_Lead.Produto_escolhido_pelo_cliente__c</elementReference>
@@ -758,8 +831,8 @@
     <recordCreates>
         <name>Estudo_Update_0</name>
         <label>Estudo Update</label>
-        <locationX>754</locationX>
-        <locationY>890</locationY>
+        <locationX>1370</locationX>
+        <locationY>1046</locationY>
         <connector>
             <targetReference>Loop_Update</targetReference>
         </connector>
@@ -872,6 +945,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Prioridade__c</field>
+            <value>
+                <elementReference>Prioridade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Produto_Escolhido_Pelo_Cliente__c</field>
             <value>
                 <elementReference>Dados_do_Lead.Produto_escolhido_pelo_cliente__c</elementReference>
@@ -943,11 +1022,11 @@
     <recordLookups>
         <name>Dados_do_Lead</name>
         <label>Dados do Lead</label>
-        <locationX>490</locationX>
-        <locationY>350</locationY>
+        <locationX>578</locationX>
+        <locationY>182</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Tipo_de_Estudo</targetReference>
+            <targetReference>Tem_CNPJ</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -964,8 +1043,8 @@
     <recordLookups>
         <name>Obter_Anexos</name>
         <label>Obter Anexos</label>
-        <locationX>490</locationX>
-        <locationY>1466</locationY>
+        <locationX>1106</locationX>
+        <locationY>1622</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Atualiza</targetReference>
@@ -985,8 +1064,8 @@
     <recordLookups>
         <name>Obter_Unidade_Consumidora</name>
         <label>Obter Unidade Consumidora</label>
-        <locationX>798</locationX>
-        <locationY>566</locationY>
+        <locationX>1414</locationX>
+        <locationY>722</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Tem_Unidade_Consumidora</targetReference>
@@ -1006,8 +1085,8 @@
     <recordLookups>
         <name>Obter_Unidade_Consumidora_0</name>
         <label>Obter Unidade Consumidora</label>
-        <locationX>182</locationX>
-        <locationY>566</locationY>
+        <locationX>798</locationX>
+        <locationY>722</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Tem_Unidade_Consumidora_0</targetReference>
@@ -1027,11 +1106,11 @@
     <recordLookups>
         <name>Valida_Estudos</name>
         <label>Valida Estudos</label>
-        <locationX>490</locationX>
-        <locationY>242</locationY>
+        <locationX>1106</locationX>
+        <locationY>506</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Dados_do_Lead</targetReference>
+            <targetReference>Tipo_de_Estudo</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1048,8 +1127,8 @@
     <recordUpdates>
         <name>Atualiza_Lead</name>
         <label>Atualiza Lead</label>
-        <locationX>490</locationX>
-        <locationY>1358</locationY>
+        <locationX>1106</locationX>
+        <locationY>1514</locationY>
         <connector>
             <targetReference>Obter_Anexos</targetReference>
         </connector>
@@ -1087,14 +1166,22 @@
     <screens>
         <name>Gerar_Estudo</name>
         <label>Gerar Estudo</label>
-        <locationX>490</locationX>
-        <locationY>134</locationY>
+        <locationX>1106</locationX>
+        <locationY>398</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
             <targetReference>Valida_Estudos</targetReference>
         </connector>
+        <fields>
+            <name>Prioridade</name>
+            <choiceReferences>Motivo</choiceReferences>
+            <dataType>String</dataType>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+        </fields>
         <fields>
             <name>Observa_es_para_Solicita_o_de_Estudo</name>
             <fieldText>Observações para Solicitação de Estudo</fieldText>
@@ -1106,11 +1193,99 @@
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
+    <screens>
+        <name>Sem_CNPJ</name>
+        <label>Sem CNPJ</label>
+        <locationX>50</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ok</name>
+            <extensionName>avcmpbuilder:illustration</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>variant</name>
+                <value>
+                    <stringValue>not-available-in-lightning</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>title</name>
+                <value>
+                    <stringValue>Informe o CNPJ!</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>content</name>
+                <value>
+                    <stringValue>&lt;p&gt;Para seguir é necessário ter o CNPJ no seu LEAD&lt;/p&gt;</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>size</name>
+                <value>
+                    <stringValue>large</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <nextOrFinishButtonLabel>Fechar</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Sem_ScoreSerasa</name>
+        <label>Sem Score</label>
+        <locationX>557</locationX>
+        <locationY>493</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ok_0</name>
+            <extensionName>avcmpbuilder:illustration</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>variant</name>
+                <value>
+                    <stringValue>not-available-in-lightning</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>title</name>
+                <value>
+                    <stringValue>Informe o Score!</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>content</name>
+                <value>
+                    <stringValue>&lt;p&gt;Para seguir é necessário ter o Score Serasa Preenchido!&lt;/p&gt;</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>size</name>
+                <value>
+                    <stringValue>large</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <nextOrFinishButtonLabel>Fechar</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
     <start>
-        <locationX>364</locationX>
-        <locationY>0</locationY>
+        <locationX>452</locationX>
+        <locationY>48</locationY>
         <connector>
-            <targetReference>Gerar_Estudo</targetReference>
+            <targetReference>Dados_do_Lead</targetReference>
         </connector>
     </start>
     <status>Active</status>
