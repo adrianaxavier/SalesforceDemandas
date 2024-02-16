@@ -355,6 +355,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>ALTERAÇÃO DATA DO VENCIMENTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>APARELHOS DANIFICADOS</fullName>
             <default>false</default>
         </values>
