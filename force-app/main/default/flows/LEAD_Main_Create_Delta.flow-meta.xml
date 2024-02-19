@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Validar_CEP</name>
         <label>Validar CEP</label>
-        <locationX>473</locationX>
-        <locationY>384</locationY>
+        <locationX>644</locationX>
+        <locationY>276</locationY>
         <actionName>BuscaCep.ObterCep</actionName>
         <actionType>externalService</actionType>
         <connector>
@@ -25,8 +25,8 @@
     <decisions>
         <name>Dentro_da_rea_Atendida_LUZ</name>
         <label>Dentro da Área Atendida LUZ</label>
-        <locationX>275</locationX>
-        <locationY>600</locationY>
+        <locationX>446</locationX>
+        <locationY>492</locationY>
         <defaultConnector>
             <targetReference>Localiazr_Distribuidora</targetReference>
         </defaultConnector>
@@ -78,8 +78,8 @@
     <decisions>
         <name>Localizado</name>
         <label>Localizado</label>
-        <locationX>473</locationX>
-        <locationY>492</locationY>
+        <locationX>644</locationX>
+        <locationY>384</locationY>
         <defaultConnector>
             <targetReference>Atualiza_Lead</targetReference>
         </defaultConnector>
@@ -103,8 +103,8 @@
     <decisions>
         <name>MGM</name>
         <label>MGM</label>
-        <locationX>473</locationX>
-        <locationY>1500</locationY>
+        <locationX>644</locationX>
+        <locationY>1392</locationY>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
             <name>Sim3</name>
@@ -125,8 +125,8 @@
     <decisions>
         <name>Possui_Cupom</name>
         <label>Possui Cupom</label>
-        <locationX>473</locationX>
-        <locationY>1092</locationY>
+        <locationX>644</locationX>
+        <locationY>984</locationY>
         <defaultConnector>
             <targetReference>Atualiza_a_Fonte</targetReference>
         </defaultConnector>
@@ -172,8 +172,8 @@
     <recordLookups>
         <name>Localiazr_Distribuidora</name>
         <label>Localiazr Distribuidora</label>
-        <locationX>407</locationX>
-        <locationY>708</locationY>
+        <locationX>578</locationX>
+        <locationY>600</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Atualizar_Lead</targetReference>
@@ -193,8 +193,8 @@
     <recordLookups>
         <name>Localiazr_Distribuidora_0</name>
         <label>Localiazr Distribuidora</label>
-        <locationX>143</locationX>
-        <locationY>708</locationY>
+        <locationX>314</locationX>
+        <locationY>600</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Atualizar_Lead_0</targetReference>
@@ -214,8 +214,8 @@
     <recordUpdates>
         <name>Atualiza_Lead</name>
         <label>Atualiza Lead</label>
-        <locationX>671</locationX>
-        <locationY>600</locationY>
+        <locationX>842</locationX>
+        <locationY>492</locationY>
         <connector>
             <targetReference>Possui_Cupom</targetReference>
         </connector>
@@ -230,8 +230,8 @@
     <recordUpdates>
         <name>Atualiza_MGM</name>
         <label>Atualiza MGM</label>
-        <locationX>341</locationX>
-        <locationY>1608</locationY>
+        <locationX>512</locationX>
+        <locationY>1500</locationY>
         <inputAssignments>
             <field>MGMT__c</field>
             <value>
@@ -249,8 +249,8 @@
     <recordUpdates>
         <name>Atualizar_Lead</name>
         <label>Atualizar Lead</label>
-        <locationX>407</locationX>
-        <locationY>816</locationY>
+        <locationX>578</locationX>
+        <locationY>708</locationY>
         <connector>
             <targetReference>Possui_Cupom</targetReference>
         </connector>
@@ -301,8 +301,8 @@
     <recordUpdates>
         <name>Atualizar_Lead_0</name>
         <label>Atualizar Lead</label>
-        <locationX>143</locationX>
-        <locationY>816</locationY>
+        <locationX>314</locationX>
+        <locationY>708</locationY>
         <connector>
             <targetReference>Possui_Cupom</targetReference>
         </connector>
@@ -347,11 +347,8 @@
     <recordUpdates>
         <name>Campo_Data_Cria_o</name>
         <label>Campo Data Criação</label>
-        <locationX>473</locationX>
+        <locationX>50</locationX>
         <locationY>276</locationY>
-        <connector>
-            <targetReference>Validar_CEP</targetReference>
-        </connector>
         <inputAssignments>
             <field>Data_Da_Cria_o__c</field>
             <value>
@@ -361,8 +358,11 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
+        <locationX>221</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>Campo_Data_Cria_o</targetReference>
+        </connector>
         <filterLogic>or</filterLogic>
         <filters>
             <field>Company__c</field>
@@ -382,7 +382,7 @@
         <recordTriggerType>Create</recordTriggerType>
         <scheduledPaths>
             <connector>
-                <targetReference>Campo_Data_Cria_o</targetReference>
+                <targetReference>Validar_CEP</targetReference>
             </connector>
             <pathType>AsyncAfterCommit</pathType>
         </scheduledPaths>
@@ -392,8 +392,8 @@
     <subflows>
         <name>Atualiza_a_Fonte</name>
         <label>Atualiza a Fonte</label>
-        <locationX>473</locationX>
-        <locationY>1392</locationY>
+        <locationX>644</locationX>
+        <locationY>1284</locationY>
         <connector>
             <targetReference>MGM</targetReference>
         </connector>
@@ -426,8 +426,8 @@
     <subflows>
         <name>Atualiza_Parceiro</name>
         <label>Atualiza Parceiro</label>
-        <locationX>341</locationX>
-        <locationY>1200</locationY>
+        <locationX>512</locationX>
+        <locationY>1092</locationY>
         <connector>
             <targetReference>Atualiza_a_Fonte</targetReference>
         </connector>
