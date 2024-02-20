@@ -107,9 +107,6 @@
         <locationX>50</locationX>
         <locationY>647</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
-        <connector>
-            <targetReference>Atualizar_ID_do_Lead</targetReference>
-        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -730,9 +727,6 @@
         <locationX>578</locationX>
         <locationY>647</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
-        <connector>
-            <targetReference>C_pia_3_de_Atualizar_ID_do_Lead</targetReference>
-        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -1359,9 +1353,6 @@
         <locationX>314</locationX>
         <locationY>647</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
-        <connector>
-            <targetReference>C_pia_4_de_Atualizar_ID_do_Lead</targetReference>
-        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -2003,45 +1994,6 @@
         <object>PreLead__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordUpdates>
-        <name>Atualizar_ID_do_Lead</name>
-        <label>Atualizar ID do Lead</label>
-        <locationX>50</locationX>
-        <locationY>755</locationY>
-        <inputAssignments>
-            <field>Lead__c</field>
-            <value>
-                <elementReference>Criar_Lead_Delta</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>C_pia_3_de_Atualizar_ID_do_Lead</name>
-        <label>Atualizar ID do Lead</label>
-        <locationX>578</locationX>
-        <locationY>755</locationY>
-        <inputAssignments>
-            <field>Lead__c</field>
-            <value>
-                <elementReference>Criar_Lead_LuzPF</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>C_pia_4_de_Atualizar_ID_do_Lead</name>
-        <label>Atualizar ID do Lead</label>
-        <locationX>314</locationX>
-        <locationY>755</locationY>
-        <inputAssignments>
-            <field>Lead__c</field>
-            <value>
-                <elementReference>Criar_Lead_LuzPJ</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
     <start>
         <locationX>188</locationX>
         <locationY>0</locationY>

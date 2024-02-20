@@ -212,6 +212,19 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>Atualiza_ID_do_Lead</name>
+        <label>Atualiza ID do Lead</label>
+        <locationX>50</locationX>
+        <locationY>384</locationY>
+        <inputAssignments>
+            <field>Lead__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Pre_Lead__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Atualiza_Lead</name>
         <label>Atualiza Lead</label>
         <locationX>842</locationX>
@@ -349,6 +362,9 @@
         <label>Campo Data Criação</label>
         <locationX>50</locationX>
         <locationY>276</locationY>
+        <connector>
+            <targetReference>Atualiza_ID_do_Lead</targetReference>
+        </connector>
         <inputAssignments>
             <field>Data_Da_Cria_o__c</field>
             <value>
