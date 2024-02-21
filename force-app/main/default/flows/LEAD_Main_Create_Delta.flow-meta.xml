@@ -216,13 +216,24 @@
         <label>Atualiza ID do Lead</label>
         <locationX>50</locationX>
         <locationY>384</locationY>
+        <connector>
+            <targetReference>Criar_Contato</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Pr_Lead__c</elementReference>
+            </value>
+        </filters>
         <inputAssignments>
             <field>Lead__c</field>
             <value>
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputAssignments>
-        <inputReference>$Record.Pre_Lead__r</inputReference>
+        <object>PreLead__c</object>
     </recordUpdates>
     <recordUpdates>
         <name>Atualiza_Lead</name>
@@ -404,7 +415,7 @@
         </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <subflows>
         <name>Atualiza_a_Fonte</name>
         <label>Atualiza a Fonte</label>
@@ -458,6 +469,73 @@
             <name>Record_id</name>
             <value>
                 <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Criar_Contato</name>
+        <label>Criar Contato</label>
+        <locationX>50</locationX>
+        <locationY>492</locationY>
+        <flowName>Subflow_Cria_o_de_Contato</flowName>
+        <inputAssignments>
+            <name>DatadeAniversario</name>
+            <value>
+                <elementReference>$Record.BirthDate__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Email</name>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>EstadoCivil</name>
+            <value>
+                <elementReference>$Record.MaritalStatus__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Lead</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Locale</name>
+            <value>
+                <stringValue>BR</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>NaturezaJuridica</name>
+            <value>
+                <elementReference>$Record.PFPJ__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>PrimeiroNome</name>
+            <value>
+                <elementReference>$Record.FirstName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Profissao</name>
+            <value>
+                <elementReference>$Record.Occupation__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Telefone</name>
+            <value>
+                <elementReference>$Record.Phone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>UltimoNome</name>
+            <value>
+                <elementReference>$Record.Phone</elementReference>
             </value>
         </inputAssignments>
     </subflows>
