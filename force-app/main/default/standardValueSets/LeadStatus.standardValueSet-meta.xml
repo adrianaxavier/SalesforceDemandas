@@ -2,21 +2,15 @@
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <sorted>false</sorted>
     <standardValue>
+        <fullName>Solicitação de Proposta</fullName>
+        <default>false</default>
+        <label>Solicitação de Proposta</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
         <fullName>New</fullName>
         <default>true</default>
         <label>Novo</label>
-        <converted>false</converted>
-    </standardValue>
-    <standardValue>
-        <fullName>Coleta de Fatura</fullName>
-        <default>false</default>
-        <label>Coleta de Fatura</label>
-        <converted>false</converted>
-    </standardValue>
-    <standardValue>
-        <fullName>Simulação</fullName>
-        <default>false</default>
-        <label>Simulação</label>
         <converted>false</converted>
     </standardValue>
     <standardValue>
