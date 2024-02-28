@@ -395,6 +395,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Link_Download__c</field>
+            <value>
+                <elementReference>Obter_Pr_lead.Link_Download__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>MaritalStatus__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.MaritalStatus__c</elementReference>
@@ -969,6 +975,12 @@
             <field>LastName</field>
             <value>
                 <elementReference>sobrenome</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Link_Download__c</field>
+            <value>
+                <elementReference>Obter_Pr_lead.Link_Download__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
