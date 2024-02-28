@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>SOLICITAÇÃO DE ESTUDO FINALIZADO</name>
+    <pageDevName>SOLICITA_O_DE_ESTUDO_FINALIZADO</pageDevName>
+    <relatedEntityType>Estudos__c</relatedEntityType>
+    <style>none</style>
+    <textOnly>Olá, {{{Estudos__c.Solicitante_do_Estudo__c}}}, 
+
+Queremos te informar que o estudo de seu Lead {{{Estudos__c.Nome_do_Lead__c}}} foi concluído. e o 
+
+mesmo é {{{Estudos__c.Viabilidade__c}}} 
+
+**Observação do Estudo** 
+
+{{{Estudos__c.Observa_o__c}}} 
+
+Acesso o Estudo &lt; https://deltaenergiacom.lightning.force.com/lightning/r/Estudos__c/{{{Estudos__c.Id}}}/view &gt; 
+
+Av.Brigadeiro Faria Lima,4,100 - 7 Andar | São Paulo -SP - CEP 04538-132   Tel:55 (11) 3897-6500 | Fax.: 55 (11) 3897-6509</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>
