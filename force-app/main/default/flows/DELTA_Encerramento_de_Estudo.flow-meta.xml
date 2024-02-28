@@ -1,52 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Encerramento_de_Estudo</name>
-        <label>Encerramento de Estudo</label>
-        <locationX>859</locationX>
-        <locationY>1595</locationY>
-        <actionName>emailSimple</actionName>
-        <actionType>emailSimple</actionType>
+        <name>Email_de_encerramento</name>
+        <label>Email de encerramento</label>
+        <locationX>176</locationX>
+        <locationY>1247</locationY>
+        <actionName>Estudos__c.Encerramento_de_Estudo</actionName>
+        <actionType>emailAlert</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
-            <name>emailAddresses</name>
-            <value>
-                <stringValue>adriana.xavier@deltaenergia.com.br</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>senderAddress</name>
-            <value>
-                <elementReference>$Record.Owner:User.Email</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>relatedRecordId</name>
+            <name>SObjectRowId</name>
             <value>
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <inputParameters>
-            <name>recipientId</name>
-            <value>
-                <elementReference>$Record.Solicitante_do_Estudo__r.Email</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailTemplateId</name>
-            <value>
-                <elementReference>Obter_Modelo.Id</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>emailSimple</nameSegment>
+        <nameSegment>Estudos__c.Encerramento_de_Estudo</nameSegment>
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>58.0</apiVersion>
     <decisions>
         <name>Esta_no_Lead</name>
         <label>Esta no Lead</label>
-        <locationX>1035</locationX>
-        <locationY>1103</locationY>
+        <locationX>352</locationX>
+        <locationY>755</locationY>
         <defaultConnector>
             <targetReference>Criar_Anexo</targetReference>
         </defaultConnector>
@@ -73,8 +49,8 @@
     <loops>
         <name>Loop_Anexos</name>
         <label>Loop Anexos</label>
-        <locationX>859</locationX>
-        <locationY>887</locationY>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
         <collectionReference>Obter_Anexos</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -93,7 +69,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -106,8 +82,8 @@
     <recordCreates>
         <name>Criar_Anexo</name>
         <label>Criar Anexo</label>
-        <locationX>1123</locationX>
-        <locationY>1211</locationY>
+        <locationX>440</locationX>
+        <locationY>863</locationY>
         <connector>
             <targetReference>Loop_Anexos</targetReference>
         </connector>
@@ -129,8 +105,8 @@
     <recordLookups>
         <name>Obter_Anexos</name>
         <label>Obter Anexos</label>
-        <locationX>859</locationX>
-        <locationY>779</locationY>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Anexos</targetReference>
@@ -157,11 +133,11 @@
     <recordLookups>
         <name>Obter_Modelo</name>
         <label>Obter Modelo</label>
-        <locationX>859</locationX>
-        <locationY>1487</locationY>
+        <locationX>176</locationX>
+        <locationY>1139</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Encerramento_de_Estudo</targetReference>
+            <targetReference>Email_de_encerramento</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -178,8 +154,8 @@
     <recordLookups>
         <name>Validar_se_tem_no_Lead</name>
         <label>Validar se tem no Lead</label>
-        <locationX>1035</locationX>
-        <locationY>995</locationY>
+        <locationX>352</locationX>
+        <locationY>647</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Esta_no_Lead</targetReference>
@@ -206,8 +182,8 @@
     <recordUpdates>
         <name>Atualizar_Lead</name>
         <label>Atualizar Lead</label>
-        <locationX>859</locationX>
-        <locationY>371</locationY>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
         <connector>
             <targetReference>Obter_Anexos</targetReference>
         </connector>
@@ -432,8 +408,8 @@
         <object>Lead</object>
     </recordUpdates>
     <start>
-        <locationX>733</locationX>
-        <locationY>48</locationY>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Atualizar_Lead</targetReference>
         </connector>
