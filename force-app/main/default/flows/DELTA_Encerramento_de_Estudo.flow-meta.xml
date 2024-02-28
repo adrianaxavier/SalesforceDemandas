@@ -370,6 +370,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Status_Estudo__c</field>
+            <value>
+                <elementReference>$Record.Viabilidade__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Submercado__c</field>
             <value>
                 <elementReference>$Record.Submercado__c</elementReference>
