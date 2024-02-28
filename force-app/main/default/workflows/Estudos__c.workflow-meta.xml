@@ -5,6 +5,10 @@
         <description>Encerramento de Estudo</description>
         <protected>false</protected>
         <recipients>
+            <recipient>adriana.xavier@deltaenergia.com.br</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
             <recipient>marcelo.barros@deltaenergia.com.br</recipient>
             <type>user</type>
         </recipients>
@@ -17,6 +21,6 @@
             <type>userLookup</type>
         </recipients>
         <senderType>DefaultWorkflowUser</senderType>
-        <template>unfiled$public/Encerramento_Estudo</template>
+        <template>unfiled$public/SOLICITA_O_DE_ESTUDO_FINALIZADO_1706893654453</template>
     </alerts>
 </Workflow>
