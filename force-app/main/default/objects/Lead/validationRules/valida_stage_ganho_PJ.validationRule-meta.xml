@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>valida_stage_ganho_PJ</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(ISPICKVAL(Status, &quot;Ganho&quot;),
+							 RecordType.Id = &apos;012HY0000004IBxYAM&apos;,
+				OR(Email = null,
+							Phone = null,  
+       ISBLANK(TEXT(PFPJ__c)),
+							 CNPJ__c = null,
+							 ISBLANK(TEXT(Industry)),
+							 ISBLANK(TEXT(Tipo_de_produto__c)),
+							 Address__c = null,
+							City__c = null,
+							CEP__c = null,
+						 AdressNumber__c = null,
+							District__c = null,
+							ISBLANK(TEXT(UF__c))
+				)
+)
+		)</errorConditionFormula>
+    <errorMessage>Favor preencher os campos: Telefone, Email, Natureza Juridica, CNPJ/CPF, Setor, Produto, Empresa do Grupo, Logradouro, Cidade, CEP, Número,Bairro e UF</errorMessage>
+</ValidationRule>
