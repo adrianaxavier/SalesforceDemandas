@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Units</fullName>
+    <fields>Name</fields>
+    <fields>UF__c</fields>
+    <fields>CNPJ__c</fields>
+    <fields>Status__c</fields>
+    <fields>Mercado__c</fields>
+    <fields>VoltageClass__c</fields>
+    <fields>FareClass__c</fields>
+    <fields>Distributor__c</fields>
+    <fields>Submarket__c</fields>
+    <label>Unidades</label>
+</CompactLayout>

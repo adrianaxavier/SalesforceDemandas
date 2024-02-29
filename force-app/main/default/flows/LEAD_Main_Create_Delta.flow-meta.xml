@@ -580,7 +580,7 @@
         <inputAssignments>
             <name>UltimoNome</name>
             <value>
-                <elementReference>$Record.Phone</elementReference>
+                <elementReference>$Record.LastName</elementReference>
             </value>
         </inputAssignments>
     </subflows>
