@@ -37,6 +37,11 @@
                 <default>false</default>
                 <label>Finalização de Onboard</label>
             </value>
+            <value>
+                <fullName>Finalizado</fullName>
+                <default>false</default>
+                <label>Finalizado</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

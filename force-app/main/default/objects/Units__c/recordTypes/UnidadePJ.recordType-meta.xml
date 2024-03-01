@@ -255,6 +255,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Finalizado</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Finalização de Onboard</fullName>
             <default>false</default>
         </values>
