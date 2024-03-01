@@ -1199,6 +1199,23 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.Cupom_do_parceiro__c</fieldItem>
+                <identifier>RecordCupom_do_parceiro_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Parceiro__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Cupom__c</fieldItem>
                 <identifier>RecordCupom_cField</identifier>
             </fieldInstance>
