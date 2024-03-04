@@ -512,6 +512,12 @@
                 <elementReference>$Record.FantasyName__c</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <name>ValorFatura</name>
+            <value>
+                <elementReference>$Record.Valor_da_Fatura__c</elementReference>
+            </value>
+        </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
     <subflows>
