@@ -661,7 +661,7 @@
         <inputAssignments>
             <field>Valor_Conta__c</field>
             <value>
-                <elementReference>$Record.AccountValue__c</elementReference>
+                <elementReference>Obter_Pr_lead.AccountValue__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1244,7 +1244,7 @@
         <inputAssignments>
             <field>Valor_Conta__c</field>
             <value>
-                <elementReference>$Record.AccountValue__c</elementReference>
+                <elementReference>Obter_Pr_lead.AccountValue__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

@@ -606,6 +606,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Conta__c</field>
+            <value>
+                <elementReference>IDdaconta</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Lead__c</field>
             <value>
                 <elementReference>$Record.Id</elementReference>
@@ -645,6 +651,18 @@
             <field>UF__c</field>
             <value>
                 <elementReference>$Record.UF__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Valor_Conta__c</field>
+            <value>
+                <elementReference>$Record.Valor_Conta__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Valor_da_Fatura_R__c</field>
+            <value>
+                <elementReference>$Record.Valor_da_Fatura__c</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
