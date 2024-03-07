@@ -180,6 +180,13 @@
                     <stringValue>Novo</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contrato Gerado</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>SetPreLeadQtdEmAndamento</targetReference>
             </connector>
