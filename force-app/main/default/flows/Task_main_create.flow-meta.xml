@@ -30,7 +30,7 @@
         <name>Email</name>
         <label>Email</label>
         <locationX>1128</locationX>
-        <locationY>1847</locationY>
+        <locationY>1739</locationY>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
             <name>Sim</name>
@@ -74,9 +74,9 @@
         <name>Esta_Encerrada</name>
         <label>Esta Encerrada</label>
         <locationX>842</locationX>
-        <locationY>1463</locationY>
+        <locationY>1355</locationY>
         <defaultConnector>
-            <targetReference>Email</targetReference>
+            <targetReference>leadatt</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
@@ -90,7 +90,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Atualiar_farol_Tarefa</targetReference>
+                <targetReference>Atualizar_lead_encerrado</targetReference>
             </connector>
             <label>Sim</label>
         </rules>
@@ -124,7 +124,7 @@
         <name>Qual_a_Empresa</name>
         <label>Qual Empresa</label>
         <locationX>842</locationX>
-        <locationY>1163</locationY>
+        <locationY>1055</locationY>
         <defaultConnector>
             <targetReference>Esta_Encerrada</targetReference>
         </defaultConnector>
@@ -194,7 +194,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>leadatt</targetReference>
+                <targetReference>Qual_a_Empresa</targetReference>
             </connector>
             <label>Primeiro</label>
         </rules>
@@ -350,34 +350,10 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Atualiar_farol_Tarefa</name>
-        <label>Atualiar farol Tarefa</label>
-        <locationX>710</locationX>
-        <locationY>1571</locationY>
-        <connector>
-            <targetReference>Email</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.WhoId</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Data_Tarefa__c</field>
-            <value>
-                <elementReference>$Record.ActivityDate</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Lead</object>
-    </recordUpdates>
-    <recordUpdates>
         <name>Atualizar_Lead_Delta_Inside_Sales</name>
         <label>Atualizar Lead Delta Inside Sales</label>
         <locationX>842</locationX>
-        <locationY>1271</locationY>
+        <locationY>1163</locationY>
         <connector>
             <targetReference>Esta_Encerrada</targetReference>
         </connector>
@@ -398,10 +374,52 @@
         <object>Lead</object>
     </recordUpdates>
     <recordUpdates>
+        <name>Atualizar_lead_encerrado</name>
+        <label>Atualizar lead</label>
+        <locationX>710</locationX>
+        <locationY>1463</locationY>
+        <connector>
+            <targetReference>Email</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>CreatedDateTask__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Data_Primeiro_Contato__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Numero_de_Contatos__c</field>
+            <value>
+                <elementReference>NumContLead</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SubjectTask__c</field>
+            <value>
+                <elementReference>$Record.Subject</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
         <name>Atualizar_Lead_Thymos</name>
         <label>Atualizar Lead Thymos</label>
         <locationX>578</locationX>
-        <locationY>1271</locationY>
+        <locationY>1163</locationY>
         <connector>
             <targetReference>Esta_Encerrada</targetReference>
         </connector>
@@ -609,9 +627,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Data_Tarefa__c</field>
-        </inputAssignments>
-        <inputAssignments>
             <field>Numero_de_Contatos__c</field>
             <value>
                 <elementReference>NumContLead</elementReference>
@@ -629,7 +644,7 @@
         <name>Lead2</name>
         <label>Lead</label>
         <locationX>996</locationX>
-        <locationY>1955</locationY>
+        <locationY>1847</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -649,10 +664,10 @@
     <recordUpdates>
         <name>leadatt</name>
         <label>Atualizar lead</label>
-        <locationX>842</locationX>
-        <locationY>1055</locationY>
+        <locationX>974</locationX>
+        <locationY>1463</locationY>
         <connector>
-            <targetReference>Qual_a_Empresa</targetReference>
+            <targetReference>Email</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -672,6 +687,12 @@
             <field>Data_Primeiro_Contato__c</field>
             <value>
                 <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Data_Tarefa__c</field>
+            <value>
+                <elementReference>$Record.ActivityDate</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
