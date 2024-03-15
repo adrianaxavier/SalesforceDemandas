@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Validar_CEP</name>
         <label>Validar CEP</label>
-        <locationX>908</locationX>
+        <locationX>644</locationX>
         <locationY>276</locationY>
         <actionName>BuscaCep.ObterCep</actionName>
         <actionType>externalService</actionType>
@@ -25,7 +25,7 @@
     <decisions>
         <name>Dentro_da_rea_Atendida_LUZ</name>
         <label>Dentro da Área Atendida LUZ</label>
-        <locationX>710</locationX>
+        <locationX>446</locationX>
         <locationY>492</locationY>
         <defaultConnector>
             <targetReference>Localiazr_Distribuidora</targetReference>
@@ -78,7 +78,7 @@
     <decisions>
         <name>Localizado</name>
         <label>Localizado</label>
-        <locationX>908</locationX>
+        <locationX>644</locationX>
         <locationY>384</locationY>
         <defaultConnector>
             <targetReference>Atualiza_Lead</targetReference>
@@ -103,7 +103,7 @@
     <decisions>
         <name>MGM</name>
         <label>MGM</label>
-        <locationX>908</locationX>
+        <locationX>644</locationX>
         <locationY>1392</locationY>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
@@ -125,7 +125,7 @@
     <decisions>
         <name>Possui_Cupom</name>
         <label>Possui Cupom</label>
-        <locationX>908</locationX>
+        <locationX>644</locationX>
         <locationY>984</locationY>
         <defaultConnector>
             <targetReference>Atualiza_a_Fonte</targetReference>
@@ -143,28 +143,6 @@
             </conditions>
             <connector>
                 <targetReference>Atualiza_Parceiro</targetReference>
-            </connector>
-            <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Tem_Fatura</name>
-        <label>Tem Fatura</label>
-        <locationX>182</locationX>
-        <locationY>600</locationY>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>Sim123</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Fatura_Anexada__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Criacao_de_Faturas</targetReference>
             </connector>
             <label>Sim</label>
         </rules>
@@ -194,7 +172,7 @@
     <recordLookups>
         <name>Localiazr_Distribuidora</name>
         <label>Localiazr Distribuidora</label>
-        <locationX>842</locationX>
+        <locationX>578</locationX>
         <locationY>600</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -215,7 +193,7 @@
     <recordLookups>
         <name>Localiazr_Distribuidora_0</name>
         <label>Localiazr Distribuidora</label>
-        <locationX>578</locationX>
+        <locationX>314</locationX>
         <locationY>600</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -236,7 +214,7 @@
     <recordUpdates>
         <name>Atualiza_ID_do_Lead</name>
         <label>Atualiza ID do Lead</label>
-        <locationX>182</locationX>
+        <locationX>50</locationX>
         <locationY>384</locationY>
         <connector>
             <targetReference>Criar_Contato</targetReference>
@@ -260,7 +238,7 @@
     <recordUpdates>
         <name>Atualiza_Lead</name>
         <label>Atualiza Lead</label>
-        <locationX>1106</locationX>
+        <locationX>842</locationX>
         <locationY>492</locationY>
         <connector>
             <targetReference>Possui_Cupom</targetReference>
@@ -276,7 +254,7 @@
     <recordUpdates>
         <name>Atualiza_MGM</name>
         <label>Atualiza MGM</label>
-        <locationX>776</locationX>
+        <locationX>512</locationX>
         <locationY>1500</locationY>
         <inputAssignments>
             <field>MGMT__c</field>
@@ -295,7 +273,7 @@
     <recordUpdates>
         <name>Atualizar_Lead</name>
         <label>Atualizar Lead</label>
-        <locationX>842</locationX>
+        <locationX>578</locationX>
         <locationY>708</locationY>
         <connector>
             <targetReference>Possui_Cupom</targetReference>
@@ -347,7 +325,7 @@
     <recordUpdates>
         <name>Atualizar_Lead_0</name>
         <label>Atualizar Lead</label>
-        <locationX>578</locationX>
+        <locationX>314</locationX>
         <locationY>708</locationY>
         <connector>
             <targetReference>Possui_Cupom</targetReference>
@@ -393,7 +371,7 @@
     <recordUpdates>
         <name>Campo_Data_Cria_o</name>
         <label>Campo Data Criação</label>
-        <locationX>182</locationX>
+        <locationX>50</locationX>
         <locationY>276</locationY>
         <connector>
             <targetReference>Atualiza_ID_do_Lead</targetReference>
@@ -407,7 +385,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>419</locationX>
+        <locationX>221</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Campo_Data_Cria_o</targetReference>
@@ -441,7 +419,7 @@
     <subflows>
         <name>Atualiza_a_Fonte</name>
         <label>Atualiza a Fonte</label>
-        <locationX>908</locationX>
+        <locationX>644</locationX>
         <locationY>1284</locationY>
         <connector>
             <targetReference>MGM</targetReference>
@@ -475,7 +453,7 @@
     <subflows>
         <name>Atualiza_Parceiro</name>
         <label>Atualiza Parceiro</label>
-        <locationX>776</locationX>
+        <locationX>512</locationX>
         <locationY>1092</locationY>
         <connector>
             <targetReference>Atualiza_a_Fonte</targetReference>
@@ -498,12 +476,84 @@
         <name>Criacao_de_Faturas</name>
         <label>Criação de Faturas</label>
         <locationX>50</locationX>
-        <locationY>708</locationY>
+        <locationY>600</locationY>
         <flowName>Subflow_criacao_de_fatura</flowName>
+        <inputAssignments>
+            <name>BaixaRenda</name>
+            <value>
+                <elementReference>$Record.Baixa_Renda__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>classificacao</name>
+            <value>
+                <elementReference>$Record.Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>consumoabaixorange</name>
+            <value>
+                <elementReference>$Record.Consumo_Abaixo_do_Range__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Distribuidora</name>
+            <value>
+                <elementReference>$Record.Distributor__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>distribuidoranaoatendida</name>
+            <value>
+                <elementReference>$Record.Distribuidora_n_o_Atendida__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>errogenericosimulacao</name>
+            <value>
+                <elementReference>$Record.Erro_Gen_rico_de_Simula_o__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>erroleiturafatura</name>
+            <value>
+                <elementReference>$Record.Erro_Leitura_Fatura__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>erros</name>
+            <value>
+                <elementReference>$Record.Erros__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>faturaanexada</name>
+            <value>
+                <elementReference>$Record.Fatura_Anexada__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>faturaprocessada</name>
+            <value>
+                <elementReference>$Record.Fatura_Processada__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>guiddoarquivo</name>
+            <value>
+                <elementReference>$Record.GuidArquivoDaDigitalizacao__c</elementReference>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <name>LinkDownload</name>
             <value>
                 <elementReference>$Record.Link_Download__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>multadadistribuidora</name>
+            <value>
+                <elementReference>$Record.Multa_Da_distribuidora__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -513,9 +563,51 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <name>NomedoArquivoanexocomexten</name>
+            <value>
+                <elementReference>$Record.Nome_do_Arquivo_anexo_com_extens_o__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>scoreserasa</name>
+            <value>
+                <elementReference>$Record.Score_SERASA__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>TarifaBranca</name>
+            <value>
+                <elementReference>$Record.Tarifa_Branca__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>ValordaConta</name>
+            <value>
+                <elementReference>$Record.Valor_Conta__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <name>ValorFatura</name>
             <value>
                 <elementReference>$Record.Valor_da_Fatura__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Volumeconsideradoparaestudo</name>
+            <value>
+                <elementReference>$Record.Volume_considerado_para_estudo_kWh__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>lead</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>prelead</name>
+            <value>
+                <elementReference>$Record.Pr_Lead__r.Id</elementReference>
             </value>
         </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -523,10 +615,10 @@
     <subflows>
         <name>Criar_Contato</name>
         <label>Criar Contato</label>
-        <locationX>182</locationX>
+        <locationX>50</locationX>
         <locationY>492</locationY>
         <connector>
-            <targetReference>Tem_Fatura</targetReference>
+            <targetReference>Criacao_de_Faturas</targetReference>
         </connector>
         <flowName>Subflow_Cria_o_de_Contato</flowName>
         <inputAssignments>
