@@ -3,7 +3,7 @@
     <apiVersion>57.0</apiVersion>
     <decisions>
         <name>Possui</name>
-        <label>Possui</label>
+        <label>Possui UC</label>
         <locationX>182</locationX>
         <locationY>539</locationY>
         <defaultConnector>
@@ -31,6 +31,9 @@
         <label>Possui Lead</label>
         <locationX>380</locationX>
         <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Get_Fatura_Distribuidora</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
             <name>Sim</name>
@@ -81,6 +84,27 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
+        <name>Get_Fatura_Distribuidora</name>
+        <label>Get Fatura Distribuidora</label>
+        <locationX>380</locationX>
+        <locationY>923</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Upd_fatura_distribuidora</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Pr_Lead__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Fatura_Distribuidora__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Obter_Pr_lead</name>
         <label>Obter Pré lead</label>
         <locationX>380</locationX>
@@ -106,6 +130,9 @@
         <label>Atualiza Lead Luz PF</label>
         <locationX>50</locationX>
         <locationY>647</locationY>
+        <connector>
+            <targetReference>Get_Fatura_Distribuidora</targetReference>
+        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -689,6 +716,9 @@
         <label>Atualiza Lead Luz PF</label>
         <locationX>314</locationX>
         <locationY>647</locationY>
+        <connector>
+            <targetReference>Get_Fatura_Distribuidora</targetReference>
+        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -1266,6 +1296,73 @@
             </value>
         </inputAssignments>
         <inputReference>$Record.Leads__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Upd_fatura_distribuidora</name>
+        <label>Upd fatura distribuidora</label>
+        <locationX>380</locationX>
+        <locationY>1031</locationY>
+        <inputAssignments>
+            <field>AccountValue__c</field>
+            <value>
+                <elementReference>$Record.AccountValue__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Consumo_Abaixo_do_Range__c</field>
+            <value>
+                <elementReference>$Record.ConsumoAbaixoRange__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Consumo_Historico__c</field>
+            <value>
+                <elementReference>$Record.ConsumoHistorico__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Consumo_Mensal__c</field>
+            <value>
+                <elementReference>$Record.ConsumoMensal__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Consumo_Utilizado__c</field>
+            <value>
+                <elementReference>$Record.ConsumoUtilizado__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Distribuidora__c</field>
+            <value>
+                <elementReference>$Record.Distribuidora__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Link_Download__c</field>
+            <value>
+                <elementReference>$Record.Link_Download__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>$Record.FantasyName__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Valor_da_Fatura_R__c</field>
+            <value>
+                <elementReference>$Record.Valor_da_Fatura__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Volume_considerado_para_estudo_kWh__c</field>
+            <value>
+                <elementReference>$Record.Volume_considerado_para_estudo_kWh__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Fatura_Distribuidoras__r</inputReference>
     </recordUpdates>
     <start>
         <locationX>254</locationX>
