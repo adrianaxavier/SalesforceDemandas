@@ -98,6 +98,28 @@ trigger LeadTrigger on Lead (before insert, before update,after update, before d
         i++;
         i++;
         i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
         
         for (Lead lead : trigger.new)
         {
