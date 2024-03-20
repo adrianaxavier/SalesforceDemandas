@@ -18,6 +18,22 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Atribuir_Id_opp</name>
+        <label>Atribuir Id opp</label>
+        <locationX>182</locationX>
+        <locationY>1163</locationY>
+        <assignmentItems>
+            <assignToReference>IdOpp</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Criar_Oportunidade</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Getfatura</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>C_pia_2_de_atribuir_ID</name>
         <label>Cópia 2 de atribuir ID</label>
         <locationX>314</locationX>
@@ -93,7 +109,7 @@
         <locationX>314</locationX>
         <locationY>947</locationY>
         <defaultConnector>
-            <targetReference>Check_UC</targetReference>
+            <targetReference>Getfatura</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
@@ -145,7 +161,7 @@
         <name>Check_UC</name>
         <label>Check UC</label>
         <locationX>314</locationX>
-        <locationY>1247</locationY>
+        <locationY>1571</locationY>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
             <name>N_o_tem_UC</name>
@@ -223,7 +239,7 @@
         <name>C_pia_1_de_Criar_UC_PJ</name>
         <label>Criar UC PF</label>
         <locationX>50</locationX>
-        <locationY>1355</locationY>
+        <locationY>1679</locationY>
         <inputAssignments>
             <field>Account__c</field>
             <value>
@@ -567,7 +583,7 @@
         <locationX>182</locationX>
         <locationY>1055</locationY>
         <connector>
-            <targetReference>Check_UC</targetReference>
+            <targetReference>Atribuir_Id_opp</targetReference>
         </connector>
         <inputAssignments>
             <field>Bairro__c</field>
@@ -672,7 +688,7 @@
         <name>Criar_UC_PJ</name>
         <label>Criar UC PJ</label>
         <locationX>314</locationX>
-        <locationY>1355</locationY>
+        <locationY>1679</locationY>
         <inputAssignments>
             <field>Account__c</field>
             <value>
@@ -772,6 +788,27 @@
         <object>Units__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordLookups>
+        <name>Getfatura</name>
+        <label>Getfatura distribuidora</label>
+        <locationX>314</locationX>
+        <locationY>1355</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Atualiza_opp_na_fatura_distribuidora</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Lead__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Fatura_Distribuidora__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>Atualiza_Lead</name>
         <label>Atualiza Lead</label>
@@ -788,13 +825,29 @@
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
+    <recordUpdates>
+        <name>Atualiza_opp_na_fatura_distribuidora</name>
+        <label>Atualiza opp na fatura distribuidora</label>
+        <locationX>314</locationX>
+        <locationY>1463</locationY>
+        <connector>
+            <targetReference>Check_UC</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Oportunidade__c</field>
+            <value>
+                <elementReference>IdOpp</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Fatura_Distribuidoras__r</inputReference>
+    </recordUpdates>
     <start>
         <locationX>452</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Check_Status_of_Lead</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>or</filterLogic>
         <filters>
             <field>Recordtype_Name__c</field>
             <operator>EqualTo</operator>
@@ -816,6 +869,13 @@
     <status>Active</status>
     <variables>
         <name>IDdaconta</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>IdOpp</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
