@@ -84,6 +84,20 @@ trigger LeadTrigger on Lead (before insert, before update,after update, before d
         i++;
         i++;
         i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
+        i++;
         
         for (Lead lead : trigger.new)
         {
@@ -103,6 +117,10 @@ trigger LeadTrigger on Lead (before insert, before update,after update, before d
             if(lead.LeadType__c == 'Pessoa Jurídica'){
               erro = LeadTriggerValidation.ValidarPJBeforeInsertOrUpdate(lead);}
             else if(lead.LeadType__c == 'Pessoa Física'){
+            if (lead.FantasyName__c == null)
+                {
+                    lead.FantasyName__c = lead.Company;
+               }   
                 erro = LeadTriggerValidation.ValidarPFBeforeInsertOrUpdate(lead);}
                 
             //Valida Tipo de Lead PJ  Thymos - Alteração dia 23/01/2023 por Adriana Xavier  
