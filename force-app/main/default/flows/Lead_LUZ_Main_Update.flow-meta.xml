@@ -2,10 +2,42 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>60.0</apiVersion>
     <assignments>
-        <name>atribuir_ID</name>
-        <label>atribuir ID</label>
+        <name>Atribuir_Id_opp_PF</name>
+        <label>Atribuir Id opp PF</label>
         <locationX>50</locationX>
-        <locationY>647</locationY>
+        <locationY>1296</locationY>
+        <assignmentItems>
+            <assignToReference>IdOpp</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Criar_Oportunidade_PF</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>upd_cotacao</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Atribuir_Id_opp_PJ</name>
+        <label>Atribuir Id opp PJ</label>
+        <locationX>174</locationX>
+        <locationY>1525</locationY>
+        <assignmentItems>
+            <assignToReference>IdOpp</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Criar_Oportunidade_PJ</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>upd_cotacao</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>atribuir_ID_PF</name>
+        <label>atribuir ID PF</label>
+        <locationX>862</locationX>
+        <locationY>1047</locationY>
         <assignmentItems>
             <assignToReference>IDdaconta</assignToReference>
             <operator>Assign</operator>
@@ -18,26 +50,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Atribuir_Id_opp</name>
-        <label>Atribuir Id opp</label>
-        <locationX>182</locationX>
-        <locationY>1163</locationY>
-        <assignmentItems>
-            <assignToReference>IdOpp</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Criar_Oportunidade</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Getfatura</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>C_pia_2_de_atribuir_ID</name>
-        <label>Cópia 2 de atribuir ID</label>
-        <locationX>314</locationX>
-        <locationY>647</locationY>
+        <name>atribuir_ID_PJ</name>
+        <label>atribuir ID PJ</label>
+        <locationX>1507</locationX>
+        <locationY>1070</locationY>
         <assignmentItems>
             <assignToReference>IDdaconta</assignToReference>
             <operator>Assign</operator>
@@ -52,14 +68,14 @@
     <decisions>
         <name>Check_Account</name>
         <label>Check Account</label>
-        <locationX>314</locationX>
-        <locationY>431</locationY>
+        <locationX>1171</locationX>
+        <locationY>746</locationY>
         <defaultConnector>
             <targetReference>Atualiza_Lead</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
-            <name>N_o_Tem_Conta</name>
+            <name>Nao_Tem_Conta</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.RetailPartnerAccount__c</leftValueReference>
@@ -81,7 +97,7 @@
             <label>Não Tem Conta PF</label>
         </rules>
         <rules>
-            <name>N_o_Tem_Conta_PJ</name>
+            <name>Nao_Tem_Conta_PJ</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.RetailPartnerAccount__c</leftValueReference>
@@ -106,8 +122,8 @@
     <decisions>
         <name>Check_Opportunity</name>
         <label>Check Opportunity</label>
-        <locationX>314</locationX>
-        <locationY>947</locationY>
+        <locationX>1163</locationX>
+        <locationY>1445</locationY>
         <defaultConnector>
             <targetReference>Getfatura</targetReference>
         </defaultConnector>
@@ -123,7 +139,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Criar_Oportunidade</targetReference>
+                <targetReference>Tipo_de_Oportunidade</targetReference>
             </connector>
             <label>Nao tem oportunidade</label>
         </rules>
@@ -131,8 +147,8 @@
     <decisions>
         <name>Check_Status_of_Lead</name>
         <label>Check Status of Lead</label>
-        <locationX>578</locationX>
-        <locationY>323</locationY>
+        <locationX>1172</locationX>
+        <locationY>497</locationY>
         <defaultConnectorLabel>Pass Status</defaultConnectorLabel>
         <rules>
             <name>Status_Ganho</name>
@@ -160,11 +176,11 @@
     <decisions>
         <name>Check_UC</name>
         <label>Check UC</label>
-        <locationX>314</locationX>
-        <locationY>1571</locationY>
+        <locationX>1168</locationX>
+        <locationY>2472</locationY>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
-            <name>N_o_tem_UC</name>
+            <name>Nao_tem_UC</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.PFPJ__c</leftValueReference>
@@ -181,12 +197,12 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>C_pia_1_de_Criar_UC_PJ</targetReference>
+                <targetReference>Criar_UC_PF</targetReference>
             </connector>
             <label>Não tem UC PF</label>
         </rules>
         <rules>
-            <name>N_o_tem_UC_PJ</name>
+            <name>Nao_tem_UC_PJ</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.PFPJ__c</leftValueReference>
@@ -208,6 +224,93 @@
             <label>Não tem UC PJ</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Tipo_de_Oportunidade</name>
+        <label>Tipo de Oportunidade</label>
+        <locationX>931</locationX>
+        <locationY>1445</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>PF</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PFPJ__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PF</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Obter_Tipo_de_Registro_PF</targetReference>
+            </connector>
+            <label>PF</label>
+        </rules>
+        <rules>
+            <name>PJ</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PFPJ__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PJ</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Obter_Tipo_de_Registro_PJ</targetReference>
+            </connector>
+            <label>PJ</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Tipo_de_Registro_existente</name>
+        <label>Tipo de Registro existente</label>
+        <locationX>517</locationX>
+        <locationY>1363</locationY>
+        <defaultConnector>
+            <targetReference>Getfatura</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>Sim</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_Id_RecordType</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Criar_Oportunidade_PF</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Tipo_de_Registro_existente2</name>
+        <label>Tipo de Registro existente</label>
+        <locationX>522</locationX>
+        <locationY>1598</locationY>
+        <defaultConnector>
+            <targetReference>Getfatura</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>Sim2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_Id_RecordType</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Criar_Oportunidade_PJ</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>DiaDeHoje</name>
@@ -225,7 +328,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -236,116 +339,12 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
-        <name>C_pia_1_de_Criar_UC_PJ</name>
-        <label>Criar UC PF</label>
-        <locationX>50</locationX>
-        <locationY>1679</locationY>
-        <inputAssignments>
-            <field>Account__c</field>
-            <value>
-                <elementReference>$Record.Conta__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Address__c</field>
-            <value>
-                <elementReference>$Record.Address__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>CEP__c</field>
-            <value>
-                <elementReference>$Record.CEP__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>CNPJ__c</field>
-            <value>
-                <elementReference>$Record.CNPJ__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>City__c</field>
-            <value>
-                <elementReference>$Record.City__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Complement__c</field>
-            <value>
-                <elementReference>$Record.Complement__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Cupom__c</field>
-            <value>
-                <elementReference>$Record.Cupom__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>District__c</field>
-            <value>
-                <elementReference>$Record.District__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Email__c</field>
-            <value>
-                <elementReference>$Record.Email</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Lead__c</field>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>MobilePhone__c</field>
-            <value>
-                <elementReference>$Record.MobilePhone</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Name</field>
-            <value>
-                <elementReference>$Record.FantasyName__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Number__c</field>
-            <value>
-                <elementReference>$Record.NumeroInstalacao__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Phone__c</field>
-            <value>
-                <elementReference>$Record.Phone</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>RecordTypeId</field>
-            <value>
-                <stringValue>012HY0000004IaJYAU</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>UF__c</field>
-            <value>
-                <elementReference>$Record.UF__c</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Units__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
-    <recordCreates>
         <name>Cria_Account</name>
         <label>Cria Account PF</label>
-        <locationX>50</locationX>
-        <locationY>539</locationY>
+        <locationX>862</locationX>
+        <locationY>861</locationY>
         <connector>
-            <targetReference>atribuir_ID</targetReference>
+            <targetReference>atribuir_ID_PF</targetReference>
         </connector>
         <inputAssignments>
             <field>Address__c</field>
@@ -461,10 +460,10 @@
     <recordCreates>
         <name>Cria_Account_PJ</name>
         <label>Cria Account PJ</label>
-        <locationX>314</locationX>
-        <locationY>539</locationY>
+        <locationX>1507</locationX>
+        <locationY>857</locationY>
         <connector>
-            <targetReference>C_pia_2_de_atribuir_ID</targetReference>
+            <targetReference>atribuir_ID_PJ</targetReference>
         </connector>
         <inputAssignments>
             <field>Address__c</field>
@@ -578,12 +577,12 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>Criar_Oportunidade</name>
-        <label>Criar Oportunidade</label>
-        <locationX>182</locationX>
-        <locationY>1055</locationY>
+        <name>Criar_Oportunidade_PF</name>
+        <label>Criar Oportunidade PF</label>
+        <locationX>279</locationX>
+        <locationY>1296</locationY>
         <connector>
-            <targetReference>Atribuir_Id_opp</targetReference>
+            <targetReference>Atribuir_Id_opp_PF</targetReference>
         </connector>
         <inputAssignments>
             <field>Bairro__c</field>
@@ -652,15 +651,21 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Pessoa_F_sica_Jur_dica__c</field>
+            <value>
+                <elementReference>$Record.PFPJ__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>012HY0000004LC6YAM</stringValue>
+                <elementReference>var_Id_RecordType</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>StageName</field>
             <value>
-                <stringValue>Em Andamento</stringValue>
+                <stringValue>Proposta</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -685,10 +690,227 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
+        <name>Criar_Oportunidade_PJ</name>
+        <label>Criar Oportunidade PJ</label>
+        <locationX>362</locationX>
+        <locationY>1524</locationY>
+        <connector>
+            <targetReference>Atribuir_Id_opp_PJ</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Bairro__c</field>
+            <value>
+                <elementReference>$Record.District__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CEP__c</field>
+            <value>
+                <elementReference>$Record.CEP__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cidade__c</field>
+            <value>
+                <elementReference>$Record.City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CloseDate</field>
+            <value>
+                <elementReference>DiaDeHoje</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Company__c</field>
+            <value>
+                <elementReference>$Record.Company__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Complemento__c</field>
+            <value>
+                <elementReference>$Record.Complement__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Conta__c</field>
+            <value>
+                <elementReference>IDdaconta</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Logradouro__c</field>
+            <value>
+                <elementReference>$Record.Address__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>N_mero__c</field>
+            <value>
+                <elementReference>$Record.AdressNumber__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>$Record.FantasyName__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Pessoa_F_sica_Jur_dica__c</field>
+            <value>
+                <elementReference>$Record.PFPJ__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>var_Id_RecordType</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Agendar Reunião</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UF__c</field>
+            <value>
+                <elementReference>$Record.UF__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Valor_Conta__c</field>
+            <value>
+                <elementReference>$Record.Valor_Conta__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Valor_da_Fatura_R__c</field>
+            <value>
+                <elementReference>$Record.Valor_da_Fatura__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Criar_UC_PF</name>
+        <label>Criar UC PF</label>
+        <locationX>799</locationX>
+        <locationY>2578</locationY>
+        <inputAssignments>
+            <field>Account__c</field>
+            <value>
+                <elementReference>$Record.Conta__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Address__c</field>
+            <value>
+                <elementReference>$Record.Address__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CEP__c</field>
+            <value>
+                <elementReference>$Record.CEP__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CNPJ__c</field>
+            <value>
+                <elementReference>$Record.CNPJ__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>City__c</field>
+            <value>
+                <elementReference>$Record.City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Complement__c</field>
+            <value>
+                <elementReference>$Record.Complement__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cupom__c</field>
+            <value>
+                <elementReference>$Record.Cupom__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>District__c</field>
+            <value>
+                <elementReference>$Record.District__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Email__c</field>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MobilePhone__c</field>
+            <value>
+                <elementReference>$Record.MobilePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>$Record.FantasyName__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Number__c</field>
+            <value>
+                <elementReference>$Record.NumeroInstalacao__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone__c</field>
+            <value>
+                <elementReference>$Record.Phone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>012HY0000004IaJYAU</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UF__c</field>
+            <value>
+                <elementReference>$Record.UF__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Units__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>Criar_UC_PJ</name>
         <label>Criar UC PJ</label>
-        <locationX>314</locationX>
-        <locationY>1679</locationY>
+        <locationX>1178</locationX>
+        <locationY>2712</locationY>
         <inputAssignments>
             <field>Account__c</field>
             <value>
@@ -791,8 +1013,8 @@
     <recordLookups>
         <name>Getfatura</name>
         <label>Getfatura distribuidora</label>
-        <locationX>314</locationX>
-        <locationY>1355</locationY>
+        <locationX>1176</locationX>
+        <locationY>2031</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Atualiza_opp_na_fatura_distribuidora</targetReference>
@@ -809,11 +1031,71 @@
         <object>Fatura_Distribuidora__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Obter_Tipo_de_Registro_PF</name>
+        <label>Obter Tipo de Registro PF</label>
+        <locationX>841</locationX>
+        <locationY>1298</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Tipo_de_Registro_existente</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Oportunidade_PF_Luz</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Opportunity</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>var_Id_RecordType</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <name>Obter_Tipo_de_Registro_PJ</name>
+        <label>Obter Tipo de Registro PJ</label>
+        <locationX>750</locationX>
+        <locationY>1528</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Tipo_de_Registro_existente2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Oportunidade_PJ_Luz</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Opportunity</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>var_Id_RecordType</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
     <recordUpdates>
         <name>Atualiza_Lead</name>
         <label>Atualiza Lead</label>
-        <locationX>314</locationX>
-        <locationY>839</locationY>
+        <locationX>1171</locationX>
+        <locationY>1229</locationY>
         <connector>
             <targetReference>Check_Opportunity</targetReference>
         </connector>
@@ -828,8 +1110,8 @@
     <recordUpdates>
         <name>Atualiza_opp_na_fatura_distribuidora</name>
         <label>Atualiza opp na fatura distribuidora</label>
-        <locationX>314</locationX>
-        <locationY>1463</locationY>
+        <locationX>1176</locationX>
+        <locationY>2257</locationY>
         <connector>
             <targetReference>Check_UC</targetReference>
         </connector>
@@ -841,9 +1123,25 @@
         </inputAssignments>
         <inputReference>$Record.Fatura_Distribuidoras__r</inputReference>
     </recordUpdates>
+    <recordUpdates>
+        <name>upd_cotacao</name>
+        <label>upd cotacao</label>
+        <locationX>59</locationX>
+        <locationY>2040</locationY>
+        <connector>
+            <targetReference>Getfatura</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Oportunidade__c</field>
+            <value>
+                <elementReference>IdOpp</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Cota_es__r</inputReference>
+    </recordUpdates>
     <start>
-        <locationX>452</locationX>
-        <locationY>0</locationY>
+        <locationX>1055</locationX>
+        <locationY>50</locationY>
         <connector>
             <targetReference>Check_Status_of_Lead</targetReference>
         </connector>
@@ -880,5 +1178,12 @@
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>var_Id_RecordType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
 </Flow>
