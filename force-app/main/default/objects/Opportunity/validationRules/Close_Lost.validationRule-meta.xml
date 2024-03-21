@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Lost</fullName>
+    <active>false</active>
+    <description>Para classicar uma oportunidade como encerrada perdida é necessário informar o motivo e uma observação.</description>
+    <errorConditionFormula>AND(ISPICKVAL(StageName,&apos;Closed Lost&apos;), ISBLANK(LossReasonObs__c) || ISPICKVAL(LossReason__c, &apos;&apos;))</errorConditionFormula>
+    <errorDisplayField>LossReason__c</errorDisplayField>
+    <errorMessage>Favor preencher os campos de observação e motivo da Perda.</errorMessage>
+</ValidationRule>

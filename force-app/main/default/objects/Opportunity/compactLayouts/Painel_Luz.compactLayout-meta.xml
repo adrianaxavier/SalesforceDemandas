@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Painel_Luz</fullName>
+    <fields>Name</fields>
+    <fields>Empresa_Nome__c</fields>
+    <fields>Nome_do_contato__c</fields>
+    <fields>Pessoa_F_sica_Jur_dica__c</fields>
+    <fields>Probability</fields>
+    <fields>OwnerId</fields>
+    <label>Painel Luz</label>
+</CompactLayout>
