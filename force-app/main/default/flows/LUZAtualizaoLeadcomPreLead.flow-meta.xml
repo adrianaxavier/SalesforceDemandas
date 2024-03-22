@@ -2,6 +2,142 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <decisions>
+        <name>C_pia_1_de_Qual_o_tipo_de_desconto</name>
+        <label>Qual o tipo de desconto?</label>
+        <locationX>226</locationX>
+        <locationY>1655</locationY>
+        <defaultConnector>
+            <targetReference>C_pia_3_de_Qual_o_tipo_de_desconto</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>C_pia_1_de_3_anos</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_3_Anos__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_3_Anos__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C_pi_4_de_cria_plano</targetReference>
+            </connector>
+            <label>3 anos</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>C_pia_3_de_Qual_o_tipo_de_desconto</name>
+        <label>Qual o tipo de desconto?</label>
+        <locationX>226</locationX>
+        <locationY>1955</locationY>
+        <defaultConnector>
+            <targetReference>C_pia_4_de_Qual_o_tipo_de_desconto</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>C_pia_2_de_5_anos</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_5_Anos__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_5_Anos__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Cpia_4_de_cria_plano</targetReference>
+            </connector>
+            <label>5 anos</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>C_pia_4_de_Qual_o_tipo_de_desconto</name>
+        <label>Qual o tipo de desconto?</label>
+        <locationX>226</locationX>
+        <locationY>2255</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>C_pia_2_de_Liberdade_Total</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_Liberdade_total__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_Liberdade_total__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C_pia_4_de_cria_plano</targetReference>
+            </connector>
+            <label>Liberdade Total</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Foi_alterada_a_fatura</name>
+        <label>Foi alterada a fatura?</label>
+        <locationX>380</locationX>
+        <locationY>1139</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>Simsafasfdasdfsa</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_2_Anos__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_5_Anos__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_3_Anos__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_Liberdade_total__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Criar_Cota_o</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Possui</name>
         <label>Possui UC</label>
         <locationX>182</locationX>
@@ -51,6 +187,38 @@
             <label>Sim</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Qual_o_tipo_de_desconto</name>
+        <label>Qual o tipo de desconto?</label>
+        <locationX>226</locationX>
+        <locationY>1355</locationY>
+        <defaultConnector>
+            <targetReference>C_pia_1_de_Qual_o_tipo_de_desconto</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>X2_anos</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_2_Anos__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_2_Anos__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>cria_plano</targetReference>
+            </connector>
+            <label>2 anos</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>prname</name>
@@ -83,6 +251,172 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>C_pi_4_de_cria_plano</name>
+        <label>cria plano</label>
+        <locationX>94</locationX>
+        <locationY>1763</locationY>
+        <connector>
+            <targetReference>C_pia_3_de_Qual_o_tipo_de_desconto</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Cotacao__c</field>
+            <value>
+                <elementReference>idcotacao</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Desconto__c</field>
+            <value>
+                <elementReference>$Record.Desconto_Ofertado_3_Anos__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EconomiaAnual__c</field>
+            <value>
+                <elementReference>$Record.ReducaoCusto3Anos__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PrazoFidelidade__c</field>
+            <value>
+                <numberValue>36.0</numberValue>
+            </value>
+        </inputAssignments>
+        <object>Plano__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>C_pia_4_de_cria_plano</name>
+        <label>cria plano</label>
+        <locationX>94</locationX>
+        <locationY>2363</locationY>
+        <inputAssignments>
+            <field>Cotacao__c</field>
+            <value>
+                <elementReference>idcotacao</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Desconto__c</field>
+            <value>
+                <elementReference>$Record.Desconto_Ofertado_Liberdade_total__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EconomiaAnual__c</field>
+            <value>
+                <elementReference>$Record.ReducaoCustoSemFidelidade__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PrazoFidelidade__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <object>Plano__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Cpia_4_de_cria_plano</name>
+        <label>cria plano</label>
+        <locationX>94</locationX>
+        <locationY>2063</locationY>
+        <connector>
+            <targetReference>C_pia_4_de_Qual_o_tipo_de_desconto</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Cotacao__c</field>
+            <value>
+                <elementReference>idcotacao</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Desconto__c</field>
+            <value>
+                <elementReference>$Record.Desconto_Ofertado_5_Anos__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EconomiaAnual__c</field>
+            <value>
+                <elementReference>$Record.ReducaoCusto5Anos__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PrazoFidelidade__c</field>
+            <value>
+                <numberValue>60.0</numberValue>
+            </value>
+        </inputAssignments>
+        <object>Plano__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>cria_plano</name>
+        <label>cria plano</label>
+        <locationX>94</locationX>
+        <locationY>1463</locationY>
+        <connector>
+            <targetReference>C_pia_1_de_Qual_o_tipo_de_desconto</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Cotacao__c</field>
+            <value>
+                <elementReference>idcotacao</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Desconto__c</field>
+            <value>
+                <elementReference>$Record.Desconto_Ofertado_2_Anos__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EconomiaAnual__c</field>
+            <value>
+                <elementReference>$Record.CostReduction__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PrazoFidelidade__c</field>
+            <value>
+                <numberValue>24.0</numberValue>
+            </value>
+        </inputAssignments>
+        <object>Plano__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Criar_Cota_o</name>
+        <label>Criar Cotação</label>
+        <locationX>226</locationX>
+        <locationY>1247</locationY>
+        <assignRecordIdToReference>idcotacao</assignRecordIdToReference>
+        <connector>
+            <targetReference>Qual_o_tipo_de_desconto</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Lead__c</field>
+            <value>
+                <elementReference>$Record.Lead__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Oportunidade__c</field>
+            <value>
+                <elementReference>$Record.Oportunidade__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Ativa</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Cotacao__c</object>
+    </recordCreates>
     <recordLookups>
         <name>Get_Fatura_Distribuidora</name>
         <label>Get Fatura Distribuidora</label>
@@ -1302,6 +1636,9 @@
         <label>Upd fatura distribuidora</label>
         <locationX>380</locationX>
         <locationY>1031</locationY>
+        <connector>
+            <targetReference>Foi_alterada_a_fatura</targetReference>
+        </connector>
         <inputAssignments>
             <field>AccountValue__c</field>
             <value>
@@ -1383,6 +1720,13 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <variables>
+        <name>idcotacao</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
     <variables>
         <name>varNewLead</name>
         <dataType>SObject</dataType>

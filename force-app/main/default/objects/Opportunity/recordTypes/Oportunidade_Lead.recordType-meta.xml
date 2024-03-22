@@ -1,0 +1,1825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oportunidade_Lead</fullName>
+    <active>true</active>
+    <businessProcess>LUZ</businessProcess>
+    <compactLayoutAssignment>Painel_Luz</compactLayoutAssignment>
+    <label>Oportunidade Luz</label>
+    <picklistValues>
+        <picklist>Classifica_o__c</picklist>
+        <values>
+            <fullName>A1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cliente_Livre__c</picklist>
+        <values>
+            <fullName>Não</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sim</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Erros__c</picklist>
+        <values>
+            <fullName>Consumo Abaixo do Range</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distribuidora não Atendida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erro Genérico de Simulação</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erro Leitura Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multa da Distribuidora</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estado_Civil__c</picklist>
+        <values>
+            <fullName>Casado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Divorciado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Separado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solteiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viúvo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fluxo__c</picklist>
+        <values>
+            <fullName>Conta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oportunidade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pré-Lead</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Campanha Publicitaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feiras e Eventos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gestao Passiva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indicacao</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lista Scooto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midias Sociais</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospeccao Usuario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LossReason__c</picklist>
+        <values>
+            <fullName>Baixa Demanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baixa Viabilidade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumo abaixo do range</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crédito reprovado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desacordo com o contrato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desconto Baixo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desengajamento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distribuidora não atendida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enviado para Delta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fechou com concorrente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multa da Distribuidora</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parceria%2FQuer vender produto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Possui placa solar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Possuí benefícios fiscais</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Projeto futuro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regulatorio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarifa Baixa Renda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarifa Branca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarifa Rural</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefone Não existente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tem interesse em placa solar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Término da cadência</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loss_Reason__c</picklist>
+        <values>
+            <fullName>Lost to Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Budget %2F Lost Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Decision %2F Non-Responsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mercado__c</picklist>
+        <values>
+            <fullName>Cativo Elegível</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cativo Não Elegível</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Especial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Livre</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pessoa_F_sica_Jur_dica__c</picklist>
+        <values>
+            <fullName>PF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PJ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Produto__c</picklist>
+        <values>
+            <fullName>ACL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Qual_foi_a_base_de_c_lculo__c</picklist>
+        <values>
+            <fullName>Consumo do Último mês</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumo dos Últimos 12 messes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumo dos Últimos 3 messes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Servi_os__c</picklist>
+        <values>
+            <fullName>Consultoria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desconto Garantido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gestão de Energia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gestão de Gás</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gestão de Água</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inteligência de Mercado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Representação CCEE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ServiceType__c</picklist>
+        <values>
+            <fullName>Consultoria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desconto_Garantido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eficiencia Energetica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eficiência Energética %7C Stylux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gestao e Representacao</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Representacao</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venda Energia</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Setor__c</picklist>
+        <values>
+            <fullName>ABATEDOURO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ABATEDOURO FRANGOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADMINISTRAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADMINISTRAÇÃO DE BENS E IMÓVEIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADMINISTRAÇÃO DE CARTÕES E CONVÊNIOS DE REFEIÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADMINISTRAÇÃO DE CONDOMÍNIOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRICULTURA%2F PECUÁRIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGROQUIMICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGÊNCIA GOVERNAMENTAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALIMENTOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALUMINIO%2F CONSTRUÇÃO CIVIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALUMÍNIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARAME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AREIA E BRITA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARMAZEM REFRIG%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARMAZÉM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASSISTENCIA MÉDICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASSISTENCIA SOCIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASSOCIAÇÃO%2F SAÚDE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ATACADISTA%2F FABRICANTE DE AÇUCAR E ÁLCOOL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTARQUI FEDERAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOÇÃO INDUSTRIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AÇO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AÇO%2F ENGENHARIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AÇO%2F ENGENHARIA%2F TELHAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AÇO%2F FERRAMENTAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AÇO%2F GALVANIZAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AÇO%2F GALVANIZAÇÃO%2F ENGENHARIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AÇO%2F TELHAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANCOS%2F ESTOFADOS AUTOMOTIVOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BATERIAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEBIDAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BELICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BENEFICIAMENTO DE CASTANHA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BICICLETAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOLSA DE VALORES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOMBAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOMBAS DE DIAFRAGMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BORRACHA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRINQUEDOS%2F PLÁSTICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUSINESS PROCESS OUTSOURCING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CALCADOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CALL CENTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CALÇADOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CARTUCHOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CARTÕES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CEASA DO GRANDE ABC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTRO CULTURAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTRO DE PESQUISA BIOMÉDICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTRO DE SEVIÇOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTROS COMERCIAIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTROS DE SERVIÇO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTROS DE SERVIÇO%2F AÇO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTROS DE SERVIÇO%2F ENGRADAMENTO METÁLICO%2F AÇO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTROS DE SERVIÇO%2F TELHAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTROS DE SERVIÇOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTROS DE SERVIÇOS%2F ENGENHARIA%2F TELHAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CENTROS DE SEVIÇOS%2F TELHAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CERAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CINEMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLUBE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMPRESSORES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMÉRCIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONCESSIONÁRIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONCRETARIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONDOMINIO%2F ADMINISTRAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONDOMÍNIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONDOMÍNIO%2F CONSULTORIA ÁGUA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONEXÕES%2C FLANGES%2C DISCOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSOÓRCIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSTRUTORA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSTRUÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSTRUÇÃO%2FAÇO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSULADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSULTORIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSULTORIA GESTÃO%2F SERVIÇO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COOP%2E ELETRIFICAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COOP%2E FLORES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COOPERATIVA DE CONSUMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COOPERATIVA%2F INDUSTRIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CORDÃO DE AÇO PARA PNEUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CORREIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COSMÉTICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CROMAÇÃO DE METAIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DESCARTAVÉIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISTRIBUIDOR%2F SERVIÇOS GERAIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIVERSOS SEGUIMENTOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDITORA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELEMENTOS DE FIXAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELEMENTOS FIXAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELETRODOMÉSTICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELETROELETRÔNICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELETRÔNICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELEVADORES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELEVADORES%2F PLATAFORMAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELÉTRICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELÉTRICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMBALAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMBALAGEM DE VIDRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMBALAGEM FARMACÊUTICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMBALAGEM%2F DESCATAVEIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMBALAGEM%2F PEÇAS TÉCNICAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMBALAGENS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMISSORA E RETRANSMISSORA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMPREENDIMENTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMPREENDIMENTOS IMOBILIARIOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENERGIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGENHARIA%2F TELHAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGRADAMENTO METÁLICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENSINO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EQUIP%2E DE REFRIGERAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EQUIP%2E PEÇAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EQUIP%2E TRANSPORTE E ELEVAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EQUIP%2E%2F PEÇAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EQUIPAMENTOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESCRITÓRIO DE ADVOCACIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESTAMPARIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESTAMPARIA DE METAL%2F MOLAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESTAMPARIA%2F TINTURARIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESTAMPOS E MOLDES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESTAPARIA DE PRECISÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESTEIRAS%2FROLETES%2FSAPATAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ETIQUETAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVENTOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EXPLOSIVO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FABRICA DE FUNDIÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FABRICANTES DE INFLAVEIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FARMACÊUTICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FECHAMENTO DE PORTAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERRAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERRAMENTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERRAMENTAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERRAMENTAS%2F TRATAMENTO TERMICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERTILIZANTE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIBRAS%2F PRODUTOS DE FIBRAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FILTROS INDUSTRIAIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FONOGRÁFICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FORJARIAS%2F PEÇAS AUTOMOTIVAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FORNECEDOR DE LATICINIOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FRIGORÍFICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUMO - FAB%2E E DISTR%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUNDO DE INVESTIMENTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FÁBRICA DE FUNDIÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GALVANIZAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GALVANIZAÇÃO%2F TELHAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GERADOR EÓLICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GRÁFICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIGIENE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIGIENE E LIMPEZA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSPITALAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOTEIS%2F ADMINISTRADORA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOTEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ILUMINAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMOBILIÁRIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMPRESSORAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMPRESSÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMPRESSÃO%2F EMBALAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMÃS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INCORPORADORES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDÚSTRIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INFORMÁTICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INFRAESTRUTURA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INFRAESTUTURA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INSTITORES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INSTITUTO DE PESQUISA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INVESTIDORA EM GERAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISOLANTES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISOPOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JORNAIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JUSTIÇA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LABORATÓRIOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAMINADOS EM PVC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAMINADOS%2F PLASTICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAMINAÇÃO DE TERMOPLÁSTICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATARIAS AUTOMOTIVAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATICÍNIOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOGISTICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MANTENEDORA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAQ%2E E EQUIP%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAQ%2E E FERRAMENTAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAQ%2E EQUIP%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MATERIAIS DE ESCRITORIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MECÂNICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MECÂNICA INDUSTRIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDICINA DIAGNOSTICA %28ENDEREÇO DE 1 CLINICA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEIO DE COMUNIÇÃO %28CANAL FECHADO%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MERCADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MERCEARIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>METAIS%2F FERRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>METAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>METAL%2F CHAPAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>METALIZAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>METALURGIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>METALURGICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MINERAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOBILIÁRIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MONTAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOTORES DIESEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUSEU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MÁQUINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MÁQUINAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MÓVEIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NUTRIÇÃO ANIMAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORGANIZAÇÃO MILITAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PADARIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAINÉIS%2F DIVISÓRIAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAPEIS%2FCELULOSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PARQUE%2F DIVERSÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PARUFOSO%2FPORCA%2FARRUELA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAVIMENTAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEDRAS BRITADAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEDREIRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PERFUMARIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇA AUTOMOTIVA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇAS FORJADAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇAS FUNDIDAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇAS INJETADAS EM PLÁSTICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇAS%2E EQUIP%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇAS%2EMAQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇAS%2F EQUIP%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇAS%2F MANGUEIRAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇAS%2F SERVIÇO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEÇAS%2FSERVIÇOS%2FBOMBAS D%C2%B4AGUA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PINCEIS E FERRAMENTAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PINOS%2E BUCHAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PINTURA ELETROSTÁTICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PINTURA METÁLICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PISOS ELEVADOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLASTICO%2F BORRACHA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLÁSTICO%2F BORRACHA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLÁSTICO%2F EMBALAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLÁSTICO%2F METAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLÁSTICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PNEUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PODER JUDICIARIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POLÍCIA FEDERAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PORTA MOLDES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PREFEITURA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRESIDIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PREVIDÊNCIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRODUTOS DE LIMPEZA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRODUTOS DE PORCELANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRODUTOS IMPERMEABILIZANTES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRODUTOS LIMPEZA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRODUTOS OFTALMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROTEÇÃO TÉRMICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUBLICIDADE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PVC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QUITANDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QUÍMICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QUÍMICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RECICLAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REDE DE DISTRIBUIÇÃO ENERGIA%2F TELECOMUNICAÇÃO%2F DATACOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REDUTORES DE VELOCIDADE%2F ACLOPAMENTOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REVISTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROLAMENTOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROSCAS ELETRODUTOS REDES ELETRICAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROTOMOLDAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SANEAMENTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAÚDE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAÚDE%2F EDUCAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEGURANÇA DE CARGAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEGURO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SELANTE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SERVIÇO SOCIAL%2F COMERCIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SERVIÇO SOCIAL%2F INDUSTRIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHOPPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIDERURGIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SISTEMA PENITENCIÁRIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SISTEMAS E PRODUTO AUDIOVISUAIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TABACO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TECELAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TECNOLOGIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TELECOMUNIÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TELEVISÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TELHAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TERCERIZAÇÃO MÃO DE OBRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TERMOSTATO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TERRAPLANAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEXTIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TINTAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TINTURARIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSPORTE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSPORTE AÉREO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRATAMENTO TERMICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TUBOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TUBOS E CONEXÕES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TUBOS%2FCONEXÕES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UNIVERSIDADE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USINAGEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VEDAÇÃO HIDRÁULICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VESTUÁRIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIDRO%2F FERRO%2F PLASTICO%2F CERÂMICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIDRO%2F PLASTICO FARMACEUTICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIDROS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VÁLVULAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ÁGUA E ENERGIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ÓLEO DE SOJA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SignedContract__c</picklist>
+        <values>
+            <fullName>Sim</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Submercado_ACL__c</picklist>
+        <values>
+            <fullName>aa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Energia_ACL__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Leed__c</picklist>
+        <values>
+            <fullName>aa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Novo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recontratação</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renovacao</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upsell</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>UF__c</picklist>
+        <values>
+            <fullName>AC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>respons_vel_pela_rea__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
