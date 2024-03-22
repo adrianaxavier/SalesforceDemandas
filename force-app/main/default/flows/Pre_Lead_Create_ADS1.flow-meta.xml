@@ -581,6 +581,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>DistribuidoraNaoAtendida__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Motivo_Desqualifica_o__c</field>
             <value>
                 <stringValue>Distribuidora não atendida</stringValue>
