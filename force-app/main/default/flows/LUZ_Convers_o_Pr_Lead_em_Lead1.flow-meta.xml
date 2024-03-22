@@ -2,9 +2,81 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <decisions>
+        <name>C_pia_1_de_Tipo_de_desconto</name>
+        <label>Tipo de desconto</label>
+        <locationX>539</locationX>
+        <locationY>1392</locationY>
+        <defaultConnector>
+            <targetReference>C_pia_3_de_Tipo_de_desconto</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>C_pia_1_de_3_anos</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_3_Anos__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C_pia_13_de_Criar_Plano</targetReference>
+            </connector>
+            <label>3 anos</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>C_pia_3_de_Tipo_de_desconto</name>
+        <label>Tipo de desconto</label>
+        <locationX>539</locationX>
+        <locationY>1692</locationY>
+        <defaultConnector>
+            <targetReference>C_pia_4_de_Tipo_de_desconto</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>C_pia_2_de_5_anos</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_5_Anos__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C_pia4_de_Criar_Plano</targetReference>
+            </connector>
+            <label>5 anos</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>C_pia_4_de_Tipo_de_desconto</name>
+        <label>Tipo de desconto</label>
+        <locationX>539</locationX>
+        <locationY>1992</locationY>
+        <defaultConnectorLabel>resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>C_pia_2_de_Liberdade_total</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_Liberdade_total__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C_pia_4e_Criar_Plano</targetReference>
+            </connector>
+            <label>Liberdade total</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Qual_Empresa</name>
         <label>Empresa</label>
-        <locationX>578</locationX>
+        <locationX>539</locationX>
         <locationY>492</locationY>
         <defaultConnector>
             <targetReference>Tem_UC</targetReference>
@@ -72,7 +144,7 @@
     <decisions>
         <name>Tem_UC</name>
         <label>Tem UC</label>
-        <locationX>1040</locationX>
+        <locationX>1001</locationX>
         <locationY>600</locationY>
         <defaultConnector>
             <targetReference>Criar_Lead_LuzPF_0</targetReference>
@@ -97,7 +169,7 @@
     <decisions>
         <name>Tem_UC_0</name>
         <label>Tem UC</label>
-        <locationX>512</locationX>
+        <locationX>473</locationX>
         <locationY>600</locationY>
         <defaultConnector>
             <targetReference>Criar_Lead_LuzPJ_0</targetReference>
@@ -122,8 +194,11 @@
     <decisions>
         <name>Tipo_de_desconto</name>
         <label>Tipo de desconto</label>
-        <locationX>578</locationX>
+        <locationX>539</locationX>
         <locationY>1092</locationY>
+        <defaultConnector>
+            <targetReference>C_pia_1_de_Tipo_de_desconto</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>resultado padrão</defaultConnectorLabel>
         <rules>
             <name>X2_anos</name>
@@ -139,51 +214,6 @@
                 <targetReference>Criar_Plano</targetReference>
             </connector>
             <label>2 anos</label>
-        </rules>
-        <rules>
-            <name>X3_anos</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_3_Anos__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>C_pia_13_de_Criar_Plano</targetReference>
-            </connector>
-            <label>3 anos</label>
-        </rules>
-        <rules>
-            <name>X5_anos</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_5_Anos__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>C_pia4_de_Criar_Plano</targetReference>
-            </connector>
-            <label>5 anos</label>
-        </rules>
-        <rules>
-            <name>Liberdade_total</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_Liberdade_total__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>C_pia_4e_Criar_Plano</targetReference>
-            </connector>
-            <label>Liberdade total</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -221,8 +251,11 @@
     <recordCreates>
         <name>C_pia4_de_Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>578</locationX>
-        <locationY>1200</locationY>
+        <locationX>407</locationX>
+        <locationY>1800</locationY>
+        <connector>
+            <targetReference>C_pia_4_de_Tipo_de_desconto</targetReference>
+        </connector>
         <inputAssignments>
             <field>Cotacao__c</field>
             <value>
@@ -253,8 +286,11 @@
     <recordCreates>
         <name>C_pia_13_de_Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>314</locationX>
-        <locationY>1200</locationY>
+        <locationX>407</locationX>
+        <locationY>1500</locationY>
+        <connector>
+            <targetReference>C_pia_3_de_Tipo_de_desconto</targetReference>
+        </connector>
         <inputAssignments>
             <field>Cotacao__c</field>
             <value>
@@ -285,8 +321,8 @@
     <recordCreates>
         <name>C_pia_4e_Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>842</locationX>
-        <locationY>1200</locationY>
+        <locationX>407</locationX>
+        <locationY>2100</locationY>
         <inputAssignments>
             <field>Cotacao__c</field>
             <value>
@@ -317,7 +353,7 @@
     <recordCreates>
         <name>Criar_cotacao</name>
         <label>Criar cotacao</label>
-        <locationX>578</locationX>
+        <locationX>539</locationX>
         <locationY>984</locationY>
         <assignRecordIdToReference>Idcotacao</assignRecordIdToReference>
         <connector>
@@ -340,7 +376,7 @@
     <recordCreates>
         <name>Criar_Lead_Delta</name>
         <label>Criar Lead Delta</label>
-        <locationX>116</locationX>
+        <locationX>77</locationX>
         <locationY>600</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
@@ -966,7 +1002,7 @@
     <recordCreates>
         <name>Criar_Lead_LuzPF</name>
         <label>Criar Lead LuzPF</label>
-        <locationX>908</locationX>
+        <locationX>869</locationX>
         <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
@@ -1595,7 +1631,7 @@
     <recordCreates>
         <name>Criar_Lead_LuzPF_0</name>
         <label>Criar Lead LuzPF</label>
-        <locationX>1172</locationX>
+        <locationX>1133</locationX>
         <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
@@ -2224,7 +2260,7 @@
     <recordCreates>
         <name>Criar_Lead_LuzPJ</name>
         <label>Criar Lead LuzPJ</label>
-        <locationX>380</locationX>
+        <locationX>341</locationX>
         <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
@@ -2853,7 +2889,7 @@
     <recordCreates>
         <name>Criar_Lead_LuzPJ_0</name>
         <label>Criar Lead LuzPJ</label>
-        <locationX>644</locationX>
+        <locationX>605</locationX>
         <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
@@ -3482,8 +3518,11 @@
     <recordCreates>
         <name>Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>50</locationX>
+        <locationX>407</locationX>
         <locationY>1200</locationY>
+        <connector>
+            <targetReference>C_pia_1_de_Tipo_de_desconto</targetReference>
+        </connector>
         <inputAssignments>
             <field>Cotacao__c</field>
             <value>
@@ -3514,7 +3553,7 @@
     <recordLookups>
         <name>Obter_Pr_lead</name>
         <label>Obter Pré lead</label>
-        <locationX>578</locationX>
+        <locationX>539</locationX>
         <locationY>384</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -3533,7 +3572,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>56</locationX>
+        <locationX>50</locationX>
         <locationY>0</locationY>
         <object>PreLead__c</object>
         <recordTriggerType>Create</recordTriggerType>
@@ -3549,7 +3588,7 @@
     <subflows>
         <name>Localizacao_Id_Empresa</name>
         <label>Localizacao Id Empresa</label>
-        <locationX>578</locationX>
+        <locationX>539</locationX>
         <locationY>276</locationY>
         <connector>
             <targetReference>Obter_Pr_lead</targetReference>
