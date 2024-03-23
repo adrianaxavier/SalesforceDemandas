@@ -88,10 +88,6 @@ public class AccountTriggerValidation {
                 acc.StateRegistration__c.addError(AlteracaoNaoPermitida);
             if (acc.Address__c != oldAcc.Address__c) 
                 acc.Address__c.addError(AlteracaoNaoPermitida);
-            if (acc.AdressNumber__c != oldAcc.AdressNumber__c) 
-                acc.AdressNumber__c.addError(AlteracaoNaoPermitida);
-            if (acc.Complement__c != oldAcc.Complement__c) 
-                acc.Complement__c.addError(AlteracaoNaoPermitida);
             if (acc.District__c != oldAcc.District__c) 
                 acc.District__c.addError(AlteracaoNaoPermitida);
             if (acc.City__c != oldAcc.City__c) 
@@ -112,8 +108,6 @@ public class AccountTriggerValidation {
                 (acc.MunicipalRegistration__c != oldAcc.MunicipalRegistration__c) ||
                 (acc.StateRegistration__c != oldAcc.StateRegistration__c) ||
                 (acc.Address__c != oldAcc.Address__c) ||
-                (acc.AdressNumber__c != oldAcc.AdressNumber__c) ||
-                (acc.Complement__c != oldAcc.Complement__c) ||
                 (acc.District__c != oldAcc.District__c) ||
                 (acc.City__c != oldAcc.City__c) ||
                 (acc.UF__c != oldAcc.UF__c) ||
@@ -280,10 +274,6 @@ public class AccountTriggerValidation {
                 acc.StateRegistration__c.addError(AlteracaoNaoPermitida);
             if (acc.Address__c != oldAcc.Address__c) 
                 acc.Address__c.addError(AlteracaoNaoPermitida);
-            if (acc.AdressNumber__c != oldAcc.AdressNumber__c) 
-                acc.AdressNumber__c.addError(AlteracaoNaoPermitida);
-            if (acc.Complement__c != oldAcc.Complement__c) 
-                acc.Complement__c.addError(AlteracaoNaoPermitida);
             if (acc.District__c != oldAcc.District__c) 
                 acc.District__c.addError(AlteracaoNaoPermitida);
             if (acc.City__c != oldAcc.City__c) 
@@ -304,8 +294,6 @@ public class AccountTriggerValidation {
                 (acc.MunicipalRegistration__c != oldAcc.MunicipalRegistration__c) ||
                 (acc.StateRegistration__c != oldAcc.StateRegistration__c) ||
                 (acc.Address__c != oldAcc.Address__c) ||
-                (acc.AdressNumber__c != oldAcc.AdressNumber__c) ||
-                (acc.Complement__c != oldAcc.Complement__c) ||
                 (acc.District__c != oldAcc.District__c) ||
                 (acc.City__c != oldAcc.City__c) ||
                 (acc.UF__c != oldAcc.UF__c) ||
@@ -428,8 +416,6 @@ public class AccountTriggerValidation {
     private static void ConsistirEnderecoStatusEhEmpresa(Account acc) {
         if (acc.Address__c == null)
             acc.Address__c.addError('Logradouro deve ser informado');
-        if (acc.AdressNumber__c == null)
-            acc.AdressNumber__c.addError('Número do Logradouro deve ser informado');
         if (acc.CEP__c == null)
             acc.CEP__c.addError('CEP deve ser informado');
         if (acc.City__c == null)
@@ -661,6 +647,53 @@ public class AccountTriggerValidation {
                 i++;
                 i++;
                 i++;      
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                   i++;
+                i++;
+                i++;
+                i++;
+                i++;      
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;      
+                i++;
                 i++;
                 i++;
                 i++;
