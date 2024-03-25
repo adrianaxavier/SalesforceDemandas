@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_perda__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de perda</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>perdido c/ atuação</fullName>
+                <default>false</default>
+                <label>perdido c/ atuação</label>
+            </value>
+            <value>
+                <fullName>perdido s/atuação</fullName>
+                <default>false</default>
+                <label>perdido s/atuação</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
