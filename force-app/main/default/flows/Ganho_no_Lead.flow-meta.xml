@@ -7,52 +7,10 @@
         <locationX>50</locationX>
         <locationY>350</locationY>
         <assignmentItems>
-            <assignToReference>Get_Lead.MaritalStatus__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Solteiro</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_Lead.Gender__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>NI</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_Lead.Occupation__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Não informada</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_Lead.BirthDate__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <dateValue>1990-01-01</dateValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_Lead.AdressNumber__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>0</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>Get_Lead.Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ganho</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_Lead.Tipo_de_produto__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>GD</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -65,24 +23,10 @@
         <locationX>314</locationX>
         <locationY>350</locationY>
         <assignmentItems>
-            <assignToReference>Get_Lead.Industry</assignToReference>
+            <assignToReference>Get_Lead.Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>COMÉRCIO</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_Lead.Tipo_de_produto__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>GD</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_Lead.AdressNumber__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>0</stringValue>
+                <stringValue>Ganho</stringValue>
             </value>
         </assignmentItems>
         <connector>
