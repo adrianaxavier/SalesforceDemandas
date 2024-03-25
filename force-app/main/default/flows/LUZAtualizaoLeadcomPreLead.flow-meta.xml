@@ -70,6 +70,9 @@
         <label>Qual o tipo de desconto?</label>
         <locationX>226</locationX>
         <locationY>2255</locationY>
+        <defaultConnector>
+            <targetReference>Ganho_no_Lead</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
             <name>C_pia_2_de_Liberdade_Total</name>
@@ -102,7 +105,7 @@
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
             <name>Simsafasfdasdfsa</name>
-            <conditionLogic>or</conditionLogic>
+            <conditionLogic>1 OR 2 OR 3 OR 4</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Desconto_Ofertado_2_Anos__c</leftValueReference>
                 <operator>IsChanged</operator>
@@ -291,6 +294,9 @@
         <label>cria plano</label>
         <locationX>94</locationX>
         <locationY>2363</locationY>
+        <connector>
+            <targetReference>Ganho_no_Lead</targetReference>
+        </connector>
         <inputAssignments>
             <field>Cotacao__c</field>
             <value>
@@ -1720,6 +1726,20 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <subflows>
+        <name>Ganho_no_Lead</name>
+        <label>Ganho no Lead</label>
+        <locationX>226</locationX>
+        <locationY>2555</locationY>
+        <flowName>Ganho_no_Lead</flowName>
+        <inputAssignments>
+            <name>IddoLeadnoPreLead</name>
+            <value>
+                <elementReference>$Record.Lead__c</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
     <variables>
         <name>idcotacao</name>
         <dataType>String</dataType>

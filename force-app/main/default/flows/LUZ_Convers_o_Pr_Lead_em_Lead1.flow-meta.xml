@@ -4,8 +4,8 @@
     <decisions>
         <name>C_pia_1_de_Tipo_de_desconto</name>
         <label>Tipo de desconto</label>
-        <locationX>539</locationX>
-        <locationY>1392</locationY>
+        <locationX>385</locationX>
+        <locationY>1608</locationY>
         <defaultConnector>
             <targetReference>C_pia_3_de_Tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -29,8 +29,8 @@
     <decisions>
         <name>C_pia_3_de_Tipo_de_desconto</name>
         <label>Tipo de desconto</label>
-        <locationX>539</locationX>
-        <locationY>1692</locationY>
+        <locationX>385</locationX>
+        <locationY>1908</locationY>
         <defaultConnector>
             <targetReference>C_pia_4_de_Tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -54,8 +54,11 @@
     <decisions>
         <name>C_pia_4_de_Tipo_de_desconto</name>
         <label>Tipo de desconto</label>
-        <locationX>539</locationX>
-        <locationY>1992</locationY>
+        <locationX>385</locationX>
+        <locationY>2208</locationY>
+        <defaultConnector>
+            <targetReference>Ganho_no_Lead</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>resultado padrão</defaultConnectorLabel>
         <rules>
             <name>C_pia_2_de_Liberdade_total</name>
@@ -71,6 +74,28 @@
                 <targetReference>C_pia_4e_Criar_Plano</targetReference>
             </connector>
             <label>Liberdade total</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Fatura_anexada</name>
+        <label>Fatura anexada?</label>
+        <locationX>539</locationX>
+        <locationY>984</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>sim</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Fatura_Anexada__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Cria_o_de_faturas</targetReference>
+            </connector>
+            <label>sim</label>
         </rules>
     </decisions>
     <decisions>
@@ -194,8 +219,8 @@
     <decisions>
         <name>Tipo_de_desconto</name>
         <label>Tipo de desconto</label>
-        <locationX>539</locationX>
-        <locationY>1092</locationY>
+        <locationX>385</locationX>
+        <locationY>1308</locationY>
         <defaultConnector>
             <targetReference>C_pia_1_de_Tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -251,8 +276,8 @@
     <recordCreates>
         <name>C_pia4_de_Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>407</locationX>
-        <locationY>1800</locationY>
+        <locationX>253</locationX>
+        <locationY>2016</locationY>
         <connector>
             <targetReference>C_pia_4_de_Tipo_de_desconto</targetReference>
         </connector>
@@ -286,8 +311,8 @@
     <recordCreates>
         <name>C_pia_13_de_Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>407</locationX>
-        <locationY>1500</locationY>
+        <locationX>253</locationX>
+        <locationY>1716</locationY>
         <connector>
             <targetReference>C_pia_3_de_Tipo_de_desconto</targetReference>
         </connector>
@@ -321,8 +346,11 @@
     <recordCreates>
         <name>C_pia_4e_Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>407</locationX>
-        <locationY>2100</locationY>
+        <locationX>253</locationX>
+        <locationY>2316</locationY>
+        <connector>
+            <targetReference>Ganho_no_Lead</targetReference>
+        </connector>
         <inputAssignments>
             <field>Cotacao__c</field>
             <value>
@@ -353,8 +381,8 @@
     <recordCreates>
         <name>Criar_cotacao</name>
         <label>Criar cotacao</label>
-        <locationX>539</locationX>
-        <locationY>984</locationY>
+        <locationX>385</locationX>
+        <locationY>1200</locationY>
         <assignRecordIdToReference>Idcotacao</assignRecordIdToReference>
         <connector>
             <targetReference>Tipo_de_desconto</targetReference>
@@ -1006,7 +1034,7 @@
         <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
-            <targetReference>Criar_cotacao</targetReference>
+            <targetReference>Fatura_anexada</targetReference>
         </connector>
         <inputAssignments>
             <field>Address__c</field>
@@ -1635,7 +1663,7 @@
         <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
-            <targetReference>Criar_cotacao</targetReference>
+            <targetReference>Fatura_anexada</targetReference>
         </connector>
         <inputAssignments>
             <field>Address__c</field>
@@ -2264,7 +2292,7 @@
         <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
-            <targetReference>Criar_cotacao</targetReference>
+            <targetReference>Fatura_anexada</targetReference>
         </connector>
         <inputAssignments>
             <field>Address__c</field>
@@ -2893,7 +2921,7 @@
         <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
-            <targetReference>Criar_cotacao</targetReference>
+            <targetReference>Fatura_anexada</targetReference>
         </connector>
         <inputAssignments>
             <field>Address__c</field>
@@ -3518,8 +3546,8 @@
     <recordCreates>
         <name>Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>407</locationX>
-        <locationY>1200</locationY>
+        <locationX>253</locationX>
+        <locationY>1416</locationY>
         <connector>
             <targetReference>C_pia_1_de_Tipo_de_desconto</targetReference>
         </connector>
@@ -3585,6 +3613,169 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <subflows>
+        <name>Cria_o_de_faturas</name>
+        <label>Criação de faturas</label>
+        <locationX>385</locationX>
+        <locationY>1092</locationY>
+        <connector>
+            <targetReference>Criar_cotacao</targetReference>
+        </connector>
+        <flowName>Subflow_criacao_de_fatura</flowName>
+        <inputAssignments>
+            <name>BaixaRenda</name>
+            <value>
+                <elementReference>$Record.Baixa_Renda__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>classificacao</name>
+            <value>
+                <elementReference>$Record.Classifica_o__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>consumoabaixorange</name>
+            <value>
+                <elementReference>$Record.ConsumoAbaixoRange__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Distribuidora</name>
+            <value>
+                <elementReference>$Record.Distribuidora__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>distribuidoranaoatendida</name>
+            <value>
+                <elementReference>$Record.DistribuidoraNaoAtendida__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>errogenericosimulacao</name>
+            <value>
+                <elementReference>$Record.ErroGenericoSimulacao__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>erroleiturafatura</name>
+            <value>
+                <elementReference>$Record.ErroLeituraFatura__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>erros</name>
+            <value>
+                <elementReference>$Record.Erros__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>faturaanexada</name>
+            <value>
+                <elementReference>$Record.Fatura_Anexada__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>faturaprocessada</name>
+            <value>
+                <elementReference>$Record.Fatura_Processada__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>guiddoarquivo</name>
+            <value>
+                <elementReference>$Record.GuidArquivoDaDigitalizacao__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>lead</name>
+            <value>
+                <elementReference>$Record.Lead__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>LinkDownload</name>
+            <value>
+                <elementReference>$Record.Link_Download__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>multadadistribuidora</name>
+            <value>
+                <elementReference>$Record.AssessmentDistributor__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>NomedaFatura</name>
+            <value>
+                <elementReference>$Record.FantasyName__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>NomedoArquivoanexocomexten</name>
+            <value>
+                <elementReference>$Record.NomeDoAnexoComExtensao__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>oportunidade</name>
+            <value>
+                <elementReference>$Record.Lead__r.Oportunidade__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>prelead</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>scoreserasa</name>
+            <value>
+                <elementReference>$Record.ScoreSerasa__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>TarifaBranca</name>
+            <value>
+                <elementReference>$Record.Tarifa_Branca__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>ValordaConta</name>
+            <value>
+                <elementReference>$Record.AccountValue__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>ValorFatura</name>
+            <value>
+                <elementReference>$Record.Valor_da_Fatura__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Volumeconsideradoparaestudo</name>
+            <value>
+                <elementReference>$Record.Volume_considerado_para_estudo_kWh__c</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>Ganho_no_Lead</name>
+        <label>Ganho no Lead</label>
+        <locationX>385</locationX>
+        <locationY>2508</locationY>
+        <flowName>Ganho_no_Lead</flowName>
+        <inputAssignments>
+            <name>IddoLeadnoPreLead</name>
+            <value>
+                <elementReference>$Record.Lead__c</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
     <subflows>
         <name>Localizacao_Id_Empresa</name>
         <label>Localizacao Id Empresa</label>
