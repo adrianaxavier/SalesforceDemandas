@@ -31,7 +31,7 @@ public with sharing class CHATBOTHorarioFuncionamentoInsideSales {
  
 
     private static void ValidarHorario(InformacoesDeSaida saida, DateTime dataHoraInformada) {
-        string mensagem = 'Agradecemos muito o seu contato! Nosso horário de atendimento é de Segunda a Sexta-Feira das 09 às 20hrs e aos sábados e feriados, das 10 às 14hrs. Por favor, retorne seu contato durante esse período. Muito obrigada!';
+        string mensagem = 'Agradecemos muito o seu contato! Nosso horário de atendimento é de Segunda a Sexta-Feira das 09 às 22hrs e aos sábados e feriados, das 10 às 14hrs. Por favor, retorne seu contato durante esse período. Muito obrigada!';
         saida.HorarioValidado = false;
         saida.Resposta_Mensagem = mensagem;
         
