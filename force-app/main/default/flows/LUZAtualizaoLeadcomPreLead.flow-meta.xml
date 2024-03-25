@@ -499,18 +499,6 @@
             <targetReference>Get_Fatura_Distribuidora</targetReference>
         </connector>
         <inputAssignments>
-            <field>Address__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.Address__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>AdressNumber__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.AdressNumber__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Baixa_Renda__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.Baixa_Renda__c</elementReference>
@@ -544,12 +532,6 @@
             <field>Campaign__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.Campaign__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>City__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.City__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -664,12 +646,6 @@
             <field>DistribuidoraLuz__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.Distribuidora__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>District__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.District__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1017,7 +993,7 @@
         <inputAssignments>
             <field>Term__c</field>
             <value>
-                <stringValue>{!Obter_Pr_lead.{!Obter_Pr_lead.Term__c}}</stringValue>
+                <elementReference>Obter_Pr_lead.Term__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1036,12 +1012,6 @@
             <field>TotalUnitsQuantity__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.TotalUnitsQuantity__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>UF__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.UF__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1085,18 +1055,6 @@
             <targetReference>Get_Fatura_Distribuidora</targetReference>
         </connector>
         <inputAssignments>
-            <field>Address__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.Address__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>AdressNumber__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.AdressNumber__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Baixa_Renda__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.Baixa_Renda__c</elementReference>
@@ -1106,12 +1064,6 @@
             <field>BirthDate__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.Data_de_Anivers_rio__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>CEP__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.CEP__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1130,12 +1082,6 @@
             <field>Campaign__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.Campaign__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>City__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.City__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1253,12 +1199,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>District__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.District__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>EconomicGroup__c</field>
             <value>
                 <elementReference>$Record.EconomicGroup__c</elementReference>
@@ -1603,7 +1543,7 @@
         <inputAssignments>
             <field>Term__c</field>
             <value>
-                <stringValue>{!Obter_Pr_lead.{!Obter_Pr_lead.Term__c}}</stringValue>
+                <elementReference>Obter_Pr_lead.Term__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1622,12 +1562,6 @@
             <field>TotalUnitsQuantity__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.TotalUnitsQuantity__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>UF__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.UF__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
