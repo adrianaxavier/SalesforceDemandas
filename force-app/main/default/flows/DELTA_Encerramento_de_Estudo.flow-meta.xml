@@ -4,7 +4,7 @@
         <name>Email_de_encerramento</name>
         <label>Email de encerramento</label>
         <locationX>176</locationX>
-        <locationY>1247</locationY>
+        <locationY>1547</locationY>
         <actionName>Estudos__c.Encerramento_de_Estudo</actionName>
         <actionType>emailAlert</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -22,7 +22,7 @@
         <name>Esta_no_Lead</name>
         <label>Esta no Lead</label>
         <locationX>352</locationX>
-        <locationY>755</locationY>
+        <locationY>1055</locationY>
         <defaultConnector>
             <targetReference>Criar_Anexo</targetReference>
         </defaultConnector>
@@ -43,6 +43,31 @@
             <label>Sim</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Tipo_de_Registro</name>
+        <label>Tipo de Registro</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Atualizar_Lead_DP</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Delta Parceiros</defaultConnectorLabel>
+        <rules>
+            <name>Inside_Sales</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Nome_do_Lead__r.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Delta Inside Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Obter_Anexos</targetReference>
+            </connector>
+            <label>Inside Sales</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <interviewLabel>DELTA - Encerramento de Estudo {!$Flow.CurrentDateTime}</interviewLabel>
     <label>DELTA - Encerramento de Estudo</label>
@@ -50,7 +75,7 @@
         <name>Loop_Anexos</name>
         <label>Loop Anexos</label>
         <locationX>176</locationX>
-        <locationY>539</locationY>
+        <locationY>839</locationY>
         <collectionReference>Obter_Anexos</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -83,7 +108,7 @@
         <name>Criar_Anexo</name>
         <label>Criar Anexo</label>
         <locationX>440</locationX>
-        <locationY>863</locationY>
+        <locationY>1163</locationY>
         <connector>
             <targetReference>Loop_Anexos</targetReference>
         </connector>
@@ -106,7 +131,7 @@
         <name>Obter_Anexos</name>
         <label>Obter Anexos</label>
         <locationX>176</locationX>
-        <locationY>431</locationY>
+        <locationY>731</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Anexos</targetReference>
@@ -134,7 +159,7 @@
         <name>Obter_Modelo</name>
         <label>Obter Modelo</label>
         <locationX>176</locationX>
-        <locationY>1139</locationY>
+        <locationY>1439</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Email_de_encerramento</targetReference>
@@ -155,7 +180,7 @@
         <name>Validar_se_tem_no_Lead</name>
         <label>Validar se tem no Lead</label>
         <locationX>352</locationX>
-        <locationY>647</locationY>
+        <locationY>947</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Esta_no_Lead</targetReference>
@@ -185,7 +210,7 @@
         <locationX>176</locationX>
         <locationY>323</locationY>
         <connector>
-            <targetReference>Obter_Anexos</targetReference>
+            <targetReference>Tipo_de_Registro</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -409,6 +434,30 @@
             <field>preco__c</field>
             <value>
                 <elementReference>$Record.Pre_o__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Atualizar_Lead_DP</name>
+        <label>Atualizar Lead DP</label>
+        <locationX>264</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Obter_Anexos</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Nome_do_Lead__r.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Em Agendamento</stringValue>
             </value>
         </inputAssignments>
         <object>Lead</object>
