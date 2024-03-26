@@ -4,8 +4,8 @@
     <decisions>
         <name>C_pia_1_de_Tipo_de_desconto</name>
         <label>Tipo de desconto</label>
-        <locationX>539</locationX>
-        <locationY>1800</locationY>
+        <locationX>512</locationX>
+        <locationY>1847</locationY>
         <defaultConnector>
             <targetReference>C_pia_3_de_Tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -29,8 +29,8 @@
     <decisions>
         <name>C_pia_3_de_Tipo_de_desconto</name>
         <label>Tipo de desconto</label>
-        <locationX>539</locationX>
-        <locationY>2100</locationY>
+        <locationX>512</locationX>
+        <locationY>2147</locationY>
         <defaultConnector>
             <targetReference>C_pia_4_de_Tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -54,8 +54,8 @@
     <decisions>
         <name>C_pia_4_de_Tipo_de_desconto</name>
         <label>Tipo de desconto</label>
-        <locationX>539</locationX>
-        <locationY>2400</locationY>
+        <locationX>512</locationX>
+        <locationY>2447</locationY>
         <defaultConnector>
             <targetReference>Ganho_no_Lead</targetReference>
         </defaultConnector>
@@ -79,8 +79,8 @@
     <decisions>
         <name>Fatura_anexada</name>
         <label>tem fatura?</label>
-        <locationX>539</locationX>
-        <locationY>1092</locationY>
+        <locationX>512</locationX>
+        <locationY>1139</locationY>
         <defaultConnector>
             <targetReference>upd_fatura_distribuidora</targetReference>
         </defaultConnector>
@@ -104,8 +104,8 @@
     <decisions>
         <name>Qual_Empresa</name>
         <label>Empresa</label>
-        <locationX>539</locationX>
-        <locationY>492</locationY>
+        <locationX>512</locationX>
+        <locationY>539</locationY>
         <defaultConnector>
             <targetReference>Tem_UC</targetReference>
         </defaultConnector>
@@ -172,8 +172,8 @@
     <decisions>
         <name>Tem_UC</name>
         <label>Tem UC</label>
-        <locationX>1001</locationX>
-        <locationY>600</locationY>
+        <locationX>974</locationX>
+        <locationY>647</locationY>
         <defaultConnector>
             <targetReference>Criar_Lead_LuzPF_0</targetReference>
         </defaultConnector>
@@ -197,8 +197,8 @@
     <decisions>
         <name>Tem_UC_0</name>
         <label>Tem UC</label>
-        <locationX>473</locationX>
-        <locationY>600</locationY>
+        <locationX>446</locationX>
+        <locationY>647</locationY>
         <defaultConnector>
             <targetReference>Criar_Lead_LuzPJ_0</targetReference>
         </defaultConnector>
@@ -222,8 +222,8 @@
     <decisions>
         <name>Tipo_de_desconto</name>
         <label>Tipo de desconto</label>
-        <locationX>539</locationX>
-        <locationY>1500</locationY>
+        <locationX>512</locationX>
+        <locationY>1547</locationY>
         <defaultConnector>
             <targetReference>C_pia_1_de_Tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -279,8 +279,8 @@
     <recordCreates>
         <name>C_pia4_de_Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>407</locationX>
-        <locationY>2208</locationY>
+        <locationX>380</locationX>
+        <locationY>2255</locationY>
         <connector>
             <targetReference>C_pia_4_de_Tipo_de_desconto</targetReference>
         </connector>
@@ -314,8 +314,8 @@
     <recordCreates>
         <name>C_pia_13_de_Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>407</locationX>
-        <locationY>1908</locationY>
+        <locationX>380</locationX>
+        <locationY>1955</locationY>
         <connector>
             <targetReference>C_pia_3_de_Tipo_de_desconto</targetReference>
         </connector>
@@ -349,8 +349,8 @@
     <recordCreates>
         <name>C_pia_4e_Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>407</locationX>
-        <locationY>2508</locationY>
+        <locationX>380</locationX>
+        <locationY>2555</locationY>
         <connector>
             <targetReference>Ganho_no_Lead</targetReference>
         </connector>
@@ -384,8 +384,8 @@
     <recordCreates>
         <name>Criar_cotacao</name>
         <label>Criar cotacao</label>
-        <locationX>539</locationX>
-        <locationY>1392</locationY>
+        <locationX>512</locationX>
+        <locationY>1439</locationY>
         <assignRecordIdToReference>Idcotacao</assignRecordIdToReference>
         <connector>
             <targetReference>Tipo_de_desconto</targetReference>
@@ -407,8 +407,8 @@
     <recordCreates>
         <name>Criar_Lead_Delta</name>
         <label>Criar Lead Delta</label>
-        <locationX>77</locationX>
-        <locationY>600</locationY>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -1033,8 +1033,8 @@
     <recordCreates>
         <name>Criar_Lead_LuzPF</name>
         <label>Criar Lead LuzPF</label>
-        <locationX>869</locationX>
-        <locationY>708</locationY>
+        <locationX>842</locationX>
+        <locationY>755</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
             <targetReference>Get_Fatura_distribuidora</targetReference>
@@ -1662,8 +1662,8 @@
     <recordCreates>
         <name>Criar_Lead_LuzPF_0</name>
         <label>Criar Lead LuzPF</label>
-        <locationX>1133</locationX>
-        <locationY>708</locationY>
+        <locationX>1106</locationX>
+        <locationY>755</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
             <targetReference>Get_Fatura_distribuidora</targetReference>
@@ -2291,8 +2291,8 @@
     <recordCreates>
         <name>Criar_Lead_LuzPJ</name>
         <label>Criar Lead LuzPJ</label>
-        <locationX>341</locationX>
-        <locationY>708</locationY>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
             <targetReference>Get_Fatura_distribuidora</targetReference>
@@ -2920,8 +2920,8 @@
     <recordCreates>
         <name>Criar_Lead_LuzPJ_0</name>
         <label>Criar Lead LuzPJ</label>
-        <locationX>605</locationX>
-        <locationY>708</locationY>
+        <locationX>578</locationX>
+        <locationY>755</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <connector>
             <targetReference>Get_Fatura_distribuidora</targetReference>
@@ -3549,8 +3549,8 @@
     <recordCreates>
         <name>Criar_Plano</name>
         <label>Criar Plano</label>
-        <locationX>407</locationX>
-        <locationY>1608</locationY>
+        <locationX>380</locationX>
+        <locationY>1655</locationY>
         <connector>
             <targetReference>C_pia_1_de_Tipo_de_desconto</targetReference>
         </connector>
@@ -3584,8 +3584,8 @@
     <recordLookups>
         <name>Get_Fatura_distribuidora</name>
         <label>Get Fatura distribuidora</label>
-        <locationX>539</locationX>
-        <locationY>984</locationY>
+        <locationX>512</locationX>
+        <locationY>1031</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Fatura_anexada</targetReference>
@@ -3605,8 +3605,8 @@
     <recordLookups>
         <name>Obter_Pr_lead</name>
         <label>Obter Pré lead</label>
-        <locationX>539</locationX>
-        <locationY>384</locationY>
+        <locationX>512</locationX>
+        <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Qual_Empresa</targetReference>
@@ -3626,8 +3626,8 @@
     <recordUpdates>
         <name>upd_fatura_distribuidora</name>
         <label>upd fatura distribuidora</label>
-        <locationX>671</locationX>
-        <locationY>1200</locationY>
+        <locationX>644</locationX>
+        <locationY>1247</locationY>
         <connector>
             <targetReference>Criar_cotacao</targetReference>
         </connector>
@@ -3694,24 +3694,21 @@
         <inputReference>$Record.Fatura_Distribuidoras__r</inputReference>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
+        <locationX>386</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>Localizacao_Id_Empresa</targetReference>
+        </connector>
         <object>PreLead__c</object>
         <recordTriggerType>Create</recordTriggerType>
-        <scheduledPaths>
-            <connector>
-                <targetReference>Localizacao_Id_Empresa</targetReference>
-            </connector>
-            <pathType>AsyncAfterCommit</pathType>
-        </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
     <subflows>
         <name>Cria_o_de_faturas</name>
         <label>Criação de faturas</label>
-        <locationX>407</locationX>
-        <locationY>1200</locationY>
+        <locationX>380</locationX>
+        <locationY>1247</locationY>
         <connector>
             <targetReference>Criar_cotacao</targetReference>
         </connector>
@@ -3859,8 +3856,8 @@
     <subflows>
         <name>Ganho_no_Lead</name>
         <label>Ganho no Lead</label>
-        <locationX>539</locationX>
-        <locationY>2700</locationY>
+        <locationX>512</locationX>
+        <locationY>2747</locationY>
         <flowName>Ganho_no_Lead</flowName>
         <inputAssignments>
             <name>IddoLeadnoPreLead</name>
@@ -3873,8 +3870,8 @@
     <subflows>
         <name>Localizacao_Id_Empresa</name>
         <label>Localizacao Id Empresa</label>
-        <locationX>539</locationX>
-        <locationY>276</locationY>
+        <locationX>512</locationX>
+        <locationY>323</locationY>
         <connector>
             <targetReference>Obter_Pr_lead</targetReference>
         </connector>
