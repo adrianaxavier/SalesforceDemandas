@@ -737,6 +737,16 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.Fora_da_rea_de_Cobertura__c</fieldItem>
+                <identifier>RecordFora_da_rea_de_Cobertura_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Erros__c</fieldItem>
                 <identifier>RecordErros_cField</identifier>
             </fieldInstance>
