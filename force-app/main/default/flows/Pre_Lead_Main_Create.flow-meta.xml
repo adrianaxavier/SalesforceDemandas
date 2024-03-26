@@ -465,6 +465,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Fora_da_rea_de_Cobertura__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Motivo_Desqualifica_o__c</field>
             <value>
                 <stringValue>Distribuidora não atendida</stringValue>
