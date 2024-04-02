@@ -5,7 +5,7 @@
         <name>C_pia_1_de_Qual_o_tipo_de_desconto</name>
         <label>Qual o tipo de desconto?</label>
         <locationX>226</locationX>
-        <locationY>1847</locationY>
+        <locationY>1955</locationY>
         <defaultConnector>
             <targetReference>C_pia_3_de_Qual_o_tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -37,7 +37,7 @@
         <name>C_pia_3_de_Qual_o_tipo_de_desconto</name>
         <label>Qual o tipo de desconto?</label>
         <locationX>226</locationX>
-        <locationY>2147</locationY>
+        <locationY>2255</locationY>
         <defaultConnector>
             <targetReference>C_pia_4_de_Qual_o_tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -69,7 +69,7 @@
         <name>C_pia_4_de_Qual_o_tipo_de_desconto</name>
         <label>Qual o tipo de desconto?</label>
         <locationX>226</locationX>
-        <locationY>2447</locationY>
+        <locationY>2555</locationY>
         <defaultConnector>
             <targetReference>Ganho_no_Lead</targetReference>
         </defaultConnector>
@@ -98,49 +98,6 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Foi_alterada_a_fatura</name>
-        <label>Foi alterada a fatura?</label>
-        <locationX>380</locationX>
-        <locationY>1331</locationY>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>Simsafasfdasdfsa</name>
-            <conditionLogic>1 OR 2 OR 3 OR 4</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_2_Anos__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_5_Anos__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_3_Anos__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_Liberdade_total__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Criar_Cota_o</targetReference>
-            </connector>
-            <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Possui</name>
         <label>Possui UC</label>
         <locationX>182</locationX>
@@ -163,6 +120,28 @@
                 <targetReference>Atualiza_Lead_Luz_PF</targetReference>
             </connector>
             <label>sim</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Possui_cota_o</name>
+        <label>Possui cotação?</label>
+        <locationX>380</locationX>
+        <locationY>1439</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>N_o</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>get_cota_o</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Criar_Cota_o</targetReference>
+            </connector>
+            <label>Não</label>
         </rules>
     </decisions>
     <decisions>
@@ -194,7 +173,7 @@
         <name>Qual_o_tipo_de_desconto</name>
         <label>Qual o tipo de desconto?</label>
         <locationX>226</locationX>
-        <locationY>1547</locationY>
+        <locationY>1655</locationY>
         <defaultConnector>
             <targetReference>C_pia_1_de_Qual_o_tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -283,7 +262,7 @@
         <name>C_pi_4_de_cria_plano</name>
         <label>cria plano</label>
         <locationX>94</locationX>
-        <locationY>1955</locationY>
+        <locationY>2063</locationY>
         <connector>
             <targetReference>C_pia_3_de_Qual_o_tipo_de_desconto</targetReference>
         </connector>
@@ -318,7 +297,7 @@
         <name>C_pia_4_de_cria_plano</name>
         <label>cria plano</label>
         <locationX>94</locationX>
-        <locationY>2555</locationY>
+        <locationY>2663</locationY>
         <connector>
             <targetReference>Ganho_no_Lead</targetReference>
         </connector>
@@ -353,7 +332,7 @@
         <name>Cpia_4_de_cria_plano</name>
         <label>cria plano</label>
         <locationX>94</locationX>
-        <locationY>2255</locationY>
+        <locationY>2363</locationY>
         <connector>
             <targetReference>C_pia_4_de_Qual_o_tipo_de_desconto</targetReference>
         </connector>
@@ -388,7 +367,7 @@
         <name>cria_plano</name>
         <label>cria plano</label>
         <locationX>94</locationX>
-        <locationY>1655</locationY>
+        <locationY>1763</locationY>
         <connector>
             <targetReference>C_pia_1_de_Qual_o_tipo_de_desconto</targetReference>
         </connector>
@@ -423,7 +402,7 @@
         <name>Criar_Cota_o</name>
         <label>Criar Cotação</label>
         <locationX>226</locationX>
-        <locationY>1439</locationY>
+        <locationY>1547</locationY>
         <assignRecordIdToReference>idcotacao</assignRecordIdToReference>
         <connector>
             <targetReference>Qual_o_tipo_de_desconto</targetReference>
@@ -448,6 +427,27 @@
         </inputAssignments>
         <object>Cotacao__c</object>
     </recordCreates>
+    <recordLookups>
+        <name>get_cota_o</name>
+        <label>get cotação</label>
+        <locationX>380</locationX>
+        <locationY>1331</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Possui_cota_o</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Lead__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Lead__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Cotacao__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordLookups>
         <name>Get_Fatura_Distribuidora</name>
         <label>Get Fatura Distribuidora</label>
@@ -502,12 +502,6 @@
             <field>Baixa_Renda__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.Baixa_Renda__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>BirthDate__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.Data_de_Anivers_rio__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -721,12 +715,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Gender__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.Gender__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Growth__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.Growth__c</elementReference>
@@ -766,12 +754,6 @@
             <field>Link_Download__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.Link_Download__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>MaritalStatus__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.MaritalStatus__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -844,12 +826,6 @@
             <field>Observa_es_gerais_de_cr_dito__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.Observa_es_Gerais_de_Cr_dito__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Occupation__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.Occupation__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1289,12 +1265,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Industry</field>
-            <value>
-                <elementReference>Obter_Pr_lead.Setor__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>InitialDiscount__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.InitialDiscount__c</elementReference>
@@ -1602,7 +1572,7 @@
         <locationX>248</locationX>
         <locationY>1139</locationY>
         <connector>
-            <targetReference>Foi_alterada_a_fatura</targetReference>
+            <targetReference>get_cota_o</targetReference>
         </connector>
         <inputAssignments>
             <field>AccountValue__c</field>
@@ -1691,7 +1661,7 @@
         <locationX>512</locationX>
         <locationY>1139</locationY>
         <connector>
-            <targetReference>Foi_alterada_a_fatura</targetReference>
+            <targetReference>get_cota_o</targetReference>
         </connector>
         <flowName>Subflow_criacao_de_fatura</flowName>
         <inputAssignments>
@@ -1838,12 +1808,42 @@
         <name>Ganho_no_Lead</name>
         <label>Ganho no Lead</label>
         <locationX>226</locationX>
-        <locationY>2747</locationY>
+        <locationY>2855</locationY>
         <flowName>Ganho_no_Lead</flowName>
         <inputAssignments>
             <name>IddoLeadnoPreLead</name>
             <value>
                 <elementReference>$Record.Lead__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>datadeaniversario</name>
+            <value>
+                <elementReference>$Record.BirthDate__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Estadocivil</name>
+            <value>
+                <elementReference>$Record.MaritalStatus__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>profissao</name>
+            <value>
+                <elementReference>$Record.Occupation__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>setor</name>
+            <value>
+                <elementReference>$Record.Setor__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>sexo</name>
+            <value>
+                <elementReference>$Record.Gender__c</elementReference>
             </value>
         </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>
