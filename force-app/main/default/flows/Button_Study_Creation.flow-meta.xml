@@ -196,6 +196,15 @@
         <picklistObject>Estudos__c</picklistObject>
     </dynamicChoiceSets>
     <environments>Default</environments>
+    <formulas>
+        <name>Nome</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    LEN({!Dados_do_Lead.Company}) &gt; 80,
+   LEFT({!Dados_do_Lead.Company}, FIND(&quot; &quot;, {!Dados_do_Lead.Company})),
+    {!Dados_do_Lead.Company}
+)</expression>
+    </formulas>
     <interviewLabel>[BOTTON {!$Flow.CurrentDateTime}</interviewLabel>
     <label>[Button]  Study Creation</label>
     <loops>
@@ -356,7 +365,7 @@
         <inputAssignments>
             <field>Name</field>
             <value>
-                <elementReference>Dados_do_Lead.Company</elementReference>
+                <elementReference>Nome</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -541,7 +550,7 @@
         <inputAssignments>
             <field>Name</field>
             <value>
-                <elementReference>Dados_do_Lead.Company</elementReference>
+                <elementReference>Nome</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -726,7 +735,7 @@
         <inputAssignments>
             <field>Name</field>
             <value>
-                <elementReference>Dados_do_Lead.Company</elementReference>
+                <elementReference>Nome</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

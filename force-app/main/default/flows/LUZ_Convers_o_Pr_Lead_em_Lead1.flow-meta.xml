@@ -2,110 +2,10 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <decisions>
-        <name>C_pia_1_de_Tipo_de_desconto</name>
-        <label>Tipo de desconto</label>
-        <locationX>512</locationX>
-        <locationY>1847</locationY>
-        <defaultConnector>
-            <targetReference>C_pia_3_de_Tipo_de_desconto</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>C_pia_1_de_3_anos</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_3_Anos__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>C_pia_13_de_Criar_Plano</targetReference>
-            </connector>
-            <label>3 anos</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>C_pia_3_de_Tipo_de_desconto</name>
-        <label>Tipo de desconto</label>
-        <locationX>512</locationX>
-        <locationY>2147</locationY>
-        <defaultConnector>
-            <targetReference>C_pia_4_de_Tipo_de_desconto</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>C_pia_2_de_5_anos</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_5_Anos__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>C_pia4_de_Criar_Plano</targetReference>
-            </connector>
-            <label>5 anos</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>C_pia_4_de_Tipo_de_desconto</name>
-        <label>Tipo de desconto</label>
-        <locationX>512</locationX>
-        <locationY>2447</locationY>
-        <defaultConnector>
-            <targetReference>Ganho_no_Lead</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>C_pia_2_de_Liberdade_total</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_Liberdade_total__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>C_pia_4e_Criar_Plano</targetReference>
-            </connector>
-            <label>Liberdade total</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Fatura_anexada</name>
-        <label>tem fatura?</label>
-        <locationX>512</locationX>
-        <locationY>1139</locationY>
-        <defaultConnector>
-            <targetReference>upd_fatura_distribuidora</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>sim</defaultConnectorLabel>
-        <rules>
-            <name>naoasdfasdgfasdf</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Get_Fatura_distribuidora</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Cria_o_de_faturas</targetReference>
-            </connector>
-            <label>não</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Qual_Empresa</name>
         <label>Empresa</label>
-        <locationX>512</locationX>
-        <locationY>539</locationY>
+        <locationX>539</locationX>
+        <locationY>492</locationY>
         <defaultConnector>
             <targetReference>Tem_UC</targetReference>
         </defaultConnector>
@@ -172,8 +72,8 @@
     <decisions>
         <name>Tem_UC</name>
         <label>Tem UC</label>
-        <locationX>974</locationX>
-        <locationY>647</locationY>
+        <locationX>1001</locationX>
+        <locationY>600</locationY>
         <defaultConnector>
             <targetReference>Criar_Lead_LuzPF_0</targetReference>
         </defaultConnector>
@@ -197,8 +97,8 @@
     <decisions>
         <name>Tem_UC_0</name>
         <label>Tem UC</label>
-        <locationX>446</locationX>
-        <locationY>647</locationY>
+        <locationX>473</locationX>
+        <locationY>600</locationY>
         <defaultConnector>
             <targetReference>Criar_Lead_LuzPJ_0</targetReference>
         </defaultConnector>
@@ -217,31 +117,6 @@
                 <targetReference>Criar_Lead_LuzPJ</targetReference>
             </connector>
             <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Tipo_de_desconto</name>
-        <label>Tipo de desconto</label>
-        <locationX>512</locationX>
-        <locationY>1547</locationY>
-        <defaultConnector>
-            <targetReference>C_pia_1_de_Tipo_de_desconto</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>X2_anos</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Desconto_Ofertado_2_Anos__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Criar_Plano</targetReference>
-            </connector>
-            <label>2 anos</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -277,138 +152,10 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
-        <name>C_pia4_de_Criar_Plano</name>
-        <label>Criar Plano</label>
-        <locationX>380</locationX>
-        <locationY>2255</locationY>
-        <connector>
-            <targetReference>C_pia_4_de_Tipo_de_desconto</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Cotacao__c</field>
-            <value>
-                <elementReference>Idcotacao</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Desconto__c</field>
-            <value>
-                <elementReference>$Record.Desconto_Ofertado_5_Anos__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>EconomiaAnual__c</field>
-            <value>
-                <elementReference>$Record.ReducaoCusto5Anos__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>PrazoFidelidade__c</field>
-            <value>
-                <numberValue>60.0</numberValue>
-            </value>
-        </inputAssignments>
-        <object>Plano__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
-    <recordCreates>
-        <name>C_pia_13_de_Criar_Plano</name>
-        <label>Criar Plano</label>
-        <locationX>380</locationX>
-        <locationY>1955</locationY>
-        <connector>
-            <targetReference>C_pia_3_de_Tipo_de_desconto</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Cotacao__c</field>
-            <value>
-                <elementReference>Idcotacao</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Desconto__c</field>
-            <value>
-                <elementReference>$Record.Desconto_Ofertado_3_Anos__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>EconomiaAnual__c</field>
-            <value>
-                <elementReference>$Record.ReducaoCusto3Anos__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>PrazoFidelidade__c</field>
-            <value>
-                <numberValue>36.0</numberValue>
-            </value>
-        </inputAssignments>
-        <object>Plano__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
-    <recordCreates>
-        <name>C_pia_4e_Criar_Plano</name>
-        <label>Criar Plano</label>
-        <locationX>380</locationX>
-        <locationY>2555</locationY>
-        <connector>
-            <targetReference>Ganho_no_Lead</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Cotacao__c</field>
-            <value>
-                <elementReference>Idcotacao</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Desconto__c</field>
-            <value>
-                <elementReference>$Record.Desconto_Ofertado_Liberdade_total__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>EconomiaAnual__c</field>
-            <value>
-                <elementReference>$Record.ReducaoCustoSemFidelidade__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>PrazoFidelidade__c</field>
-            <value>
-                <numberValue>0.0</numberValue>
-            </value>
-        </inputAssignments>
-        <object>Plano__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
-    <recordCreates>
-        <name>Criar_cotacao</name>
-        <label>Criar cotacao</label>
-        <locationX>512</locationX>
-        <locationY>1439</locationY>
-        <assignRecordIdToReference>Idcotacao</assignRecordIdToReference>
-        <connector>
-            <targetReference>Tipo_de_desconto</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Lead__c</field>
-            <value>
-                <elementReference>varNewLead.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status__c</field>
-            <value>
-                <stringValue>Ativa</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Cotacao__c</object>
-    </recordCreates>
-    <recordCreates>
         <name>Criar_Lead_Delta</name>
         <label>Criar Lead Delta</label>
-        <locationX>50</locationX>
-        <locationY>647</locationY>
+        <locationX>77</locationX>
+        <locationY>600</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -1033,12 +780,9 @@
     <recordCreates>
         <name>Criar_Lead_LuzPF</name>
         <label>Criar Lead LuzPF</label>
-        <locationX>842</locationX>
-        <locationY>755</locationY>
+        <locationX>869</locationX>
+        <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
-        <connector>
-            <targetReference>Get_Fatura_distribuidora</targetReference>
-        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -1662,12 +1406,9 @@
     <recordCreates>
         <name>Criar_Lead_LuzPF_0</name>
         <label>Criar Lead LuzPF</label>
-        <locationX>1106</locationX>
-        <locationY>755</locationY>
+        <locationX>1133</locationX>
+        <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
-        <connector>
-            <targetReference>Get_Fatura_distribuidora</targetReference>
-        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -2291,12 +2032,9 @@
     <recordCreates>
         <name>Criar_Lead_LuzPJ</name>
         <label>Criar Lead LuzPJ</label>
-        <locationX>314</locationX>
-        <locationY>755</locationY>
+        <locationX>341</locationX>
+        <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
-        <connector>
-            <targetReference>Get_Fatura_distribuidora</targetReference>
-        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -2920,12 +2658,9 @@
     <recordCreates>
         <name>Criar_Lead_LuzPJ_0</name>
         <label>Criar Lead LuzPJ</label>
-        <locationX>578</locationX>
-        <locationY>755</locationY>
+        <locationX>605</locationX>
+        <locationY>708</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
-        <connector>
-            <targetReference>Get_Fatura_distribuidora</targetReference>
-        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -3546,67 +3281,11 @@
         </inputAssignments>
         <object>Lead</object>
     </recordCreates>
-    <recordCreates>
-        <name>Criar_Plano</name>
-        <label>Criar Plano</label>
-        <locationX>380</locationX>
-        <locationY>1655</locationY>
-        <connector>
-            <targetReference>C_pia_1_de_Tipo_de_desconto</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Cotacao__c</field>
-            <value>
-                <elementReference>Idcotacao</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Desconto__c</field>
-            <value>
-                <elementReference>$Record.Desconto_Ofertado_2_Anos__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>EconomiaAnual__c</field>
-            <value>
-                <elementReference>$Record.CostReduction__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>PrazoFidelidade__c</field>
-            <value>
-                <numberValue>24.0</numberValue>
-            </value>
-        </inputAssignments>
-        <object>Plano__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
-    <recordLookups>
-        <name>Get_Fatura_distribuidora</name>
-        <label>Get Fatura distribuidora</label>
-        <locationX>512</locationX>
-        <locationY>1031</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Fatura_anexada</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Pr_Lead__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>Fatura_Distribuidora__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <recordLookups>
         <name>Obter_Pr_lead</name>
         <label>Obter Pré lead</label>
-        <locationX>512</locationX>
-        <locationY>431</locationY>
+        <locationX>539</locationX>
+        <locationY>384</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Qual_Empresa</targetReference>
@@ -3623,255 +3302,25 @@
         <object>PreLead__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordUpdates>
-        <name>upd_fatura_distribuidora</name>
-        <label>upd fatura distribuidora</label>
-        <locationX>644</locationX>
-        <locationY>1247</locationY>
-        <connector>
-            <targetReference>Criar_cotacao</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>AccountValue__c</field>
-            <value>
-                <elementReference>$Record.AccountValue__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Consumo_Abaixo_do_Range__c</field>
-            <value>
-                <elementReference>$Record.ConsumoAbaixoRange__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Consumo_Historico__c</field>
-            <value>
-                <elementReference>$Record.ConsumoHistorico__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Consumo_Mensal__c</field>
-            <value>
-                <elementReference>$Record.ConsumoMensal__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Consumo_Utilizado__c</field>
-            <value>
-                <elementReference>$Record.ConsumoUtilizado__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Distribuidora__c</field>
-            <value>
-                <elementReference>$Record.Distribuidora__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Link_Download__c</field>
-            <value>
-                <elementReference>$Record.Link_Download__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Name</field>
-            <value>
-                <elementReference>$Record.FantasyName__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Valor_da_Fatura_R__c</field>
-            <value>
-                <elementReference>$Record.Valor_da_Fatura__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Volume_considerado_para_estudo_kWh__c</field>
-            <value>
-                <elementReference>$Record.Volume_considerado_para_estudo_kWh__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record.Fatura_Distribuidoras__r</inputReference>
-    </recordUpdates>
     <start>
-        <locationX>386</locationX>
+        <locationX>50</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Localizacao_Id_Empresa</targetReference>
-        </connector>
         <object>PreLead__c</object>
         <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Localizacao_Id_Empresa</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
     <subflows>
-        <name>Cria_o_de_faturas</name>
-        <label>Criação de faturas</label>
-        <locationX>380</locationX>
-        <locationY>1247</locationY>
-        <connector>
-            <targetReference>Criar_cotacao</targetReference>
-        </connector>
-        <flowName>Subflow_criacao_de_fatura</flowName>
-        <inputAssignments>
-            <name>BaixaRenda</name>
-            <value>
-                <elementReference>$Record.Baixa_Renda__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>classificacao</name>
-            <value>
-                <elementReference>$Record.Classifica_o__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>consumoabaixorange</name>
-            <value>
-                <elementReference>$Record.ConsumoAbaixoRange__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>Distribuidora</name>
-            <value>
-                <elementReference>$Record.Distribuidora__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>distribuidoranaoatendida</name>
-            <value>
-                <elementReference>$Record.DistribuidoraNaoAtendida__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>errogenericosimulacao</name>
-            <value>
-                <elementReference>$Record.ErroGenericoSimulacao__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>erroleiturafatura</name>
-            <value>
-                <elementReference>$Record.ErroLeituraFatura__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>erros</name>
-            <value>
-                <elementReference>$Record.Erros__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>faturaanexada</name>
-            <value>
-                <elementReference>$Record.Fatura_Anexada__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>faturaprocessada</name>
-            <value>
-                <elementReference>$Record.Fatura_Processada__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>guiddoarquivo</name>
-            <value>
-                <elementReference>$Record.GuidArquivoDaDigitalizacao__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>lead</name>
-            <value>
-                <elementReference>$Record.Lead__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>LinkDownload</name>
-            <value>
-                <elementReference>$Record.Link_Download__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>multadadistribuidora</name>
-            <value>
-                <elementReference>$Record.AssessmentDistributor__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>NomedaFatura</name>
-            <value>
-                <elementReference>$Record.FantasyName__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>NomedoArquivoanexocomexten</name>
-            <value>
-                <elementReference>$Record.NomeDoAnexoComExtensao__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>oportunidade</name>
-            <value>
-                <elementReference>$Record.Lead__r.Oportunidade__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>prelead</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>scoreserasa</name>
-            <value>
-                <elementReference>$Record.ScoreSerasa__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>TarifaBranca</name>
-            <value>
-                <elementReference>$Record.Tarifa_Branca__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>ValordaConta</name>
-            <value>
-                <elementReference>$Record.AccountValue__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>ValorFatura</name>
-            <value>
-                <elementReference>$Record.Valor_da_Fatura__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>Volumeconsideradoparaestudo</name>
-            <value>
-                <elementReference>$Record.Volume_considerado_para_estudo_kWh__c</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <subflows>
-        <name>Ganho_no_Lead</name>
-        <label>Ganho no Lead</label>
-        <locationX>512</locationX>
-        <locationY>2747</locationY>
-        <flowName>Ganho_no_Lead</flowName>
-        <inputAssignments>
-            <name>IddoLeadnoPreLead</name>
-            <value>
-                <elementReference>$Record.Lead__c</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <subflows>
         <name>Localizacao_Id_Empresa</name>
         <label>Localizacao Id Empresa</label>
-        <locationX>512</locationX>
-        <locationY>323</locationY>
+        <locationX>539</locationX>
+        <locationY>276</locationY>
         <connector>
             <targetReference>Obter_Pr_lead</targetReference>
         </connector>

@@ -17,28 +17,28 @@
             <assignToReference>Get_Lead.MaritalStatus__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Estadocivil</elementReference>
+                <stringValue>Casado</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Get_Lead.Gender__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>sexo</elementReference>
+                <stringValue>NI</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Get_Lead.Occupation__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>profissao</elementReference>
+                <stringValue>teste</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Get_Lead.BirthDate__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>datadeaniversario</elementReference>
+                <dateValue>1990-01-01</dateValue>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -75,7 +75,7 @@
             <assignToReference>Get_Lead.Industry</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>setor</elementReference>
+                <stringValue>AÇO</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
