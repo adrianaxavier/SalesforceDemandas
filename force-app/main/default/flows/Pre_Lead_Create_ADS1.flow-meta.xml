@@ -163,6 +163,13 @@
                     <numberValue>1067.0</numberValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>Obter_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1071.0</numberValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Atualizar_PreLead</targetReference>
             </connector>
@@ -501,6 +508,12 @@
             <field>City__c</field>
             <value>
                 <elementReference>Obter_Cep.2XX.cidade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DistribuidoraNaoAtendida__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
             </value>
         </inputAssignments>
         <inputAssignments>
