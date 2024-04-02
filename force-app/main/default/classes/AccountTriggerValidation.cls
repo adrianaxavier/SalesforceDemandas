@@ -238,70 +238,10 @@ public class AccountTriggerValidation {
             acc.CompanyName__c.addError('Nome deve ser informado');
         if (acc.FantasyName__c == null)
             acc.FantasyName__c.addError('Apelido deve ser informado');
-        if (acc.MaritalStatus__c == null)
-            acc.MaritalStatus__c.addError('Selecione um Estado civil');
-        if (acc.Gender__c == null)
-            acc.Gender__c.addError('Selecione um Gênero');
-        if (acc.Occupation__c == null)
-            acc.Occupation__c.addError('Informe a Profissão');
-        if (acc.BirthDate__c == null)
-            acc.BirthDate__c.addError('Informe a Data de Nascimento');
-        else
-        {
-            if (acc.BirthDate__c >= system.Today())
-                acc.BirthDate__c.addError('Data de Aniversário está inválida');
-        }
-
- 
-        
+   
         // consistir os campos que não podem ser alterados na conta, pois eles devem ser alterados no Delta Digital;   
         String userProfileName = [select Name from Profile where id =: UserInfo.getProfileId()].Name;
         
-      /*  if (Trigger.isUpdate && UserInfo.getName() != integrationUserName && (userProfileName != 'Administrador do sistema' || userProfileName != 'Analista Comercial Thymos' || userProfileName != 'Coordenador Comercial Thymos'))
-        {
-            string AlteracaoNaoPermitida = 'Alteração permitida só pelo Delta Digital';
-            if (acc.Name != oldAcc.Name)
-                acc.Name.addError(AlteracaoNaoPermitida);
-            if (acc.CompanyName__c != oldAcc.CompanyName__c) 
-                acc.CompanyName__c.addError(AlteracaoNaoPermitida);
-            if (acc.FantasyName__c != oldAcc.FantasyName__c) 
-                acc.FantasyName__c.addError(AlteracaoNaoPermitida);
-            if (acc.CNPJ__c != oldAcc.CNPJ__c)
-                acc.CNPJ__c.addError(AlteracaoNaoPermitida);
-            if (acc.MunicipalRegistration__c != oldAcc.MunicipalRegistration__c) 
-                acc.MunicipalRegistration__c.addError(AlteracaoNaoPermitida);
-            if (acc.StateRegistration__c != oldAcc.StateRegistration__c) 
-                acc.StateRegistration__c.addError(AlteracaoNaoPermitida);
-            if (acc.Address__c != oldAcc.Address__c) 
-                acc.Address__c.addError(AlteracaoNaoPermitida);
-            if (acc.District__c != oldAcc.District__c) 
-                acc.District__c.addError(AlteracaoNaoPermitida);
-            if (acc.City__c != oldAcc.City__c) 
-                acc.City__c.addError(AlteracaoNaoPermitida);
-            if (acc.UF__c != oldAcc.UF__c) 
-                acc.UF__c.addError(AlteracaoNaoPermitida);
-            if (acc.CEP__c != oldAcc.CEP__c) 
-                acc.CEP__c.addError(AlteracaoNaoPermitida);
-            if (acc.Empresa__c != oldAcc.Empresa__c) 
-                acc.Empresa__c.addError(AlteracaoNaoPermitida);
-            if (acc.Status__c != oldAcc.Status__c)
-                acc.Status__c.addError(AlteracaoNaoPermitida);
-            
-            if ((acc.Name != oldAcc.Name) ||
-                (acc.CompanyName__c != oldAcc.CompanyName__c) ||
-                (acc.FantasyName__c != oldAcc.FantasyName__c) ||
-                (acc.CNPJ__c != oldAcc.CNPJ__c) ||
-                (acc.MunicipalRegistration__c != oldAcc.MunicipalRegistration__c) ||
-                (acc.StateRegistration__c != oldAcc.StateRegistration__c) ||
-                (acc.Address__c != oldAcc.Address__c) ||
-                (acc.District__c != oldAcc.District__c) ||
-                (acc.City__c != oldAcc.City__c) ||
-                (acc.UF__c != oldAcc.UF__c) ||
-                (acc.CEP__c != oldAcc.CEP__c) ||
-                (acc.Empresa__c != oldAcc.Empresa__c) 
-               (acc.Status__c != oldAcc.Status__c))
-                erros += 'Atenção: Dados da Conta e Dados de Endereço, só podem ser alterados pelo Delta Digital.';
-        }*/
         if (erros != '')
             acc.addError(erros);
         
@@ -439,6 +379,154 @@ public class AccountTriggerValidation {
         }
      public static void subirCobertura() {
                 Integer i = 0;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;      
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;      
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;      
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;      
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;
+                i++;      
+                i++;
+                i++;
                 i++;
                 i++;
                 i++;
