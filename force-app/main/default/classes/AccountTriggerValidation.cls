@@ -66,7 +66,7 @@ public class AccountTriggerValidation {
         if (acc.FantasyName__c == null)
             acc.FantasyName__c.addError('Nome Fantasia deve ser informado');
        
-        ConsistirEnderecoStatusEhEmpresa(acc);
+    
         
       /*  // consistir os campos que não podem ser alterados na conta, pois eles devem ser alterados no Delta Digital;   
         String userProfileName = [select Name from Profile where id =: UserInfo.getProfileId()].Name;
@@ -252,7 +252,7 @@ public class AccountTriggerValidation {
                 acc.BirthDate__c.addError('Data de Aniversário está inválida');
         }
 
-        ConsistirEnderecoStatusEhEmpresa(acc);
+ 
         
         // consistir os campos que não podem ser alterados na conta, pois eles devem ser alterados no Delta Digital;   
         String userProfileName = [select Name from Profile where id =: UserInfo.getProfileId()].Name;
@@ -410,27 +410,7 @@ public class AccountTriggerValidation {
     //------------------------------------------------------------------------------------------------
 
     
-    //------------------------------------------------------------------------------------------------
-    // Consistir dados de Endereço, Status e Empresa (Pessoa Física e/ou Pessoa Jurídica)
-    //------------------------------------------------------------------------------------------------
-    private static void ConsistirEnderecoStatusEhEmpresa(Account acc) {
-        if (acc.Address__c == null)
-            acc.Address__c.addError('Logradouro deve ser informado');
-        if (acc.CEP__c == null)
-            acc.CEP__c.addError('CEP deve ser informado');
-        if (acc.City__c == null)
-            acc.City__c.addError('Cidade deve ser informada');
-        if (acc.UF__c == null)
-            acc.UF__c.addError('UF Deve ser informada');
-        if (acc.Empresa__c == null)
-            acc.Empresa__c.addError('Empresa do Grupo Delta deve ser informada');
-        if (acc.Status__c == null)
-            acc.Status__c.addError('Status deve ser informado');
-    }    
-    //------------------------------------------------------------------------------------------------
-    // FIM Consistir dados de Endereço, Status e Empresa (Pessoa Física e/ou Pessoa Jurídica)
-    //------------------------------------------------------------------------------------------------
-    
+
     
     
     //------------------------------------------------------------------------------------------------
