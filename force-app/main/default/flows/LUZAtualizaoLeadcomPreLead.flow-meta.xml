@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>atualiza_id_da_cota_o</name>
+        <label>atualiza id da cotação</label>
+        <locationX>512</locationX>
+        <locationY>1547</locationY>
+        <assignmentItems>
+            <assignToReference>idcotacao</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>get_cota_o.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Qual_o_tipo_de_desconto</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>C_pia_1_de_Qual_o_tipo_de_desconto</name>
         <label>Qual o tipo de desconto?</label>
-        <locationX>226</locationX>
-        <locationY>1955</locationY>
+        <locationX>380</locationX>
+        <locationY>2039</locationY>
         <defaultConnector>
             <targetReference>C_pia_3_de_Qual_o_tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -36,8 +52,8 @@
     <decisions>
         <name>C_pia_3_de_Qual_o_tipo_de_desconto</name>
         <label>Qual o tipo de desconto?</label>
-        <locationX>226</locationX>
-        <locationY>2255</locationY>
+        <locationX>380</locationX>
+        <locationY>2339</locationY>
         <defaultConnector>
             <targetReference>C_pia_4_de_Qual_o_tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -68,10 +84,10 @@
     <decisions>
         <name>C_pia_4_de_Qual_o_tipo_de_desconto</name>
         <label>Qual o tipo de desconto?</label>
-        <locationX>226</locationX>
-        <locationY>2555</locationY>
+        <locationX>380</locationX>
+        <locationY>2639</locationY>
         <defaultConnector>
-            <targetReference>Ganho_no_Lead</targetReference>
+            <targetReference>plano_foi_criado</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
@@ -95,6 +111,49 @@
                 <targetReference>C_pia_4_de_cria_plano</targetReference>
             </connector>
             <label>Liberdade Total</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>plano_foi_criado</name>
+        <label>plano foi criado?</label>
+        <locationX>380</locationX>
+        <locationY>2939</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>simaerdgfsfdag</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Idplano2anos</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Idplano3anos</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Idplano5anos</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>IdplanoLT</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Ganho_no_Lead</targetReference>
+            </connector>
+            <label>sim</label>
         </rules>
     </decisions>
     <decisions>
@@ -127,6 +186,9 @@
         <label>Possui cotação?</label>
         <locationX>380</locationX>
         <locationY>1439</locationY>
+        <defaultConnector>
+            <targetReference>atualiza_id_da_cota_o</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
             <name>N_o</name>
@@ -172,8 +234,8 @@
     <decisions>
         <name>Qual_o_tipo_de_desconto</name>
         <label>Qual o tipo de desconto?</label>
-        <locationX>226</locationX>
-        <locationY>1655</locationY>
+        <locationX>380</locationX>
+        <locationY>1739</locationY>
         <defaultConnector>
             <targetReference>C_pia_1_de_Qual_o_tipo_de_desconto</targetReference>
         </defaultConnector>
@@ -261,8 +323,9 @@
     <recordCreates>
         <name>C_pi_4_de_cria_plano</name>
         <label>cria plano</label>
-        <locationX>94</locationX>
-        <locationY>2063</locationY>
+        <locationX>248</locationX>
+        <locationY>2147</locationY>
+        <assignRecordIdToReference>Idplano3anos</assignRecordIdToReference>
         <connector>
             <targetReference>C_pia_3_de_Qual_o_tipo_de_desconto</targetReference>
         </connector>
@@ -291,15 +354,15 @@
             </value>
         </inputAssignments>
         <object>Plano__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
         <name>C_pia_4_de_cria_plano</name>
         <label>cria plano</label>
-        <locationX>94</locationX>
-        <locationY>2663</locationY>
+        <locationX>248</locationX>
+        <locationY>2747</locationY>
+        <assignRecordIdToReference>IdplanoLT</assignRecordIdToReference>
         <connector>
-            <targetReference>Ganho_no_Lead</targetReference>
+            <targetReference>plano_foi_criado</targetReference>
         </connector>
         <inputAssignments>
             <field>Cotacao__c</field>
@@ -326,13 +389,13 @@
             </value>
         </inputAssignments>
         <object>Plano__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
         <name>Cpia_4_de_cria_plano</name>
         <label>cria plano</label>
-        <locationX>94</locationX>
-        <locationY>2363</locationY>
+        <locationX>248</locationX>
+        <locationY>2447</locationY>
+        <assignRecordIdToReference>Idplano5anos</assignRecordIdToReference>
         <connector>
             <targetReference>C_pia_4_de_Qual_o_tipo_de_desconto</targetReference>
         </connector>
@@ -361,13 +424,13 @@
             </value>
         </inputAssignments>
         <object>Plano__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
         <name>cria_plano</name>
         <label>cria plano</label>
-        <locationX>94</locationX>
-        <locationY>1763</locationY>
+        <locationX>248</locationX>
+        <locationY>1847</locationY>
+        <assignRecordIdToReference>Idplano2anos</assignRecordIdToReference>
         <connector>
             <targetReference>C_pia_1_de_Qual_o_tipo_de_desconto</targetReference>
         </connector>
@@ -396,12 +459,11 @@
             </value>
         </inputAssignments>
         <object>Plano__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
         <name>Criar_Cota_o</name>
         <label>Criar Cotação</label>
-        <locationX>226</locationX>
+        <locationX>248</locationX>
         <locationY>1547</locationY>
         <assignRecordIdToReference>idcotacao</assignRecordIdToReference>
         <connector>
@@ -444,7 +506,7 @@
                 <elementReference>$Record.Lead__c</elementReference>
             </value>
         </filters>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>Cotacao__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
@@ -1807,8 +1869,8 @@
     <subflows>
         <name>Ganho_no_Lead</name>
         <label>Ganho no Lead</label>
-        <locationX>226</locationX>
-        <locationY>2855</locationY>
+        <locationX>248</locationX>
+        <locationY>3047</locationY>
         <flowName>Ganho_no_Lead</flowName>
         <inputAssignments>
             <name>IddoLeadnoPreLead</name>
@@ -1854,6 +1916,34 @@
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Idplano2anos</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Idplano3anos</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Idplano5anos</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>IdplanoLT</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>varNewLead</name>
