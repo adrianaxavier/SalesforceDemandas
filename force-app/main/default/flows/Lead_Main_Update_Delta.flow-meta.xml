@@ -2,49 +2,10 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>58.0</apiVersion>
     <decisions>
-        <name>Alterado_para_Stephanie</name>
-        <label>Alterado para Stephanie</label>
-        <locationX>182</locationX>
-        <locationY>323</locationY>
-        <defaultConnector>
-            <targetReference>Cupom_Alterado</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Não</defaultConnectorLabel>
-        <rules>
-            <name>Sim8</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.OwnerId</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.RecordType.Name</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Delta Inside Sales</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.OwnerId</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>005HY000000JxUKYA0</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Obter_Id_Registro_Outros_St</targetReference>
-            </connector>
-            <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Cupom_Alterado</name>
         <label>Cupom Alterado</label>
         <locationX>182</locationX>
-        <locationY>731</locationY>
+        <locationY>323</locationY>
         <defaultConnector>
             <targetReference>Status_Atualizado</targetReference>
         </defaultConnector>
@@ -69,7 +30,7 @@
         <name>Status_Atualizado</name>
         <label>Status Atualizado</label>
         <locationX>182</locationX>
-        <locationY>1031</locationY>
+        <locationY>623</locationY>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
             <name>Sim</name>
@@ -114,54 +75,11 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <recordLookups>
-        <name>Obter_Id_Registro_Outros_St</name>
-        <label>Obter Id Registro Outros Sté</label>
-        <locationX>50</locationX>
-        <locationY>431</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Atualiza_o_Lead</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Name</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Outros Sté</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>RecordType</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordUpdates>
-        <name>Atualiza_o_Lead</name>
-        <label>Atualiza o Lead</label>
-        <locationX>50</locationX>
-        <locationY>539</locationY>
-        <connector>
-            <targetReference>Cupom_Alterado</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>RecordTypeId</field>
-            <value>
-                <elementReference>Obter_Id_Registro_Outros_St.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Estudo</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
     <start>
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Alterado_para_Stephanie</targetReference>
+            <targetReference>Cupom_Alterado</targetReference>
         </connector>
         <object>Lead</object>
         <recordTriggerType>Update</recordTriggerType>
@@ -172,7 +90,7 @@
         <name>Atualiza_Dados_de_Parceiro</name>
         <label>Atualiza Dados de Parceiro</label>
         <locationX>50</locationX>
-        <locationY>839</locationY>
+        <locationY>431</locationY>
         <connector>
             <targetReference>Status_Atualizado</targetReference>
         </connector>
@@ -194,7 +112,7 @@
         <name>Atualiza_Status</name>
         <label>Atualiza Status</label>
         <locationX>50</locationX>
-        <locationY>1139</locationY>
+        <locationY>731</locationY>
         <flowName>SUBFLOW_LEAD_StatusDeltaInsideSales</flowName>
         <inputAssignments>
             <name>RecordId</name>
