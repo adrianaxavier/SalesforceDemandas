@@ -443,6 +443,11 @@
         <fields>NAME</fields>
         <relatedList>Fatura_Distribuidora__c.Oportunidade__c</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Endere_o_completo__c</fields>
+        <relatedList>Units__c.Oportunidade__c</relatedList>
+    </relatedLists>
     <relatedObjects>AccountId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
