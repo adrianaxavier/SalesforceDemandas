@@ -918,6 +918,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Origem__c</field>
+            <value>
+                <elementReference>get_prelead.InformationSource__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Valor_da_Fatura_R__c</field>
             <value>
                 <elementReference>get_prelead.Valor_da_Fatura__c</elementReference>
@@ -1122,6 +1128,12 @@
             <name>NomedoArquivoanexocomexten</name>
             <value>
                 <elementReference>get_prelead.NomeDoAnexoComExtensao__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>origem</name>
+            <value>
+                <elementReference>get_prelead.InformationSource__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

@@ -3,7 +3,7 @@
     <fullName>Plano__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Plano</label>
+    <label>Plano selecionado</label>
     <lookupFilter>
         <active>true</active>
         <filterItems>
