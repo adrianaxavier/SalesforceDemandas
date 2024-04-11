@@ -199,7 +199,7 @@
         <inputAssignments>
             <field>Distribuidora__c</field>
             <value>
-                <elementReference>Atualiza_N_o_Localizada</elementReference>
+                <stringValue>Não Localizada</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -364,6 +364,13 @@
             <operator>IsChanged</operator>
             <value>
                 <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CEP__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
             </value>
         </filters>
         <object>PreLead__c</object>
