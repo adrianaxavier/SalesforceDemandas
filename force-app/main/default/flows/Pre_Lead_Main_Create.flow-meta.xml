@@ -62,7 +62,7 @@
         <name>Block_List</name>
         <label>Block List</label>
         <locationX>446</locationX>
-        <locationY>2963</locationY>
+        <locationY>3371</locationY>
         <defaultConnector>
             <targetReference>Cria_Contato</targetReference>
         </defaultConnector>
@@ -127,7 +127,7 @@
         <name>Empresa</name>
         <label>Empresa</label>
         <locationX>248</locationX>
-        <locationY>2639</locationY>
+        <locationY>3047</locationY>
         <defaultConnector>
             <targetReference>Atualizar_LUZ</targetReference>
         </defaultConnector>
@@ -205,7 +205,7 @@
         <name>MGM</name>
         <label>MGM</label>
         <locationX>248</locationX>
-        <locationY>2039</locationY>
+        <locationY>2447</locationY>
         <defaultConnector>
             <targetReference>Possui_Numero_de_Instala_o</targetReference>
         </defaultConnector>
@@ -230,7 +230,7 @@
         <name>Parceiro</name>
         <label>É Parceiro?</label>
         <locationX>248</locationX>
-        <locationY>1631</locationY>
+        <locationY>2039</locationY>
         <defaultConnector>
             <targetReference>Atualizar_A_fonte</targetReference>
         </defaultConnector>
@@ -255,7 +255,7 @@
         <name>Possui_Numero_de_Instala_o</name>
         <label>Possui Numero de Instalação</label>
         <locationX>248</locationX>
-        <locationY>2339</locationY>
+        <locationY>2747</locationY>
         <defaultConnector>
             <targetReference>Insere_0_na_Instal_o</targetReference>
         </defaultConnector>
@@ -277,10 +277,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Possui_Telefone</name>
+        <label>Possui Telefone</label>
+        <locationX>501</locationX>
+        <locationY>1631</locationY>
+        <defaultConnector>
+            <targetReference>Tipo_de_Atualiza_o</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Não</defaultConnectorLabel>
+        <rules>
+            <name>Sim8</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PhoneNumber__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Atualiza_Telefone_MKT</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Tipo_de_Atualiza_o</name>
         <label>Tipo de Atualização</label>
         <locationX>501</locationX>
-        <locationY>1523</locationY>
+        <locationY>1931</locationY>
         <defaultConnectorLabel>Geral</defaultConnectorLabel>
         <rules>
             <name>Novo</name>
@@ -313,6 +338,20 @@
         <dataType>Boolean</dataType>
         <expression>ISNEW()</expression>
     </formulas>
+    <formulas>
+        <name>prname</name>
+        <dataType>String</dataType>
+        <expression>TRIM(LEFT({!$Record.Name}, FIND(&quot; &quot;, {!$Record.Name})-1))</expression>
+    </formulas>
+    <formulas>
+        <name>TelefoneFormatado</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    LEN({!$Record.PhoneNumber__c}) = 12 &amp;&amp; LEFT({!$Record.PhoneNumber__c}, 4) = &quot;5541&quot;,
+    LEFT({!$Record.PhoneNumber__c}, 4) &amp; &quot;9&quot; &amp; MID({!$Record.PhoneNumber__c}, 5, 8),
+    {!$Record.PhoneNumber__c}
+)</expression>
+    </formulas>
     <label>{Pre-Lead} - Main Create</label>
     <loops>
         <name>LoopCompany</name>
@@ -325,7 +364,7 @@
             <targetReference>Company_Name</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Tipo_de_Atualiza_o</targetReference>
+            <targetReference>Atualiza_LOCALE_e_Primeiro_Nome</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -351,7 +390,7 @@
         <name>BlockList</name>
         <label>BlockList</label>
         <locationX>446</locationX>
-        <locationY>2855</locationY>
+        <locationY>3263</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Block_List</targetReference>
@@ -389,10 +428,48 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>Atualiza_LOCALE_e_Primeiro_Nome</name>
+        <label>Atualiza LOCALE e Primeiro Nome</label>
+        <locationX>501</locationX>
+        <locationY>1523</locationY>
+        <connector>
+            <targetReference>Possui_Telefone</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Primeiro_Nome__c</field>
+            <value>
+                <elementReference>prname</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>locale__c</field>
+            <value>
+                <stringValue>BR</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Atualiza_Telefone_MKT</name>
+        <label>Atualiza Telefone MKT</label>
+        <locationX>369</locationX>
+        <locationY>1739</locationY>
+        <connector>
+            <targetReference>Tipo_de_Atualiza_o</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Telefone_MKT__c</field>
+            <value>
+                <stringValue>035a333d-e39c-4096-8da0-f35d18ebc61a</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Atualizar_Delta_Inside_Sales</name>
         <label>Atualizar Delta Inside Sales</label>
         <locationX>50</locationX>
-        <locationY>2747</locationY>
+        <locationY>3155</locationY>
         <connector>
             <targetReference>Fluxo_de_Convers_o1</targetReference>
         </connector>
@@ -426,7 +503,7 @@
         <name>Atualizar_LUZ</name>
         <label>Atualizar LUZ</label>
         <locationX>446</locationX>
-        <locationY>2747</locationY>
+        <locationY>3155</locationY>
         <connector>
             <targetReference>BlockList</targetReference>
         </connector>
@@ -448,7 +525,7 @@
         <name>Desqualificar</name>
         <label>Desqualificar</label>
         <locationX>314</locationX>
-        <locationY>3071</locationY>
+        <locationY>3479</locationY>
         <connector>
             <targetReference>Cria_Contato</targetReference>
         </connector>
@@ -494,7 +571,7 @@
         <name>Insere_0_na_Instal_o</name>
         <label>Insere 0 na Instalção</label>
         <locationX>336</locationX>
-        <locationY>2447</locationY>
+        <locationY>2855</locationY>
         <connector>
             <targetReference>Empresa</targetReference>
         </connector>
@@ -536,7 +613,7 @@
         <name>Atualizar_A_fonte</name>
         <label>Atualizar A fonte</label>
         <locationX>248</locationX>
-        <locationY>1931</locationY>
+        <locationY>2339</locationY>
         <connector>
             <targetReference>MGM</targetReference>
         </connector>
@@ -570,7 +647,7 @@
         <name>Cria_Contato</name>
         <label>Cria Contato</label>
         <locationX>446</locationX>
-        <locationY>3263</locationY>
+        <locationY>3671</locationY>
         <flowName>Subfluxo_prelead_cricao_de_contato</flowName>
         <inputAssignments>
             <name>Record_Id</name>
@@ -583,7 +660,7 @@
         <name>Fluxo_de_Convers_o1</name>
         <label>Fluxo de Conversão</label>
         <locationX>50</locationX>
-        <locationY>2855</locationY>
+        <locationY>3263</locationY>
         <flowName>Subfluxo_pr_lead_convers_o_para_lead</flowName>
         <inputAssignments>
             <name>NomedaUC</name>
@@ -603,7 +680,7 @@
         <name>FLUXO_MGM</name>
         <label>FLUXO MGM</label>
         <locationX>116</locationX>
-        <locationY>2147</locationY>
+        <locationY>2555</locationY>
         <connector>
             <targetReference>Possui_Numero_de_Instala_o</targetReference>
         </connector>
@@ -619,7 +696,7 @@
         <name>Fluxo_Parceiros</name>
         <label>Fluxo Parceiros</label>
         <locationX>116</locationX>
-        <locationY>1739</locationY>
+        <locationY>2147</locationY>
         <connector>
             <targetReference>Atualizar_A_fonte</targetReference>
         </connector>
