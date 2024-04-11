@@ -1280,6 +1280,40 @@
                 <identifier>RecordCriativo_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Parcerias__c</fieldItem>
+                <identifier>RecordParcerias_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Parcerias__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Parceria_Indicado__c</fieldItem>
+                <identifier>RecordParceria_Indicado_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Parcerias__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-38ec11f4-7d71-4bff-a762-5bc6ce49a297</name>
         <type>Facet</type>
     </flexiPageRegions>
