@@ -180,7 +180,7 @@
         <name>Empresa</name>
         <label>Empresa</label>
         <locationX>182</locationX>
-        <locationY>1884</locationY>
+        <locationY>2292</locationY>
         <defaultConnector>
             <targetReference>Atualizar_LUZ</targetReference>
         </defaultConnector>
@@ -244,7 +244,7 @@
         <name>MGM</name>
         <label>MGM</label>
         <locationX>182</locationX>
-        <locationY>1284</locationY>
+        <locationY>1692</locationY>
         <defaultConnector>
             <targetReference>Possui_Numero_de_Instala_o</targetReference>
         </defaultConnector>
@@ -269,7 +269,7 @@
         <name>Parceiro</name>
         <label>É Parceiro?</label>
         <locationX>182</locationX>
-        <locationY>984</locationY>
+        <locationY>1392</locationY>
         <defaultConnector>
             <targetReference>MGM</targetReference>
         </defaultConnector>
@@ -294,7 +294,7 @@
         <name>Possui_Numero_de_Instala_o</name>
         <label>Possui Numero de Instalação</label>
         <locationX>182</locationX>
-        <locationY>1584</locationY>
+        <locationY>1992</locationY>
         <defaultConnector>
             <targetReference>Insere_0_na_Instal_o</targetReference>
         </defaultConnector>
@@ -316,6 +316,31 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Possui_Telefone</name>
+        <label>Possui Telefone</label>
+        <locationX>182</locationX>
+        <locationY>1092</locationY>
+        <defaultConnector>
+            <targetReference>Parceiro</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Não</defaultConnectorLabel>
+        <rules>
+            <name>Sim8</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PhoneNumber__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Atualiza_Telefone_MKT</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Tipo_de_Atualiza_o</name>
         <label>Tipo de Atualização</label>
         <locationX>380</locationX>
@@ -332,7 +357,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Parceiro</targetReference>
+                <targetReference>Atualiza_LOCALE_e_Primeiro_Nome</targetReference>
             </connector>
             <label>Novo</label>
         </rules>
@@ -351,6 +376,20 @@
         <name>IsNew</name>
         <dataType>Boolean</dataType>
         <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>prname</name>
+        <dataType>String</dataType>
+        <expression>TRIM(LEFT({!$Record.Name}, FIND(&quot; &quot;, {!$Record.Name})-1))</expression>
+    </formulas>
+    <formulas>
+        <name>TelefoneFormatado</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    LEN({!$Record.PhoneNumber__c}) = 12 &amp;&amp; LEFT({!$Record.PhoneNumber__c}, 4) = &quot;5541&quot;,
+    LEFT({!$Record.PhoneNumber__c}, 4) &amp; &quot;9&quot; &amp; MID({!$Record.PhoneNumber__c}, 5, 8),
+    {!$Record.PhoneNumber__c}
+)</expression>
     </formulas>
     <label>{Pre-Lead}-Create ADS</label>
     <loops>
@@ -428,6 +467,28 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>Atualiza_LOCALE_e_Primeiro_Nome</name>
+        <label>Atualiza LOCALE e Primeiro Nome</label>
+        <locationX>182</locationX>
+        <locationY>984</locationY>
+        <connector>
+            <targetReference>Possui_Telefone</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Primeiro_Nome__c</field>
+            <value>
+                <elementReference>prname</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>locale__c</field>
+            <value>
+                <stringValue>BR</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Atualiza_PreLeaad</name>
         <label>Atualiza Pré-Leaad</label>
         <locationX>1370</locationX>
@@ -444,10 +505,26 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
+        <name>Atualiza_Telefone_MKT</name>
+        <label>Atualiza Telefone MKT</label>
+        <locationX>50</locationX>
+        <locationY>1200</locationY>
+        <connector>
+            <targetReference>Parceiro</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Telefone_MKT__c</field>
+            <value>
+                <stringValue>aab15a04-1921-490c-9f70-d38e5e9ec624</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Atualizar_Delta_Inside_Sales</name>
         <label>Atualizar Delta Inside Sales</label>
         <locationX>50</locationX>
-        <locationY>1992</locationY>
+        <locationY>2400</locationY>
         <inputAssignments>
             <field>Company__c</field>
             <value>
@@ -472,7 +549,7 @@
         <name>Atualizar_LUZ</name>
         <label>Atualizar LUZ</label>
         <locationX>314</locationX>
-        <locationY>1992</locationY>
+        <locationY>2400</locationY>
         <connector>
             <targetReference>Criar_o_Contato</targetReference>
         </connector>
@@ -629,7 +706,7 @@
         <name>Insere_0_na_Instal_o</name>
         <label>Insere 0 na Instalção</label>
         <locationX>270</locationX>
-        <locationY>1692</locationY>
+        <locationY>2100</locationY>
         <connector>
             <targetReference>Empresa</targetReference>
         </connector>
@@ -670,7 +747,7 @@
         <name>Criar_o_Contato</name>
         <label>Criar o Contato</label>
         <locationX>314</locationX>
-        <locationY>2100</locationY>
+        <locationY>2508</locationY>
         <flowName>Subfluxo_prelead_cricao_de_contato</flowName>
         <inputAssignments>
             <name>Record_Id</name>
@@ -683,7 +760,7 @@
         <name>FLUXO_MGM</name>
         <label>FLUXO MGM</label>
         <locationX>50</locationX>
-        <locationY>1392</locationY>
+        <locationY>1800</locationY>
         <connector>
             <targetReference>Possui_Numero_de_Instala_o</targetReference>
         </connector>
@@ -699,7 +776,7 @@
         <name>Fluxo_Parceiros</name>
         <label>Fluxo Parceiros</label>
         <locationX>50</locationX>
-        <locationY>1092</locationY>
+        <locationY>1500</locationY>
         <connector>
             <targetReference>MGM</targetReference>
         </connector>
