@@ -4,7 +4,7 @@
     <decisions>
         <name>FindAccount</name>
         <label>FindAccount?</label>
-        <locationX>974</locationX>
+        <locationX>1150</locationX>
         <locationY>674</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -24,12 +24,34 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Possui_Parceiro</name>
+        <label>Possui Parceiro</label>
+        <locationX>446</locationX>
+        <locationY>566</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obter_cupom.Parceiro__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Compartilhar_Community_Parceiro</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Possui_Vendedor</name>
         <label>Possui Vendedor?</label>
-        <locationX>182</locationX>
+        <locationX>248</locationX>
         <locationY>458</locationY>
         <defaultConnector>
-            <targetReference>Compartilhar_Community_Parceiro</targetReference>
+            <targetReference>Possui_Parceiro</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -51,7 +73,7 @@
     <decisions>
         <name>validar_cupom</name>
         <label>validar cupom</label>
-        <locationX>479</locationX>
+        <locationX>600</locationX>
         <locationY>242</locationY>
         <defaultConnector>
             <targetReference>Obter_Parcerias</targetReference>
@@ -76,7 +98,7 @@
     <decisions>
         <name>Validar_Parcerias</name>
         <label>Validar Parcerias</label>
-        <locationX>776</locationX>
+        <locationX>952</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>GetAccountWithMGM</targetReference>
@@ -125,7 +147,7 @@
         <name>Compartilhar_Community_Parceiro</name>
         <label>Compartilhar Community Parceiro</label>
         <locationX>314</locationX>
-        <locationY>566</locationY>
+        <locationY>674</locationY>
         <inputAssignments>
             <field>AccessLevel</field>
             <value>
@@ -188,7 +210,7 @@
     <recordLookups>
         <name>GetAccountWithMGM</name>
         <label>GetAccountWithMGM</label>
-        <locationX>974</locationX>
+        <locationX>1150</locationX>
         <locationY>566</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -209,7 +231,7 @@
     <recordLookups>
         <name>Obter_cupom</name>
         <label>Obter cupom</label>
-        <locationX>479</locationX>
+        <locationX>600</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -230,7 +252,7 @@
     <recordLookups>
         <name>Obter_Parcerias</name>
         <label>Obter Parcerias</label>
-        <locationX>776</locationX>
+        <locationX>952</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -251,7 +273,7 @@
     <recordUpdates>
         <name>Atualizar_Parcerias</name>
         <label>Atualizar Parcerias</label>
-        <locationX>578</locationX>
+        <locationX>754</locationX>
         <locationY>566</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -278,7 +300,7 @@
     <recordUpdates>
         <name>atualizar_pr_lead</name>
         <label>atualizar pré lead</label>
-        <locationX>182</locationX>
+        <locationX>248</locationX>
         <locationY>350</locationY>
         <connector>
             <targetReference>Possui_Vendedor</targetReference>
@@ -320,7 +342,7 @@
     <recordUpdates>
         <name>UpdatePreLead</name>
         <label>UpdatePreLead</label>
-        <locationX>842</locationX>
+        <locationX>1018</locationX>
         <locationY>782</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -351,7 +373,7 @@
         <object>PreLead__c</object>
     </recordUpdates>
     <start>
-        <locationX>353</locationX>
+        <locationX>474</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Obter_cupom</targetReference>
