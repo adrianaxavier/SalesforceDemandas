@@ -2,10 +2,10 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>59.0</apiVersion>
     <assignments>
-        <name>SetPreLeadQtd</name>
-        <label>SetPreLeadQtd</label>
-        <locationX>1976</locationX>
-        <locationY>224</locationY>
+        <name>SetCounters</name>
+        <label>SetCounters</label>
+        <locationX>2265</locationX>
+        <locationY>50</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLead</assignToReference>
             <operator>Add</operator>
@@ -21,14 +21,37 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>SumContacts</targetReference>
+            <targetReference>SetVars</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>SetCounters2</name>
+        <label>SetCounters</label>
+        <locationX>1906</locationX>
+        <locationY>929</locationY>
+        <assignmentItems>
+            <assignToReference>varCountPreLead</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCountContacts</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LoopPreLeads.Numero_de_Contatos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SetVars2</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>SetPreLeadQtdConverted</name>
         <label>SetPreLeadQtdConverted</label>
-        <locationX>2383</locationX>
-        <locationY>244</locationY>
+        <locationX>2642</locationX>
+        <locationY>359</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLeadConverted</assignToReference>
             <operator>Add</operator>
@@ -41,10 +64,26 @@
         </connector>
     </assignments>
     <assignments>
+        <name>SetPreLeadQtdConverted2</name>
+        <label>SetPreLeadQtdConverted</label>
+        <locationX>2386</locationX>
+        <locationY>1115</locationY>
+        <assignmentItems>
+            <assignToReference>varCountPreLeadConverted</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>LoopPreLeads2</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>SetPreLeadQtdDesqualificados</name>
         <label>SetPreLeadQtdDesqualificados</label>
-        <locationX>2370</locationX>
-        <locationY>592</locationY>
+        <locationX>2616</locationX>
+        <locationY>841</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLeadDesqualified</assignToReference>
             <operator>Add</operator>
@@ -57,10 +96,26 @@
         </connector>
     </assignments>
     <assignments>
+        <name>SetPreLeadQtdDesqualificados2</name>
+        <label>SetPreLeadQtdDesqualificados</label>
+        <locationX>2396</locationX>
+        <locationY>1685</locationY>
+        <assignmentItems>
+            <assignToReference>varCountPreLeadDesqualified</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>LoopPreLeads2</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>SetPreLeadQtdEmAndamento</name>
         <label>SetPreLeadQtdEmAndamento</label>
-        <locationX>2367</locationX>
-        <locationY>447</locationY>
+        <locationX>3000</locationX>
+        <locationY>498</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLeadEmAndamento</assignToReference>
             <operator>Add</operator>
@@ -73,10 +128,26 @@
         </connector>
     </assignments>
     <assignments>
-        <name>SumContacts</name>
-        <label>SumContacts</label>
-        <locationX>2164</locationX>
-        <locationY>224</locationY>
+        <name>SetPreLeadQtdEmAndamento2</name>
+        <label>SetPreLeadQtdEmAndamento</label>
+        <locationX>2732</locationX>
+        <locationY>1243</locationY>
+        <assignmentItems>
+            <assignToReference>varCountPreLeadEmAndamento</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>LoopPreLeads2</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>SetVars</name>
+        <label>SetVars</label>
+        <locationX>2459</locationX>
+        <locationY>50</locationY>
         <assignmentItems>
             <assignToReference>varCountContactsSum</assignToReference>
             <operator>Add</operator>
@@ -84,15 +155,70 @@
                 <elementReference>varCountContacts</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varConsumoTotal</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>LoopPreLeads.ConsumoUtilizado__c</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>PreLeadStatus</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>SetVars2</name>
+        <label>SetVars</label>
+        <locationX>2175</locationX>
+        <locationY>929</locationY>
+        <assignmentItems>
+            <assignToReference>varCountContactsSum</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>varCountContacts</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varConsumoTotal</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>LoopPreLeads2.ConsumoUtilizado__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>PreLeadStatus2</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>EconomicGroupRemovedDecision</name>
+        <label>EconomicGroupRemoved?</label>
+        <locationX>767</locationX>
+        <locationY>414</locationY>
+        <defaultConnector>
+            <targetReference>GetEconomicGroup</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>EconomicGroupRemoved</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetOldEconomicGroup</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Find_Economic_Group</name>
         <label>Find Economic Group?</label>
-        <locationX>1015</locationX>
-        <locationY>232</locationY>
+        <locationX>1316</locationX>
+        <locationY>415</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_Find_Economic_Group</name>
@@ -111,10 +237,32 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Find_Old_Economic_Group</name>
+        <label>Find Old Economic Group?</label>
+        <locationX>1011</locationX>
+        <locationY>1242</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Find_Old_Economic_Group</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetOldEconomicGroup</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetAllPreLeads2</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Find_Pre_Leads</name>
         <label>Find Pre Leads?</label>
-        <locationX>1465</locationX>
-        <locationY>232</locationY>
+        <locationX>1749</locationX>
+        <locationY>415</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_Find_Pre_Leads</name>
@@ -133,10 +281,32 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Find_Pre_Leads2</name>
+        <label>Find Pre Leads?</label>
+        <locationX>1460</locationX>
+        <locationY>1243</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Find_Pre_Leads2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetAllPreLeads2</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LoopPreLeads2</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>PreLeadStatus</name>
         <label>PreLeadStatus</label>
-        <locationX>2156</locationX>
-        <locationY>403</locationY>
+        <locationX>2451</locationX>
+        <locationY>584</locationY>
         <defaultConnector>
             <targetReference>LoopPreLeads</targetReference>
         </defaultConnector>
@@ -208,21 +378,111 @@
             <label>Desqualificados</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>PreLeadStatus2</name>
+        <label>PreLeadStatus</label>
+        <locationX>2167</locationX>
+        <locationY>1412</locationY>
+        <defaultConnector>
+            <targetReference>LoopPreLeads2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Convertidos2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Convertido</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SetPreLeadQtdConverted2</targetReference>
+            </connector>
+            <label>Convertidos</label>
+        </rules>
+        <rules>
+            <name>Em_andamento2</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Em andamento</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Qualificado</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Novo</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contrato Gerado</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SetPreLeadQtdEmAndamento2</targetReference>
+            </connector>
+            <label>Em andamento</label>
+        </rules>
+        <rules>
+            <name>Desqualificados2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Desqualificado</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SetPreLeadQtdDesqualificados2</targetReference>
+            </connector>
+            <label>Desqualificados</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <interviewLabel>[Grupo Economico] Qualificar Pre Leads em massa {!$Flow.CurrentDateTime}</interviewLabel>
     <label>[Grupo Economico] Pré-Lead Updates</label>
     <loops>
         <name>LoopPreLeads</name>
         <label>LoopPreLeads</label>
-        <locationX>1683</locationX>
-        <locationY>230</locationY>
+        <locationX>1978</locationX>
+        <locationY>411</locationY>
         <collectionReference>GetAllPreLeads</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>SetPreLeadQtd</targetReference>
+            <targetReference>SetCounters</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
             <targetReference>UpdateEconomicGroup</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>LoopPreLeads2</name>
+        <label>LoopPreLeads</label>
+        <locationX>1694</locationX>
+        <locationY>1240</locationY>
+        <collectionReference>GetAllPreLeads</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>SetCounters2</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>UpdateOldEconomicGroup</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -247,13 +507,13 @@
     <recordLookups>
         <name>GetAllPreLeads</name>
         <label>GetAllPreLeads</label>
-        <locationX>1274</locationX>
-        <locationY>230</locationY>
+        <locationX>1543</locationX>
+        <locationY>413</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Find_Pre_Leads</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>or</filterLogic>
         <filters>
             <field>EconomicGroup__c</field>
             <operator>EqualTo</operator>
@@ -266,15 +526,36 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>GetAllPreLeads2</name>
+        <label>GetAllPreLeads</label>
+        <locationX>1243</locationX>
+        <locationY>1241</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Find_Pre_Leads2</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>EconomicGroup__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>idOldEconomicGroup</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>PreLead__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>GetEconomicGroup</name>
         <label>GetEconomicGroup</label>
-        <locationX>776</locationX>
-        <locationY>230</locationY>
+        <locationX>1070</locationX>
+        <locationY>411</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Find_Economic_Group</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>or</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -286,11 +567,32 @@
         <object>EconomicGroup__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>GetOldEconomicGroup</name>
+        <label>GetOldEconomicGroup</label>
+        <locationX>776</locationX>
+        <locationY>1240</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Find_Old_Economic_Group</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>idOldEconomicGroup</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>EconomicGroup__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>UpdateEconomicGroup</name>
         <label>UpdateEconomicGroup</label>
-        <locationX>1683</locationX>
-        <locationY>465</locationY>
+        <locationX>1978</locationX>
+        <locationY>646</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -299,6 +601,63 @@
                 <elementReference>idEconomicGroup</elementReference>
             </value>
         </filters>
+        <inputAssignments>
+            <field>ConsumoTotal__c</field>
+            <value>
+                <elementReference>varConsumoTotal</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ContactNumber__c</field>
+            <value>
+                <elementReference>varCountContactsSum</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Pre_Leads_Convertidos__c</field>
+            <value>
+                <elementReference>varCountPreLeadConverted</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Pre_Leads_Desqualificados__c</field>
+            <value>
+                <elementReference>varCountPreLeadDesqualified</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Pre_Leads_Em_Andamento__c</field>
+            <value>
+                <elementReference>varCountPreLeadEmAndamento</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UCQuantity__c</field>
+            <value>
+                <elementReference>varCountPreLead</elementReference>
+            </value>
+        </inputAssignments>
+        <object>EconomicGroup__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>UpdateOldEconomicGroup</name>
+        <label>UpdateOldEconomicGroup</label>
+        <locationX>1694</locationX>
+        <locationY>1475</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>idOldEconomicGroup</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>ConsumoTotal__c</field>
+            <value>
+                <elementReference>varConsumoTotal</elementReference>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <field>ContactNumber__c</field>
             <value>
@@ -332,19 +691,50 @@
         <object>EconomicGroup__c</object>
     </recordUpdates>
     <start>
-        <locationX>650</locationX>
-        <locationY>48</locationY>
+        <locationX>649</locationX>
+        <locationY>108</locationY>
         <connector>
-            <targetReference>GetEconomicGroup</targetReference>
+            <targetReference>EconomicGroupRemovedDecision</targetReference>
         </connector>
     </start>
     <status>Active</status>
+    <variables>
+        <name>EconomicGroupRemoved</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
     <variables>
         <name>idEconomicGroup</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>idOldEconomicGroup</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varConsumoTotal</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>4</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
     </variables>
     <variables>
         <name>varCountContacts</name>
