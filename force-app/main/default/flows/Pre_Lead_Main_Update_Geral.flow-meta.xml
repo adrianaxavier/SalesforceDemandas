@@ -5,7 +5,7 @@
         <name>Altera_o_de_contrato1</name>
         <label>Alteração de contrato</label>
         <locationX>776</locationX>
-        <locationY>1670</locationY>
+        <locationY>1950</locationY>
         <defaultConnector>
             <targetReference>Converte</targetReference>
         </defaultConnector>
@@ -44,7 +44,7 @@
         <name>Altera_o_de_contrato1_0</name>
         <label>Alteração de contrato</label>
         <locationX>402</locationX>
-        <locationY>1778</locationY>
+        <locationY>2058</locationY>
         <defaultConnectorLabel>Não altera</defaultConnectorLabel>
         <rules>
             <name>Contrato_Assinado</name>
@@ -81,7 +81,7 @@
         <name>Alterado_MGM</name>
         <label>Alterado MGM</label>
         <locationX>776</locationX>
-        <locationY>878</locationY>
+        <locationY>1158</locationY>
         <defaultConnector>
             <targetReference>Cupom_Alterado</targetReference>
         </defaultConnector>
@@ -106,7 +106,7 @@
         <name>Apto_pra_Cadencia</name>
         <label>Apto pra Cadência?</label>
         <locationX>783</locationX>
-        <locationY>439</locationY>
+        <locationY>719</locationY>
         <defaultConnector>
             <targetReference>Grupo_Economico_Pre_Lead_Updates</targetReference>
         </defaultConnector>
@@ -152,7 +152,7 @@
         <name>Converte</name>
         <label>Converte</label>
         <locationX>1150</locationX>
-        <locationY>1778</locationY>
+        <locationY>2058</locationY>
         <defaultConnectorLabel>Não Converte</defaultConnectorLabel>
         <rules>
             <name>Delta</name>
@@ -238,7 +238,7 @@
         <name>Cupom_Alterado</name>
         <label>Cupom Alterado</label>
         <locationX>776</locationX>
-        <locationY>1370</locationY>
+        <locationY>1650</locationY>
         <defaultConnector>
             <targetReference>Altera_o_de_contrato1</targetReference>
         </defaultConnector>
@@ -263,7 +263,7 @@
         <name>MGM</name>
         <label>é MGM</label>
         <locationX>622</locationX>
-        <locationY>986</locationY>
+        <locationY>1266</locationY>
         <defaultConnector>
             <targetReference>Cupom_Alterado</targetReference>
         </defaultConnector>
@@ -285,10 +285,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Telefone_Alterado</name>
+        <label>Telefone Alterado</label>
+        <locationX>784</locationX>
+        <locationY>409</locationY>
+        <defaultConnector>
+            <targetReference>Apto_pra_Cadencia</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Não</defaultConnectorLabel>
+        <rules>
+            <name>Sim8</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PhoneNumber__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Atualiza_Telefone</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Valida_se_j_h_Lead</name>
         <label>Valida se já há Lead</label>
         <locationX>94</locationX>
-        <locationY>1886</locationY>
+        <locationY>2166</locationY>
         <defaultConnector>
             <targetReference>Atualizar_Status</targetReference>
         </defaultConnector>
@@ -313,7 +338,7 @@
         <name>Valida_se_j_h_Lead_0</name>
         <label>Valida se já há Lead</label>
         <locationX>446</locationX>
-        <locationY>1886</locationY>
+        <locationY>2166</locationY>
         <defaultConnector>
             <targetReference>Atualizar_Status_0</targetReference>
         </defaultConnector>
@@ -357,6 +382,15 @@
         <dataType>Boolean</dataType>
         <expression>ISNEW()</expression>
     </formulas>
+    <formulas>
+        <name>TelefoneFormatado</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    LEN({!$Record.PhoneNumber__c}) = 12 &amp;&amp; LEFT({!$Record.PhoneNumber__c}, 4) = &quot;5541&quot;,
+    LEFT({!$Record.PhoneNumber__c}, 4) &amp; &quot;9&quot; &amp; MID({!$Record.PhoneNumber__c}, 5, 8),
+    {!$Record.PhoneNumber__c}
+)</expression>
+    </formulas>
     <interviewLabel>[Pre-Lead]- Main Update {!$Flow.CurrentDateTime}</interviewLabel>
     <label>[Pre-Lead]- Main Update</label>
     <processMetadataValues>
@@ -379,10 +413,26 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
+        <name>Atualiza_Telefone</name>
+        <label>Atualiza Telefone</label>
+        <locationX>646</locationX>
+        <locationY>529</locationY>
+        <connector>
+            <targetReference>Apto_pra_Cadencia</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Telefone_MKT__c</field>
+            <value>
+                <elementReference>TelefoneFormatado</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Atualizar_Status</name>
         <label>Atualizar Status</label>
         <locationX>94</locationX>
-        <locationY>2078</locationY>
+        <locationY>2358</locationY>
         <inputAssignments>
             <field>Status__c</field>
             <value>
@@ -395,7 +445,7 @@
         <name>Atualizar_Status_0</name>
         <label>Atualizar Status</label>
         <locationX>446</locationX>
-        <locationY>2078</locationY>
+        <locationY>2358</locationY>
         <inputAssignments>
             <field>Status__c</field>
             <value>
@@ -405,10 +455,10 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>667</locationX>
+        <locationX>665</locationX>
         <locationY>50</locationY>
         <connector>
-            <targetReference>Apto_pra_Cadencia</targetReference>
+            <targetReference>Telefone_Alterado</targetReference>
         </connector>
         <object>PreLead__c</object>
         <recordTriggerType>Update</recordTriggerType>
@@ -419,7 +469,7 @@
         <name>Fluxo_de_Convers_o</name>
         <label>Fluxo de Conversão</label>
         <locationX>1150</locationX>
-        <locationY>2078</locationY>
+        <locationY>2358</locationY>
         <flowName>Subfluxo_pr_lead_convers_o_para_lead</flowName>
         <inputAssignments>
             <name>Record_Id</name>
@@ -433,7 +483,7 @@
         <name>Fluxo_MGM</name>
         <label>Fluxo MGM</label>
         <locationX>490</locationX>
-        <locationY>1094</locationY>
+        <locationY>1374</locationY>
         <connector>
             <targetReference>Cupom_Alterado</targetReference>
         </connector>
@@ -449,7 +499,7 @@
         <name>Fluxo_Parceiro</name>
         <label>Fluxo Parceiro</label>
         <locationX>644</locationX>
-        <locationY>1478</locationY>
+        <locationY>1758</locationY>
         <connector>
             <targetReference>Altera_o_de_contrato1</targetReference>
         </connector>
@@ -471,7 +521,7 @@
         <name>Grupo_Economico_Pre_Lead_Updates</name>
         <label>[Grupo Economico] Pré-Lead Updates</label>
         <locationX>782</locationX>
-        <locationY>730</locationY>
+        <locationY>1010</locationY>
         <connector>
             <targetReference>Alterado_MGM</targetReference>
         </connector>
@@ -499,7 +549,7 @@
         <name>PreLead_Fluxo_de_Cadencia</name>
         <label>[PreLead] Fluxo de Cadência</label>
         <locationX>644</locationX>
-        <locationY>578</locationY>
+        <locationY>858</locationY>
         <connector>
             <targetReference>Grupo_Economico_Pre_Lead_Updates</targetReference>
         </connector>
