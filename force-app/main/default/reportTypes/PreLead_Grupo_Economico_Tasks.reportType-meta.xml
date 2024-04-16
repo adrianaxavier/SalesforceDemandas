@@ -119,6 +119,11 @@
             <field>Pre_Leads_Desqualificados__c</field>
             <table>EconomicGroup__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>ConsumoTotal__c</field>
+            <table>EconomicGroup__c</table>
+        </columns>
         <masterLabel>Grupo Economico</masterLabel>
     </sections>
     <sections>
