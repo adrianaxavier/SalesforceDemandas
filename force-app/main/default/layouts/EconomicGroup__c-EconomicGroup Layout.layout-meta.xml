@@ -35,6 +35,10 @@
                 <behavior>Edit</behavior>
                 <field>Ultima_tarefa__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ConsumoTotal__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
