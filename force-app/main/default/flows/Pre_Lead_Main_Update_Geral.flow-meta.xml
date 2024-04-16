@@ -4,8 +4,8 @@
     <decisions>
         <name>Altera_o_de_contrato1</name>
         <label>Alteração de contrato</label>
-        <locationX>732</locationX>
-        <locationY>1523</locationY>
+        <locationX>776</locationX>
+        <locationY>1670</locationY>
         <defaultConnector>
             <targetReference>Converte</targetReference>
         </defaultConnector>
@@ -43,8 +43,8 @@
     <decisions>
         <name>Altera_o_de_contrato1_0</name>
         <label>Alteração de contrato</label>
-        <locationX>358</locationX>
-        <locationY>1631</locationY>
+        <locationX>402</locationX>
+        <locationY>1778</locationY>
         <defaultConnectorLabel>Não altera</defaultConnectorLabel>
         <rules>
             <name>Contrato_Assinado</name>
@@ -80,8 +80,8 @@
     <decisions>
         <name>Alterado_MGM</name>
         <label>Alterado MGM</label>
-        <locationX>732</locationX>
-        <locationY>731</locationY>
+        <locationX>776</locationX>
+        <locationY>878</locationY>
         <defaultConnector>
             <targetReference>Cupom_Alterado</targetReference>
         </defaultConnector>
@@ -105,8 +105,8 @@
     <decisions>
         <name>Apto_pra_Cadencia</name>
         <label>Apto pra Cadência?</label>
-        <locationX>732</locationX>
-        <locationY>323</locationY>
+        <locationX>783</locationX>
+        <locationY>439</locationY>
         <defaultConnector>
             <targetReference>Grupo_Economico_Pre_Lead_Updates</targetReference>
         </defaultConnector>
@@ -151,8 +151,8 @@
     <decisions>
         <name>Converte</name>
         <label>Converte</label>
-        <locationX>1106</locationX>
-        <locationY>1631</locationY>
+        <locationX>1150</locationX>
+        <locationY>1778</locationY>
         <defaultConnectorLabel>Não Converte</defaultConnectorLabel>
         <rules>
             <name>Delta</name>
@@ -237,8 +237,8 @@
     <decisions>
         <name>Cupom_Alterado</name>
         <label>Cupom Alterado</label>
-        <locationX>732</locationX>
-        <locationY>1223</locationY>
+        <locationX>776</locationX>
+        <locationY>1370</locationY>
         <defaultConnector>
             <targetReference>Altera_o_de_contrato1</targetReference>
         </defaultConnector>
@@ -262,8 +262,8 @@
     <decisions>
         <name>MGM</name>
         <label>é MGM</label>
-        <locationX>578</locationX>
-        <locationY>839</locationY>
+        <locationX>622</locationX>
+        <locationY>986</locationY>
         <defaultConnector>
             <targetReference>Cupom_Alterado</targetReference>
         </defaultConnector>
@@ -287,8 +287,8 @@
     <decisions>
         <name>Valida_se_j_h_Lead</name>
         <label>Valida se já há Lead</label>
-        <locationX>50</locationX>
-        <locationY>1739</locationY>
+        <locationX>94</locationX>
+        <locationY>1886</locationY>
         <defaultConnector>
             <targetReference>Atualizar_Status</targetReference>
         </defaultConnector>
@@ -312,8 +312,8 @@
     <decisions>
         <name>Valida_se_j_h_Lead_0</name>
         <label>Valida se já há Lead</label>
-        <locationX>402</locationX>
-        <locationY>1739</locationY>
+        <locationX>446</locationX>
+        <locationY>1886</locationY>
         <defaultConnector>
             <targetReference>Atualizar_Status_0</targetReference>
         </defaultConnector>
@@ -345,6 +345,14 @@
 )</expression>
     </formulas>
     <formulas>
+        <name>EconomicGroupRemoved</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+{!$Record__Prior.EconomicGroup__c} &lt;&gt; null,
+{!$Record.EconomicGroup__c} = null
+)</expression>
+    </formulas>
+    <formulas>
         <name>IsNew</name>
         <dataType>Boolean</dataType>
         <expression>ISNEW()</expression>
@@ -360,7 +368,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -373,8 +381,8 @@
     <recordUpdates>
         <name>Atualizar_Status</name>
         <label>Atualizar Status</label>
-        <locationX>50</locationX>
-        <locationY>1931</locationY>
+        <locationX>94</locationX>
+        <locationY>2078</locationY>
         <inputAssignments>
             <field>Status__c</field>
             <value>
@@ -386,8 +394,8 @@
     <recordUpdates>
         <name>Atualizar_Status_0</name>
         <label>Atualizar Status</label>
-        <locationX>402</locationX>
-        <locationY>1931</locationY>
+        <locationX>446</locationX>
+        <locationY>2078</locationY>
         <inputAssignments>
             <field>Status__c</field>
             <value>
@@ -397,8 +405,8 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>606</locationX>
-        <locationY>0</locationY>
+        <locationX>667</locationX>
+        <locationY>50</locationY>
         <connector>
             <targetReference>Apto_pra_Cadencia</targetReference>
         </connector>
@@ -410,8 +418,8 @@
     <subflows>
         <name>Fluxo_de_Convers_o</name>
         <label>Fluxo de Conversão</label>
-        <locationX>1106</locationX>
-        <locationY>1931</locationY>
+        <locationX>1150</locationX>
+        <locationY>2078</locationY>
         <flowName>Subfluxo_pr_lead_convers_o_para_lead</flowName>
         <inputAssignments>
             <name>Record_Id</name>
@@ -424,8 +432,8 @@
     <subflows>
         <name>Fluxo_MGM</name>
         <label>Fluxo MGM</label>
-        <locationX>446</locationX>
-        <locationY>947</locationY>
+        <locationX>490</locationX>
+        <locationY>1094</locationY>
         <connector>
             <targetReference>Cupom_Alterado</targetReference>
         </connector>
@@ -440,8 +448,8 @@
     <subflows>
         <name>Fluxo_Parceiro</name>
         <label>Fluxo Parceiro</label>
-        <locationX>600</locationX>
-        <locationY>1331</locationY>
+        <locationX>644</locationX>
+        <locationY>1478</locationY>
         <connector>
             <targetReference>Altera_o_de_contrato1</targetReference>
         </connector>
@@ -462,8 +470,8 @@
     <subflows>
         <name>Grupo_Economico_Pre_Lead_Updates</name>
         <label>[Grupo Economico] Pré-Lead Updates</label>
-        <locationX>732</locationX>
-        <locationY>623</locationY>
+        <locationX>782</locationX>
+        <locationY>730</locationY>
         <connector>
             <targetReference>Alterado_MGM</targetReference>
         </connector>
@@ -474,12 +482,24 @@
                 <elementReference>$Record.EconomicGroup__c</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <name>EconomicGroupRemoved</name>
+            <value>
+                <elementReference>EconomicGroupRemoved</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>idOldEconomicGroup</name>
+            <value>
+                <elementReference>$Record__Prior.EconomicGroup__c</elementReference>
+            </value>
+        </inputAssignments>
     </subflows>
     <subflows>
         <name>PreLead_Fluxo_de_Cadencia</name>
         <label>[PreLead] Fluxo de Cadência</label>
-        <locationX>600</locationX>
-        <locationY>431</locationY>
+        <locationX>644</locationX>
+        <locationY>578</locationY>
         <connector>
             <targetReference>Grupo_Economico_Pre_Lead_Updates</targetReference>
         </connector>
