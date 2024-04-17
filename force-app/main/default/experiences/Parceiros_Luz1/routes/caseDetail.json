@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "cde318df-8160-4720-be7a-182a77f32db0",
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "configurationTags" : [ ],
+  "devName" : "Case_Detail",
+  "id" : "12dbaed3-79c0-48cb-abc3-3170df35c239",
+  "label" : "Case Detail",
+  "routeType" : "detail-500",
+  "type" : "route",
+  "urlPrefix" : "case"
+}

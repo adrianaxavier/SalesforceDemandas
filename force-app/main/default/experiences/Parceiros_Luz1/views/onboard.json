@@ -1,0 +1,33 @@
+{
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "0d114af9-7a96-4884-98b9-588783a71c6b",
+  "label" : "Onboard",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 72px;\">Página em manutenção</span></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "4e071a68-9d4d-4921-a9f3-8c5dbc4a64d1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9ba95054-970d-4df5-9422-a6e3d5076ee5",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "46d0fdbb-24e5-4f16-bc8f-806519feb260",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "fa4378b6-21a0-4742-9302-85efd57905fa",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "lead-inspection"
+}

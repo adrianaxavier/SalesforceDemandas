@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "4ae766cf-a777-4afc-a4af-3a6646e5a234",
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "configurationTags" : [ ],
+  "devName" : "Unidades_Detalhe__c",
+  "id" : "ba428afb-861a-49b9-82d9-d80902add93f",
+  "label" : "Unidades Detalhe",
+  "objectApiName" : "Units__c",
+  "routeType" : "detail-a1L",
+  "type" : "route",
+  "urlPrefix" : "units"
+}

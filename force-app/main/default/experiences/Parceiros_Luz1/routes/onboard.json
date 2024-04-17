@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "620a544c-fee8-45f1-9851-1994b94ee5d2",
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "configurationTags" : [ ],
+  "devName" : "Onboard__c",
+  "id" : "e7bb75cc-cefb-4277-8587-7b767c56e4e8",
+  "label" : "Onboard",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-onboardoperacao",
+  "type" : "route",
+  "urlPrefix" : "onboardoperacao"
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Email_Solicitante__c</field>
+        <formula>$User.Email</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Solicitante__c</field>
+        <formula>$User.Id</formula>
+    </fieldOverrides>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Assunto__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Descri_o__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <standardLabel>New</standardLabel>
+    <successMessage>Solicitação Cria e encaminhada a equipe responsavel</successMessage>
+    <targetObject>Chamado__c</targetObject>
+    <targetParentField>Unidade__c</targetParentField>
+    <targetRecordType>Chamado__c.Solicitacao_Parceiro</targetRecordType>
+    <type>Create</type>
+</QuickAction>

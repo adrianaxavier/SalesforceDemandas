@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "d2cc31cf-4bbf-4ad5-92c7-be4872b25ea6",
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "configurationTags" : [ ],
+  "devName" : "Account_Management",
+  "id" : "694c4033-5342-424f-a7af-a5829f5d2ec8",
+  "label" : "Account Management",
+  "routeType" : "account-management",
+  "type" : "route",
+  "urlPrefix" : "Prospects"
+}

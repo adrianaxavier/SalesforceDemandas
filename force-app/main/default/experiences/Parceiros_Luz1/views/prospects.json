@@ -1,0 +1,79 @@
+{
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "d2cc31cf-4bbf-4ad5-92c7-be4872b25ea6",
+  "label" : "Prospects",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1 style=\"text-align: center;\">Prospects</h1>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "02598d6e-2323-4fbb-a4e6-306602fd0cf5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3b9b024f-36e4-4b7d-b2dc-f3b11a331702",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "height" : "1800",
+        "recordId" : "01ZHY0000005mBc2AI"
+      },
+      "componentName" : "forceCommunity:dashboard",
+      "id" : "a67b6ccf-8481-47e2-badb-2b4e20e10056",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "height" : "1300",
+        "recordId" : "01ZHY0000005mBX2AY"
+      },
+      "componentName" : "forceCommunity:dashboard",
+      "id" : "46ed9150-e140-45f2-9c52-92e0bb1d41fb",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "height" : "1000",
+        "recordId" : "01ZHY0000005qyd2AA"
+      },
+      "componentName" : "forceCommunity:dashboard",
+      "id" : "6f21fdb8-7f2e-4670-9120-f645ee04ca26",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "01b59908-42b8-4b40-b333-a0c5e4c61fc1",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "6fbc99af-0c0d-4fca-909b-94a50b59b62c",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Prospects"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5c85ecee-3e60-4485-b842-9a040de04bd7",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "12342465-857a-4191-b465-67d1e2b95392",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "account-management"
+}

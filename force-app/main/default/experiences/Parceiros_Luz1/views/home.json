@@ -1,0 +1,62 @@
+{
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "6c33f2d6-59e0-42ba-bcaa-2556c554a25a",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerText" : "Estamos de cara nova para trazer mais novidades a você",
+        "bannerTextWithKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineArticles\">articles</a> and <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "bannerTextWithoutKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "pageType" : "",
+        "showSubTopics" : true,
+        "title" : "Bem Vindo!",
+        "uniqueNameOrId" : ""
+      },
+      "componentName" : "forceCommunity:headline",
+      "id" : "0226aa38-4120-4f4a-a2e6-14c5efb30b87",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f746b2c2-6b42-4c1b-8ef1-9a513b6b1d35",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "b0dcb71e-d405-4c3c-bfd8-cfe1d13b918e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "44d9de6b-d495-4309-a397-6aa598e16e12",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "7eb064ee-9a94-447d-a01c-7033aa81e7cc",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c56ee6fa-75c2-4c55-9ab4-c0e9e44f4115",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "58c579c3-94ea-4fb8-b58a-0f974e8d42e3",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "id" : "4bfff92f-ab04-4a37-8f74-df6562c6e71b",
+    "regionName" : "sidebarAlt",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}
