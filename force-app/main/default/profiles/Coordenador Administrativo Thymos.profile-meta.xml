@@ -8,7 +8,7 @@
     <applicationVisibilities>
         <application>PowerBIApp__PowerBIDashboard</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>Relationship_Management</application>
@@ -28,12 +28,12 @@
     <applicationVisibilities>
         <application>Tigerface1__Tiger_Face_Systems</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>agf__Agile_Accelerator_LEX</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>basuc__EinsteinBotIntentDetector</application>
@@ -63,7 +63,7 @@
     <applicationVisibilities>
         <application>standard__LightningSales</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>standard__LightningSalesConsole</application>
@@ -83,7 +83,7 @@
     <applicationVisibilities>
         <application>standard__PreconfiguredLightningServiceConsole</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>standard__SalesforceCMS</application>
@@ -734,39 +734,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Units__c-Unidades Layout</layout>
-        <recordType>Units__c.UnidadePJ</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Units__c-Unidades Layout Pessoa Física</layout>
         <recordType>Units__c.UnidadePF</recordType>
     </layoutAssignments>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Chamado__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Medidor__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Units__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
+    <layoutAssignments>
+        <layout>Units__c-Unidades Layout</layout>
+        <recordType>Units__c.UnidadePJ</recordType>
+    </layoutAssignments>
     <recordTypeVisibilities>
         <default>true</default>
         <recordType>Chamado__c.Chamados</recordType>
@@ -793,16 +766,16 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Medidor__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Units__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
-        <name>AccessContentBuilder</name>
+        <name>ActivateContract</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -811,6 +784,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>AddDirectMessageMembers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AllowObjectDetectionTraining</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -830,19 +807,15 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>ApproveContract</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>AssignTopics</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>CanAccessCE</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CanUseNewDashboardBuilder</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChangeDashboardColors</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -870,31 +843,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>CreateCustomizeDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>CreateCustomizeFilters</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateCustomizeReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateDashboardFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateReportFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateReportInLightning</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateTopics</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -902,27 +851,11 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>EditCaseComments</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>EditEvent</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>EditMyDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditMyReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>EditOppLineItemUnitPrice</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditPublicFilters</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -950,6 +883,10 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>GiveRecognitionBadge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>LightningConsoleAllowedForUser</name>
     </userPermissions>
     <userPermissions>
@@ -962,47 +899,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageAnalyticSnapshots</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ManageCases</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageCustomReportTypes</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageDashbdsInPubFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageDataIntegrations</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageDynamicDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageInteraction</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManagePvtRptsAndDashbds</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageReportsInPubFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>MassInlineEdit</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>NewReportBuilder</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -1014,27 +911,11 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>RunFlow</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>RunReports</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ScheduleJob</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ScheduleReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>SelectFilesFromSalesforce</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SendExternalEmailAvailable</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -1054,10 +935,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>SubscribeToLightningReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>TransactionalEmailSend</name>
     </userPermissions>
     <userPermissions>
@@ -1070,39 +947,11 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ViewAllForeignKeyNames</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewCaseInteraction</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewDeveloperName</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ViewHelpLink</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ViewMyTeamsDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewPublicDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewPublicReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ViewRoles</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewSetup</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

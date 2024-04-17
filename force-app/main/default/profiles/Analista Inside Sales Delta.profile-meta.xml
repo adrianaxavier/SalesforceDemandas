@@ -8,7 +8,7 @@
     <applicationVisibilities>
         <application>PowerBIApp__PowerBIDashboard</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>Relationship_Management</application>
@@ -28,12 +28,12 @@
     <applicationVisibilities>
         <application>Tigerface1__Tiger_Face_Systems</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>agf__Agile_Accelerator_LEX</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>basuc__EinsteinBotIntentDetector</application>
@@ -43,7 +43,7 @@
     <applicationVisibilities>
         <application>flowmagic__Flow_Magic_Editor</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>qsydApps_AO__All_Onboard</application>
@@ -53,7 +53,7 @@
     <applicationVisibilities>
         <application>standard__HVSConsole</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>standard__LightningBolt</application>
@@ -63,7 +63,7 @@
     <applicationVisibilities>
         <application>standard__LightningSales</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>standard__LightningSalesConsole</application>
@@ -78,12 +78,12 @@
     <applicationVisibilities>
         <application>standard__Optimizer</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>standard__PreconfiguredLightningServiceConsole</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>standard__SalesforceCMS</application>
@@ -741,22 +741,13 @@
         <recordType>Units__c.UnidadePF</recordType>
     </layoutAssignments>
     <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Chamado__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>Medidor__c</object>
-        <viewAllRecords>true</viewAllRecords>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -793,17 +784,13 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Medidor__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Units__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AccessContentBuilder</name>
-    </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ActivitiesAccess</name>
@@ -902,10 +889,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>EditCaseComments</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>EditEvent</name>
     </userPermissions>
     <userPermissions>
@@ -950,6 +933,10 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>ImportPersonal</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>LightningConsoleAllowedForUser</name>
     </userPermissions>
     <userPermissions>
@@ -975,10 +962,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageDashbdsInPubFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageDataIntegrations</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -1054,6 +1037,30 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>SubscribeDashboardRolesGrps</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubscribeDashboardToOtherUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubscribeReportRolesGrps</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubscribeReportToOtherUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubscribeReportsRunAsUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubscribeToLightningDashboards</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>SubscribeToLightningReports</name>
     </userPermissions>
     <userPermissions>
@@ -1070,15 +1077,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ViewAllForeignKeyNames</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewCaseInteraction</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewDeveloperName</name>
+        <name>ViewFlowUsageAndFlowEventData</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
