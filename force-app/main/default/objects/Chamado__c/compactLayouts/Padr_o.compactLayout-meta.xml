@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Padr_o</fullName>
+    <fields>Name</fields>
+    <fields>Assunto__c</fields>
+    <fields>Tipo_de_Chamado__c</fields>
+    <fields>Farol_SLA__c</fields>
+    <label>Padrão</label>
+</CompactLayout>
