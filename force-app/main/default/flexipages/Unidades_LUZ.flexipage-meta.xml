@@ -12,6 +12,9 @@
                         <valueListItems>
                             <value>PrintableView</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>ChangeRecordType</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -62,9 +65,9 @@
                 <identifier>runtime_sales_pathassistant_pathAssistant</identifier>
                 <visibilityRule>
                     <criteria>
-                        <leftValue>{!Record.PassoAtual__c}</leftValue>
+                        <leftValue>{!Record.Status_Onboard__c}</leftValue>
                         <operator>NE</operator>
-                        <rightValue>Onboard Finalizado</rightValue>
+                        <rightValue>Finalizado</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
@@ -185,6 +188,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Lead__c</fieldItem>
                 <identifier>RecordLead_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Canal_Conversao__c</fieldItem>
+                <identifier>RecordCanal_Conversao_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -785,10 +798,16 @@
                 <fieldItem>Record.DataEnvioDocumentos__c</fieldItem>
                 <identifier>RecordDataEnvioDocumentos_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 OR 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.StatusDocumento__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>Finalizado</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.StatusDocumento__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Cancelado</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -836,10 +855,16 @@
                 <fieldItem>Record.Finaliza_o_da_Troca_de_Titularidade__c</fieldItem>
                 <identifier>RecordFinaliza_o_da_Troca_de_Titularidade_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 OR 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.StatusTrocaTitularidade__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>Finalizado</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.StatusTrocaTitularidade__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Cancelado</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -853,10 +878,16 @@
                 <fieldItem>Record.Data_de_Instala_o_do_Medidor__c</fieldItem>
                 <identifier>RecordData_de_Instala_o_do_Medidor_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 OR 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.StatusMedidor__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>Finalizado</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.StatusMedidor__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Cancelado</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>

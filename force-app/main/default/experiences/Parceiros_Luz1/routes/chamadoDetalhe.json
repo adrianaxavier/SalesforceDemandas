@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "1f5f1907-7b30-46f3-afa4-bc8bc1aee9c7",
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "configurationTags" : [ ],
+  "devName" : "Chamado_Detalhe__c",
+  "id" : "86c75cf5-f3e0-4309-ae8a-890502661e20",
+  "label" : "Chamado Detalhe",
+  "objectApiName" : "Chamado__c",
+  "routeType" : "detail-a40",
+  "type" : "route",
+  "urlPrefix" : "chamado"
+}
