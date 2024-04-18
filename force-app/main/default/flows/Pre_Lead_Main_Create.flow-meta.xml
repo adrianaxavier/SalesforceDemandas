@@ -4,8 +4,8 @@
     <assignments>
         <name>SetDelta</name>
         <label>SetDelta</label>
-        <locationX>589</locationX>
-        <locationY>1247</locationY>
+        <locationX>468</locationX>
+        <locationY>1200</locationY>
         <assignmentItems>
             <assignToReference>idDeltaCompany</assignToReference>
             <operator>Assign</operator>
@@ -20,8 +20,8 @@
     <assignments>
         <name>SetLUZ</name>
         <label>SetLUZ</label>
-        <locationX>853</locationX>
-        <locationY>1247</locationY>
+        <locationX>732</locationX>
+        <locationY>1200</locationY>
         <assignmentItems>
             <assignToReference>idLuzCompany</assignToReference>
             <operator>Assign</operator>
@@ -36,8 +36,8 @@
     <decisions>
         <name>Apto_pra_Cadencia</name>
         <label>Apto pra Cadência?</label>
-        <locationX>501</locationX>
-        <locationY>323</locationY>
+        <locationX>380</locationX>
+        <locationY>276</locationY>
         <defaultConnector>
             <targetReference>Grupo_Economico</targetReference>
         </defaultConnector>
@@ -61,11 +61,8 @@
     <decisions>
         <name>Block_List</name>
         <label>Block List</label>
-        <locationX>446</locationX>
-        <locationY>3371</locationY>
-        <defaultConnector>
-            <targetReference>Cria_Contato</targetReference>
-        </defaultConnector>
+        <locationX>974</locationX>
+        <locationY>384</locationY>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
             <name>Sim5</name>
@@ -86,8 +83,8 @@
     <decisions>
         <name>Company_Name</name>
         <label>Company Name</label>
-        <locationX>853</locationX>
-        <locationY>1139</locationY>
+        <locationX>732</locationX>
+        <locationY>1092</locationY>
         <defaultConnector>
             <targetReference>LoopCompany</targetReference>
         </defaultConnector>
@@ -126,8 +123,8 @@
     <decisions>
         <name>Empresa</name>
         <label>Empresa</label>
-        <locationX>248</locationX>
-        <locationY>3047</locationY>
+        <locationX>182</locationX>
+        <locationY>3000</locationY>
         <defaultConnector>
             <targetReference>Atualizar_LUZ</targetReference>
         </defaultConnector>
@@ -179,8 +176,8 @@
     <decisions>
         <name>Grupo_Economico</name>
         <label>Grupo Economico?</label>
-        <locationX>501</locationX>
-        <locationY>623</locationY>
+        <locationX>380</locationX>
+        <locationY>576</locationY>
         <defaultConnector>
             <targetReference>GetCompany</targetReference>
         </defaultConnector>
@@ -204,8 +201,8 @@
     <decisions>
         <name>MGM</name>
         <label>MGM</label>
-        <locationX>248</locationX>
-        <locationY>2447</locationY>
+        <locationX>182</locationX>
+        <locationY>2400</locationY>
         <defaultConnector>
             <targetReference>Possui_Numero_de_Instala_o</targetReference>
         </defaultConnector>
@@ -229,8 +226,8 @@
     <decisions>
         <name>Parceiro</name>
         <label>É Parceiro?</label>
-        <locationX>248</locationX>
-        <locationY>2039</locationY>
+        <locationX>182</locationX>
+        <locationY>1992</locationY>
         <defaultConnector>
             <targetReference>Atualizar_A_fonte</targetReference>
         </defaultConnector>
@@ -254,8 +251,8 @@
     <decisions>
         <name>Possui_Numero_de_Instala_o</name>
         <label>Possui Numero de Instalação</label>
-        <locationX>248</locationX>
-        <locationY>2747</locationY>
+        <locationX>182</locationX>
+        <locationY>2700</locationY>
         <defaultConnector>
             <targetReference>Insere_0_na_Instal_o</targetReference>
         </defaultConnector>
@@ -279,8 +276,8 @@
     <decisions>
         <name>Possui_Telefone</name>
         <label>Possui Telefone</label>
-        <locationX>501</locationX>
-        <locationY>1631</locationY>
+        <locationX>380</locationX>
+        <locationY>1584</locationY>
         <defaultConnector>
             <targetReference>Tipo_de_Atualiza_o</targetReference>
         </defaultConnector>
@@ -304,8 +301,8 @@
     <decisions>
         <name>Tipo_de_Atualiza_o</name>
         <label>Tipo de Atualização</label>
-        <locationX>501</locationX>
-        <locationY>1931</locationY>
+        <locationX>380</locationX>
+        <locationY>1884</locationY>
         <defaultConnectorLabel>Geral</defaultConnectorLabel>
         <rules>
             <name>Novo</name>
@@ -356,8 +353,8 @@
     <loops>
         <name>LoopCompany</name>
         <label>LoopCompany</label>
-        <locationX>501</locationX>
-        <locationY>1031</locationY>
+        <locationX>380</locationX>
+        <locationY>984</locationY>
         <collectionReference>GetCompany</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -389,8 +386,8 @@
     <recordLookups>
         <name>BlockList</name>
         <label>BlockList</label>
-        <locationX>446</locationX>
-        <locationY>3263</locationY>
+        <locationX>974</locationX>
+        <locationY>276</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Block_List</targetReference>
@@ -417,8 +414,8 @@
     <recordLookups>
         <name>GetCompany</name>
         <label>GetCompany</label>
-        <locationX>501</locationX>
-        <locationY>923</locationY>
+        <locationX>380</locationX>
+        <locationY>876</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>LoopCompany</targetReference>
@@ -430,8 +427,8 @@
     <recordUpdates>
         <name>Atualiza_LOCALE_e_Primeiro_Nome</name>
         <label>Atualiza LOCALE e Primeiro Nome</label>
-        <locationX>501</locationX>
-        <locationY>1523</locationY>
+        <locationX>380</locationX>
+        <locationY>1476</locationY>
         <connector>
             <targetReference>Possui_Telefone</targetReference>
         </connector>
@@ -452,15 +449,15 @@
     <recordUpdates>
         <name>Atualiza_Telefone_MKT</name>
         <label>Atualiza Telefone MKT</label>
-        <locationX>369</locationX>
-        <locationY>1739</locationY>
+        <locationX>248</locationX>
+        <locationY>1692</locationY>
         <connector>
             <targetReference>Tipo_de_Atualiza_o</targetReference>
         </connector>
         <inputAssignments>
             <field>Telefone_MKT__c</field>
             <value>
-                <stringValue>035a333d-e39c-4096-8da0-f35d18ebc61a</stringValue>
+                <elementReference>TelefoneFormatado</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -469,7 +466,7 @@
         <name>Atualizar_Delta_Inside_Sales</name>
         <label>Atualizar Delta Inside Sales</label>
         <locationX>50</locationX>
-        <locationY>3155</locationY>
+        <locationY>3108</locationY>
         <connector>
             <targetReference>Fluxo_de_Convers_o1</targetReference>
         </connector>
@@ -482,7 +479,7 @@
         <inputAssignments>
             <field>OwnerId</field>
             <value>
-                <stringValue>005HY000000VdgrYAC</stringValue>
+                <stringValue>005TT000009UO7lYAG</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -502,10 +499,10 @@
     <recordUpdates>
         <name>Atualizar_LUZ</name>
         <label>Atualizar LUZ</label>
-        <locationX>446</locationX>
-        <locationY>3155</locationY>
+        <locationX>314</locationX>
+        <locationY>3108</locationY>
         <connector>
-            <targetReference>BlockList</targetReference>
+            <targetReference>Cria_Contato</targetReference>
         </connector>
         <inputAssignments>
             <field>Company__c</field>
@@ -524,11 +521,8 @@
     <recordUpdates>
         <name>Desqualificar</name>
         <label>Desqualificar</label>
-        <locationX>314</locationX>
-        <locationY>3479</locationY>
-        <connector>
-            <targetReference>Cria_Contato</targetReference>
-        </connector>
+        <locationX>842</locationX>
+        <locationY>492</locationY>
         <inputAssignments>
             <field>Data_de_Desqualificacao__c</field>
             <value>
@@ -570,8 +564,8 @@
     <recordUpdates>
         <name>Insere_0_na_Instal_o</name>
         <label>Insere 0 na Instalção</label>
-        <locationX>336</locationX>
-        <locationY>2855</locationY>
+        <locationX>270</locationX>
+        <locationY>2808</locationY>
         <connector>
             <targetReference>Empresa</targetReference>
         </connector>
@@ -584,7 +578,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>375</locationX>
+        <locationX>551</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Apto_pra_Cadencia</targetReference>
@@ -606,14 +600,24 @@
         </filters>
         <object>PreLead__c</object>
         <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <name>Depois_de_2_min</name>
+            <connector>
+                <targetReference>BlockList</targetReference>
+            </connector>
+            <label>Depois de 2 min</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
     <subflows>
         <name>Atualizar_A_fonte</name>
         <label>Atualizar A fonte</label>
-        <locationX>248</locationX>
-        <locationY>2339</locationY>
+        <locationX>182</locationX>
+        <locationY>2292</locationY>
         <connector>
             <targetReference>MGM</targetReference>
         </connector>
@@ -646,8 +650,8 @@
     <subflows>
         <name>Cria_Contato</name>
         <label>Cria Contato</label>
-        <locationX>446</locationX>
-        <locationY>3671</locationY>
+        <locationX>314</locationX>
+        <locationY>3216</locationY>
         <flowName>Subfluxo_prelead_cricao_de_contato</flowName>
         <inputAssignments>
             <name>Record_Id</name>
@@ -660,7 +664,7 @@
         <name>Fluxo_de_Convers_o1</name>
         <label>Fluxo de Conversão</label>
         <locationX>50</locationX>
-        <locationY>3263</locationY>
+        <locationY>3216</locationY>
         <flowName>Subfluxo_pr_lead_convers_o_para_lead</flowName>
         <inputAssignments>
             <name>NomedaUC</name>
@@ -679,8 +683,8 @@
     <subflows>
         <name>FLUXO_MGM</name>
         <label>FLUXO MGM</label>
-        <locationX>116</locationX>
-        <locationY>2555</locationY>
+        <locationX>50</locationX>
+        <locationY>2508</locationY>
         <connector>
             <targetReference>Possui_Numero_de_Instala_o</targetReference>
         </connector>
@@ -695,8 +699,8 @@
     <subflows>
         <name>Fluxo_Parceiros</name>
         <label>Fluxo Parceiros</label>
-        <locationX>116</locationX>
-        <locationY>2147</locationY>
+        <locationX>50</locationX>
+        <locationY>2100</locationY>
         <connector>
             <targetReference>Atualizar_A_fonte</targetReference>
         </connector>
@@ -717,8 +721,8 @@
     <subflows>
         <name>Grupo_Economico_Pre_Lead_Updates</name>
         <label>[Grupo Economico] Pré-Lead Updates</label>
-        <locationX>369</locationX>
-        <locationY>731</locationY>
+        <locationX>248</locationX>
+        <locationY>684</locationY>
         <connector>
             <targetReference>GetCompany</targetReference>
         </connector>
@@ -733,8 +737,8 @@
     <subflows>
         <name>PreLead_Fluxo_de_Cadencia</name>
         <label>[PreLead] Fluxo de Cadência</label>
-        <locationX>369</locationX>
-        <locationY>431</locationY>
+        <locationX>248</locationX>
+        <locationY>384</locationY>
         <connector>
             <targetReference>Grupo_Economico</targetReference>
         </connector>
