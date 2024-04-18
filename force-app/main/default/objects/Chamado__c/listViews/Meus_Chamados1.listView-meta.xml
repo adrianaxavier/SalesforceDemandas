@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meus_Chamados1</fullName>
+    <columns>NAME</columns>
+    <columns>Farol_SLA__c</columns>
+    <columns>Assunto__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Prioridade__c</columns>
+    <columns>Status__c</columns>
+    <columns>Tipo_de_Chamado__c</columns>
+    <columns>Caso_Atrelado__c</columns>
+    <columns>Solicitante__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Meus Chamados</label>
+</ListView>

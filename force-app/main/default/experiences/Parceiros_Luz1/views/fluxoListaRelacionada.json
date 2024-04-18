@@ -1,0 +1,23 @@
+{
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "fc57f5f8-cab4-4aeb-a092-e3114a385064",
+  "label" : "Fluxo Lista relacionada",
+  "regions" : [ {
+    "id" : "bc3e7459-49ff-43c2-be23-5f07fbd4bc33",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "8800368d-3e0e-48eb-8d15-5e95b2be73b9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "62a9df28-189e-41d3-af6a-d03984dc2b38",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "relatedlist-0Fq"
+}

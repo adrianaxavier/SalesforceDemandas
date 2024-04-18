@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "9c362746-41af-4e1c-9ac0-c27990739934",
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "configurationTags" : [ ],
+  "devName" : "Unidades_Lista_relacionada__c",
+  "id" : "37097c66-b75f-4e46-b1a4-f9be099f5ff8",
+  "label" : "Unidades Lista relacionada",
+  "objectApiName" : "Units__c",
+  "routeType" : "relatedlist-a1L",
+  "type" : "route",
+  "urlPrefix" : "units"
+}

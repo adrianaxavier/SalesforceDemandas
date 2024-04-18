@@ -1,0 +1,39 @@
+{
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "9610b4af-31a7-4e14-a1a8-e0860a034e2a",
+  "label" : "Chamado Lista relacionada",
+  "regions" : [ {
+    "id" : "41060153-3a27-4895-b1c6-092ecfb656e0",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customTitle" : "",
+        "parentRecordId" : "{!recordId}",
+        "relatedListName" : "{!relationshipApiName}",
+        "showBreadCrumbs" : true,
+        "showCustomTitle" : false,
+        "showManualRefreshButton" : true,
+        "showRowNumbers" : true
+      },
+      "componentName" : "forceCommunity:relatedList",
+      "id" : "80f70007-563a-4fcc-a4d3-909766b54d22",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "22a9fbba-1492-4418-949c-d4f16509e487",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "14581eaf-64d5-4e06-b397-1d39bb08901c",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "relatedlist-a40"
+}

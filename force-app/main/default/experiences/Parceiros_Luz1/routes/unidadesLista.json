@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "615f4b72-973a-4798-8139-5683025e8fc5",
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "configurationTags" : [ ],
+  "devName" : "Unidades_Lista__c",
+  "id" : "d4e756fc-d6e3-41b5-983e-b01b9ec832b7",
+  "label" : "Unidades Lista",
+  "objectApiName" : "Units__c",
+  "routeType" : "list-a1L",
+  "type" : "route",
+  "urlPrefix" : "units"
+}

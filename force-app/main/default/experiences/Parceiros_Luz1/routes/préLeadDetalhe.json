@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "77a73aa5-5db8-4f2c-86cd-5daa67696323",
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "configurationTags" : [ ],
+  "devName" : "detail_a1N__c",
+  "id" : "7ad68acd-6894-4951-88da-4ef27e0d50af",
+  "label" : "Pré Lead Detalhe",
+  "objectApiName" : "PreLead__c",
+  "routeType" : "detail-a1N",
+  "type" : "route",
+  "urlPrefix" : "prelead"
+}

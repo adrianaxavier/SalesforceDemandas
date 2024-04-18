@@ -1,0 +1,46 @@
+{
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "906ea6b8-a007-4380-bda6-6cfc7385e6cd",
+  "label" : "Chamado Lista",
+  "regions" : [ {
+    "id" : "16de12bb-e0b1-4201-882d-dfc75958b704",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "enableInlineEdit" : false,
+        "filterName" : "Meus_Chamados1",
+        "layout" : "FULL",
+        "pageSize" : 25,
+        "scope" : "Chamado__c",
+        "showActionBar" : false,
+        "showChartsPanel" : true,
+        "showDisplay" : "showall",
+        "showFilterPanel" : false,
+        "showImageIcon" : true,
+        "showManualRefreshButton" : true,
+        "showObjectName" : true,
+        "showPinnedList" : false,
+        "showSearchBar" : true
+      },
+      "componentName" : "forceCommunity:objectHome",
+      "id" : "49213e92-09ce-4fb2-8da5-bd227733309b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2020afc6-647d-499f-a280-49c90db4e2cb",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "772fbb50-2aae-4e59-ac1f-60a3047b9c9c",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-a40"
+}

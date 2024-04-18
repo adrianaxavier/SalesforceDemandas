@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "9610b4af-31a7-4e14-a1a8-e0860a034e2a",
+  "appPageId" : "c167ea5f-a3a9-4198-95e0-2d06f7cc26bf",
+  "configurationTags" : [ ],
+  "devName" : "Chamado_Lista_relacionada__c",
+  "id" : "4cc89290-69a4-4aca-aade-df3d0ca76c8c",
+  "label" : "Chamado Lista relacionada",
+  "objectApiName" : "Chamado__c",
+  "routeType" : "relatedlist-a40",
+  "type" : "route",
+  "urlPrefix" : "chamado"
+}
