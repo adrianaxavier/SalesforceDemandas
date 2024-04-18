@@ -515,7 +515,7 @@
         <inputAssignments>
             <field>Telefone_MKT__c</field>
             <value>
-                <stringValue>aab15a04-1921-490c-9f70-d38e5e9ec624</stringValue>
+                <elementReference>TelefoneFormatado</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -534,7 +534,7 @@
         <inputAssignments>
             <field>OwnerId</field>
             <value>
-                <stringValue>005HY000000VdgrYAC</stringValue>
+                <stringValue>005TT000009UO7lYAG</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>

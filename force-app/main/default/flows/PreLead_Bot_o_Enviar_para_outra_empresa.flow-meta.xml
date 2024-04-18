@@ -165,7 +165,7 @@
         <inputAssignments>
             <field>Status__c</field>
             <value>
-                <stringValue>Novo</stringValue>
+                <stringValue>Qualificado</stringValue>
             </value>
         </inputAssignments>
         <object>PreLead__c</object>
@@ -237,7 +237,7 @@
         <inputAssignments>
             <field>OwnerId</field>
             <value>
-                <stringValue>005HY000000VdgrYAC</stringValue>
+                <stringValue>005TT000009UO7lYAG</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
