@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Canal_Conversao__c</fullName>
+    <externalId>false</externalId>
+    <label>Canal Conversao</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inside Sales</fullName>
+                <default>false</default>
+                <label>Inside Sales</label>
+            </value>
+            <value>
+                <fullName>Parceiras</fullName>
+                <default>false</default>
+                <label>Parceiras</label>
+            </value>
+            <value>
+                <fullName>Full self-service</fullName>
+                <default>false</default>
+                <label>Full self-service</label>
+            </value>
+            <value>
+                <fullName>Grandes Contas</fullName>
+                <default>false</default>
+                <label>Grandes Contas</label>
+            </value>
+            <value>
+                <fullName>MGM</fullName>
+                <default>false</default>
+                <label>MGM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
