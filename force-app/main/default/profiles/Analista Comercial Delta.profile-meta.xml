@@ -98,6 +98,26 @@
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Data_da_emissao_da_primeira_fatura__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Data_de_vencimento_da_primeira_fatura__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Link_da_Primeira_Fatura__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Numero_de_Faturas__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Chamado__c.Assunto__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -189,6 +209,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Chamado__c.Unidade__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Fatura__c.Telefone__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -388,7 +413,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Units__c.Data_da_emissao_da_primeira_fatura__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Units__c.Data_de_Instala_o_do_Medidor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Units__c.Data_de_vencimento_da_primeira_fatura__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -498,6 +533,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Units__c.Link_da_Primeira_Fatura__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Units__c.MGM_Indica_por__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -549,6 +589,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Units__c.Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Units__c.Numero_de_Faturas__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
