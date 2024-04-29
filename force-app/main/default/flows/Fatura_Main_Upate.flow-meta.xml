@@ -114,8 +114,8 @@
         <expression>{!Obter_a_Unidade.Account__r.Numero_de_Faturas__c}+1</expression>
         <scale>2</scale>
     </formulas>
-    <interviewLabel>[Fatura]Main Create {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>[Fatura]Main Create</label>
+    <interviewLabel>[Fatura]Main Upate {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Fatura]Main Upate</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
