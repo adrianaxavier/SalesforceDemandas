@@ -197,12 +197,6 @@
                 <elementReference>Nome</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>Telefone__c</field>
-            <value>
-                <elementReference>Obter_pelo_Contato.Account.Phone</elementReference>
-            </value>
-        </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
@@ -346,12 +340,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Telefone__c</field>
-            <value>
-                <elementReference>Obter_a_Unidade.Phone__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
+
             <field>Unidades__c</field>
             <value>
                 <elementReference>Obter_a_Unidade.Id</elementReference>
