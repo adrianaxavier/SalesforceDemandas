@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Area_Envolvida__c</fullName>
+    <externalId>false</externalId>
+    <label>Área Envolvida</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TECNOLOGIA</fullName>
+                <default>false</default>
+                <label>TECNOLOGIA</label>
+            </value>
+            <value>
+                <fullName>BACKOFFICE</fullName>
+                <default>false</default>
+                <label>BACKOFFICE</label>
+            </value>
+            <value>
+                <fullName>GESTÃO</fullName>
+                <default>false</default>
+                <label>GESTÃO</label>
+            </value>
+            <value>
+                <fullName>MEDIDOR</fullName>
+                <default>false</default>
+                <label>MEDIDOR</label>
+            </value>
+            <value>
+                <fullName>BILLING</fullName>
+                <default>false</default>
+                <label>BILLING</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
