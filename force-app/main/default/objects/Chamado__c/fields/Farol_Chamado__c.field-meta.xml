@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Farol_Chamado__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Dados_do_F_arol__c,
+&quot;Amarelo&quot;,IMAGE(&quot;/resource/1699470828000/Bandeira3Amarela?&quot;, &apos;&apos;,25,25 ),
+&quot;Vermelho&quot;,IMAGE(&quot;/resource/1699470828000/Bandeira2Vermelha?&quot;, &apos;&apos;,25,25 ),
+&quot;Laranja&quot;,IMAGE(&quot;/resource/1714506929000/BandeiraLaranja?&quot;, &apos;&apos;,25,25 ),
+&quot;Verde&quot;,IMAGE(&quot;/resource/1699470828000/Bandeira1Verdee?&quot;, &apos;&apos;,25,25 ),
+IMAGE(&quot;/resource/1699470828000/Bandeira5Cinza?&quot;, &apos;&apos;,26,26 ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Farol Acompanhamento</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

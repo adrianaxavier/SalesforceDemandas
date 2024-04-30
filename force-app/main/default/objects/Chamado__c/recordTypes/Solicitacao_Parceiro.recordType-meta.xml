@@ -5,6 +5,100 @@
     <description>Solicitações de Parceiro</description>
     <label>Solicitação Parceiro</label>
     <picklistValues>
+        <picklist>Area_Envolvida__c</picklist>
+        <values>
+            <fullName>BACKOFFICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BILLING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GESTÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIDOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TECNOLOGIA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AssuntoN__c</picklist>
+        <values>
+            <fullName>ALTERAÇÃO DE ENDEREÇO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALTERAÇÃO DE VENCIMENTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANÁLISE DE CONSUMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANÁLISE DE FATURAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUMENTO DE CARGA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CADASTRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CANCELAMENTO DE FATURA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONTRATO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRITICAL CASE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DANOS ELÉTRICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FATURA INDISPONÍVEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIDOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEMBER GET MEMBER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OUTROS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAGAMENTO PARA A DISTRIBUIDORA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROBLEMAS COM A FATURA LUZ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Prioridade__c</picklist>
         <values>
             <fullName>Alta</fullName>
