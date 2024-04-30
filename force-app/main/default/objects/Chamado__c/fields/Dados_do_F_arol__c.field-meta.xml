@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dados_do_F_arol__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISPICKVAL(Status__c, &apos;Aberto&apos;),
+    IF(
+        AND(
+            (TODAY() - DATEVALUE(CreatedDate)) &lt;= 1,
+            MOD(5 + CASE(MOD((DATEVALUE(CreatedDate) - DATE(1900, 1, 7)), 7), 0, 7, 1, 6, 2, 5, 3, 4, 4, 3, 5, 2, 6), 5) &lt; 5
+        ),
+        &quot;Verde&quot;,
+        IF(
+            (TODAY() - DATEVALUE(CreatedDate)) = 1,
+            &quot;Amarelo&quot;,
+            IF(
+                (TODAY() - DATEVALUE(CreatedDate)) &lt;= 4,
+                &quot;Laranja&quot;,
+                IF(
+                    (TODAY() - DATEVALUE(CreatedDate)) &gt;= 5,
+                    &quot;Vermelho&quot;,
+                    &quot;Cinza&quot;
+                )
+            )
+        )
+    ),
+    IF(
+        ISPICKVAL(Status__c, &apos;Em Tratativa&apos;),
+        IF(
+            (TODAY() - DATEVALUE(CreatedDate)) &lt;= 5,
+            &quot;Verde&quot;,
+            IF(
+                (TODAY() - DATEVALUE(CreatedDate)) = 6,
+                &quot;Amarelo&quot;,
+                IF(
+                    (TODAY() - DATEVALUE(CreatedDate)) &lt;= 10,
+                    &quot;Laranja&quot;,
+  
+                       IF(
+                    (TODAY() - DATEVALUE(CreatedDate)) &gt;= 10,
+                    &quot;Laranja&quot;,             
+
+                    IF(
+                        (TODAY() - DATEVALUE(CreatedDate)) &gt;= 15,
+                        &quot;Vermelho&quot;,
+                        &quot;Cinza&quot;
+                    )
+                ))
+            )
+        ),
+
+
+
+        IF(
+            ISPICKVAL(Status__c, &apos;Aguardando Cliente&apos;),
+            IF(
+                (TODAY() - DATEVALUE(CreatedDate)) &lt;= 10,
+                &quot;Verde&quot;,
+                IF(
+                    (TODAY() - DATEVALUE(CreatedDate)) = 11,
+                    &quot;Amarelo&quot;,
+                    IF(
+                        (TODAY() - DATEVALUE(CreatedDate)) &lt;= 15,
+                        &quot;Laranja&quot;,
+ 
+                          IF(
+                        (TODAY() - DATEVALUE(CreatedDate)) &gt;= 15,
+                        &quot;Laranja&quot;,
+
+                        IF(
+                            (TODAY() - DATEVALUE(CreatedDate)) &gt;= 21,
+                            &quot;Vermelho&quot;,
+                            &quot;Cinza&quot;
+                        )
+                    ))
+                )
+            ),
+            IF(
+                ISPICKVAL(Status__c, &apos;Aguardando a Distribuidora&apos;),
+                &quot;Cinza&quot;,
+                IF(
+                    ISPICKVAL(Status__c, &apos;Aguardando Gestão&apos;),
+                    &quot;Cinza&quot;,
+                    IF(
+                        ISPICKVAL(Status__c, &apos;Aguardando outra área&apos;),
+                        &quot;Cinza&quot;,
+                        IF(
+                            ISPICKVAL(Status__c, &apos;Acompanhamento pós Solução&apos;),
+                            &quot;Cinza&quot;,
+                            &quot;Cinza&quot;
+                        )
+                    )
+                )
+            )
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Dados do Farol</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
