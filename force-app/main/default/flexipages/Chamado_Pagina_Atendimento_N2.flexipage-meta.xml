@@ -207,6 +207,16 @@
                 <identifier>RecordData_Previsao_Outra_Area_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Data_Acompanhamento_Pos_Solucao__c</fieldItem>
+                <identifier>RecordData_Acompanhamento_Pos_Solucao_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-7e9e700d-864c-4dd2-854a-210ada72df01</name>
         <type>Facet</type>
     </flexiPageRegions>

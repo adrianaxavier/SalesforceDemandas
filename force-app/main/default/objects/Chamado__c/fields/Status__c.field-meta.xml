@@ -23,6 +23,11 @@
                 <label>Em Tratativa</label>
             </value>
             <value>
+                <fullName>Agencia Distribuidora</fullName>
+                <default>false</default>
+                <label>Agencia Distribuidora</label>
+            </value>
+            <value>
                 <fullName>Aguardando a Distribuidora</fullName>
                 <default>false</default>
                 <label>Aguardando a Distribuidora</label>

@@ -128,6 +128,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Agencia Distribuidora</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Aguardando Cliente</fullName>
             <default>false</default>
         </values>
