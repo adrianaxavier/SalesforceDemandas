@@ -4,7 +4,7 @@
     <decisions>
         <name>C_pia_1_de_Esta_Encerrada</name>
         <label>Esta Encerrada</label>
-        <locationX>1414</locationX>
+        <locationX>1590</locationX>
         <locationY>1055</locationY>
         <defaultConnector>
             <targetReference>Atualizar_lead_Ultima</targetReference>
@@ -27,19 +27,80 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Canal_de_Tarefa</name>
+        <label>Canal de Tarefa</label>
+        <locationX>314</locationX>
+        <locationY>947</locationY>
+        <defaultConnector>
+            <targetReference>Email_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Outros</defaultConnectorLabel>
+        <rules>
+            <name>MKT</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Canal__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>WhatsApp Marketing Cloud</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Canal__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Marketing Cloud</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Pr_Lead_MKT</targetReference>
+            </connector>
+            <label>MKT</label>
+        </rules>
+        <rules>
+            <name>Inside_Sales</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.Time_Comercial_Luz__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Inside Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Pr_Lead_Outros</targetReference>
+            </connector>
+            <label>Inside Sales</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Email</name>
         <label>Email</label>
-        <locationX>1128</locationX>
+        <locationX>1304</locationX>
         <locationY>1739</locationY>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
             <name>Sim</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.TaskSubtype</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Email</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.TaskSubtype</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ListEmail</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>E-mail</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -51,8 +112,8 @@
     <decisions>
         <name>Email_0</name>
         <label>Email</label>
-        <locationX>182</locationX>
-        <locationY>947</locationY>
+        <locationX>314</locationX>
+        <locationY>1247</locationY>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
             <name>Sim_0</name>
@@ -73,7 +134,7 @@
     <decisions>
         <name>Esta_Encerrada</name>
         <label>Esta Encerrada</label>
-        <locationX>842</locationX>
+        <locationX>1018</locationX>
         <locationY>1355</locationY>
         <defaultConnector>
             <targetReference>leadatt</targetReference>
@@ -98,7 +159,7 @@
     <decisions>
         <name>Foi_SDR_Thymos</name>
         <label>Foi SDR Thymos</label>
-        <locationX>1128</locationX>
+        <locationX>1304</locationX>
         <locationY>647</locationY>
         <defaultConnector>
             <targetReference>Tarefa</targetReference>
@@ -123,7 +184,7 @@
     <decisions>
         <name>Qual_a_Empresa</name>
         <label>Qual Empresa</label>
-        <locationX>842</locationX>
+        <locationX>1018</locationX>
         <locationY>1055</locationY>
         <defaultConnector>
             <targetReference>Esta_Encerrada</targetReference>
@@ -136,7 +197,7 @@
                 <leftValueReference>Nome.RecordType.Name</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Thymos</stringValue>
+                    <stringValue>THYMOS ENERGIA</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -177,7 +238,7 @@
     <decisions>
         <name>Tarefa</name>
         <label>Tarefa</label>
-        <locationX>1128</locationX>
+        <locationX>1304</locationX>
         <locationY>947</locationY>
         <defaultConnector>
             <targetReference>C_pia_1_de_Esta_Encerrada</targetReference>
@@ -202,7 +263,7 @@
     <decisions>
         <name>Tarefa1</name>
         <label>Tarefa</label>
-        <locationX>182</locationX>
+        <locationX>314</locationX>
         <locationY>647</locationY>
         <defaultConnector>
             <targetReference>Atualizar_Pr_lead_0</targetReference>
@@ -227,7 +288,7 @@
     <decisions>
         <name>Tipo_de_registro</name>
         <label>Tipo de registro</label>
-        <locationX>996</locationX>
+        <locationX>1150</locationX>
         <locationY>539</locationY>
         <defaultConnectorLabel>NA</defaultConnectorLabel>
         <rules>
@@ -262,6 +323,18 @@
         </rules>
     </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>ContadorCRM</name>
+        <dataType>Number</dataType>
+        <expression>IF(ISNULL({!Relativo.Numero_de_Contatos_CRM__c}), 1, {!Relativo.Numero_de_Contatos_CRM__c}+1)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>ContadorOutros</name>
+        <dataType>Number</dataType>
+        <expression>IF(ISNULL({!Relativo.Numero_de_Contatos_Inside_Sales__c}), 1, {!Relativo.Numero_de_Contatos_Inside_Sales__c}+1)</expression>
+        <scale>2</scale>
+    </formulas>
     <formulas>
         <name>ContatoPreLead</name>
         <dataType>Number</dataType>
@@ -310,7 +383,7 @@
     <recordLookups>
         <name>Nome</name>
         <label>Nome</label>
-        <locationX>996</locationX>
+        <locationX>1150</locationX>
         <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -331,7 +404,7 @@
     <recordLookups>
         <name>Relativo</name>
         <label>Relativo</label>
-        <locationX>996</locationX>
+        <locationX>1150</locationX>
         <locationY>323</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -352,7 +425,7 @@
     <recordUpdates>
         <name>Atualizar_Lead_Delta_Inside_Sales</name>
         <label>Atualizar Lead Delta Inside Sales</label>
-        <locationX>842</locationX>
+        <locationX>1018</locationX>
         <locationY>1163</locationY>
         <connector>
             <targetReference>Esta_Encerrada</targetReference>
@@ -376,7 +449,7 @@
     <recordUpdates>
         <name>Atualizar_lead_encerrado</name>
         <label>Atualizar lead</label>
-        <locationX>710</locationX>
+        <locationX>886</locationX>
         <locationY>1463</locationY>
         <connector>
             <targetReference>Email</targetReference>
@@ -390,12 +463,6 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>CreatedDateTask__c</field>
-            <value>
-                <elementReference>$Flow.CurrentDate</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Data_Primeiro_Contato__c</field>
             <value>
                 <elementReference>$Flow.CurrentDate</elementReference>
@@ -407,18 +474,12 @@
                 <elementReference>NumContLead</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>SubjectTask__c</field>
-            <value>
-                <elementReference>$Record.Subject</elementReference>
-            </value>
-        </inputAssignments>
         <object>Lead</object>
     </recordUpdates>
     <recordUpdates>
         <name>Atualizar_Lead_Thymos</name>
         <label>Atualizar Lead Thymos</label>
-        <locationX>578</locationX>
+        <locationX>754</locationX>
         <locationY>1163</locationY>
         <connector>
             <targetReference>Esta_Encerrada</targetReference>
@@ -442,7 +503,7 @@
     <recordUpdates>
         <name>Atualizar_lead_Ultima</name>
         <label>Atualizar lead Ultima</label>
-        <locationX>1546</locationX>
+        <locationX>1722</locationX>
         <locationY>1163</locationY>
         <connector>
             <targetReference>Email</targetReference>
@@ -484,10 +545,10 @@
     <recordUpdates>
         <name>Atualizar_Pr_lead</name>
         <label>Atualizar Pré lead</label>
-        <locationX>50</locationX>
+        <locationX>182</locationX>
         <locationY>755</locationY>
         <connector>
-            <targetReference>Email_0</targetReference>
+            <targetReference>Canal_de_Tarefa</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -550,10 +611,10 @@
     <recordUpdates>
         <name>Atualizar_Pr_lead_0</name>
         <label>Atualizar Pré lead</label>
-        <locationX>314</locationX>
+        <locationX>446</locationX>
         <locationY>755</locationY>
         <connector>
-            <targetReference>Email_0</targetReference>
+            <targetReference>Canal_de_Tarefa</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -610,8 +671,11 @@
     <recordUpdates>
         <name>C_pia_1_de_Atualizar_lead_Ultima</name>
         <label>Atualizar lead Ultima</label>
-        <locationX>1282</locationX>
+        <locationX>1458</locationX>
         <locationY>1163</locationY>
+        <connector>
+            <targetReference>Email</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -621,21 +685,9 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>CreatedDateTask__c</field>
-            <value>
-                <elementReference>$Flow.CurrentDate</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Numero_de_Contatos__c</field>
             <value>
                 <elementReference>NumContLead</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>SubjectTask__c</field>
-            <value>
-                <elementReference>$Record.Subject</elementReference>
             </value>
         </inputAssignments>
         <object>Lead</object>
@@ -643,7 +695,7 @@
     <recordUpdates>
         <name>Lead2</name>
         <label>Lead</label>
-        <locationX>996</locationX>
+        <locationX>1172</locationX>
         <locationY>1847</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -664,7 +716,7 @@
     <recordUpdates>
         <name>leadatt</name>
         <label>Atualizar lead</label>
-        <locationX>974</locationX>
+        <locationX>1150</locationX>
         <locationY>1463</locationY>
         <connector>
             <targetReference>Email</targetReference>
@@ -712,8 +764,8 @@
     <recordUpdates>
         <name>Pr_Lead1</name>
         <label>Pré-Lead</label>
-        <locationX>50</locationX>
-        <locationY>1055</locationY>
+        <locationX>182</locationX>
+        <locationY>1355</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -730,8 +782,56 @@
         </inputAssignments>
         <object>PreLead__c</object>
     </recordUpdates>
+    <recordUpdates>
+        <name>Pr_Lead_MKT</name>
+        <label>Pré-Lead MKT</label>
+        <locationX>50</locationX>
+        <locationY>1055</locationY>
+        <connector>
+            <targetReference>Email_0</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Relativo.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Numero_de_Contatos_CRM__c</field>
+            <value>
+                <elementReference>ContadorCRM</elementReference>
+            </value>
+        </inputAssignments>
+        <object>PreLead__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Pr_Lead_Outros</name>
+        <label>Pré-Lead Outros</label>
+        <locationX>314</locationX>
+        <locationY>1055</locationY>
+        <connector>
+            <targetReference>Email_0</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Relativo.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Numero_de_Contatos_Inside_Sales__c</field>
+            <value>
+                <elementReference>ContadorOutros</elementReference>
+            </value>
+        </inputAssignments>
+        <object>PreLead__c</object>
+    </recordUpdates>
     <start>
-        <locationX>870</locationX>
+        <locationX>1024</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Relativo</targetReference>
@@ -752,7 +852,7 @@
     <subflows>
         <name>Nota_Automatica</name>
         <label>Nota Automatica</label>
-        <locationX>996</locationX>
+        <locationX>1172</locationX>
         <locationY>755</locationY>
         <connector>
             <targetReference>Tarefa</targetReference>

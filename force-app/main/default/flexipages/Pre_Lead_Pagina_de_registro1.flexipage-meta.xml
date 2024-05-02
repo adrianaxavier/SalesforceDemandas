@@ -191,6 +191,16 @@
                 <identifier>RecordData_Primeiro_Contato_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Telefone_MKT__c</fieldItem>
+                <identifier>RecordTelefone_MKT_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-d1aacf77-f875-46f6-9fdd-b1c7f87a3516</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -243,6 +253,26 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Numero_de_Contatos__c</fieldItem>
                 <identifier>RecordNumero_de_Contatos_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Numero_de_Contatos_Inside_Sales__c</fieldItem>
+                <identifier>RecordNumero_de_Contratos_Inside_Sales_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Numero_de_Contatos_CRM__c</fieldItem>
+                <identifier>RecordNumero_de_Contatos_CRM_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
