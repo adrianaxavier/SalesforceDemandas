@@ -95,7 +95,40 @@
         <default>false</default>
         <visible>false</visible>
     </applicationVisibilities>
+    <classAccesses>
+        <apexClass>UnitsTriggerValidation</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>UnitsTriggerValidationTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
     <custom>true</custom>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Data_da_emissao_da_primeira_fatura__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Data_de_vencimento_da_primeira_fatura__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Link_da_Primeira_Fatura__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Numero_de_Faturas__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Chamado__c.Area_Envolvida__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Chamado__c.Assunto__c</field>
@@ -113,12 +146,32 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Chamado__c.Dados_do_F_arol__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Chamado__c.Data_Gestao__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Chamado__c.Data_Hora_de_abertura__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Chamado__c.Data_Hora_de_fechamento__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Chamado__c.Data_Previs_o_Distribuidora__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Chamado__c.Data_Previsao_Outra_Area__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -134,6 +187,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Chamado__c.Empresa_do_Grupo__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Chamado__c.Farol_Chamado__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -189,6 +247,31 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Chamado__c.Unidade__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Fatura__c.Data_de_Pagamento__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Fatura__c.Dias_de_Atraso__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Fatura__c.Telefone__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Fatura__c.Valor_de_Juros__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Fatura__c.Valor_de_Multa__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -388,7 +471,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Units__c.Data_da_emissao_da_primeira_fatura__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Units__c.Data_de_Instala_o_do_Medidor__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Units__c.Data_de_vencimento_da_primeira_fatura__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -434,6 +527,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Units__c.EndEffectiveDate__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Units__c.Endere_o_Completo__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -498,6 +596,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Units__c.Link_da_Primeira_Fatura__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Units__c.MGM_Indica_por__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -553,12 +656,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Units__c.Numero_de_Faturas__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Units__c.NumerodoContrato__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Units__c.Old_Submarket__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Units__c.Oportunidade__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -740,6 +853,11 @@
         <layout>Units__c-Unidades Layout</layout>
         <recordType>Units__c.UnidadePJ</recordType>
     </layoutAssignments>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Chamado__c.Atendimento_N2</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Chamado__c.Chamados</recordType>

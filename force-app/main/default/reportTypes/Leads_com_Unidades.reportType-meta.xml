@@ -2023,6 +2023,16 @@
             <field>Data_de_vencimento_da_primeira_fatura__c</field>
             <table>Lead.Units__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Oportunidade__c</field>
+            <table>Lead.Units__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Endere_o_Completo__c</field>
+            <table>Lead.Units__r</table>
+        </columns>
         <masterLabel>Unidades</masterLabel>
     </sections>
 </ReportType>
