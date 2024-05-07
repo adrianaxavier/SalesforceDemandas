@@ -1,51 +1,1424 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Atribui_o_1</name>
+        <label>Add Fiels of Lead</label>
+        <locationX>314</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Address</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Address__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.AdressNumber__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.AdressNumber__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Baixa_Renda__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Baixa_Renda__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.BirthDate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Data_de_Anivers_rio__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.CEP__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.CEP__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Pr_Lead__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.CNPJ__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.CPFCNPJ__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.CONSUMO__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ConsumoKwh__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Campaign__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Campaign__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.City__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.City__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Comercialuz__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Comercial__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Company__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Company__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Complement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Complement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ConsumoHistorico__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ConsumoHistorico__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ConsumoMensal__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ConsumoMensal__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ConsumoUtilizado__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ConsumoUtilizado__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Contrato_Assinado__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Hired__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Contrato_Gerado__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ContratoGerado__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Criativo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Criativo__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Cupom__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Cupom__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Data_Simulacao__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.DateSimulation__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Data_do_contrato_assinado__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.DateContratado__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Data_do_contrato_gerado__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.DateContrato__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_1_anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_1_Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_2_anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_2_Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_3_anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_3_Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_4_anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_4_Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_5_anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_5_Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_Liberdade_total__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_Liberdade_total__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_escolhido_pelo_cliente__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_escolhido_pelo_cliente__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.DistribuidoraLuz__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Distribuidora__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Distribuidora_n_o_Atendida__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.DistribuidoraNaoAtendida__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.District__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.District__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.EconomicGroup__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.EconomicGroup__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Email__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Email_do_Parceiro__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Email_do_Parceiro__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Erro_Gen_rico_de_Simula_o__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ErroGenericoSimulacao__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Erro_Leitura_Fatura__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ErroLeituraFatura__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Erros__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Erros__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Fatura_Anexada__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Fatura_Anexada__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Fatura_Processada__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Fatura_Processada__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Fluxo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Garantidor__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Garantidor__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Gender__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Gender__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Growth__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Growth__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.GuidArquivoDaDigitalizacao__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.GuidArquivoDaDigitalizacao__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Industry</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Setor__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.InitialDiscount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.InitialDiscount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Inside_Sales__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Inside_Sales__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.LOCALE__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.locale__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.MaritalStatus__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.MaritalStatus__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Marketplace__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Marketplace__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Medium__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Medium__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Multa_Da_distribuidora__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.AssessmentDistributor__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.MunicipalRegistration__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.MunicipalRegistration__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.N_o_Incomodar__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.N_o_Incomodar__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Nome_do_Arquivo_anexo_com_extens_o__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.NomeDoAnexoComExtensao__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Nome_do_Parceiro__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Nome_do_Parceiro__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Note__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Note__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.NumeroInstalacao__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.NumeroInstalacao__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Numero_de_Contatos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Numero_de_Contatos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Numero_de_E_mails__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Numero_de_E_mails__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Observa_es_gerais_de_cr_dito__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Observa_es_Gerais_de_Cr_dito__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Occupation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Occupation__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Office__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Office__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Origem_da_Opera_o__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.InformationSource__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.PFPJ__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.PFPJ__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Parceiro__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Parceiro__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Phone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.PhoneNumber__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Phone_second__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.MobilePhone__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Poss_vel_Fraude__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Possivel_Fraude__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Prazo_de_pagamento__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Prazo_de_Pagamento__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Produto_escolhido_pelo_cliente__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Produto_escolhido_pelo_cliente__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Qual_foi_a_base_de_c_lculo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Qual_foi_a_base_de_c_lculo__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Quantidade_de_meses__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Quantidade_de_meses__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.QuantityUnidtsNegotiable__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.QuantityUnidtsNegotiable__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Rating</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Classifica_o__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Redu_o_Custo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.CostReduction__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ReducaoCusto3anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ReducaoCusto3Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ReducaoCusto5anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ReducaoCusto5Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ReducaoCustoSemFidelidade__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ReducaoCustoSemFidelidade__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Score_SERASA__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ScoreSerasa__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.SimulacoesRealizadas__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.simulacoes_realizadas__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Source__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.StateRegistration__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.StateRegistration__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Tarifa_Branca__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Tarifa_Branca__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Telefone_do_Parceiros__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Telefone_do_Parceiros__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Term__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Term__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Tipo_de_garantia__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Tipo_de_garantia__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Tipo_de_produto__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Produto__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.TotalUnitsQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.TotalUnitsQuantity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.UF__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.UF__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Validade_do_Contrato__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Validade_do_Contrato__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Valor_Conta__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.AccountValue__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Valor_da_Fatura__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Valor_da_Fatura__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Volume_considerado_para_estudo_kWh__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Volume_considerado_para_estudo_kWh__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Whatsapp__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Whatsapp__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>up_get_lead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>C_pia_2_de_Add_Fiels_of_Lead</name>
+        <label>Add Fiels of Lead</label>
+        <locationX>1106</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Address</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Address__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.AdressNumber__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.AdressNumber__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Baixa_Renda__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Baixa_Renda__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.BirthDate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Data_de_Anivers_rio__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.CEP__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.CEP__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Pr_Lead__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.CNPJ__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.CPFCNPJ__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.CONSUMO__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ConsumoKwh__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Campaign__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Campaign__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.City__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.City__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Comercialuz__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Comercial__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Company__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Company__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Complement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Complement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ConsumoHistorico__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ConsumoHistorico__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ConsumoMensal__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ConsumoMensal__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ConsumoUtilizado__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ConsumoUtilizado__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Contrato_Assinado__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Hired__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Contrato_Gerado__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ContratoGerado__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Criativo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Criativo__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Cupom__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Cupom__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Data_Simulacao__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.DateSimulation__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Data_do_contrato_assinado__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.DateContratado__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Data_do_contrato_gerado__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.DateContrato__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_1_anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_1_Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_2_anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_2_Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_3_anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_3_Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_4_anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_4_Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_5_anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_5_Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_Ofertado_Liberdade_total__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_Ofertado_Liberdade_total__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Desconto_escolhido_pelo_cliente__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Desconto_escolhido_pelo_cliente__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.DistribuidoraLuz__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Distribuidora__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Distribuidora_n_o_Atendida__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.DistribuidoraNaoAtendida__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.District__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.District__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.EconomicGroup__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.EconomicGroup__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Email__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Email_do_Parceiro__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Email_do_Parceiro__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Erro_Gen_rico_de_Simula_o__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ErroGenericoSimulacao__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Erro_Leitura_Fatura__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ErroLeituraFatura__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Erros__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Erros__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Fatura_Anexada__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Fatura_Anexada__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Fatura_Processada__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Fatura_Processada__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Fluxo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Garantidor__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Garantidor__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Gender__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Gender__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Growth__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Growth__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.GuidArquivoDaDigitalizacao__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.GuidArquivoDaDigitalizacao__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Industry</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Setor__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.InitialDiscount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.InitialDiscount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Inside_Sales__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Inside_Sales__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.LOCALE__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.locale__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.MaritalStatus__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.MaritalStatus__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Marketplace__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Marketplace__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Medium__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Medium__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Multa_Da_distribuidora__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.AssessmentDistributor__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.MunicipalRegistration__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.MunicipalRegistration__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.N_o_Incomodar__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.N_o_Incomodar__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Nome_do_Arquivo_anexo_com_extens_o__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.NomeDoAnexoComExtensao__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Nome_do_Parceiro__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Nome_do_Parceiro__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Note__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Note__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.NumeroInstalacao__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.NumeroInstalacao__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Numero_de_Contatos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Numero_de_Contatos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Numero_de_E_mails__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Numero_de_E_mails__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Observa_es_gerais_de_cr_dito__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Observa_es_Gerais_de_Cr_dito__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Occupation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Occupation__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Office__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Office__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Origem_da_Opera_o__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.InformationSource__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.PFPJ__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.PFPJ__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Parceiro__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Parceiro__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Phone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.PhoneNumber__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Phone_second__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.MobilePhone__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Poss_vel_Fraude__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Possivel_Fraude__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Prazo_de_pagamento__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Prazo_de_Pagamento__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Produto_escolhido_pelo_cliente__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Produto_escolhido_pelo_cliente__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Qual_foi_a_base_de_c_lculo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Qual_foi_a_base_de_c_lculo__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Quantidade_de_meses__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Quantidade_de_meses__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.QuantityUnidtsNegotiable__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.QuantityUnidtsNegotiable__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Rating</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Classifica_o__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Redu_o_Custo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.CostReduction__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ReducaoCusto3anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ReducaoCusto3Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ReducaoCusto5anos__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ReducaoCusto5Anos__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.ReducaoCustoSemFidelidade__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ReducaoCustoSemFidelidade__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Score_SERASA__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.ScoreSerasa__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.SimulacoesRealizadas__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.simulacoes_realizadas__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Source__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.StateRegistration__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.StateRegistration__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Tarifa_Branca__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Tarifa_Branca__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Telefone_do_Parceiros__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Telefone_do_Parceiros__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Term__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Term__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Tipo_de_garantia__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Tipo_de_garantia__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Tipo_de_produto__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Produto__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.TotalUnitsQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.TotalUnitsQuantity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.UF__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.UF__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Validade_do_Contrato__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Validade_do_Contrato__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Valor_Conta__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.AccountValue__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Valor_da_Fatura__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Valor_da_Fatura__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Volume_considerado_para_estudo_kWh__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Volume_considerado_para_estudo_kWh__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Whatsapp__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Whatsapp__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>C_pia_2_de_up_get_lead</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>C_pia_1_de_Tem_Lead</name>
+        <label>Tem Lead?</label>
+        <locationX>1304</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Tem_UC</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Não</defaultConnectorLabel>
+        <rules>
+            <name>C_pia_1_de_Sim</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Lead</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C_pia_2_de_Add_Fiels_of_Lead</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Qual_Empresa</name>
         <label>Empresa</label>
-        <locationX>512</locationX>
-        <locationY>539</locationY>
+        <locationX>677</locationX>
+        <locationY>350</locationY>
         <defaultConnector>
-            <targetReference>Tem_UC</targetReference>
+            <targetReference>C_pia_1_de_Tem_Lead</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Luz</defaultConnectorLabel>
         <rules>
             <name>Delta_Inside_Sales</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.PFPJ__c</leftValueReference>
+                <leftValueReference>Obter_Pr_lead.Company__r.Name</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>PJ</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.AccountValue__c</leftValueReference>
-                <operator>GreaterThanOrEqualTo</operator>
-                <rightValue>
-                    <numberValue>5000.0</numberValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Parceiro__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Produto__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>GD</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.InformationSource__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>AreaLogada</stringValue>
+                    <stringValue>Delta</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -57,23 +1430,48 @@
             <name>LuzPJ</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.PFPJ__c</leftValueReference>
+                <leftValueReference>Obter_Pr_lead.PFPJ__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>PJ</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Tem_UC_0</targetReference>
+                <targetReference>Tem_Lead</targetReference>
             </connector>
             <label>LuzPJ</label>
         </rules>
     </decisions>
     <decisions>
+        <name>Tem_Lead</name>
+        <label>Tem Lead?</label>
+        <locationX>512</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Tem_UC_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Não</defaultConnectorLabel>
+        <rules>
+            <name>Sim</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Lead</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Atribui_o_1</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Tem_UC</name>
         <label>Tem UC</label>
-        <locationX>974</locationX>
-        <locationY>647</locationY>
+        <locationX>1502</locationX>
+        <locationY>566</locationY>
         <defaultConnector>
             <targetReference>Criar_Lead_LuzPF_Sem_UC</targetReference>
         </defaultConnector>
@@ -97,8 +1495,8 @@
     <decisions>
         <name>Tem_UC_0</name>
         <label>Tem UC</label>
-        <locationX>446</locationX>
-        <locationY>647</locationY>
+        <locationX>710</locationX>
+        <locationY>566</locationY>
         <defaultConnector>
             <targetReference>Criar_Lead_LuzPJ_Sem_UC</targetReference>
         </defaultConnector>
@@ -130,8 +1528,8 @@
         <dataType>String</dataType>
         <expression>RIGHT({!Obter_Pr_lead.Name}, LEN({!Obter_Pr_lead.Name}) - FIND (&quot; &quot;, {!Obter_Pr_lead.Name}))</expression>
     </formulas>
-    <interviewLabel>LUZ-Conversão Pré-Lead em Lead {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>LUZ-Conversão Pré-Lead em Lead</label>
+    <interviewLabel>[Pré Lead] Conversãoa em Lead {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Pré Lead] Conversão em Lead</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -155,7 +1553,7 @@
         <name>Criar_Lead_Delta</name>
         <label>Criar Lead Delta</label>
         <locationX>50</locationX>
-        <locationY>647</locationY>
+        <locationY>458</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -226,7 +1624,7 @@
         <inputAssignments>
             <field>Company__c</field>
             <value>
-                <elementReference>Localizacao_Id_Empresa.idDeltaEmpresa</elementReference>
+                <elementReference>Obter_Pr_lead.Company__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -358,7 +1756,7 @@
         <inputAssignments>
             <field>EconomicGroup__c</field>
             <value>
-                <elementReference>$Record.EconomicGroup__c</elementReference>
+                <elementReference>Obter_Pr_lead.EconomicGroup__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -464,6 +1862,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>LOCALE__c</field>
+            <value>
+                <elementReference>Obter_Pr_lead.locale__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>LastName</field>
             <value>
                 <elementReference>sobrenome</elementReference>
@@ -502,7 +1906,7 @@
         <inputAssignments>
             <field>MunicipalRegistration__c</field>
             <value>
-                <elementReference>$Record.MunicipalRegistration__c</elementReference>
+                <elementReference>Obter_Pr_lead.MunicipalRegistration__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -610,7 +2014,7 @@
         <inputAssignments>
             <field>Pr_Lead__c</field>
             <value>
-                <elementReference>$Record.Id</elementReference>
+                <elementReference>Obter_Pr_lead.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -640,13 +2044,13 @@
         <inputAssignments>
             <field>QuantityUnidtsNegotiable__c</field>
             <value>
-                <elementReference>$Record.QuantityUnidtsNegotiable__c</elementReference>
+                <elementReference>Obter_Pr_lead.QuantityUnidtsNegotiable__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Rating</field>
             <value>
-                <elementReference>$Record.Classifica_o__c</elementReference>
+                <elementReference>Obter_Pr_lead.Classifica_o__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -736,7 +2140,7 @@
         <inputAssignments>
             <field>Tipo_de_produto__c</field>
             <value>
-                <elementReference>$Record.Produto__c</elementReference>
+                <elementReference>Obter_Pr_lead.Produto__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -754,7 +2158,7 @@
         <inputAssignments>
             <field>Valor_Conta__c</field>
             <value>
-                <elementReference>$Record.AccountValue__c</elementReference>
+                <elementReference>Obter_Pr_lead.AccountValue__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -780,8 +2184,8 @@
     <recordCreates>
         <name>Criar_Lead_LuzPF</name>
         <label>Criar Lead LuzPF</label>
-        <locationX>842</locationX>
-        <locationY>755</locationY>
+        <locationX>1370</locationX>
+        <locationY>674</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -852,7 +2256,7 @@
         <inputAssignments>
             <field>Company__c</field>
             <value>
-                <elementReference>Localizacao_Id_Empresa.idLuzEmpresa</elementReference>
+                <elementReference>Obter_Pr_lead.Company__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -984,7 +2388,7 @@
         <inputAssignments>
             <field>EconomicGroup__c</field>
             <value>
-                <elementReference>$Record.EconomicGroup__c</elementReference>
+                <elementReference>Obter_Pr_lead.EconomicGroup__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1090,6 +2494,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>LOCALE__c</field>
+            <value>
+                <elementReference>Obter_Pr_lead.locale__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>LastName</field>
             <value>
                 <elementReference>sobrenome</elementReference>
@@ -1122,7 +2532,7 @@
         <inputAssignments>
             <field>MunicipalRegistration__c</field>
             <value>
-                <elementReference>$Record.MunicipalRegistration__c</elementReference>
+                <elementReference>Obter_Pr_lead.MunicipalRegistration__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1230,7 +2640,7 @@
         <inputAssignments>
             <field>Pr_Lead__c</field>
             <value>
-                <elementReference>$Record.Id</elementReference>
+                <elementReference>Obter_Pr_lead.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1260,13 +2670,13 @@
         <inputAssignments>
             <field>QuantityUnidtsNegotiable__c</field>
             <value>
-                <elementReference>$Record.QuantityUnidtsNegotiable__c</elementReference>
+                <elementReference>Obter_Pr_lead.QuantityUnidtsNegotiable__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Rating</field>
             <value>
-                <elementReference>$Record.Classifica_o__c</elementReference>
+                <elementReference>Obter_Pr_lead.Classifica_o__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1326,7 +2736,7 @@
         <inputAssignments>
             <field>Status</field>
             <value>
-                <stringValue>New</stringValue>
+                <stringValue>Coleta de Fatura</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1356,7 +2766,7 @@
         <inputAssignments>
             <field>Tipo_de_produto__c</field>
             <value>
-                <elementReference>$Record.Produto__c</elementReference>
+                <elementReference>Obter_Pr_lead.Produto__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1374,13 +2784,13 @@
         <inputAssignments>
             <field>Validade_do_Contrato__c</field>
             <value>
-                <elementReference>$Record.Validade_do_Contrato__c</elementReference>
+                <elementReference>Obter_Pr_lead.Validade_do_Contrato__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Valor_Conta__c</field>
             <value>
-                <elementReference>$Record.AccountValue__c</elementReference>
+                <elementReference>Obter_Pr_lead.AccountValue__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1406,8 +2816,8 @@
     <recordCreates>
         <name>Criar_Lead_LuzPF_Sem_UC</name>
         <label>Criar Lead LuzPF Sem UC</label>
-        <locationX>1106</locationX>
-        <locationY>755</locationY>
+        <locationX>1634</locationX>
+        <locationY>674</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -1478,7 +2888,7 @@
         <inputAssignments>
             <field>Company__c</field>
             <value>
-                <elementReference>Localizacao_Id_Empresa.idLuzEmpresa</elementReference>
+                <elementReference>Obter_Pr_lead.Company__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1610,7 +3020,7 @@
         <inputAssignments>
             <field>EconomicGroup__c</field>
             <value>
-                <elementReference>$Record.EconomicGroup__c</elementReference>
+                <elementReference>Obter_Pr_lead.EconomicGroup__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1716,6 +3126,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>LOCALE__c</field>
+            <value>
+                <elementReference>Obter_Pr_lead.locale__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>LastName</field>
             <value>
                 <elementReference>sobrenome</elementReference>
@@ -1743,6 +3159,12 @@
             <field>Multa_Da_distribuidora__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.AssessmentDistributor__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MunicipalRegistration__c</field>
+            <value>
+                <elementReference>Obter_Pr_lead.MunicipalRegistration__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1850,7 +3272,7 @@
         <inputAssignments>
             <field>Pr_Lead__c</field>
             <value>
-                <elementReference>$Record.Id</elementReference>
+                <elementReference>Obter_Pr_lead.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1880,13 +3302,13 @@
         <inputAssignments>
             <field>QuantityUnidtsNegotiable__c</field>
             <value>
-                <elementReference>$Record.QuantityUnidtsNegotiable__c</elementReference>
+                <elementReference>Obter_Pr_lead.QuantityUnidtsNegotiable__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Rating</field>
             <value>
-                <elementReference>$Record.Classifica_o__c</elementReference>
+                <elementReference>Obter_Pr_lead.Classifica_o__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1970,7 +3392,7 @@
         <inputAssignments>
             <field>Tipo_de_produto__c</field>
             <value>
-                <elementReference>$Record.Produto__c</elementReference>
+                <elementReference>Obter_Pr_lead.Produto__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1988,13 +3410,13 @@
         <inputAssignments>
             <field>Validade_do_Contrato__c</field>
             <value>
-                <elementReference>$Record.Validade_do_Contrato__c</elementReference>
+                <elementReference>Obter_Pr_lead.Validade_do_Contrato__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Valor_Conta__c</field>
             <value>
-                <elementReference>$Record.AccountValue__c</elementReference>
+                <elementReference>Obter_Pr_lead.AccountValue__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2020,8 +3442,8 @@
     <recordCreates>
         <name>Criar_Lead_LuzPJ</name>
         <label>Criar Lead LuzPJ</label>
-        <locationX>314</locationX>
-        <locationY>755</locationY>
+        <locationX>578</locationX>
+        <locationY>674</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -2092,7 +3514,7 @@
         <inputAssignments>
             <field>Company__c</field>
             <value>
-                <elementReference>Localizacao_Id_Empresa.idLuzEmpresa</elementReference>
+                <elementReference>Obter_Pr_lead.Company__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2224,7 +3646,7 @@
         <inputAssignments>
             <field>EconomicGroup__c</field>
             <value>
-                <elementReference>$Record.EconomicGroup__c</elementReference>
+                <elementReference>Obter_Pr_lead.EconomicGroup__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2330,6 +3752,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>LOCALE__c</field>
+            <value>
+                <elementReference>Obter_Pr_lead.locale__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>LastName</field>
             <value>
                 <elementReference>sobrenome</elementReference>
@@ -2362,7 +3790,7 @@
         <inputAssignments>
             <field>MunicipalRegistration__c</field>
             <value>
-                <elementReference>$Record.MunicipalRegistration__c</elementReference>
+                <elementReference>Obter_Pr_lead.MunicipalRegistration__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2470,7 +3898,7 @@
         <inputAssignments>
             <field>Pr_Lead__c</field>
             <value>
-                <elementReference>$Record.Id</elementReference>
+                <elementReference>Obter_Pr_lead.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2500,13 +3928,13 @@
         <inputAssignments>
             <field>QuantityUnidtsNegotiable__c</field>
             <value>
-                <elementReference>$Record.QuantityUnidtsNegotiable__c</elementReference>
+                <elementReference>Obter_Pr_lead.QuantityUnidtsNegotiable__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Rating</field>
             <value>
-                <elementReference>$Record.Classifica_o__c</elementReference>
+                <elementReference>Obter_Pr_lead.Classifica_o__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2566,7 +3994,7 @@
         <inputAssignments>
             <field>Status</field>
             <value>
-                <stringValue>New</stringValue>
+                <stringValue>Coleta de Fatura</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2596,7 +4024,7 @@
         <inputAssignments>
             <field>Tipo_de_produto__c</field>
             <value>
-                <elementReference>$Record.Produto__c</elementReference>
+                <elementReference>Obter_Pr_lead.Produto__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2614,13 +4042,13 @@
         <inputAssignments>
             <field>Validade_do_Contrato__c</field>
             <value>
-                <elementReference>$Record.Validade_do_Contrato__c</elementReference>
+                <elementReference>Obter_Pr_lead.Validade_do_Contrato__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Valor_Conta__c</field>
             <value>
-                <elementReference>$Record.AccountValue__c</elementReference>
+                <elementReference>Obter_Pr_lead.AccountValue__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2646,8 +4074,8 @@
     <recordCreates>
         <name>Criar_Lead_LuzPJ_Sem_UC</name>
         <label>Criar Lead LuzPJ Sem UC</label>
-        <locationX>578</locationX>
-        <locationY>755</locationY>
+        <locationX>842</locationX>
+        <locationY>674</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -2718,7 +4146,7 @@
         <inputAssignments>
             <field>Company__c</field>
             <value>
-                <elementReference>Localizacao_Id_Empresa.idLuzEmpresa</elementReference>
+                <elementReference>Obter_Pr_lead.Company__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2850,7 +4278,7 @@
         <inputAssignments>
             <field>EconomicGroup__c</field>
             <value>
-                <elementReference>$Record.EconomicGroup__c</elementReference>
+                <elementReference>Obter_Pr_lead.EconomicGroup__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2956,6 +4384,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>LOCALE__c</field>
+            <value>
+                <elementReference>Obter_Pr_lead.locale__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>LastName</field>
             <value>
                 <elementReference>sobrenome</elementReference>
@@ -2988,7 +4422,7 @@
         <inputAssignments>
             <field>MunicipalRegistration__c</field>
             <value>
-                <elementReference>$Record.MunicipalRegistration__c</elementReference>
+                <elementReference>Obter_Pr_lead.MunicipalRegistration__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3096,7 +4530,7 @@
         <inputAssignments>
             <field>Pr_Lead__c</field>
             <value>
-                <elementReference>$Record.Id</elementReference>
+                <elementReference>Obter_Pr_lead.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3126,13 +4560,13 @@
         <inputAssignments>
             <field>QuantityUnidtsNegotiable__c</field>
             <value>
-                <elementReference>$Record.QuantityUnidtsNegotiable__c</elementReference>
+                <elementReference>Obter_Pr_lead.QuantityUnidtsNegotiable__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Rating</field>
             <value>
-                <elementReference>$Record.Classifica_o__c</elementReference>
+                <elementReference>Obter_Pr_lead.Classifica_o__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3192,7 +4626,7 @@
         <inputAssignments>
             <field>Status</field>
             <value>
-                <stringValue>New</stringValue>
+                <stringValue>Coleta de Fatura</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3222,7 +4656,7 @@
         <inputAssignments>
             <field>Tipo_de_produto__c</field>
             <value>
-                <elementReference>$Record.Produto__c</elementReference>
+                <elementReference>Obter_Pr_lead.Produto__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3240,13 +4674,13 @@
         <inputAssignments>
             <field>Validade_do_Contrato__c</field>
             <value>
-                <elementReference>$Record.Validade_do_Contrato__c</elementReference>
+                <elementReference>Obter_Pr_lead.Validade_do_Contrato__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Valor_Conta__c</field>
             <value>
-                <elementReference>$Record.AccountValue__c</elementReference>
+                <elementReference>Obter_Pr_lead.AccountValue__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3270,48 +4704,90 @@
         <object>Lead</object>
     </recordCreates>
     <recordLookups>
-        <name>Obter_Pr_lead</name>
-        <label>Obter Pré lead</label>
-        <locationX>512</locationX>
-        <locationY>431</locationY>
+        <name>Get_Lead</name>
+        <label>Get Lead</label>
+        <locationX>677</locationX>
+        <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Qual_Empresa</targetReference>
+        </connector>
+        <filterLogic>1 OR (2 AND 3 AND 4)</filterLogic>
+        <filters>
+            <field>NumeroInstalacao__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.NumeroInstalacao__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Phone</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.PhoneNumber__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CEP__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.CEP__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Company__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Obter_Pr_lead.Company__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Obter_Pr_lead</name>
+        <label>Obter Pré lead</label>
+        <locationX>677</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Lead</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.Id</elementReference>
+                <elementReference>varIDPrelead</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>PreLead__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>C_pia_2_de_up_get_lead</name>
+        <label>up get lead</label>
+        <locationX>1106</locationX>
+        <locationY>674</locationY>
+        <inputReference>Get_Lead</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>up_get_lead</name>
+        <label>up get lead</label>
+        <locationX>314</locationX>
+        <locationY>674</locationY>
+        <inputReference>Get_Lead</inputReference>
+    </recordUpdates>
     <start>
-        <locationX>386</locationX>
+        <locationX>551</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Localizacao_Id_Empresa</targetReference>
-        </connector>
-        <object>PreLead__c</object>
-        <recordTriggerType>Create</recordTriggerType>
-        <triggerType>RecordAfterSave</triggerType>
-    </start>
-    <status>Draft</status>
-    <subflows>
-        <name>Localizacao_Id_Empresa</name>
-        <label>Localizacao Id Empresa</label>
-        <locationX>512</locationX>
-        <locationY>323</locationY>
         <connector>
             <targetReference>Obter_Pr_lead</targetReference>
         </connector>
-        <flowName>Subflow_Determinacao_Id_Empresa</flowName>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
+    </start>
+    <status>Active</status>
     <textTemplates>
         <name>MensagemWhats</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
@@ -3319,6 +4795,13 @@
     </textTemplates>
     <variables>
         <name>Idcotacao</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varIDPrelead</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>

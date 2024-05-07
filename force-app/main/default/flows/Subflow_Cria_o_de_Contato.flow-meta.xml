@@ -77,12 +77,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>N_o_Incomodar__c</field>
-            <value>
-                <elementReference>naoincomodar</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Nacionalidade__c</field>
             <value>
                 <elementReference>Nacionalidade</elementReference>
@@ -128,7 +122,7 @@
             <targetReference>Criar_Contato</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>Cargo</name>
         <dataType>String</dataType>
