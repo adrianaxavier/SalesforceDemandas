@@ -22,95 +22,26 @@
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>59.0</apiVersion>
-    <assignments>
-        <name>atualiza_id_da_cota_o</name>
-        <label>atualiza id da cotação</label>
-        <locationX>578</locationX>
-        <locationY>2532</locationY>
-        <assignmentItems>
-            <assignToReference>IdCotacao</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>get_cota_o.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Tipo_de_desconto</targetReference>
-        </connector>
-    </assignments>
     <decisions>
-        <name>C_ia_4_de_Tipo_de_desconto</name>
-        <label>Tipo de desconto</label>
-        <locationX>446</locationX>
-        <locationY>3324</locationY>
-        <defaultConnector>
-            <targetReference>C_pi_4_de_Tipo_de_desconto</targetReference>
-        </defaultConnector>
+        <name>blocklis</name>
+        <label>blocklis?</label>
+        <locationX>644</locationX>
+        <locationY>2508</locationY>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
-            <name>C_ia_3_de_3_anos</name>
+            <name>simerwgwergf</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>get_prelead.Desconto_Ofertado_5_Anos__c</leftValueReference>
+                <leftValueReference>Get_blocklist.Id</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>C_pia_3_de_Criar_Plano</targetReference>
+                <targetReference>desqualifica_o</targetReference>
             </connector>
-            <label>5 anos</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>C_pi_4_de_Tipo_de_desconto</name>
-        <label>Tipo de desconto</label>
-        <locationX>446</locationX>
-        <locationY>3624</locationY>
-        <defaultConnector>
-            <targetReference>Plano_Criado</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>C_pia_3_de_3_ano</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>get_prelead.Desconto_Ofertado_Liberdade_total__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>C_pia_4_de_Criar_Plano</targetReference>
-            </connector>
-            <label>Liberdade Total</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>C_pia_2_de_Tipo_de_desconto</name>
-        <label>Tipo de desconto</label>
-        <locationX>446</locationX>
-        <locationY>3024</locationY>
-        <defaultConnector>
-            <targetReference>C_ia_4_de_Tipo_de_desconto</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>C_pia_2_de_2_anos</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>get_prelead.Desconto_Ofertado_3_Anos__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>C_pia_2_de_Criar_Plano</targetReference>
-            </connector>
-            <label>3 anos</label>
+            <label>sim</label>
         </rules>
     </decisions>
     <decisions>
@@ -217,49 +148,6 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Plano_Criado</name>
-        <label>Plano Criado?</label>
-        <locationX>446</locationX>
-        <locationY>3924</locationY>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>simasfdgsadgf</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>Idplano2anos</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Idplano3anos</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Idplano5anos</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>IdplanoLT</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Ganho_no_Lead</targetReference>
-            </connector>
-            <label>sim</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Possui_Cupom</name>
         <label>Possui Cupom</label>
         <locationX>644</locationX>
@@ -282,31 +170,6 @@
                 <targetReference>Atualiza_Parceiro</targetReference>
             </connector>
             <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>tem_cota_o</name>
-        <label>tem cotação?</label>
-        <locationX>446</locationX>
-        <locationY>2424</locationY>
-        <defaultConnector>
-            <targetReference>atualiza_id_da_cota_o</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>n_oasfdasdf</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>get_cota_o</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Criar_Cota_o</targetReference>
-            </connector>
-            <label>não</label>
         </rules>
     </decisions>
     <decisions>
@@ -339,6 +202,9 @@
         <label>Tem pre-lead</label>
         <locationX>644</locationX>
         <locationY>1800</locationY>
+        <defaultConnector>
+            <targetReference>Get_blocklist</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
             <name>Resultado_1_de_Decis_o_6</name>
@@ -356,32 +222,16 @@
             <label>sim</label>
         </rules>
     </decisions>
-    <decisions>
-        <name>Tipo_de_desconto</name>
-        <label>Tipo de desconto</label>
-        <locationX>446</locationX>
-        <locationY>2724</locationY>
-        <defaultConnector>
-            <targetReference>C_pia_2_de_Tipo_de_desconto</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>X2_anos</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>get_prelead.Desconto_Ofertado_2_Anos__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Criar_Plano</targetReference>
-            </connector>
-            <label>2 anos</label>
-        </rules>
-    </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>cepsemtraco</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    CONTAINS({!$Record.CEP__c}, &quot;-&quot;),
+    SUBSTITUTE({!$Record.CEP__c}, &quot;-&quot;, &quot;&quot;),
+    {!$Record.CEP__c}
+)</expression>
+    </formulas>
     <interviewLabel>[LEAD]Main Create Delta {!$Flow.CurrentDateTime}</interviewLabel>
     <label>[LEAD]Main Create Delta/LUZ</label>
     <processMetadataValues>
@@ -403,194 +253,32 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <recordCreates>
-        <name>C_pia_2_de_Criar_Plano</name>
-        <label>Criar Plano</label>
-        <locationX>314</locationX>
-        <locationY>3132</locationY>
-        <assignRecordIdToReference>Idplano3anos</assignRecordIdToReference>
-        <connector>
-            <targetReference>C_ia_4_de_Tipo_de_desconto</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Cotacao__c</field>
-            <value>
-                <elementReference>IdCotacao</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Desconto__c</field>
-            <value>
-                <elementReference>get_prelead.Desconto_Ofertado_3_Anos__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>EconomiaAnual__c</field>
-            <value>
-                <elementReference>get_prelead.ReducaoCusto3Anos__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>PrazoFidelidade__c</field>
-            <value>
-                <numberValue>36.0</numberValue>
-            </value>
-        </inputAssignments>
-        <object>Plano__c</object>
-    </recordCreates>
-    <recordCreates>
-        <name>C_pia_3_de_Criar_Plano</name>
-        <label>Criar Plano</label>
-        <locationX>314</locationX>
-        <locationY>3432</locationY>
-        <assignRecordIdToReference>Idplano5anos</assignRecordIdToReference>
-        <connector>
-            <targetReference>C_pi_4_de_Tipo_de_desconto</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Cotacao__c</field>
-            <value>
-                <elementReference>IdCotacao</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Desconto__c</field>
-            <value>
-                <elementReference>get_prelead.Desconto_Ofertado_5_Anos__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>EconomiaAnual__c</field>
-            <value>
-                <elementReference>get_prelead.Desconto_Ofertado_5_Anos__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>PrazoFidelidade__c</field>
-            <value>
-                <numberValue>60.0</numberValue>
-            </value>
-        </inputAssignments>
-        <object>Plano__c</object>
-    </recordCreates>
-    <recordCreates>
-        <name>C_pia_4_de_Criar_Plano</name>
-        <label>Criar Plano</label>
-        <locationX>314</locationX>
-        <locationY>3732</locationY>
-        <assignRecordIdToReference>IdplanoLT</assignRecordIdToReference>
-        <connector>
-            <targetReference>Plano_Criado</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Cotacao__c</field>
-            <value>
-                <elementReference>IdCotacao</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Desconto__c</field>
-            <value>
-                <elementReference>get_prelead.Desconto_Ofertado_Liberdade_total__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>EconomiaAnual__c</field>
-            <value>
-                <elementReference>get_prelead.ReducaoCustoSemFidelidade__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>PrazoFidelidade__c</field>
-            <value>
-                <numberValue>0.0</numberValue>
-            </value>
-        </inputAssignments>
-        <object>Plano__c</object>
-    </recordCreates>
-    <recordCreates>
-        <name>Criar_Cota_o</name>
-        <label>Criar Cotação</label>
-        <locationX>314</locationX>
-        <locationY>2532</locationY>
-        <assignRecordIdToReference>IdCotacao</assignRecordIdToReference>
-        <connector>
-            <targetReference>Tipo_de_desconto</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Lead__c</field>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Pre_Lead__c</field>
-            <value>
-                <elementReference>get_prelead.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status__c</field>
-            <value>
-                <stringValue>Ativa</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Cotacao__c</object>
-    </recordCreates>
-    <recordCreates>
-        <name>Criar_Plano</name>
-        <label>Criar Plano</label>
-        <locationX>314</locationX>
-        <locationY>2832</locationY>
-        <assignRecordIdToReference>Idplano2anos</assignRecordIdToReference>
-        <connector>
-            <targetReference>C_pia_2_de_Tipo_de_desconto</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Cotacao__c</field>
-            <value>
-                <elementReference>IdCotacao</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Desconto__c</field>
-            <value>
-                <elementReference>get_prelead.Desconto_Ofertado_2_Anos__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>EconomiaAnual__c</field>
-            <value>
-                <elementReference>get_prelead.CostReduction__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>PrazoFidelidade__c</field>
-            <value>
-                <numberValue>24.0</numberValue>
-            </value>
-        </inputAssignments>
-        <object>Plano__c</object>
-    </recordCreates>
     <recordLookups>
-        <name>get_cota_o</name>
-        <label>get cotação</label>
-        <locationX>446</locationX>
-        <locationY>2316</locationY>
+        <name>Get_blocklist</name>
+        <label>Get blocklist</label>
+        <locationX>644</locationX>
+        <locationY>2400</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>tem_cota_o</targetReference>
+            <targetReference>blocklis</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>Lead__c</field>
+            <field>Name</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.Id</elementReference>
+                <elementReference>cepsemtraco</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Empresa_do_Grupo__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>get_prelead.Company__c</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Cotacao__c</object>
+        <object>BlockList__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
@@ -682,9 +370,6 @@
         <label>Atualiza ID do Lead</label>
         <locationX>50</locationX>
         <locationY>384</locationY>
-        <connector>
-            <targetReference>Criar_Contato</targetReference>
-        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -854,12 +539,55 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
+        <name>desqualifica_o</name>
+        <label>desqualificação</label>
+        <locationX>512</locationX>
+        <locationY>2616</locationY>
+        <inputAssignments>
+            <field>Data_de_Desqualificacao__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DisqualifiedLead__c</field>
+            <value>
+                <stringValue>Distribuidora não atendida</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Disqualified__c</field>
+            <value>
+                <stringValue>Blocklist</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Distribuidora_n_o_Atendida__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OutOfRegion__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Perdido</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>upd_fatura</name>
         <label>upd fatura</label>
         <locationX>578</locationX>
         <locationY>2124</locationY>
         <connector>
-            <targetReference>get_cota_o</targetReference>
+            <targetReference>Get_blocklist</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1031,7 +759,7 @@
         <locationX>314</locationX>
         <locationY>2124</locationY>
         <connector>
-            <targetReference>get_cota_o</targetReference>
+            <targetReference>Get_blocklist</targetReference>
         </connector>
         <flowName>Subflow_criacao_de_fatura</flowName>
         <inputAssignments>
@@ -1172,81 +900,6 @@
                 <elementReference>get_prelead.Volume_considerado_para_estudo_kWh__c</elementReference>
             </value>
         </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <subflows>
-        <name>Criar_Contato</name>
-        <label>Criar Contato</label>
-        <locationX>50</locationX>
-        <locationY>492</locationY>
-        <flowName>Subflow_Cria_o_de_Contato</flowName>
-        <inputAssignments>
-            <name>DatadeAniversario</name>
-            <value>
-                <elementReference>$Record.BirthDate__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>Email</name>
-            <value>
-                <elementReference>$Record.Email</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>EstadoCivil</name>
-            <value>
-                <elementReference>$Record.MaritalStatus__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>Lead</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>Locale</name>
-            <value>
-                <stringValue>BR</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>NaturezaJuridica</name>
-            <value>
-                <elementReference>$Record.PFPJ__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>PrimeiroNome</name>
-            <value>
-                <elementReference>$Record.FirstName</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>Profissao</name>
-            <value>
-                <elementReference>$Record.Occupation__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>Telefone</name>
-            <value>
-                <elementReference>$Record.Phone</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>UltimoNome</name>
-            <value>
-                <elementReference>$Record.LastName</elementReference>
-            </value>
-        </inputAssignments>
-    </subflows>
-    <subflows>
-        <name>Ganho_no_Lead</name>
-        <label>Ganho no Lead</label>
-        <locationX>314</locationX>
-        <locationY>4032</locationY>
-        <flowName>Ganho_no_Lead</flowName>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
     <variables>

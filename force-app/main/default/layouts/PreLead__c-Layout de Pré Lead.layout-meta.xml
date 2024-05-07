@@ -56,6 +56,10 @@
                 <behavior>Edit</behavior>
                 <field>Data_Primeiro_Contato__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Telefone_MKT__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -585,10 +589,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>CreatedById</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Fluxo__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
