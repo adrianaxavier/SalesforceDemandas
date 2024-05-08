@@ -41,10 +41,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>ANÁLISE DE FATURAS</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>APP</fullName>
             <default>false</default>
         </values>
