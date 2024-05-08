@@ -18,11 +18,6 @@
                 <label>ALTERAÇÃO DE VENCIMENTO</label>
             </value>
             <value>
-                <fullName>ANÁLISE DE FATURAS</fullName>
-                <default>false</default>
-                <label>ANÁLISE DE FATURAS</label>
-            </value>
-            <value>
                 <fullName>CANCELAMENTO DE FATURA</fullName>
                 <default>false</default>
                 <label>CANCELAMENTO DE FATURA</label>
@@ -96,6 +91,22 @@
                 <fullName>CONTRATO</fullName>
                 <default>false</default>
                 <label>CONTRATO</label>
+            </value>
+            <value>
+                <fullName>CONSUMO IRREGULAR</fullName>
+                <default>false</default>
+                <label>CONSUMO IRREGULAR</label>
+            </value>
+            <value>
+                <fullName>DESAGREGADOR</fullName>
+                <default>false</default>
+                <label>DESAGREGADOR</label>
+            </value>
+            <value>
+                <fullName>ANÁLISE DE FATURAS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ANÁLISE DE FATURAS</label>
             </value>
         </valueSetDefinition>
     </valueSet>

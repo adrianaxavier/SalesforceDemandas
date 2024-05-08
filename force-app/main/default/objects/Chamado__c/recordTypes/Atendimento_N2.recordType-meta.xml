@@ -42,10 +42,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>ANÁLISE DE FATURAS</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>APP</fullName>
             <default>false</default>
         </values>
@@ -62,6 +58,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>CONSUMO IRREGULAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>CONTRATO</fullName>
             <default>false</default>
         </values>
@@ -71,6 +71,10 @@
         </values>
         <values>
             <fullName>DANOS ELÉTRICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DESAGREGADOR</fullName>
             <default>false</default>
         </values>
         <values>
