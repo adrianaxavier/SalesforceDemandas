@@ -3,11 +3,15 @@
     <fullName>Delta</fullName>
     <isActive>true</isActive>
     <values>
-        <fullName>Em Andamento</fullName>
+        <fullName>Ass%2E Termo de Adesão</fullName>
         <default>false</default>
     </values>
     <values>
-        <fullName>Em Negociação</fullName>
+        <fullName>Dúvidas e Ajustes</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Estudo Apresentado</fullName>
         <default>false</default>
     </values>
     <values>
@@ -15,15 +19,11 @@
         <default>false</default>
     </values>
     <values>
+        <fullName>Negociação</fullName>
+        <default>false</default>
+    </values>
+    <values>
         <fullName>Perdido</fullName>
-        <default>false</default>
-    </values>
-    <values>
-        <fullName>Proposta</fullName>
-        <default>false</default>
-    </values>
-    <values>
-        <fullName>Qualificação</fullName>
         <default>false</default>
     </values>
 </BusinessProcess>

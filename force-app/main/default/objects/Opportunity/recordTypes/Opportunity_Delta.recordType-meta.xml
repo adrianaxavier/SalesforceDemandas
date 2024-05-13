@@ -116,6 +116,37 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Fonte__c</picklist>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indicação Clientes MGM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indicação Interna Colaboradores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indicação Interna Consultores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parceiros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parcerias ACL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>ForecastCategoryName</picklist>
         <values>
             <fullName>Best Case</fullName>

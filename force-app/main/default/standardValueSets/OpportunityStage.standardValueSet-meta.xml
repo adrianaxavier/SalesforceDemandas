@@ -2,12 +2,48 @@
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <sorted>false</sorted>
     <standardValue>
-        <fullName>Agendar Reunião</fullName>
+        <fullName>Novo</fullName>
         <default>false</default>
-        <label>Agendar Reunião</label>
+        <label>Novo</label>
         <closed>false</closed>
         <forecastCategory>Pipeline</forecastCategory>
-        <probability>3</probability>
+        <probability>1</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Estudo Apresentado</fullName>
+        <default>false</default>
+        <label>Estudo Apresentado</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>2</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Negociação</fullName>
+        <default>false</default>
+        <label>Negociação</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>20</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Dúvidas e Ajustes</fullName>
+        <default>false</default>
+        <label>Dúvidas e Ajustes</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Ass. Termo de Adesão</fullName>
+        <default>false</default>
+        <label>Ass. Termo de Adesão</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>80</probability>
         <won>false</won>
     </standardValue>
     <standardValue>
@@ -47,24 +83,6 @@
         <won>false</won>
     </standardValue>
     <standardValue>
-        <fullName>Geração de Contrato</fullName>
-        <default>false</default>
-        <label>Geração de Contrato</label>
-        <closed>false</closed>
-        <forecastCategory>Pipeline</forecastCategory>
-        <probability>85</probability>
-        <won>false</won>
-    </standardValue>
-    <standardValue>
-        <fullName>Coleta de Assinatura</fullName>
-        <default>false</default>
-        <label>Coleta de Assinatura</label>
-        <closed>false</closed>
-        <forecastCategory>Forecast</forecastCategory>
-        <probability>95</probability>
-        <won>false</won>
-    </standardValue>
-    <standardValue>
         <fullName>Ganho</fullName>
         <default>false</default>
         <label>Ganho</label>
@@ -89,15 +107,6 @@
         <closed>false</closed>
         <forecastCategory>Pipeline</forecastCategory>
         <probability>25</probability>
-        <won>false</won>
-    </standardValue>
-    <standardValue>
-        <fullName>Novo</fullName>
-        <default>false</default>
-        <label>Novo</label>
-        <closed>false</closed>
-        <forecastCategory>Pipeline</forecastCategory>
-        <probability>1</probability>
         <won>false</won>
     </standardValue>
 </StandardValueSet>
