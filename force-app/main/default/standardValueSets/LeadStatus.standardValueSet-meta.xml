@@ -38,6 +38,12 @@
         <converted>false</converted>
     </standardValue>
     <standardValue>
+        <fullName>Pendências</fullName>
+        <default>false</default>
+        <label>Pendências</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
         <fullName>Pendência Cliente</fullName>
         <default>false</default>
         <label>Pendência Cliente</label>
