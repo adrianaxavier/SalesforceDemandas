@@ -56,9 +56,6 @@
         <label>verifica se existe fatura</label>
         <locationX>473</locationX>
         <locationY>984</locationY>
-        <defaultConnector>
-            <targetReference>Cria_Fatura</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>não</defaultConnectorLabel>
         <rules>
             <name>simqwefgsdsdf</name>
@@ -74,6 +71,21 @@
                 <targetReference>Upd_fatura_distribuidora</targetReference>
             </connector>
             <label>sim</label>
+        </rules>
+        <rules>
+            <name>N_o_mas_precisa_criar</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Link_Download__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Cria_Fatura</targetReference>
+            </connector>
+            <label>Não mas precisa criar</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -1241,7 +1253,7 @@
     <recordUpdates>
         <name>Upd_fatura_distribuidora</name>
         <label>Upd fatura distribuidora</label>
-        <locationX>341</locationX>
+        <locationX>209</locationX>
         <locationY>1092</locationY>
         <inputAssignments>
             <field>AccountValue__c</field>
@@ -1331,7 +1343,7 @@
     <subflows>
         <name>Cria_Fatura</name>
         <label>Cria Fatura</label>
-        <locationX>605</locationX>
+        <locationX>473</locationX>
         <locationY>1092</locationY>
         <flowName>Subflow_criacao_de_fatura</flowName>
         <inputAssignments>
