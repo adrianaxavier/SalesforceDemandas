@@ -2,6 +2,22 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <assignments>
+        <name>Atribui_Lead_no_Prelead</name>
+        <label>Atribui Lead no Prelead</label>
+        <locationX>677</locationX>
+        <locationY>1058</locationY>
+        <assignmentItems>
+            <assignToReference>Obter_Pr_lead.Lead__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varNewLead.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>upd_get_Pre_Lead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Atribui_o_1</name>
         <label>Add Fiels of Lead</label>
         <locationX>314</locationX>
@@ -683,6 +699,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Obter_Pr_lead.Whatsapp__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewLead</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Lead</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -1371,6 +1394,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Obter_Pr_lead.Whatsapp__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewLead</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Lead</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -2187,6 +2217,9 @@
         <locationX>1370</locationX>
         <locationY>674</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
+        <connector>
+            <targetReference>Atribui_Lead_no_Prelead</targetReference>
+        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -2440,12 +2473,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>FirstName</field>
-            <value>
-                <elementReference>prname</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Fluxo__c</field>
             <value>
                 <stringValue>Lead</stringValue>
@@ -2502,7 +2529,7 @@
         <inputAssignments>
             <field>LastName</field>
             <value>
-                <elementReference>sobrenome</elementReference>
+                <elementReference>Obter_Pr_lead.Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2819,6 +2846,9 @@
         <locationX>1634</locationX>
         <locationY>674</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
+        <connector>
+            <targetReference>Atribui_Lead_no_Prelead</targetReference>
+        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -3072,12 +3102,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>FirstName</field>
-            <value>
-                <elementReference>prname</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Fluxo__c</field>
             <value>
                 <stringValue>Lead</stringValue>
@@ -3134,7 +3158,7 @@
         <inputAssignments>
             <field>LastName</field>
             <value>
-                <elementReference>sobrenome</elementReference>
+                <elementReference>Obter_Pr_lead.Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3445,6 +3469,9 @@
         <locationX>578</locationX>
         <locationY>674</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
+        <connector>
+            <targetReference>Atribui_Lead_no_Prelead</targetReference>
+        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -3698,12 +3725,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>FirstName</field>
-            <value>
-                <elementReference>prname</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Fluxo__c</field>
             <value>
                 <stringValue>Lead</stringValue>
@@ -3760,7 +3781,7 @@
         <inputAssignments>
             <field>LastName</field>
             <value>
-                <elementReference>sobrenome</elementReference>
+                <elementReference>Obter_Pr_lead.Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4077,6 +4098,9 @@
         <locationX>842</locationX>
         <locationY>674</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
+        <connector>
+            <targetReference>Atribui_Lead_no_Prelead</targetReference>
+        </connector>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -4330,12 +4354,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>FirstName</field>
-            <value>
-                <elementReference>prname</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Fluxo__c</field>
             <value>
                 <stringValue>Lead</stringValue>
@@ -4392,7 +4410,7 @@
         <inputAssignments>
             <field>LastName</field>
             <value>
-                <elementReference>sobrenome</elementReference>
+                <elementReference>Obter_Pr_lead.Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4767,10 +4785,23 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>C_pia_1_de_upd_varnewlead</name>
+        <label>Cópia 1 de upd varnewlead</label>
+        <locationX>314</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference>Atribui_Lead_no_Prelead</targetReference>
+        </connector>
+        <inputReference>varNewLead</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>C_pia_2_de_up_get_lead</name>
         <label>up get lead</label>
         <locationX>1106</locationX>
         <locationY>674</locationY>
+        <connector>
+            <targetReference>upd_varnewlead</targetReference>
+        </connector>
         <inputReference>Get_Lead</inputReference>
     </recordUpdates>
     <recordUpdates>
@@ -4778,7 +4809,27 @@
         <label>up get lead</label>
         <locationX>314</locationX>
         <locationY>674</locationY>
+        <connector>
+            <targetReference>C_pia_1_de_upd_varnewlead</targetReference>
+        </connector>
         <inputReference>Get_Lead</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>upd_get_Pre_Lead</name>
+        <label>upd get Pre Lead</label>
+        <locationX>677</locationX>
+        <locationY>1166</locationY>
+        <inputReference>Obter_Pr_lead</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>upd_varnewlead</name>
+        <label>upd varnewlead</label>
+        <locationX>1106</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference>Atribui_Lead_no_Prelead</targetReference>
+        </connector>
+        <inputReference>varNewLead</inputReference>
     </recordUpdates>
     <start>
         <locationX>551</locationX>
@@ -4793,13 +4844,6 @@
         <isViewedAsPlainText>false</isViewedAsPlainText>
         <text>&lt;p&gt;Olá {!prname}, Tudo bem?&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sou o *Sérgio* Reis - Coordenador Comercial aqui na *LUZ (sualuz.com.br) - Grupo Delta Energia*&lt;/p&gt;&lt;p&gt;Recebemos a sua solicitação de contato com *interesse em obter economia de até 40% na fatura de energia* para a *sua empresa*&lt;/p&gt;&lt;p&gt;Para te passar o *quanto a sua empresa pode economizar*, precisamos de uma *foto ou PDF da sua fatura de energia mais recente*&lt;/p&gt;&lt;p&gt;Você consegue me *enviar uma foto ou PDF da sua fatura de energia?*&lt;/p&gt;</text>
     </textTemplates>
-    <variables>
-        <name>Idcotacao</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>true</isInput>
-        <isOutput>true</isOutput>
-    </variables>
     <variables>
         <name>varIDPrelead</name>
         <dataType>String</dataType>
