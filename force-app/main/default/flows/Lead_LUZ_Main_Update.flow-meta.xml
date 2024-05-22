@@ -1484,6 +1484,25 @@
         </outputAssignments>
     </recordLookups>
     <recordUpdates>
+        <name>Atualiza_Id</name>
+        <label>Atualiza Id</label>
+        <locationX>1007</locationX>
+        <locationY>4295</locationY>
+        <inputAssignments>
+            <field>Conta__c</field>
+            <value>
+                <elementReference>IDdaconta</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Oportunidade__c</field>
+            <value>
+                <elementReference>IdOpp</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Atualiza_Lead</name>
         <label>Atualiza Lead</label>
         <locationX>1007</locationX>
@@ -1542,7 +1561,10 @@
         <label>upd fatura</label>
         <locationX>1007</locationX>
         <locationY>4187</locationY>
-        <inputReference>get_fatura</inputReference>
+        <connector>
+            <targetReference>Atualiza_Id</targetReference>
+        </connector>
+        <inputReference>Getfatura</inputReference>
     </recordUpdates>
     <start>
         <locationX>1150</locationX>
