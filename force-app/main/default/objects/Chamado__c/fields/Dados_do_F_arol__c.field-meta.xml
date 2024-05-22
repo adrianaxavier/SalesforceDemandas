@@ -35,22 +35,14 @@
                 IF(
                     (TODAY() - DATEVALUE(CreatedDate)) &lt;= 10,
                     &quot;Laranja&quot;,
-  
-                       IF(
-                    (TODAY() - DATEVALUE(CreatedDate)) &gt;= 10,
-                    &quot;Laranja&quot;,             
-
                     IF(
                         (TODAY() - DATEVALUE(CreatedDate)) &gt;= 15,
                         &quot;Vermelho&quot;,
                         &quot;Cinza&quot;
                     )
-                ))
+                )
             )
         ),
-
-
-
         IF(
             ISPICKVAL(Status__c, &apos;Aguardando Cliente&apos;),
             IF(
@@ -62,22 +54,33 @@
                     IF(
                         (TODAY() - DATEVALUE(CreatedDate)) &lt;= 15,
                         &quot;Laranja&quot;,
- 
-                          IF(
-                        (TODAY() - DATEVALUE(CreatedDate)) &gt;= 15,
-                        &quot;Laranja&quot;,
-
                         IF(
                             (TODAY() - DATEVALUE(CreatedDate)) &gt;= 21,
                             &quot;Vermelho&quot;,
                             &quot;Cinza&quot;
                         )
-                    ))
+                    )
                 )
             ),
             IF(
                 ISPICKVAL(Status__c, &apos;Aguardando a Distribuidora&apos;),
-                &quot;Cinza&quot;,
+                IF(
+                    (TODAY() - (Data_Previs_o_Distribuidora__c)) &lt; 0,
+                    &quot;Verde&quot;,
+                    IF(
+                        (TODAY() - (Data_Previs_o_Distribuidora__c)) = 0,
+                        &quot;Amarelo&quot;,
+                        IF(
+                            (TODAY() - (Data_Previs_o_Distribuidora__c)) &lt;= 3,
+                            &quot;Laranja&quot;,
+                            IF(
+                                (TODAY() - (Data_Previs_o_Distribuidora__c)) &gt;= 4,
+                                &quot;Vermelho&quot;,
+                                &quot;Cinza&quot;
+                            )
+                        )
+                    )
+                ),
                 IF(
                     ISPICKVAL(Status__c, &apos;Aguardando Gestão&apos;),
                     &quot;Cinza&quot;,
