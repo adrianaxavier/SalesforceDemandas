@@ -22,38 +22,31 @@
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>58.0</apiVersion>
-    <assignments>
-        <name>SetDelta</name>
-        <label>SetDelta</label>
-        <locationX>468</locationX>
-        <locationY>600</locationY>
-        <assignmentItems>
-            <assignToReference>idDeltaCompany</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>LoopCompany.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>LoopCompany</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>SetLUZ</name>
-        <label>SetLUZ</label>
-        <locationX>732</locationX>
-        <locationY>600</locationY>
-        <assignmentItems>
-            <assignToReference>idLuzCompany</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>LoopCompany.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>LoopCompany</targetReference>
-        </connector>
-    </assignments>
+    <decisions>
+        <name>Apto_pra_Cad_ncia</name>
+        <label>Apto pra Cadência?</label>
+        <locationX>380</locationX>
+        <locationY>276</locationY>
+        <defaultConnector>
+            <targetReference>Grupo_Economico</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>Simadsfasdfasdf</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Desconto_Ofertado_Liberdade_total__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>PreLead_Fluxo_de_Cad_ncia</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Block_List</name>
         <label>Block List</label>
@@ -74,46 +67,6 @@
                 <targetReference>Desqualificar</targetReference>
             </connector>
             <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Company_Name</name>
-        <label>Company Name</label>
-        <locationX>732</locationX>
-        <locationY>492</locationY>
-        <defaultConnector>
-            <targetReference>LoopCompany</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Delta_Company_Name</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>LoopCompany.Name</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Delta</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>SetDelta</targetReference>
-            </connector>
-            <label>Delta</label>
-        </rules>
-        <rules>
-            <name>Luz_Company_Name</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>LoopCompany.Name</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>LUZ</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>SetLUZ</targetReference>
-            </connector>
-            <label>Luz</label>
         </rules>
     </decisions>
     <decisions>
@@ -177,42 +130,28 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Empresa</name>
-        <label>Empresa</label>
-        <locationX>182</locationX>
-        <locationY>2292</locationY>
+        <name>Grupo_Economico</name>
+        <label>Grupo Economico?</label>
+        <locationX>380</locationX>
+        <locationY>576</locationY>
         <defaultConnector>
-            <targetReference>Atualizar_LUZ</targetReference>
+            <targetReference>Tipo_de_Atualiza_o</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Luz</defaultConnectorLabel>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
-            <name>Delta_Inside_Sales</name>
+            <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.PFPJ__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>PJ</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.AccountValue__c</leftValueReference>
-                <operator>GreaterThanOrEqualTo</operator>
-                <rightValue>
-                    <numberValue>5000.0</numberValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Parceiro__c</leftValueReference>
-                <operator>EqualTo</operator>
+                <leftValueReference>$Record.EconomicGroup__c</leftValueReference>
+                <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Atualizar_Delta_Inside_Sales</targetReference>
+                <targetReference>Grupo_Economico_Pr_Lead_Updates</targetReference>
             </connector>
-            <label>Delta Inside Sales</label>
+            <label>Yes</label>
         </rules>
     </decisions>
     <decisions>
@@ -241,38 +180,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>MGM</name>
-        <label>MGM</label>
-        <locationX>182</locationX>
-        <locationY>1692</locationY>
-        <defaultConnector>
-            <targetReference>Possui_Numero_de_Instala_o</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Não</defaultConnectorLabel>
-        <rules>
-            <name>Sim1</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Medium__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>MGM</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>FLUXO_MGM</targetReference>
-            </connector>
-            <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Parceiro</name>
         <label>É Parceiro?</label>
         <locationX>182</locationX>
-        <locationY>1392</locationY>
-        <defaultConnector>
-            <targetReference>MGM</targetReference>
-        </defaultConnector>
+        <locationY>984</locationY>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
             <name>Sim</name>
@@ -286,56 +197,6 @@
             </conditions>
             <connector>
                 <targetReference>Fluxo_Parceiros</targetReference>
-            </connector>
-            <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Possui_Numero_de_Instala_o</name>
-        <label>Possui Numero de Instalação</label>
-        <locationX>182</locationX>
-        <locationY>1992</locationY>
-        <defaultConnector>
-            <targetReference>Insere_0_na_Instal_o</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Não</defaultConnectorLabel>
-        <rules>
-            <name>Sim6</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.NumeroInstalacao__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Empresa</targetReference>
-            </connector>
-            <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Possui_Telefone</name>
-        <label>Possui Telefone</label>
-        <locationX>182</locationX>
-        <locationY>1092</locationY>
-        <defaultConnector>
-            <targetReference>Parceiro</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Não</defaultConnectorLabel>
-        <rules>
-            <name>Sim8</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.PhoneNumber__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Atualiza_Telefone_MKT</targetReference>
             </connector>
             <label>Sim</label>
         </rules>
@@ -357,7 +218,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Atualiza_LOCALE_e_Primeiro_Nome</targetReference>
+                <targetReference>Parceiro</targetReference>
             </connector>
             <label>Novo</label>
         </rules>
@@ -392,20 +253,6 @@
 )</expression>
     </formulas>
     <label>{Pre-Lead}-Create ADS</label>
-    <loops>
-        <name>LoopCompany</name>
-        <label>LoopCompany</label>
-        <locationX>380</locationX>
-        <locationY>384</locationY>
-        <collectionReference>GetCompany</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>Company_Name</targetReference>
-        </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>Tipo_de_Atualiza_o</targetReference>
-        </noMoreValuesConnector>
-    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -425,19 +272,6 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <recordLookups>
-        <name>GetCompany</name>
-        <label>GetCompany</label>
-        <locationX>380</locationX>
-        <locationY>276</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>LoopCompany</targetReference>
-        </connector>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>Company__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <recordLookups>
         <name>Validar_se_esta_na_block</name>
         <label>Validar se esta na block</label>
@@ -467,28 +301,6 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Atualiza_LOCALE_e_Primeiro_Nome</name>
-        <label>Atualiza LOCALE e Primeiro Nome</label>
-        <locationX>182</locationX>
-        <locationY>984</locationY>
-        <connector>
-            <targetReference>Possui_Telefone</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Primeiro_Nome__c</field>
-            <value>
-                <elementReference>prname</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>locale__c</field>
-            <value>
-                <stringValue>BR</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
         <name>Atualiza_PreLeaad</name>
         <label>Atualiza Pré-Leaad</label>
         <locationX>1370</locationX>
@@ -500,69 +312,6 @@
             <field>Distribuidora__c</field>
             <value>
                 <stringValue>Não Localizada</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Atualiza_Telefone_MKT</name>
-        <label>Atualiza Telefone MKT</label>
-        <locationX>50</locationX>
-        <locationY>1200</locationY>
-        <connector>
-            <targetReference>Parceiro</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Telefone_MKT__c</field>
-            <value>
-                <elementReference>TelefoneFormatado</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Atualizar_Delta_Inside_Sales</name>
-        <label>Atualizar Delta Inside Sales</label>
-        <locationX>50</locationX>
-        <locationY>2400</locationY>
-        <inputAssignments>
-            <field>Company__c</field>
-            <value>
-                <elementReference>idDeltaCompany</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <stringValue>005TT000009UO7lYAG</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>RecordTypeId</field>
-            <value>
-                <stringValue>012HY0000004LmEYAU</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Atualizar_LUZ</name>
-        <label>Atualizar LUZ</label>
-        <locationX>314</locationX>
-        <locationY>2400</locationY>
-        <connector>
-            <targetReference>Criar_o_Contato</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Company__c</field>
-            <value>
-                <elementReference>idLuzCompany</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>RecordTypeId</field>
-            <value>
-                <stringValue>012HY0000004Lm9YAE</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -702,27 +451,11 @@
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
-    <recordUpdates>
-        <name>Insere_0_na_Instal_o</name>
-        <label>Insere 0 na Instalção</label>
-        <locationX>270</locationX>
-        <locationY>2100</locationY>
-        <connector>
-            <targetReference>Empresa</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>NumeroInstalacao__c</field>
-            <value>
-                <stringValue>0</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
     <start>
         <locationX>650</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>GetCompany</targetReference>
+            <targetReference>Apto_pra_Cad_ncia</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -744,42 +477,10 @@
     </start>
     <status>Active</status>
     <subflows>
-        <name>Criar_o_Contato</name>
-        <label>Criar o Contato</label>
-        <locationX>314</locationX>
-        <locationY>2508</locationY>
-        <flowName>Subfluxo_prelead_cricao_de_contato</flowName>
-        <inputAssignments>
-            <name>Record_Id</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-    </subflows>
-    <subflows>
-        <name>FLUXO_MGM</name>
-        <label>FLUXO MGM</label>
-        <locationX>50</locationX>
-        <locationY>1800</locationY>
-        <connector>
-            <targetReference>Possui_Numero_de_Instala_o</targetReference>
-        </connector>
-        <flowName>Atualizar_MGM</flowName>
-        <inputAssignments>
-            <name>RecordID</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-    </subflows>
-    <subflows>
         <name>Fluxo_Parceiros</name>
         <label>Fluxo Parceiros</label>
         <locationX>50</locationX>
-        <locationY>1500</locationY>
-        <connector>
-            <targetReference>MGM</targetReference>
-        </connector>
+        <locationY>1092</locationY>
         <flowName>SUBFLOW_pr_lead_createParceiros</flowName>
         <inputAssignments>
             <name>Cupom</name>
@@ -789,6 +490,50 @@
         </inputAssignments>
         <inputAssignments>
             <name>Record_id</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Grupo_Economico_Pr_Lead_Updates</name>
+        <label>[Grupo Economico] Pré-Lead Updates</label>
+        <locationX>248</locationX>
+        <locationY>684</locationY>
+        <connector>
+            <targetReference>Tipo_de_Atualiza_o</targetReference>
+        </connector>
+        <flowName>FWEconomicGroupPreLeadUpdates</flowName>
+        <inputAssignments>
+            <name>idEconomicGroup</name>
+            <value>
+                <elementReference>$Record.EconomicGroup__c</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>PreLead_Fluxo_de_Cad_ncia</name>
+        <label>[PreLead] Fluxo de Cadência</label>
+        <locationX>248</locationX>
+        <locationY>384</locationY>
+        <connector>
+            <targetReference>Grupo_Economico</targetReference>
+        </connector>
+        <flowName>FWPreLeadCustomCadence</flowName>
+        <inputAssignments>
+            <name>prelead</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>PreLeadStatusPriorValue</name>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>recordId</name>
             <value>
                 <elementReference>$Record.Id</elementReference>
             </value>

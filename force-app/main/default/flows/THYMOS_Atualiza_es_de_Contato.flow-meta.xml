@@ -98,7 +98,7 @@
         <expression>ISNEW()</expression>
     </formulas>
     <interviewLabel>THYMOS- Atualizações de Contato {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>[Contato] - Atualizações de Contato</label>
+    <label>THYMOS- Atualizações de Contato</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -260,6 +260,21 @@
         <connector>
             <targetReference>Tipo_de_Execu_o</targetReference>
         </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Recordtype_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ThymosPJ</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Recordtype_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Wisebyte</stringValue>
+            </value>
+        </filters>
         <object>Lead</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
