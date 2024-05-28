@@ -181,16 +181,7 @@ public class LeadTriggerValidation {
             }
             else
             {
-                string erroQualificado = '';
-                if (lead.DisqualifiedLead__c != null)
-                    erroQualificado += '(campo: Lead Desqualificado) só pode ser informado para Lead desqualificado | ';
-                if (lead.Disqualified__c != null)
-                    erroQualificado += '(campo: Observação Lead Desqualificado) só pode ser informado para Lead desqualificado';
-                if (erroQualificado != '')
-                {
-                    erro = true;
-                    lead.addError(erroQualificado);
-                }
+              
             }
         }
         return erro;
@@ -364,6 +355,46 @@ public class LeadTriggerValidation {
     //------------------------------------------------------------------------------------------------
     // FIM Obter DevelperName para identificar o tipo de registro.
     //------------------------------------------------------------------------------------------------
+    
+     //------------------------------------------------------------------------------------------------
+    // Atualizar Status
+    //------------------------------------------------------------------------------------------------   
+    
+    public static void validateLeadStatus(List<Lead> leads) {
+        for (Lead lead : leads) {
+            // Verificação para Status Simulação
+            if (lead.Link_Download__c != null &&
+                lead.Multa_Da_distribuidora__c == false &&
+                lead.Erro_Gen_rico_de_Simula_o__c == false &&
+                lead.Erro_Leitura_Fatura__c == false &&
+                lead.Fora_da_rea_de_Cobertura__c == false &&
+                lead.Distribuidora_n_o_Atendida__c == false) {
+                
+                lead.Status__c = 'Simulação';
+            }
+
+            // Verificação para Status Perdido
+            if (lead.Fora_da_rea_de_Cobertura__c == true &&
+                lead.DisqualifiedLead__c != null &&
+                lead.Disqualified__c == 'Blocklist') {
+                
+                lead.Status__c = 'Perdido';
+            } else if (lead.Status__c == 'Perdido') {
+                // Caso seja marcado manualmente como Perdido
+                lead.Status__c = 'Perdido';
+            }
+
+            // Verificação para Status Ganho
+            if (lead.Contrato_Gerado__c == true) {
+                lead.Status__c = 'Ganho';
+            }
+        }
+    }
+     //------------------------------------------------------------------------------------------------
+    // FIM  de validar status
+    //------------------------------------------------------------------------------------------------
+       
+    
    public static void subirCobertura() {
                 Integer i = 0;
                 i++;

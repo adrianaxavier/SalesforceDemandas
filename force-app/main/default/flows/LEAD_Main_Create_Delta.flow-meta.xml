@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Validar_CEP</name>
         <label>Validar CEP</label>
-        <locationX>644</locationX>
+        <locationX>622</locationX>
         <locationY>276</locationY>
         <actionName>BuscaCep.ObterCep</actionName>
         <actionType>externalService</actionType>
@@ -23,88 +23,10 @@
     </actionCalls>
     <apiVersion>59.0</apiVersion>
     <decisions>
-        <name>blocklis</name>
-        <label>blocklis?</label>
-        <locationX>644</locationX>
-        <locationY>2508</locationY>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>simerwgwergf</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Get_blocklist.Id</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>desqualifica_o</targetReference>
-            </connector>
-            <label>sim</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Dentro_da_rea_Atendida_LUZ</name>
-        <label>Dentro da Área Atendida LUZ</label>
-        <locationX>446</locationX>
-        <locationY>492</locationY>
-        <defaultConnector>
-            <targetReference>Localiazr_Distribuidora</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Não</defaultConnectorLabel>
-        <rules>
-            <name>sim2</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>Validar_CEP.2XX.idDistribuidora</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>1246.0</numberValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Validar_CEP.2XX.idDistribuidora</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>1251.0</numberValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Validar_CEP.2XX.idDistribuidora</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>1232.0</numberValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Validar_CEP.2XX.idDistribuidora</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>1261.0</numberValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Validar_CEP.2XX.idDistribuidora</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>1067.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Localiazr_Distribuidora_0</targetReference>
-            </connector>
-            <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Localizado</name>
         <label>Localizado</label>
-        <locationX>644</locationX>
+        <locationX>622</locationX>
         <locationY>384</locationY>
-        <defaultConnector>
-            <targetReference>Atualiza_Lead</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
             <name>Sim1</name>
@@ -117,32 +39,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Dentro_da_rea_Atendida_LUZ</targetReference>
-            </connector>
-            <label>Sim</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>MGM</name>
-        <label>MGM</label>
-        <locationX>644</locationX>
-        <locationY>1392</locationY>
-        <defaultConnector>
-            <targetReference>get_prelead</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Não</defaultConnectorLabel>
-        <rules>
-            <name>Sim3</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Medium__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>MGM</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Atualiza_MGM</targetReference>
+                <targetReference>Localiazr_Distribuidora</targetReference>
             </connector>
             <label>Sim</label>
         </rules>
@@ -150,11 +47,8 @@
     <decisions>
         <name>Possui_Cupom</name>
         <label>Possui Cupom</label>
-        <locationX>644</locationX>
-        <locationY>984</locationY>
-        <defaultConnector>
-            <targetReference>Atualiza_a_Fonte</targetReference>
-        </defaultConnector>
+        <locationX>182</locationX>
+        <locationY>276</locationY>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
             <name>Sim</name>
@@ -172,68 +66,9 @@
             <label>Sim</label>
         </rules>
     </decisions>
-    <decisions>
-        <name>tem_fatura</name>
-        <label>tem fatura?</label>
-        <locationX>446</locationX>
-        <locationY>2016</locationY>
-        <defaultConnector>
-            <targetReference>upd_fatura</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>n_o</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>get_fatura</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>cria_o_de_fatura</targetReference>
-            </connector>
-            <label>não</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Tem_pre_lead</name>
-        <label>Tem pre-lead</label>
-        <locationX>644</locationX>
-        <locationY>1800</locationY>
-        <defaultConnector>
-            <targetReference>Get_blocklist</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
-        <rules>
-            <name>Resultado_1_de_Decis_o_6</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>get_prelead</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>get_fatura</targetReference>
-            </connector>
-            <label>sim</label>
-        </rules>
-    </decisions>
     <environments>Default</environments>
-    <formulas>
-        <name>cepsemtraco</name>
-        <dataType>String</dataType>
-        <expression>IF(
-    CONTAINS({!$Record.CEP__c}, &quot;-&quot;),
-    SUBSTITUTE({!$Record.CEP__c}, &quot;-&quot;, &quot;&quot;),
-    {!$Record.CEP__c}
-)</expression>
-    </formulas>
     <interviewLabel>[LEAD]Main Create Delta {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>[LEAD]Main Create Delta/LUZ</label>
+    <label>[LEAD]Main Create Delta</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -254,80 +89,10 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <name>Get_blocklist</name>
-        <label>Get blocklist</label>
-        <locationX>644</locationX>
-        <locationY>2400</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>blocklis</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Name</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>cepsemtraco</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Empresa_do_Grupo__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>get_prelead.Company__c</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>BlockList__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>get_fatura</name>
-        <label>get fatura</label>
-        <locationX>446</locationX>
-        <locationY>1908</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>tem_fatura</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Pr_Lead__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Pr_Lead__c</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Fatura_Distribuidora__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>get_prelead</name>
-        <label>get prelead</label>
-        <locationX>644</locationX>
-        <locationY>1692</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Tem_pre_lead</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Pr_Lead__c</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>PreLead__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
         <name>Localiazr_Distribuidora</name>
         <label>Localiazr Distribuidora</label>
-        <locationX>578</locationX>
-        <locationY>600</locationY>
+        <locationX>490</locationX>
+        <locationY>492</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Atualizar_Lead</targetReference>
@@ -344,94 +109,11 @@
         <object>Distributor__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordLookups>
-        <name>Localiazr_Distribuidora_0</name>
-        <label>Localiazr Distribuidora</label>
-        <locationX>314</locationX>
-        <locationY>600</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Atualizar_Lead_0</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>DeltaCode__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Validar_CEP.2XX.idDistribuidora</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Distributor__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordUpdates>
-        <name>Atualiza_ID_do_Lead</name>
-        <label>Atualiza ID do Lead</label>
-        <locationX>50</locationX>
-        <locationY>384</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Pr_Lead__c</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Lead__c</field>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <object>PreLead__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Atualiza_Lead</name>
-        <label>Atualiza Lead</label>
-        <locationX>842</locationX>
-        <locationY>492</locationY>
-        <connector>
-            <targetReference>Possui_Cupom</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>DistribuidoraLuz__c</field>
-            <value>
-                <stringValue>Não Localizada</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Atualiza_MGM</name>
-        <label>Atualiza MGM</label>
-        <locationX>512</locationX>
-        <locationY>1500</locationY>
-        <connector>
-            <targetReference>get_prelead</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>MGMT__c</field>
-            <value>
-                <stringValue>MGM</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>MGM__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
     <recordUpdates>
         <name>Atualizar_Lead</name>
         <label>Atualizar Lead</label>
-        <locationX>578</locationX>
-        <locationY>708</locationY>
-        <connector>
-            <targetReference>Possui_Cupom</targetReference>
-        </connector>
+        <locationX>490</locationX>
+        <locationY>600</locationY>
         <inputAssignments>
             <field>Address__c</field>
             <value>
@@ -442,18 +124,6 @@
             <field>City__c</field>
             <value>
                 <elementReference>Validar_CEP.2XX.cidade</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>DistribuidoraLuz__c</field>
-            <value>
-                <elementReference>Validar_CEP.2XX.nomeFantasia</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Distribuidora_n_o_Atendida__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -476,214 +146,22 @@
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
-    <recordUpdates>
-        <name>Atualizar_Lead_0</name>
-        <label>Atualizar Lead</label>
-        <locationX>314</locationX>
-        <locationY>708</locationY>
+    <start>
+        <locationX>276</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Possui_Cupom</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Address__c</field>
-            <value>
-                <elementReference>Validar_CEP.2XX.logradouroCompleto</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>City__c</field>
-            <value>
-                <elementReference>Validar_CEP.2XX.cidade</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>DistribuidoraLuz__c</field>
-            <value>
-                <elementReference>Validar_CEP.2XX.nomeFantasia</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Distributor__c</field>
-            <value>
-                <elementReference>Localiazr_Distribuidora.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>District__c</field>
-            <value>
-                <elementReference>Validar_CEP.2XX.bairro</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>UF__c</field>
-            <value>
-                <elementReference>Validar_CEP.2XX.uf</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Campo_Data_Cria_o</name>
-        <label>Campo Data Criação</label>
-        <locationX>50</locationX>
-        <locationY>276</locationY>
-        <connector>
-            <targetReference>Atualiza_ID_do_Lead</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Data_Da_Cria_o__c</field>
-            <value>
-                <elementReference>$Flow.CurrentDateTime</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>desqualifica_o</name>
-        <label>desqualificação</label>
-        <locationX>512</locationX>
-        <locationY>2616</locationY>
-        <inputAssignments>
-            <field>Data_de_Desqualificacao__c</field>
-            <value>
-                <elementReference>$Flow.CurrentDateTime</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>DisqualifiedLead__c</field>
-            <value>
-                <stringValue>Distribuidora não atendida</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Disqualified__c</field>
-            <value>
-                <stringValue>Blocklist</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Distribuidora_n_o_Atendida__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>OutOfRegion__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status__c</field>
-            <value>
-                <stringValue>Perdido</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>upd_fatura</name>
-        <label>upd fatura</label>
-        <locationX>578</locationX>
-        <locationY>2124</locationY>
-        <connector>
-            <targetReference>Get_blocklist</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>Id</field>
+            <field>Company__c</field>
             <operator>EqualTo</operator>
-            <value>
-                <elementReference>get_fatura.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>AccountValue__c</field>
-            <value>
-                <elementReference>get_prelead.AccountValue__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Consumo_Abaixo_do_Range__c</field>
-            <value>
-                <elementReference>get_prelead.ConsumoAbaixoRange__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Consumo_Historico__c</field>
-            <value>
-                <elementReference>get_prelead.ConsumoHistorico__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Consumo_Mensal__c</field>
-            <value>
-                <elementReference>get_prelead.ConsumoMensal__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Consumo_Utilizado__c</field>
-            <value>
-                <elementReference>get_prelead.ConsumoUtilizado__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Distribuidora__c</field>
-            <value>
-                <elementReference>get_prelead.Distribuidora__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Link_Download__c</field>
-            <value>
-                <elementReference>get_prelead.Link_Download__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Name</field>
-            <value>
-                <elementReference>get_prelead.FantasyName__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Origem__c</field>
-            <value>
-                <elementReference>get_prelead.InformationSource__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Valor_da_Fatura_R__c</field>
-            <value>
-                <elementReference>get_prelead.Valor_da_Fatura__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Volume_considerado_para_estudo_kWh__c</field>
-            <value>
-                <elementReference>get_prelead.Volume_considerado_para_estudo_kWh__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record.Fatura_Distribuidoras__r</inputReference>
-    </recordUpdates>
-    <start>
-        <locationX>221</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Campo_Data_Cria_o</targetReference>
-        </connector>
-        <filterLogic>or</filterLogic>
-        <filters>
-            <field>Company__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <stringValue>a1FHY00000058WC2AY</stringValue>
-            </value>
         </filters>
         <filters>
-            <field>Company__c</field>
-            <operator>NotEqualTo</operator>
+            <field>Pr_Lead__c</field>
+            <operator>IsNull</operator>
             <value>
-                <stringValue>a1F4x000000vfPPEAY</stringValue>
+                <booleanValue>true</booleanValue>
             </value>
         </filters>
         <object>Lead</object>
@@ -698,47 +176,10 @@
     </start>
     <status>Active</status>
     <subflows>
-        <name>Atualiza_a_Fonte</name>
-        <label>Atualiza a Fonte</label>
-        <locationX>644</locationX>
-        <locationY>1284</locationY>
-        <connector>
-            <targetReference>MGM</targetReference>
-        </connector>
-        <flowName>SUBFLOW_Atualizar_Fonte</flowName>
-        <inputAssignments>
-            <name>IDdoRegistro</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>OrigemdaInformacao</name>
-            <value>
-                <elementReference>$Record.Origem_da_Opera_o__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>Parceiro</name>
-            <value>
-                <elementReference>$Record.Parceiro__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>TPRegistro</name>
-            <value>
-                <stringValue>Lead</stringValue>
-            </value>
-        </inputAssignments>
-    </subflows>
-    <subflows>
         <name>Atualiza_Parceiro</name>
         <label>Atualiza Parceiro</label>
-        <locationX>512</locationX>
-        <locationY>1092</locationY>
-        <connector>
-            <targetReference>Atualiza_a_Fonte</targetReference>
-        </connector>
+        <locationX>50</locationX>
+        <locationY>384</locationY>
         <flowName>SUBFLOW_Lead_createParceiros</flowName>
         <inputAssignments>
             <name>Cupom</name>
@@ -753,188 +194,4 @@
             </value>
         </inputAssignments>
     </subflows>
-    <subflows>
-        <name>cria_o_de_fatura</name>
-        <label>criação de fatura</label>
-        <locationX>314</locationX>
-        <locationY>2124</locationY>
-        <connector>
-            <targetReference>Get_blocklist</targetReference>
-        </connector>
-        <flowName>Subflow_criacao_de_fatura</flowName>
-        <inputAssignments>
-            <name>BaixaRenda</name>
-            <value>
-                <elementReference>get_prelead.Baixa_Renda__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>classificacao</name>
-            <value>
-                <elementReference>get_prelead.Classifica_o__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>consumoabaixorange</name>
-            <value>
-                <elementReference>get_prelead.ConsumoAbaixoRange__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>Distribuidora</name>
-            <value>
-                <elementReference>get_prelead.Distribuidora__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>distribuidoranaoatendida</name>
-            <value>
-                <elementReference>get_prelead.DistribuidoraNaoAtendida__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>errogenericosimulacao</name>
-            <value>
-                <elementReference>get_prelead.ErroGenericoSimulacao__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>erroleiturafatura</name>
-            <value>
-                <elementReference>get_prelead.ErroLeituraFatura__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>erros</name>
-            <value>
-                <elementReference>get_prelead.Erros__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>faturaanexada</name>
-            <value>
-                <elementReference>get_prelead.Fatura_Anexada__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>faturaprocessada</name>
-            <value>
-                <elementReference>get_prelead.Fatura_Processada__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>guiddoarquivo</name>
-            <value>
-                <elementReference>get_prelead.GuidArquivoDaDigitalizacao__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>lead</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>LinkDownload</name>
-            <value>
-                <elementReference>get_prelead.Link_Download__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>multadadistribuidora</name>
-            <value>
-                <elementReference>get_prelead.AssessmentDistributor__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>NomedaFatura</name>
-            <value>
-                <elementReference>get_prelead.FantasyName__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>NomedoArquivoanexocomexten</name>
-            <value>
-                <elementReference>get_prelead.NomeDoAnexoComExtensao__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>origem</name>
-            <value>
-                <elementReference>get_prelead.InformationSource__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>prelead</name>
-            <value>
-                <elementReference>get_prelead.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>scoreserasa</name>
-            <value>
-                <elementReference>get_prelead.ScoreSerasa__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>TarifaBranca</name>
-            <value>
-                <elementReference>get_prelead.Tarifa_Branca__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>ValordaConta</name>
-            <value>
-                <elementReference>get_prelead.AccountValue__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>ValorFatura</name>
-            <value>
-                <elementReference>get_prelead.Valor_da_Fatura__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>Volumeconsideradoparaestudo</name>
-            <value>
-                <elementReference>get_prelead.Volume_considerado_para_estudo_kWh__c</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <variables>
-        <name>IdCotacao</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>Idplano2anos</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>Idplano3anos</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>Idplano5anos</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>IdplanoLT</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
 </Flow>
