@@ -125,6 +125,10 @@
     <picklistValues>
         <picklist>Motivo__c</picklist>
         <values>
+            <fullName>ACL</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>APP</fullName>
             <default>false</default>
         </values>
@@ -186,6 +190,10 @@
         </values>
         <values>
             <fullName>RECLAMAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RECLAME AQUI%2FPROCON</fullName>
             <default>false</default>
         </values>
         <values>
@@ -379,6 +387,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>AVALIAÇÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>BOAS VINDAS</fullName>
             <default>false</default>
         </values>
@@ -395,7 +407,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>COBRANÇA</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>COM MEDIDOR INSTALADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONDIÇÕES DE PAGAMENTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSULTA</fullName>
             <default>false</default>
         </values>
         <values>
@@ -571,6 +595,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>ONBOARDING</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>OUTROS</fullName>
             <default>false</default>
         </values>
@@ -604,6 +632,10 @@
         </values>
         <values>
             <fullName>RETORNO AGENDADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RÉPLICA</fullName>
             <default>false</default>
         </values>
         <values>
@@ -648,6 +680,10 @@
         </values>
         <values>
             <fullName>TRANSFERENCIA INSIDE SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRATATIVA DE PROBLEMAS</fullName>
             <default>false</default>
         </values>
         <values>
