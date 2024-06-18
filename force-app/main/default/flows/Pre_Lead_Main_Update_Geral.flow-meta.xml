@@ -1,259 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>58.0</apiVersion>
-    <assignments>
-        <name>Atribui_Fatura</name>
-        <label>Atribui Fatura</label>
-        <locationX>600</locationX>
-        <locationY>539</locationY>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.FantasyName__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Classifica_o__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Classifica_o__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Consumo_Historico__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.ConsumoHistorico__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Consumo_Mensal__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.ConsumoMensal__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Consumo_Utilizado__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.ConsumoUtilizado__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Link_Download__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Link_Download__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Mensagem__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Mensagem__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Valor_da_Fatura_R__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Valor_da_Fatura__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Volume_considerado_para_estudo_kWh__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Volume_considerado_para_estudo_kWh__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Distribuidora__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Distribuidora__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Nome_do_Arquivo_anexo_com_extens_o__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.NomeDoAnexoComExtensao__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Fatura_Anexada__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Fatura_Anexada__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Fatura_Processada__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Fatura_Processada__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Erro_Leitura_Fatura__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.ErroLeituraFatura__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Tarifa_Bancaria__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Tarifa_Branca__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Baixa_Renda__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Baixa_Renda__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Multa_da_Distribuidora__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.AssessmentDistributor__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Erro_Gen_rico_de_Simula_o__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.ErroGenericoSimulacao__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Consumo_Abaixo_do_Range__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.ConsumoAbaixoRange__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Distribuidora_n_o_Atendida__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.DistribuidoraNaoAtendida__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Erros__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Erros__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Score_Serasa__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.ScoreSerasa__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_fatura.Origem__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.InformationSource__c</elementReference>
-            </value>
-        </assignmentItems>
+    <actionCalls>
+        <name>Get_Cep</name>
+        <label>Get Cep</label>
+        <locationX>1084</locationX>
+        <locationY>384</locationY>
+        <actionName>BuscaCep.ObterCep</actionName>
+        <actionType>externalService</actionType>
         <connector>
-            <targetReference>Atualiza_Fatura</targetReference>
+            <targetReference>Localizou_distribuidora</targetReference>
         </connector>
-    </assignments>
-    <decisions>
-        <name>Altera_o_de_contrato1</name>
-        <label>Alteração de contrato</label>
-        <locationX>732</locationX>
-        <locationY>2339</locationY>
-        <defaultConnector>
-            <targetReference>Converte</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Não</defaultConnectorLabel>
-        <rules>
-            <name>Yes</name>
-            <conditionLogic>(1 AND 2) or (1 AND 3) or (1 and 2 and 3)</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Company__r.Name</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>LUZ</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Hired__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.ContratoGerado__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Altera_o_de_contrato1_0</targetReference>
-            </connector>
-            <label>Yes</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Altera_o_de_contrato1_0</name>
-        <label>Alteração de contrato</label>
-        <locationX>358</locationX>
-        <locationY>2447</locationY>
-        <defaultConnectorLabel>Não altera</defaultConnectorLabel>
-        <rules>
-            <name>Contrato_Assinado</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Hired__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Valida_se_j_h_Lead</targetReference>
-            </connector>
-            <label>Contrato Assinado</label>
-        </rules>
-        <rules>
-            <name>Contrato_Gerado</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.ContratoGerado__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Valida_se_j_h_Lead_0</targetReference>
-            </connector>
-            <label>Contrato Gerado</label>
-        </rules>
-    </decisions>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>cep</name>
+            <value>
+                <elementReference>$Record.CEP__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>BuscaCep.ObterCep</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
     <decisions>
         <name>Alterado_MGM</name>
         <label>Alterado MGM</label>
-        <locationX>732</locationX>
-        <locationY>1547</locationY>
+        <locationX>380</locationX>
+        <locationY>1176</locationY>
         <defaultConnector>
-            <targetReference>Cupom_Alterado</targetReference>
+            <targetReference>Verifica_Regi_o_Light</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
@@ -275,12 +50,12 @@
     <decisions>
         <name>Apto_pra_Cadencia</name>
         <label>Apto pra Cadência?</label>
-        <locationX>732</locationX>
-        <locationY>1139</locationY>
+        <locationX>380</locationX>
+        <locationY>276</locationY>
         <defaultConnector>
             <targetReference>Grupo_Economico_Pre_Lead_Updates</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Sim_Apto_pra_Cadencia</name>
             <conditionLogic>((1 AND 2 AND 3) OR 4)</conditionLogic>
@@ -319,98 +94,59 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Converte</name>
-        <label>Converte</label>
-        <locationX>1106</locationX>
-        <locationY>2447</locationY>
-        <defaultConnectorLabel>Não Converte</defaultConnectorLabel>
+        <name>BlockListadsfasdf</name>
+        <label>BlockList?</label>
+        <locationX>1084</locationX>
+        <locationY>1092</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
-            <name>Delta</name>
+            <name>sadhfasdfhjkasldf</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Company__r.Name</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>DELTA</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Qualificado</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Lead__c</leftValueReference>
+                <leftValueReference>BlockList.Id</leftValueReference>
                 <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Status__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Parceiro__c</leftValueReference>
-                <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Fluxo_de_Convers_o</targetReference>
+                <targetReference>Desqualificar</targetReference>
             </connector>
-            <label>Delta</label>
+            <label>Sim</label>
         </rules>
+    </decisions>
+    <decisions>
+        <name>Continuo_tendo_Cupom</name>
+        <label>Continuo tendo Cupom</label>
+        <locationX>182</locationX>
+        <locationY>792</locationY>
+        <defaultConnector>
+            <targetReference>Tira_Fleg</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
-            <name>LUZ_Fluxo_Lead</name>
+            <name>Sim6</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Company__r.Name</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>LUZ</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Fluxo__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Lead</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Lead__c</leftValueReference>
+                <leftValueReference>$Record.Cupom__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Fluxo__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Fluxo_de_Convers_o</targetReference>
+                <targetReference>Fluxo_Parceiro</targetReference>
             </connector>
-            <label>LUZ- Fluxo Lead</label>
+            <label>Sim</label>
         </rules>
     </decisions>
     <decisions>
         <name>Cupom_Alterado</name>
         <label>Cupom Alterado</label>
-        <locationX>732</locationX>
-        <locationY>2039</locationY>
+        <locationX>380</locationX>
+        <locationY>684</locationY>
         <defaultConnector>
-            <targetReference>Altera_o_de_contrato1</targetReference>
+            <targetReference>Alterado_MGM</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
@@ -424,39 +160,92 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Fluxo_Parceiro</targetReference>
+                <targetReference>Continuo_tendo_Cupom</targetReference>
             </connector>
             <label>Sim</label>
         </rules>
     </decisions>
     <decisions>
-        <name>Link_Download_Alterado</name>
-        <label>Link Download Alterado?</label>
-        <locationX>732</locationX>
-        <locationY>323</locationY>
+        <name>Distribuidora_Atentida</name>
+        <label>Distribuidora Atentida?</label>
+        <locationX>886</locationX>
+        <locationY>600</locationY>
         <defaultConnector>
-            <targetReference>Telefone_Alterado</targetReference>
+            <targetReference>Pr_Lead_N_o_Atendido</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
-            <name>Sim234567</name>
-            <conditionLogic>and</conditionLogic>
+            <name>Simasdfsadfadsf</name>
+            <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Link_Download__c</leftValueReference>
-                <operator>IsChanged</operator>
+                <leftValueReference>Get_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <numberValue>1246.0</numberValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Link_Download__c</leftValueReference>
+                <leftValueReference>Get_Cep.2XX.complemento</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>1251</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1232.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1261.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1067.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Cep.2XX.idDistribuidora</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1071.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C_pia_1_de_Pr_Lead_N_o_Atendido</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Localizou_distribuidora</name>
+        <label>Localizou distribuidora?</label>
+        <locationX>1084</locationX>
+        <locationY>492</locationY>
+        <defaultConnector>
+            <targetReference>N_o_Localizada</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>Simsdfsadf</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Cep.2XX.nomeFantasia</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_fatura</targetReference>
+                <targetReference>Distribuidora_Atentida</targetReference>
             </connector>
             <label>Sim</label>
         </rules>
@@ -464,10 +253,10 @@
     <decisions>
         <name>MGM</name>
         <label>é MGM</label>
-        <locationX>578</locationX>
-        <locationY>1655</locationY>
+        <locationX>182</locationX>
+        <locationY>1284</locationY>
         <defaultConnector>
-            <targetReference>Cupom_Alterado</targetReference>
+            <targetReference>C_pia_2_de_Tira_Fleg</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Não</defaultConnectorLabel>
         <rules>
@@ -487,81 +276,59 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Telefone_Alterado</name>
-        <label>Telefone Alterado</label>
-        <locationX>732</locationX>
-        <locationY>839</locationY>
-        <defaultConnector>
-            <targetReference>Apto_pra_Cadencia</targetReference>
-        </defaultConnector>
+        <name>Verifica_Regi_o_Light</name>
+        <label>Verifica Região Light</label>
+        <locationX>380</locationX>
+        <locationY>1668</locationY>
         <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
-            <name>adshfkjasbdfjb</name>
+            <name>Light</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.PhoneNumber__c</leftValueReference>
-                <operator>IsChanged</operator>
+                <leftValueReference>$Record.UF__c</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <stringValue>RJ</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Atualiza_Telefone</targetReference>
+                <targetReference>Get_Regi_o</targetReference>
             </connector>
-            <label>Sim</label>
+            <label>Light</label>
         </rules>
     </decisions>
     <decisions>
-        <name>Valida_se_j_h_Lead</name>
-        <label>Valida se já há Lead</label>
-        <locationX>50</locationX>
-        <locationY>2555</locationY>
-        <defaultConnector>
-            <targetReference>Atualizar_Status</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Sim</defaultConnectorLabel>
+        <name>Verifica_se_ADS</name>
+        <label>Verifica se é ADS</label>
+        <locationX>1315</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
         <rules>
-            <name>Nao</name>
+            <name>ADS</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Lead__c</leftValueReference>
-                <operator>IsNull</operator>
+                <leftValueReference>$Record.InformationSource__c</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <stringValue>ADS</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Atualizar_Status</targetReference>
+                <targetReference>Get_Cep</targetReference>
             </connector>
-            <label>Não</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Valida_se_j_h_Lead_0</name>
-        <label>Valida se já há Lead</label>
-        <locationX>402</locationX>
-        <locationY>2555</locationY>
-        <defaultConnector>
-            <targetReference>Atualizar_Status_0</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Sim</defaultConnectorLabel>
-        <rules>
-            <name>Nao_0</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Lead__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Atualizar_Status_0</targetReference>
-            </connector>
-            <label>Não</label>
+            <label>ADS</label>
         </rules>
     </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>Cepsemtraco</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    CONTAINS({!$Record.CEP__c}, &quot;-&quot;),
+    SUBSTITUTE({!$Record.CEP__c}, &quot;-&quot;, &quot;&quot;),
+    {!$Record.CEP__c}
+)</expression>
+    </formulas>
     <formulas>
         <name>EconomicGroupRemoved</name>
         <dataType>Boolean</dataType>
@@ -606,110 +373,293 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <name>Get_fatura</name>
-        <label>Get fatura</label>
-        <locationX>600</locationX>
-        <locationY>431</locationY>
+        <name>BlockList</name>
+        <label>BlockList</label>
+        <locationX>1084</locationX>
+        <locationY>984</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Atribui_Fatura</targetReference>
+            <targetReference>BlockListadsfasdf</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>Pr_Lead__c</field>
+            <field>Name</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.Id</elementReference>
+                <elementReference>Cepsemtraco</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Empresa_do_Grupo__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Company__c</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Fatura_Distribuidora__c</object>
+        <object>BlockList__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Regi_o</name>
+        <label>Get Região</label>
+        <locationX>248</locationX>
+        <locationY>1776</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Atualiza_Regi_o</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.District__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Regiao__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Atualiza_Fatura</name>
-        <label>Atualiza Fatura</label>
-        <locationX>600</locationX>
-        <locationY>647</locationY>
-        <connector>
-            <targetReference>Telefone_Alterado</targetReference>
-        </connector>
-        <inputReference>Get_fatura</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Atualiza_Telefone</name>
-        <label>Atualiza Telefone</label>
-        <locationX>600</locationX>
-        <locationY>947</locationY>
-        <connector>
-            <targetReference>Apto_pra_Cadencia</targetReference>
-        </connector>
+        <name>Atualiza_Regi_o</name>
+        <label>Atualiza Região</label>
+        <locationX>248</locationX>
+        <locationY>1884</locationY>
         <inputAssignments>
-            <field>Telefone_MKT__c</field>
+            <field>Regiao__c</field>
             <value>
-                <elementReference>TelefoneFormatado</elementReference>
+                <elementReference>Get_Regi_o.Id</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
-        <name>Atualizar_Status</name>
-        <label>Atualizar Status</label>
-        <locationX>50</locationX>
-        <locationY>2747</locationY>
+        <name>C_pia_1_de_Pr_Lead_N_o_Atendido</name>
+        <label>Pré Lead Atendido</label>
+        <locationX>754</locationX>
+        <locationY>708</locationY>
+        <connector>
+            <targetReference>BlockList</targetReference>
+        </connector>
         <inputAssignments>
-            <field>Status__c</field>
+            <field>Address__c</field>
             <value>
-                <stringValue>Convertido</stringValue>
+                <elementReference>Get_Cep.2XX.logradouroCompleto</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>City__c</field>
+            <value>
+                <elementReference>Get_Cep.2XX.cidade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DistribuidoraNaoAtendida__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Distribuidora__c</field>
+            <value>
+                <elementReference>Get_Cep.2XX.nomeFantasia</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>District__c</field>
+            <value>
+                <elementReference>Get_Cep.2XX.bairro</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UF__c</field>
+            <value>
+                <elementReference>Get_Cep.2XX.uf</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
-        <name>Atualizar_Status_0</name>
-        <label>Atualizar Status</label>
-        <locationX>402</locationX>
-        <locationY>2747</locationY>
+        <name>C_pia_2_de_Tira_Fleg</name>
+        <label>Tira Fleg</label>
+        <locationX>314</locationX>
+        <locationY>1392</locationY>
+        <connector>
+            <targetReference>Verifica_Regi_o_Light</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>MGM__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Desqualificar</name>
+        <label>Desqualificar</label>
+        <locationX>952</locationX>
+        <locationY>1200</locationY>
+        <inputAssignments>
+            <field>Data_de_Desqualificacao__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DistribuidoraNaoAtendida__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Fora_da_rea_de_Cobertura__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Motivo_Desqualifica_o__c</field>
+            <value>
+                <stringValue>Distribuidora não atendida</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Observa_o_da_Desqualifica_o__c</field>
+            <value>
+                <stringValue>Blocklist</stringValue>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <field>Status__c</field>
             <value>
-                <stringValue>Contrato Gerado</stringValue>
+                <stringValue>Desqualificado</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>N_o_Localizada</name>
+        <label>Não Localizada</label>
+        <locationX>1282</locationX>
+        <locationY>600</locationY>
+        <connector>
+            <targetReference>BlockList</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Distribuidora__c</field>
+            <value>
+                <stringValue>Não Localizada</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Pr_Lead_N_o_Atendido</name>
+        <label>Pré Lead Não Atendido</label>
+        <locationX>1018</locationX>
+        <locationY>708</locationY>
+        <connector>
+            <targetReference>BlockList</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Address__c</field>
+            <value>
+                <elementReference>Get_Cep.2XX.logradouroCompleto</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>City__c</field>
+            <value>
+                <elementReference>Get_Cep.2XX.cidade</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DistribuidoraNaoAtendida__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Distribuidora__c</field>
+            <value>
+                <elementReference>Get_Cep.2XX.nomeFantasia</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>District__c</field>
+            <value>
+                <elementReference>Get_Cep.2XX.bairro</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UF__c</field>
+            <value>
+                <elementReference>Get_Cep.2XX.uf</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Tira_Fleg</name>
+        <label>Tira Fleg</label>
+        <locationX>314</locationX>
+        <locationY>900</locationY>
+        <connector>
+            <targetReference>Alterado_MGM</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>MGM__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Parceiro__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>606</locationX>
+        <locationX>721</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Link_Download_Alterado</targetReference>
+            <targetReference>Apto_pra_Cadencia</targetReference>
         </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Lead__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
         <object>PreLead__c</object>
         <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <name>Executar_ap_s_2_min</name>
+            <connector>
+                <targetReference>Verifica_se_ADS</targetReference>
+            </connector>
+            <label>Executar após 2 min</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
     <subflows>
-        <name>Fluxo_de_Convers_o</name>
-        <label>Fluxo de Conversão</label>
-        <locationX>1106</locationX>
-        <locationY>2747</locationY>
-        <flowName>Subfluxo_pr_lead_convers_o_para_lead</flowName>
-        <inputAssignments>
-            <name>Record_Id</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <subflows>
         <name>Fluxo_MGM</name>
         <label>Fluxo MGM</label>
-        <locationX>446</locationX>
-        <locationY>1763</locationY>
+        <locationX>50</locationX>
+        <locationY>1392</locationY>
         <connector>
-            <targetReference>Cupom_Alterado</targetReference>
+            <targetReference>Verifica_Regi_o_Light</targetReference>
         </connector>
         <flowName>Atualizar_MGM</flowName>
         <inputAssignments>
@@ -722,10 +672,10 @@
     <subflows>
         <name>Fluxo_Parceiro</name>
         <label>Fluxo Parceiro</label>
-        <locationX>600</locationX>
-        <locationY>2147</locationY>
+        <locationX>50</locationX>
+        <locationY>900</locationY>
         <connector>
-            <targetReference>Altera_o_de_contrato1</targetReference>
+            <targetReference>Alterado_MGM</targetReference>
         </connector>
         <flowName>SUBFLOW_pr_lead_createParceiros</flowName>
         <inputAssignments>
@@ -744,22 +694,22 @@
     <subflows>
         <name>Grupo_Economico_Pre_Lead_Updates</name>
         <label>[Grupo Economico] Pré-Lead Updates</label>
-        <locationX>732</locationX>
-        <locationY>1439</locationY>
+        <locationX>380</locationX>
+        <locationY>576</locationY>
         <connector>
-            <targetReference>Alterado_MGM</targetReference>
+            <targetReference>Cupom_Alterado</targetReference>
         </connector>
         <flowName>FWEconomicGroupPreLeadUpdates</flowName>
-        <inputAssignments>
-            <name>EconomicGroupRemoved</name>
-            <value>
-                <elementReference>EconomicGroupRemoved</elementReference>
-            </value>
-        </inputAssignments>
         <inputAssignments>
             <name>idEconomicGroup</name>
             <value>
                 <elementReference>$Record.EconomicGroup__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>EconomicGroupRemoved</name>
+            <value>
+                <elementReference>EconomicGroupRemoved</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -772,14 +722,20 @@
     <subflows>
         <name>PreLead_Fluxo_de_Cadencia</name>
         <label>[PreLead] Fluxo de Cadência</label>
-        <locationX>600</locationX>
-        <locationY>1247</locationY>
+        <locationX>248</locationX>
+        <locationY>384</locationY>
         <connector>
             <targetReference>Grupo_Economico_Pre_Lead_Updates</targetReference>
         </connector>
-        <flowName>FWLeadCustomCadence</flowName>
+        <flowName>FWPreLeadCustomCadence</flowName>
         <inputAssignments>
-            <name>LeadStatusPriorValue</name>
+            <name>prelead</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>PreLeadStatusPriorValue</name>
             <value>
                 <elementReference>$Record__Prior.Status__c</elementReference>
             </value>
