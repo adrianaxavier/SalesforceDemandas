@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Motivo__c</fullName>
-    <externalId>false</externalId>
     <label>Motivo</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
@@ -101,6 +100,16 @@
                 <fullName>MEMBER GET MEMBER</fullName>
                 <default>false</default>
                 <label>MEMBER GET MEMBER</label>
+            </value>
+            <value>
+                <fullName>RECLAME AQUI/PROCON</fullName>
+                <default>false</default>
+                <label>RECLAME AQUI/PROCON</label>
+            </value>
+            <value>
+                <fullName>ACL</fullName>
+                <default>false</default>
+                <label>ACL</label>
             </value>
         </valueSetDefinition>
     </valueSet>
