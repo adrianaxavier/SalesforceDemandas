@@ -4,8 +4,11 @@
     <decisions>
         <name>ChangeStatus_New_or_Change</name>
         <label>ChangeStatus (New or Change)</label>
-        <locationX>768</locationX>
-        <locationY>446</locationY>
+        <locationX>776</locationX>
+        <locationY>371</locationY>
+        <defaultConnector>
+            <targetReference>Verifica_Regi_o_Light</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_ChangeStatus_New_or_Change</name>
@@ -33,8 +36,11 @@
     <decisions>
         <name>UserAble</name>
         <label>UserAble?</label>
-        <locationX>950</locationX>
-        <locationY>445</locationY>
+        <locationX>622</locationX>
+        <locationY>479</locationY>
+        <defaultConnector>
+            <targetReference>Verifica_Regi_o_Light</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
@@ -66,6 +72,28 @@
             <label>Yes</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Verifica_Regi_o_Light</name>
+        <label>Verifica Região Light</label>
+        <locationX>776</locationX>
+        <locationY>863</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>Light</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UF__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>RJ</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_Regi_o</targetReference>
+            </connector>
+            <label>Light</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>isNew</name>
@@ -93,6 +121,40 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_Regi_o</name>
+        <label>get Região</label>
+        <locationX>644</locationX>
+        <locationY>971</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Atualiza_Regi_o</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.District__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Regiao__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Atualiza_Regi_o</name>
+        <label>Atualiza Região</label>
+        <locationX>644</locationX>
+        <locationY>1079</locationY>
+        <inputAssignments>
+            <field>Regiao__c</field>
+            <value>
+                <elementReference>get_Regi_o.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>650</locationX>
         <locationY>48</locationY>
@@ -129,8 +191,11 @@
     <subflows>
         <name>FWLeadCustomCadence</name>
         <label>FWLeadCustomCadence</label>
-        <locationX>1179</locationX>
-        <locationY>444</locationY>
+        <locationX>490</locationX>
+        <locationY>587</locationY>
+        <connector>
+            <targetReference>Verifica_Regi_o_Light</targetReference>
+        </connector>
         <flowName>FWLeadCustomCadence</flowName>
         <inputAssignments>
             <name>LeadStatusPriorValue</name>
