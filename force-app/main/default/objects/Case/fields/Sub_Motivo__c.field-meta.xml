@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Sub_Motivo__c</fullName>
-    <externalId>false</externalId>
     <label>Sub Motivo</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
@@ -418,6 +417,41 @@
                 <default>false</default>
                 <label>ALTERAÇÃO DATA DO VENCIMENTO</label>
             </value>
+            <value>
+                <fullName>RÉPLICA</fullName>
+                <default>false</default>
+                <label>RÉPLICA</label>
+            </value>
+            <value>
+                <fullName>AVALIAÇÃO</fullName>
+                <default>false</default>
+                <label>AVALIAÇÃO</label>
+            </value>
+            <value>
+                <fullName>CONSULTA</fullName>
+                <default>false</default>
+                <label>CONSULTA</label>
+            </value>
+            <value>
+                <fullName>COBRANÇA</fullName>
+                <default>false</default>
+                <label>COBRANÇA</label>
+            </value>
+            <value>
+                <fullName>ONBOARDING</fullName>
+                <default>false</default>
+                <label>ONBOARDING</label>
+            </value>
+            <value>
+                <fullName>TRATATIVA DE PROBLEMAS</fullName>
+                <default>false</default>
+                <label>TRATATIVA DE PROBLEMAS</label>
+            </value>
+            <value>
+                <fullName>CONDIÇÕES DE PAGAMENTO</fullName>
+                <default>false</default>
+                <label>CONDIÇÕES DE PAGAMENTO</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>MIGRAÇÃO</controllingFieldValue>
@@ -704,6 +738,26 @@
             <valueName>LEMBRETE DE PAGAMENTO LUZ</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>PAGAMENTO</controllingFieldValue>
+            <valueName>CONDIÇÕES DE PAGAMENTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RECLAME AQUI/PROCON</controllingFieldValue>
+            <valueName>RECLAMAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RECLAME AQUI/PROCON</controllingFieldValue>
+            <valueName>RÉPLICA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RECLAME AQUI/PROCON</controllingFieldValue>
+            <valueName>AVALIAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RECLAME AQUI/PROCON</controllingFieldValue>
+            <valueName>CONSULTA</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>UPLOAD DOCUMENTAÇÃO</controllingFieldValue>
             <valueName>DÚVIDAS SOBRE DOCUMENTAÇÃO</valueName>
         </valueSettings>
@@ -718,6 +772,18 @@
         <valueSettings>
             <controllingFieldValue>UPLOAD DOCUMENTAÇÃO</controllingFieldValue>
             <valueName>UPLOAD INTERNO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACL</controllingFieldValue>
+            <valueName>COBRANÇA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACL</controllingFieldValue>
+            <valueName>ONBOARDING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACL</controllingFieldValue>
+            <valueName>TRATATIVA DE PROBLEMAS</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>
