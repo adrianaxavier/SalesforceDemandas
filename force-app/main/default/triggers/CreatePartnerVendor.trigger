@@ -1,4 +1,4 @@
-trigger CreatePartnerVendor on Parceiros_e_Vendedores__c (before insert) {
+trigger CreatePartnerVendor on Parceiros_e_Vendedores__c (before insert, before update) {
     // Mapa para armazenar o relacionamento entre AccountId e UserId
     Map<Id, Id> accountToUserMap = new Map<Id, Id>();
 
@@ -11,7 +11,7 @@ trigger CreatePartnerVendor on Parceiros_e_Vendedores__c (before insert) {
     }
 
     // Consultar os Users associados aos AccountIds encontrados
-    List<User> users = [SELECT Id, AccountId FROM User WHERE AccountId IN :accountIds ORDER BY CreatedDate ASC LIMIT 1];
+    List<User> users = [SELECT Id, AccountId FROM User WHERE AccountId IN :accountIds AND IsActive = true ORDER BY CreatedDate ASC LIMIT 1];
 
     // Preencher o mapa com o primeiro UserId encontrado para cada AccountId
     for (User u : users) {
