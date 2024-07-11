@@ -3,7 +3,7 @@ public class CreatePartnerVendorTest {
     @isTest
     static void testCreatePartnerVendor() {
         // Obtém o ID do usuário com base no DeltaCode__c
-        User ownerUser = [SELECT Id, ProfileId FROM User WHERE DeltaCode__c = 2424 LIMIT 1];
+        User ownerUser = [SELECT Id, ProfileId FROM User WHERE DeltaCode__c = 2621 LIMIT 1];
 
         // Cria uma Account de teste com os campos adicionais
         Account testAccount = new Account(
