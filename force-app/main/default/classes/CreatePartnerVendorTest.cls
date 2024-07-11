@@ -18,7 +18,7 @@ public class CreatePartnerVendorTest {
         insert testAccount;
 
         // Define a role de parceiro comunitário
-        UserRole partnerRole = [SELECT Id FROM UserRole WHERE DeveloperName = 'PartnerCommunityRole' LIMIT 1];
+        UserRole partnerRole = [SELECT Id FROM UserRole WHERE DeveloperName = 'CasaVerdeUsuriodeParceiro' LIMIT 1];
 
         // Cria um User com licença Partner Community
         Profile partnerProfile = [SELECT Id FROM Profile WHERE Name = 'Partner Community User' LIMIT 1];
