@@ -1,0 +1,237 @@
+<apex:page controller="ReportController">
+    <apex:includeScript value="https://cdn.jsdelivr.net/npm/chart.js"/>
+    <style>
+        .dashboard {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 20px;
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .filters {
+            display: flex;
+            gap: 10px;
+        }
+        .filters input, .filters select {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        .report-cards {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .report-card {
+            background-color: #3b3b3b;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .report-card h3 {
+            margin: 0 0 10px 0;
+        }
+        .chart-container {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .chart-box {
+            flex: 1;
+            background-color: #3b3b3b;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        canvas {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+    <apex:form id="form">
+        <div class="dashboard">
+            <div class="dashboard-header">
+                <h1>Delta Sales Insights</h1>
+                <div class="filters">
+                    <input id="startDate" type="date" onchange="filterReports()"/>
+                    <input id="endDate" type="date" onchange="filterReports()"/>
+                    <select id="uf" onchange="filterReports()">
+                        <option value="">Todos</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AM">AM</option>
+                        <option value="AP">AP</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SE">SE</option>
+                        <option value="SP">SP</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </div>
+            </div>
+            <div class="report-cards">
+                <div class="report-card">
+                    <h3>Leads Originados</h3>
+                    <p id="leadsOriginados">0</p>
+                </div>
+                <div class="report-card">
+                    <h3>Leads Perdidos</h3>
+                    <p id="leadsPerdidos">0</p>
+                </div>
+                <div class="report-card">
+                    <h3>Leads em Prospecção</h3>
+                    <p id="leadsProspeccao">0</p>
+                </div>
+                <div class="report-card">
+                    <h3>Leads Fatura Grupo A</h3>
+                    <p id="leadsFaturaGrupoA">0</p>
+                </div>
+                <div class="report-card">
+                    <h3>Oportunidades</h3>
+                    <p id="oportunidades">0</p>
+                </div>
+                <div class="report-card">
+                    <h3>Oportunidades Negociacao</h3>
+                    <p id="oportunidadesNegociacao">0</p>
+                </div>
+                <div class="report-card">
+                    <h3>Oportunidades Convertidas</h3>
+                    <p id="oportunidadesConvertidas">0</p>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-box">
+                    <h3>Motivos de Perdas de Leads</h3>
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h3>Motivos de Perdas Fatura Grupo A</h3>
+                    <canvas id="chart2"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h3>Motivos de Perdas Oportunidades</h3>
+                    <canvas id="chart3"></canvas>
+                </div>
+            </div>
+        </div>
+    </apex:form>
+    <script>
+        function filterReports() {
+            var startDate = document.getElementById('startDate').value || null;
+            var endDate = document.getElementById('endDate').value || null;
+            var uf = document.getElementById('uf').value || '';
+
+            // Converting date to correct format for Apex
+            startDate = startDate ? new Date(startDate).toISOString().substring(0, 10) : null;
+            endDate = endDate ? new Date(endDate).toISOString().substring(0, 10) : null;
+
+            console.log('Filter Params - Start Date:', startDate, 'End Date:', endDate, 'UF:', uf);
+
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.ReportController.getFilteredReports}',
+                startDate,
+                endDate,
+                uf,
+                function(result, event) {
+                    if (event.status) {
+                        console.log('Remote action succeeded:', result);
+                        document.getElementById('leadsOriginados').innerText = result['Leads Originados'];
+                        document.getElementById('leadsPerdidos').innerText = result['Leads Perdidos'];
+                        document.getElementById('leadsProspeccao').innerText = result['Leads em Prospecção'];
+                        document.getElementById('leadsFaturaGrupoA').innerText = result['Leads Fatura Grupo A'];
+                        document.getElementById('oportunidades').innerText = result['Oportunidades'];
+                        document.getElementById('oportunidadesNegociacao').innerText = result['Oportunidades Negociacao'];
+                        document.getElementById('oportunidadesConvertidas').innerText = result['Oportunidades Convertidas'];
+                        
+                        updateMotivosPerdaChart(result['MotivosPerdaLeads'], 'chart1');
+                        updateMotivosPerdaChart(result['MotivosPerdaFaturaGrupoA'], 'chart2');
+                        updateMotivosPerdaChart(result['MotivosPerdaOportunidades'], 'chart3');
+                    } else {
+                        console.error('Remote action failed:', event.message);
+                    }
+                },
+                {escape: true}
+            );
+        }
+
+        function updateMotivosPerdaChart(data, chartId) {
+            var labels = data.map(function(item) {
+                return item.Motivo_da_Perda__c || item.LossReason__c;
+            });
+
+            var values = data.map(function(item) {
+                return item.total;
+            });
+
+            var total = values.reduce(function(acc, value) {
+                return acc + value;
+            }, 0);
+
+            var percentages = values.map(function(value) {
+                return ((value / total) * 100).toFixed(2);
+            });
+
+            var chartData = {
+                labels: labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: [
+                        '#FF6384',
+                        '#36A2EB',
+                        '#FFCE56',
+                        '#FF9F40',
+                        '#4BC0C0',
+                        '#9966FF',
+                        '#FF6384'
+                    ]
+                }]
+            };
+
+            var ctx = document.getElementById(chartId).getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: chartData,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(tooltipItem) {
+                                    var index = tooltipItem.dataIndex;
+                                    return labels[index] + ': ' + values[index] + ' (' + percentages[index] + '%)';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Chamada inicial para carregar os gráficos
+        filterReports();
+    </script>
+</apex:page>
