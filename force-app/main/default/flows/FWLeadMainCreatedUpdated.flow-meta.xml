@@ -4,8 +4,11 @@
     <decisions>
         <name>ChangeStatus_New_or_Change</name>
         <label>ChangeStatus (New or Change)</label>
-        <locationX>768</locationX>
-        <locationY>446</locationY>
+        <locationX>784</locationX>
+        <locationY>455</locationY>
+        <defaultConnector>
+            <targetReference>Verifica_Regi_o_Light</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_ChangeStatus_New_or_Change</name>
@@ -31,10 +34,49 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Economic_Group_Decision</name>
+        <label>Economic Group Decision</label>
+        <locationX>1141</locationX>
+        <locationY>975</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Has_Economic_Group</name>
+            <conditionLogic>1 OR (2 AND 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.EconomicGroup__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.EconomicGroup__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.EconomicGroup__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Grupo_Economico_Lead_Updates</targetReference>
+            </connector>
+            <label>Has Economic Group</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>UserAble</name>
         <label>UserAble?</label>
-        <locationX>950</locationX>
-        <locationY>445</locationY>
+        <locationX>622</locationX>
+        <locationY>570</locationY>
+        <defaultConnector>
+            <targetReference>Verifica_Regi_o_Light</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
@@ -66,7 +108,40 @@
             <label>Yes</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Verifica_Regi_o_Light</name>
+        <label>Verifica Região Light</label>
+        <locationX>773</locationX>
+        <locationY>818</locationY>
+        <defaultConnector>
+            <targetReference>Economic_Group_Decision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>Light</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UF__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>RJ</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_Regi_o</targetReference>
+            </connector>
+            <label>Light</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>EconomicGroupRemoved</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+{!$Record__Prior.EconomicGroup__c} &lt;&gt; null,
+{!$Record.EconomicGroup__c} = null
+)</expression>
+    </formulas>
     <formulas>
         <name>isNew</name>
         <dataType>Boolean</dataType>
@@ -93,9 +168,46 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_Regi_o</name>
+        <label>get Região</label>
+        <locationX>782</locationX>
+        <locationY>1052</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Atualiza_Regi_o</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.District__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Regiao__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Atualiza_Regi_o</name>
+        <label>Atualiza Região</label>
+        <locationX>782</locationX>
+        <locationY>1160</locationY>
+        <connector>
+            <targetReference>Economic_Group_Decision</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Regiao__c</field>
+            <value>
+                <elementReference>get_Regi_o.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
-        <locationX>650</locationX>
-        <locationY>48</locationY>
+        <locationX>667</locationX>
+        <locationY>50</locationY>
         <connector>
             <targetReference>ChangeStatus_New_or_Change</targetReference>
         </connector>
@@ -129,8 +241,11 @@
     <subflows>
         <name>FWLeadCustomCadence</name>
         <label>FWLeadCustomCadence</label>
-        <locationX>1179</locationX>
-        <locationY>444</locationY>
+        <locationX>460</locationX>
+        <locationY>730</locationY>
+        <connector>
+            <targetReference>Verifica_Regi_o_Light</targetReference>
+        </connector>
         <flowName>FWLeadCustomCadence</flowName>
         <inputAssignments>
             <name>LeadStatusPriorValue</name>
@@ -142,6 +257,31 @@
             <name>recordId</name>
             <value>
                 <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Grupo_Economico_Lead_Updates</name>
+        <label>[Grupo Economico] Lead Updates</label>
+        <locationX>1418</locationX>
+        <locationY>969</locationY>
+        <flowName>FWEconomicGroupLeadUpdates</flowName>
+        <inputAssignments>
+            <name>EconomicGroupRemoved</name>
+            <value>
+                <elementReference>EconomicGroupRemoved</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>idEconomicGroup</name>
+            <value>
+                <elementReference>$Record.EconomicGroup__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>idOldEconomicGroup</name>
+            <value>
+                <elementReference>$Record__Prior.EconomicGroup__r.Id</elementReference>
             </value>
         </inputAssignments>
     </subflows>
