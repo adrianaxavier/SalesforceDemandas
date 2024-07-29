@@ -2,7 +2,7 @@
 public class CreatePartnerVendorTest {
     @isTest
     static void testCreatePartnerVendor() {
-        // Busca a conta com o campo CNPJ__c = 31329646000140
+        // Busca a conta com o campo CNPJ__c = '31329646000140'
         List<Account> accountList = [SELECT Id, OwnerId FROM Account WHERE CNPJ__c = '31329646000140' LIMIT 1];
 
         // Verifica se a conta foi encontrada
