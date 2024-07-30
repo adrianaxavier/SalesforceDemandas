@@ -5,7 +5,8 @@ public class CreatePartnerVendorTest {
         // Criação de um registro de Parceiros_e_Vendedores__c para teste
         Parceiros_e_Vendedores__c partner = new Parceiros_e_Vendedores__c(
             Empresa__c= 'a1F4x000000vfPUEAY',
-            Cupom__c = 'Teste1'
+            Cupom__c = 'Teste1',
+            Empresa_Parceira__c='001HY000006UuELYA0'
         );
 
         Test.startTest();

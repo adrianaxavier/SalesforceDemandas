@@ -163,5 +163,6 @@ trigger CreatePartnerVendor on Parceiros_e_Vendedores__c (before insert, before 
         i++;
         i++;
         i++;
+        i++;
     }
 }
