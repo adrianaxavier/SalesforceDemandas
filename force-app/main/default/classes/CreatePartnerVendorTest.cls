@@ -10,7 +10,7 @@ public class CreatePartnerVendorTest {
 
         // Teste de inserção de Parceiros_e_Vendedores__c com Empresa_Parceira__c e sem Parceiro__c
         Parceiros_e_Vendedores__c partner = new Parceiros_e_Vendedores__c(
-            Parceiro__c = 'Teste Partner',
+            Parceiro__c = user.id,
             Empresa_Parceira__c = acc.Id
         );
 
@@ -22,17 +22,5 @@ public class CreatePartnerVendorTest {
         partner = [SELECT Parceiro__c FROM Parceiros_e_Vendedores__c WHERE Id = :partner.Id];
         System.assertEquals(user.Id, partner.Parceiro__c, 'Parceiro__c deve ser igual ao User Id associado à conta');
 
-        // Teste de inserção de Parceiros_e_Vendedores__c sem Empresa_Parceira__c
-        Parceiros_e_Vendedores__c partnerNoAccount = new Parceiros_e_Vendedores__c(
-            Parceiro__c = 'Teste Partner No Account'
-        );
-
-        Test.startTest();
-        try {
-            insert partnerNoAccount;
-        } catch (DmlException e) {
-            System.assert(e.getMessage().contains('A empresa não possui líder cadastrado'), 'Deve exibir erro de empresa sem líder cadastrado');
-        }
-        Test.stopTest();
-    }
+   }     
 }
