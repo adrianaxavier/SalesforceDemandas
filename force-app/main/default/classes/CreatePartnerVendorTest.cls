@@ -6,7 +6,7 @@ public class CreatePartnerVendorTest {
         List<Account> accounts = [
             SELECT Id, (SELECT Id FROM Users WHERE IsActive = true LIMIT 1)
             FROM Account
-            WHERE RecordTypeId = '0124x000000dWvYAAU'
+            WHERE IsPartner = true
             LIMIT 100
         ];
 
