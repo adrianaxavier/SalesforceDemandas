@@ -2,33 +2,37 @@
 public class CreatePartnerVendorTest {
     @isTest
     static void testCreatePartnerVendor() {
-        // Busca a conta com o campo CNPJ__c = '31329646000140'
-        List<Account> accountList = [SELECT Id, OwnerId FROM Account WHERE CNPJ__c = '31329646000140' LIMIT 1];
+        // Encontrar uma conta existente com o RecordTypeId especificado
+        Account acc = [SELECT Id FROM Account WHERE RecordTypeId = '0124x000000dWvYAAU' LIMIT 1];
 
-        // Verifica se a conta foi encontrada
-        System.assert(!accountList.isEmpty(), 'A conta com o CNPJ especificado não foi encontrada.');
+        // Simular um usuário existente associado à conta encontrada
+        User user = [SELECT Id FROM User WHERE AccountId = :acc.Id AND IsActive = true LIMIT 1];
 
-        Account testAccount = accountList[0];
-
-        // Busca o primeiro usuário atrelado a essa conta
-        List<User> userList = [SELECT Id FROM User WHERE AccountId = :testAccount.Id LIMIT 1];
-
-        // Verifica se o usuário foi encontrado
-        System.assert(!userList.isEmpty(), 'Nenhum usuário encontrado para a conta especificada.');
-
-        User testUser = userList[0];
-
-        // Cria um registro de Parceiros_e_Vendedores__c sem Parceiro__c
+        // Teste de inserção de Parceiros_e_Vendedores__c com Empresa_Parceira__c e sem Parceiro__c
         Parceiros_e_Vendedores__c partner = new Parceiros_e_Vendedores__c(
-            Empresa_Parceira__c = testAccount.Id
+            Parceiro__c = 'Teste Partner',
+            Empresa_Parceira__c = acc.Id
         );
 
         Test.startTest();
         insert partner;
         Test.stopTest();
 
-        // Recupera o registro inserido e verifica se o acionador preencheu o campo Parceiro__c
-        partner = [SELECT Id, Parceiro__c FROM Parceiros_e_Vendedores__c WHERE Id = :partner.Id];
-        System.assertEquals(testUser.Id, partner.Parceiro__c);
+        // Verificar se o campo Parceiro__c foi preenchido corretamente
+        partner = [SELECT Parceiro__c FROM Parceiros_e_Vendedores__c WHERE Id = :partner.Id];
+        System.assertEquals(user.Id, partner.Parceiro__c, 'Parceiro__c deve ser igual ao User Id associado à conta');
+
+        // Teste de inserção de Parceiros_e_Vendedores__c sem Empresa_Parceira__c
+        Parceiros_e_Vendedores__c partnerNoAccount = new Parceiros_e_Vendedores__c(
+            Parceiro__c = 'Teste Partner No Account'
+        );
+
+        Test.startTest();
+        try {
+            insert partnerNoAccount;
+        } catch (DmlException e) {
+            System.assert(e.getMessage().contains('A empresa não possui líder cadastrado'), 'Deve exibir erro de empresa sem líder cadastrado');
+        }
+        Test.stopTest();
     }
 }
