@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpcaoCancelamento__c</fullName>
+    <externalId>false</externalId>
+    <label>Opção de cancelamento</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Instalação de Placas Solares</fullName>
+                <default>false</default>
+                <label>Instalação de Placas Solares</label>
+            </value>
+            <value>
+                <fullName>Portabilidade</fullName>
+                <default>false</default>
+                <label>Portabilidade</label>
+            </value>
+            <value>
+                <fullName>Débito com Distribuidora</fullName>
+                <default>false</default>
+                <label>Débito com Distribuidora</label>
+            </value>
+            <value>
+                <fullName>Aumento de consumo de energia</fullName>
+                <default>false</default>
+                <label>Aumento de consumo de energia</label>
+            </value>
+            <value>
+                <fullName>Atraso no recebimento de faturas</fullName>
+                <default>false</default>
+                <label>Atraso no recebimento de faturas</label>
+            </value>
+            <value>
+                <fullName>Fechou com concorrentes</fullName>
+                <default>false</default>
+                <label>Fechou com concorrentes</label>
+            </value>
+            <value>
+                <fullName>Insatisfação com Serviço</fullName>
+                <default>false</default>
+                <label>Insatisfação com Serviço</label>
+            </value>
+            <value>
+                <fullName>Desconfiança com a transferência de titularidade</fullName>
+                <default>false</default>
+                <label>Desconfiança com a transferência de titularidade</label>
+            </value>
+            <value>
+                <fullName>Insatisfação com a demora na migração</fullName>
+                <default>false</default>
+                <label>Insatisfação com a demora na migração</label>
+            </value>
+            <value>
+                <fullName>Desconto entregue inferior ao ofertado</fullName>
+                <default>false</default>
+                <label>Desconto entregue inferior ao ofertado</label>
+            </value>
+            <value>
+                <fullName>Assinou por engano</fullName>
+                <default>false</default>
+                <label>Assinou por engano</label>
+            </value>
+            <value>
+                <fullName>Desistência / Sem motivo</fullName>
+                <default>false</default>
+                <label>Desistência / Sem motivo</label>
+            </value>
+            <value>
+                <fullName>Venda forçada</fullName>
+                <default>false</default>
+                <label>Venda forçada</label>
+            </value>
+            <value>
+                <fullName>Inadimplência na Luz</fullName>
+                <default>false</default>
+                <label>Inadimplência na Luz</label>
+            </value>
+            <value>
+                <fullName>Outros</fullName>
+                <default>false</default>
+                <label>Outros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

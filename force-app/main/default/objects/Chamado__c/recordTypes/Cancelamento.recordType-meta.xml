@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Solicitacao_Parceiro</fullName>
+    <fullName>Cancelamento</fullName>
     <active>true</active>
-    <description>Solicitações de Parceiro</description>
-    <label>Solicitação Parceiro</label>
+    <label>Cancelamento</label>
     <picklistValues>
         <picklist>Area_Envolvida__c</picklist>
         <values>
@@ -38,6 +37,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>ANALISE DE FATURAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>APP</fullName>
             <default>false</default>
         </values>
@@ -54,6 +57,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>CONSUMO IRREGULAR %28MEDIDOR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>CONTRATO</fullName>
             <default>false</default>
         </values>
@@ -63,6 +70,10 @@
         </values>
         <values>
             <fullName>DANOS ELÉTRICOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DESAGREGADOR</fullName>
             <default>false</default>
         </values>
         <values>
@@ -208,27 +219,23 @@
     <picklistValues>
         <picklist>Status__c</picklist>
         <values>
-            <fullName>Aberto</fullName>
+            <fullName>Aguardando prazo de confirmação</fullName>
             <default>true</default>
         </values>
         <values>
-            <fullName>Aguardando Cliente</fullName>
+            <fullName>Cancelamento concluído</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Aguardando outra área</fullName>
+            <fullName>Devolução concluída com sucesso</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Cancelado</fullName>
+            <fullName>Em processamento de devolução</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Em atendimento</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Encerrado</fullName>
+            <fullName>Envio de multa</fullName>
             <default>false</default>
         </values>
     </picklistValues>

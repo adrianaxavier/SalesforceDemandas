@@ -37,10 +37,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>ANÁLISE DE CONSUMO</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>APP</fullName>
             <default>false</default>
         </values>
@@ -94,6 +90,91 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>OpcaoCancelamento__c</picklist>
+        <values>
+            <fullName>Assinou por engano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atraso no recebimento de faturas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aumento de consumo de energia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desconfiança com a transferência de titularidade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desconto entregue inferior ao ofertado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desistência %2F Sem motivo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Débito com Distribuidora</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fechou com concorrentes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadimplência na Luz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insatisfação com Serviço</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insatisfação com a demora na migração</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instalação de Placas Solares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portabilidade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venda forçada</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pagar_medidor__c</picklist>
+        <values>
+            <fullName>Não</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sim</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pessoa_F_sica_Jur_dica__c</picklist>
+        <values>
+            <fullName>PF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PJ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Prioridade__c</picklist>
         <values>
             <fullName>Alta</fullName>
@@ -109,6 +190,17 @@
         </values>
         <values>
             <fullName>Urgente</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Produto__c</picklist>
+        <values>
+            <fullName>GD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GF</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -207,6 +299,117 @@
         </values>
         <values>
             <fullName>Usina</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>UF__c</picklist>
+        <values>
+            <fullName>AC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TO</fullName>
             <default>false</default>
         </values>
     </picklistValues>
