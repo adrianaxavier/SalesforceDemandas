@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>All</fullName>
+    <fullName>BACKOFFICE</fullName>
     <columns>NAME</columns>
     <columns>Farol_SLA__c</columns>
     <columns>Assunto__c</columns>
@@ -14,9 +14,14 @@
     <columns>Solicitante__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Chamado__c.Chamados</value>
+    </filters>
+    <filters>
         <field>Status__c</field>
         <operation>equals</operation>
-        <value>Agencia Distribuidora</value>
+        <value>Aberto,Em Tratativa,Agencia Distribuidora,Aguardando a Distribuidora,Aguardando Gestão,Em atendimento,Aguardando outra área,Aguardando Cliente,Acompanhamento pós Solução</value>
     </filters>
-    <label>Tudo</label>
+    <label>BACKOFFICE</label>
 </ListView>
