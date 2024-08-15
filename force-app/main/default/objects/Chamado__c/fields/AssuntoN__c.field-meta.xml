@@ -3,7 +3,7 @@
     <fullName>AssuntoN__c</fullName>
     <externalId>false</externalId>
     <label>Assunto</label>
-    <required>true</required>
+    <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
@@ -21,11 +21,6 @@
                 <fullName>CANCELAMENTO DE FATURA</fullName>
                 <default>false</default>
                 <label>CANCELAMENTO DE FATURA</label>
-            </value>
-            <value>
-                <fullName>ANÁLISE DE CONSUMO</fullName>
-                <default>false</default>
-                <label>ANÁLISE DE CONSUMO</label>
             </value>
             <value>
                 <fullName>AUMENTO DE CARGA</fullName>
@@ -93,9 +88,9 @@
                 <label>CONTRATO</label>
             </value>
             <value>
-                <fullName>CONSUMO IRREGULAR</fullName>
+                <fullName>CONSUMO IRREGULAR (MEDIDOR)</fullName>
                 <default>false</default>
-                <label>CONSUMO IRREGULAR</label>
+                <label>CONSUMO IRREGULAR (MEDIDOR)</label>
             </value>
             <value>
                 <fullName>DESAGREGADOR</fullName>
@@ -103,10 +98,14 @@
                 <label>DESAGREGADOR</label>
             </value>
             <value>
-                <fullName>ANÁLISE DE FATURAS</fullName>
+                <fullName>ANALISE DE FATURAS</fullName>
                 <default>false</default>
-                <isActive>false</isActive>
                 <label>ANÁLISE DE FATURAS</label>
+            </value>
+            <value>
+                <fullName>ANÁLISE DE CONSUMO</fullName>
+                <default>false</default>
+                <label>ANÁLISE DE CONSUMO</label>
             </value>
         </valueSetDefinition>
     </valueSet>
