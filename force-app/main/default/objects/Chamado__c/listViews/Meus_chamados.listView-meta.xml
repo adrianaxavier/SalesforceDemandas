@@ -9,6 +9,11 @@
     <columns>CREATEDBY_USER</columns>
     <columns>CREATED_DATE</columns>
     <columns>Solicitante__c</columns>
-    <filterScope>Mine</filterScope>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Caso_Atrelado__c</field>
+        <operation>equals</operation>
+        <value>Heloisa Sodre</value>
+    </filters>
     <label>Meus chamados</label>
 </ListView>
