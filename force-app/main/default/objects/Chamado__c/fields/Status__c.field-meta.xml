@@ -69,6 +69,31 @@
                 <default>false</default>
                 <label>Cancelado</label>
             </value>
+            <value>
+                <fullName>Aguardando prazo de confirmação</fullName>
+                <default>false</default>
+                <label>Aguardando prazo de confirmação</label>
+            </value>
+            <value>
+                <fullName>Em processamento de devolução</fullName>
+                <default>false</default>
+                <label>Em processamento de devolução</label>
+            </value>
+            <value>
+                <fullName>Devolução concluída com sucesso</fullName>
+                <default>false</default>
+                <label>Devolução concluída com sucesso</label>
+            </value>
+            <value>
+                <fullName>Envio de multa</fullName>
+                <default>false</default>
+                <label>Envio de multa</label>
+            </value>
+            <value>
+                <fullName>Cancelamento concluído</fullName>
+                <default>false</default>
+                <label>Cancelamento concluído</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
