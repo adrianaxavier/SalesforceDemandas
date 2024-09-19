@@ -4,6 +4,15 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
     <label>Unidade</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Units__c.Account__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Nome_da_Conta__c</valueField>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
     <referenceTo>Units__c</referenceTo>
     <relationshipLabel>Chamados</relationshipLabel>
     <relationshipName>Chamados</relationshipName>

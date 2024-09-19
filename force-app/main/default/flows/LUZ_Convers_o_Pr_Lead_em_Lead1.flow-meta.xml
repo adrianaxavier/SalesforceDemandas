@@ -4,8 +4,8 @@
     <decisions>
         <name>Qual_Empresa</name>
         <label>Empresa</label>
-        <locationX>539</locationX>
-        <locationY>492</locationY>
+        <locationX>512</locationX>
+        <locationY>539</locationY>
         <defaultConnector>
             <targetReference>Tem_UC</targetReference>
         </defaultConnector>
@@ -72,10 +72,10 @@
     <decisions>
         <name>Tem_UC</name>
         <label>Tem UC</label>
-        <locationX>1001</locationX>
-        <locationY>600</locationY>
+        <locationX>974</locationX>
+        <locationY>647</locationY>
         <defaultConnector>
-            <targetReference>Criar_Lead_LuzPF_0</targetReference>
+            <targetReference>Criar_Lead_LuzPF_Sem_UC</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Sem UC</defaultConnectorLabel>
         <rules>
@@ -97,10 +97,10 @@
     <decisions>
         <name>Tem_UC_0</name>
         <label>Tem UC</label>
-        <locationX>473</locationX>
-        <locationY>600</locationY>
+        <locationX>446</locationX>
+        <locationY>647</locationY>
         <defaultConnector>
-            <targetReference>Criar_Lead_LuzPJ_0</targetReference>
+            <targetReference>Criar_Lead_LuzPJ_Sem_UC</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Sem UC</defaultConnectorLabel>
         <rules>
@@ -154,8 +154,8 @@
     <recordCreates>
         <name>Criar_Lead_Delta</name>
         <label>Criar Lead Delta</label>
-        <locationX>77</locationX>
-        <locationY>600</locationY>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -780,8 +780,8 @@
     <recordCreates>
         <name>Criar_Lead_LuzPF</name>
         <label>Criar Lead LuzPF</label>
-        <locationX>869</locationX>
-        <locationY>708</locationY>
+        <locationX>842</locationX>
+        <locationY>755</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -1404,10 +1404,10 @@
         <object>Lead</object>
     </recordCreates>
     <recordCreates>
-        <name>Criar_Lead_LuzPF_0</name>
-        <label>Criar Lead LuzPF</label>
-        <locationX>1133</locationX>
-        <locationY>708</locationY>
+        <name>Criar_Lead_LuzPF_Sem_UC</name>
+        <label>Criar Lead LuzPF Sem UC</label>
+        <locationX>1106</locationX>
+        <locationY>755</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -1472,7 +1472,7 @@
         <inputAssignments>
             <field>Company</field>
             <value>
-                <elementReference>Obter_Pr_lead.Nome__c</elementReference>
+                <elementReference>Obter_Pr_lead.Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1646,7 +1646,7 @@
         <inputAssignments>
             <field>FantasyName__c</field>
             <value>
-                <elementReference>Obter_Pr_lead.FantasyName__c</elementReference>
+                <elementReference>Obter_Pr_lead.Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1743,12 +1743,6 @@
             <field>Multa_Da_distribuidora__c</field>
             <value>
                 <elementReference>Obter_Pr_lead.AssessmentDistributor__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>MunicipalRegistration__c</field>
-            <value>
-                <elementReference>$Record.MunicipalRegistration__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1944,15 +1938,9 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>StateRegistration__c</field>
-            <value>
-                <elementReference>Obter_Pr_lead.StateRegistration__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Status</field>
             <value>
-                <stringValue>New</stringValue>
+                <stringValue>Coleta de Fatura</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2032,8 +2020,8 @@
     <recordCreates>
         <name>Criar_Lead_LuzPJ</name>
         <label>Criar Lead LuzPJ</label>
-        <locationX>341</locationX>
-        <locationY>708</locationY>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -2656,10 +2644,10 @@
         <object>Lead</object>
     </recordCreates>
     <recordCreates>
-        <name>Criar_Lead_LuzPJ_0</name>
-        <label>Criar Lead LuzPJ</label>
-        <locationX>605</locationX>
-        <locationY>708</locationY>
+        <name>Criar_Lead_LuzPJ_Sem_UC</name>
+        <label>Criar Lead LuzPJ Sem UC</label>
+        <locationX>578</locationX>
+        <locationY>755</locationY>
         <assignRecordIdToReference>varNewLead.Id</assignRecordIdToReference>
         <inputAssignments>
             <field>Address__c</field>
@@ -2724,7 +2712,7 @@
         <inputAssignments>
             <field>Company</field>
             <value>
-                <elementReference>Obter_Pr_lead.Nome__c</elementReference>
+                <elementReference>Obter_Pr_lead.Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2898,7 +2886,7 @@
         <inputAssignments>
             <field>FantasyName__c</field>
             <value>
-                <elementReference>Obter_Pr_lead.FantasyName__c</elementReference>
+                <elementReference>Obter_Pr_lead.Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3284,8 +3272,8 @@
     <recordLookups>
         <name>Obter_Pr_lead</name>
         <label>Obter Pré lead</label>
-        <locationX>539</locationX>
-        <locationY>384</locationY>
+        <locationX>512</locationX>
+        <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Qual_Empresa</targetReference>
@@ -3303,24 +3291,21 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>50</locationX>
+        <locationX>386</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>Localizacao_Id_Empresa</targetReference>
+        </connector>
         <object>PreLead__c</object>
         <recordTriggerType>Create</recordTriggerType>
-        <scheduledPaths>
-            <connector>
-                <targetReference>Localizacao_Id_Empresa</targetReference>
-            </connector>
-            <pathType>AsyncAfterCommit</pathType>
-        </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <subflows>
         <name>Localizacao_Id_Empresa</name>
         <label>Localizacao Id Empresa</label>
-        <locationX>539</locationX>
-        <locationY>276</locationY>
+        <locationX>512</locationX>
+        <locationY>323</locationY>
         <connector>
             <targetReference>Obter_Pr_lead</targetReference>
         </connector>

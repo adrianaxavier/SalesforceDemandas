@@ -13,5 +13,10 @@
     <columns>Caso_Atrelado__c</columns>
     <columns>Solicitante__c</columns>
     <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Agencia Distribuidora</value>
+    </filters>
     <label>Tudo</label>
 </ListView>

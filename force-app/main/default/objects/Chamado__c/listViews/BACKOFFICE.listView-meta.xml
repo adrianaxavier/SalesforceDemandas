@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BACKOFFICE</fullName>
+    <columns>NAME</columns>
+    <columns>Farol_SLA__c</columns>
+    <columns>Assunto__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Prioridade__c</columns>
+    <columns>Status__c</columns>
+    <columns>Tipo_de_Chamado__c</columns>
+    <columns>Caso_Atrelado__c</columns>
+    <columns>Solicitante__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Chamado__c.Chamados</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Aberto,Em Tratativa,Agencia Distribuidora,Aguardando a Distribuidora,Aguardando Gestão,Em atendimento,Aguardando outra área,Aguardando Cliente,Acompanhamento pós Solução</value>
+    </filters>
+    <label>BACKOFFICE</label>
+</ListView>
