@@ -166,7 +166,7 @@ trigger LeadTrigger on Lead (before insert, before update, after update, before 
          for (Lead lead : Trigger.new) {
             // Verifica se é uma atualização e o campo Origem Temporaria e os de Descontos foram preenchidos
             Lead oldLead = trigger.oldMap.get(lead.Id);
-            if (lead.ID_Cotacao__c != oldLead.ID_Cotacao__c && lead.ID_Cotacao__c !=null)
+            if (lead.ID_Cotacao__c != oldLead.ID_Cotacao__c && oldLead.ID_Cotacao__c !=null)
              {
                LeadTriggerValidation.CancelaOportunidade(lead);
             }
