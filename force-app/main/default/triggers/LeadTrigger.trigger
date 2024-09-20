@@ -162,7 +162,7 @@ trigger LeadTrigger on Lead (before insert, before update, after update, before 
     }
     
         // Chama o cancelamento da Oportunidade - Atualização 2024-07-10 Adriana A. Xavier
-  if ((trigger.isAfter && trigger.isInsert) || (trigger.isAfter && trigger.isUpdate)) {
+  /* if ((trigger.isAfter && trigger.isInsert) || (trigger.isAfter && trigger.isUpdate)) {
          for (Lead lead : Trigger.new) {
             // Verifica se é uma atualização e o campo Origem Temporaria e os de Descontos foram preenchidos
             Lead oldLead = trigger.oldMap.get(lead.Id);
@@ -171,7 +171,7 @@ trigger LeadTrigger on Lead (before insert, before update, after update, before 
                LeadTriggerValidation.CancelaOportunidade(lead);
             }
         }
-    }
+    }*/
     // Atualiza a fatura quando processada
     if (trigger.isAfter && trigger.isUpdate) {
         for (Lead lead : trigger.new) {
