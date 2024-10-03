@@ -4,8 +4,11 @@
     <decisions>
         <name>FindAccount</name>
         <label>FindAccount?</label>
-        <locationX>1150</locationX>
+        <locationX>1238</locationX>
         <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>UpdatePreLeadDefault</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>YesFindAccount</name>
@@ -73,7 +76,7 @@
     <decisions>
         <name>validar_cupom</name>
         <label>validar cupom</label>
-        <locationX>600</locationX>
+        <locationX>644</locationX>
         <locationY>242</locationY>
         <defaultConnector>
             <targetReference>Obter_Parcerias</targetReference>
@@ -98,7 +101,7 @@
     <decisions>
         <name>Validar_Parcerias</name>
         <label>Validar Parcerias</label>
-        <locationX>952</locationX>
+        <locationX>1040</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>GetAccountWithMGM</targetReference>
@@ -122,6 +125,11 @@
     </decisions>
     <description>Flow Parceiros x Vendedores</description>
     <environments>Default</environments>
+    <formulas>
+        <name>NomeCompleto</name>
+        <dataType>String</dataType>
+        <expression>{!Obter_cupom.Parceiro__r.FirstName}+&quot; &quot;+{!Obter_cupom.Parceiro__r.MiddleName}+&quot; &quot;+{!Obter_cupom.Parceiro__r.LastName}</expression>
+    </formulas>
     <interviewLabel>SUBFLOW{ pré-lead}-createParceiros {!$Flow.CurrentDateTime}</interviewLabel>
     <label>SUBFLOW{ pré-lead}-createParceiros</label>
     <processMetadataValues>
@@ -210,7 +218,7 @@
     <recordLookups>
         <name>GetAccountWithMGM</name>
         <label>GetAccountWithMGM</label>
-        <locationX>1150</locationX>
+        <locationX>1238</locationX>
         <locationY>566</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -231,7 +239,7 @@
     <recordLookups>
         <name>Obter_cupom</name>
         <label>Obter cupom</label>
-        <locationX>600</locationX>
+        <locationX>644</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -252,7 +260,7 @@
     <recordLookups>
         <name>Obter_Parcerias</name>
         <label>Obter Parcerias</label>
-        <locationX>952</locationX>
+        <locationX>1040</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -273,7 +281,7 @@
     <recordUpdates>
         <name>Atualizar_Parcerias</name>
         <label>Atualizar Parcerias</label>
-        <locationX>754</locationX>
+        <locationX>842</locationX>
         <locationY>566</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -320,6 +328,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Lider_Imediato__c</field>
+            <value>
+                <elementReference>NomeCompleto</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Nome_do_Parceiro__c</field>
             <value>
                 <elementReference>Obter_cupom.Nome_Vendedor__c</elementReference>
@@ -342,7 +356,7 @@
     <recordUpdates>
         <name>UpdatePreLead</name>
         <label>UpdatePreLead</label>
-        <locationX>1018</locationX>
+        <locationX>1106</locationX>
         <locationY>782</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -372,8 +386,35 @@
         </inputAssignments>
         <object>PreLead__c</object>
     </recordUpdates>
+    <recordUpdates>
+        <name>UpdatePreLeadDefault</name>
+        <label>UpdatePreLead</label>
+        <locationX>1370</locationX>
+        <locationY>782</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Record_id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MGM__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Parceiro__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>PreLead__c</object>
+    </recordUpdates>
     <start>
-        <locationX>474</locationX>
+        <locationX>518</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Obter_cupom</targetReference>
