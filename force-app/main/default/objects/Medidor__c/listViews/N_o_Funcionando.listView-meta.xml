@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>N_o_Funcionando</fullName>
+    <columns>Codigo_Medidor__c</columns>
+    <columns>Farol_Status__c</columns>
+    <columns>Unidade_Id__c</columns>
+    <columns>Ultima_Atualizacao__c</columns>
+    <columns>Conta__c</columns>
+    <columns>Unidades__c</columns>
+    <columns>Teste_Online__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Offline</value>
+    </filters>
+    <filters>
+        <field>Conta__c</field>
+        <operation>equals</operation>
+        <value>SILVIO HENRIQUE DA SILVEIRA ROMAN</value>
+    </filters>
+    <label>Não Funcionando</label>
+</ListView>
