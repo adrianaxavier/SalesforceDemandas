@@ -4,8 +4,8 @@
     <assignments>
         <name>SetCounters</name>
         <label>SetCounters</label>
-        <locationX>2265</locationX>
-        <locationY>50</locationY>
+        <locationX>2206</locationX>
+        <locationY>782</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLead</assignToReference>
             <operator>Add</operator>
@@ -27,8 +27,8 @@
     <assignments>
         <name>SetCounters2</name>
         <label>SetCounters</label>
-        <locationX>1906</locationX>
-        <locationY>929</locationY>
+        <locationX>534</locationX>
+        <locationY>782</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLead</assignToReference>
             <operator>Add</operator>
@@ -50,8 +50,8 @@
     <assignments>
         <name>SetPreLeadQtdConverted</name>
         <label>SetPreLeadQtdConverted</label>
-        <locationX>2642</locationX>
-        <locationY>359</locationY>
+        <locationX>1810</locationX>
+        <locationY>1106</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLeadConverted</assignToReference>
             <operator>Add</operator>
@@ -66,8 +66,8 @@
     <assignments>
         <name>SetPreLeadQtdConverted2</name>
         <label>SetPreLeadQtdConverted</label>
-        <locationX>2386</locationX>
-        <locationY>1115</locationY>
+        <locationX>138</locationX>
+        <locationY>1106</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLeadConverted</assignToReference>
             <operator>Add</operator>
@@ -82,8 +82,8 @@
     <assignments>
         <name>SetPreLeadQtdDesqualificados</name>
         <label>SetPreLeadQtdDesqualificados</label>
-        <locationX>2616</locationX>
-        <locationY>841</locationY>
+        <locationX>2338</locationX>
+        <locationY>1106</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLeadDesqualified</assignToReference>
             <operator>Add</operator>
@@ -98,8 +98,8 @@
     <assignments>
         <name>SetPreLeadQtdDesqualificados2</name>
         <label>SetPreLeadQtdDesqualificados</label>
-        <locationX>2396</locationX>
-        <locationY>1685</locationY>
+        <locationX>666</locationX>
+        <locationY>1106</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLeadDesqualified</assignToReference>
             <operator>Add</operator>
@@ -114,8 +114,8 @@
     <assignments>
         <name>SetPreLeadQtdEmAndamento</name>
         <label>SetPreLeadQtdEmAndamento</label>
-        <locationX>3000</locationX>
-        <locationY>498</locationY>
+        <locationX>2074</locationX>
+        <locationY>1106</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLeadEmAndamento</assignToReference>
             <operator>Add</operator>
@@ -130,8 +130,8 @@
     <assignments>
         <name>SetPreLeadQtdEmAndamento2</name>
         <label>SetPreLeadQtdEmAndamento</label>
-        <locationX>2732</locationX>
-        <locationY>1243</locationY>
+        <locationX>402</locationX>
+        <locationY>1106</locationY>
         <assignmentItems>
             <assignToReference>varCountPreLeadEmAndamento</assignToReference>
             <operator>Add</operator>
@@ -146,8 +146,8 @@
     <assignments>
         <name>SetVars</name>
         <label>SetVars</label>
-        <locationX>2459</locationX>
-        <locationY>50</locationY>
+        <locationX>2206</locationX>
+        <locationY>890</locationY>
         <assignmentItems>
             <assignToReference>varCountContactsSum</assignToReference>
             <operator>Add</operator>
@@ -169,8 +169,8 @@
     <assignments>
         <name>SetVars2</name>
         <label>SetVars</label>
-        <locationX>2175</locationX>
-        <locationY>929</locationY>
+        <locationX>534</locationX>
+        <locationY>890</locationY>
         <assignmentItems>
             <assignToReference>varCountContactsSum</assignToReference>
             <operator>Add</operator>
@@ -192,8 +192,8 @@
     <decisions>
         <name>EconomicGroupRemovedDecision</name>
         <label>EconomicGroupRemoved?</label>
-        <locationX>767</locationX>
-        <locationY>414</locationY>
+        <locationX>1216</locationX>
+        <locationY>134</locationY>
         <defaultConnector>
             <targetReference>GetEconomicGroup</targetReference>
         </defaultConnector>
@@ -217,8 +217,8 @@
     <decisions>
         <name>Find_Economic_Group</name>
         <label>Find Economic Group?</label>
-        <locationX>1316</locationX>
-        <locationY>415</locationY>
+        <locationX>2052</locationX>
+        <locationY>350</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_Find_Economic_Group</name>
@@ -239,8 +239,8 @@
     <decisions>
         <name>Find_Old_Economic_Group</name>
         <label>Find Old Economic Group?</label>
-        <locationX>1011</locationX>
-        <locationY>1242</locationY>
+        <locationX>380</locationX>
+        <locationY>350</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_Find_Old_Economic_Group</name>
@@ -260,9 +260,9 @@
     </decisions>
     <decisions>
         <name>Find_Pre_Leads</name>
-        <label>Find Pre Leads?</label>
-        <locationX>1749</locationX>
-        <locationY>415</locationY>
+        <label>Find Leads?</label>
+        <locationX>1854</locationX>
+        <locationY>566</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_Find_Pre_Leads</name>
@@ -283,8 +283,8 @@
     <decisions>
         <name>Find_Pre_Leads2</name>
         <label>Find Pre Leads?</label>
-        <locationX>1460</locationX>
-        <locationY>1243</locationY>
+        <locationX>182</locationX>
+        <locationY>566</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_Find_Pre_Leads2</name>
@@ -305,8 +305,8 @@
     <decisions>
         <name>PreLeadStatus</name>
         <label>PreLeadStatus</label>
-        <locationX>2451</locationX>
-        <locationY>584</locationY>
+        <locationX>2206</locationX>
+        <locationY>998</locationY>
         <defaultConnector>
             <targetReference>LoopPreLeads</targetReference>
         </defaultConnector>
@@ -318,7 +318,7 @@
                 <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Convertido</stringValue>
+                    <stringValue>Ganho</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -333,21 +333,7 @@
                 <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Em andamento</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Qualificado</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Novo</stringValue>
+                    <stringValue>Coleta de Fatura</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -355,6 +341,13 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Contrato Gerado</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Simulação</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -369,7 +362,7 @@
                 <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Desqualificado</stringValue>
+                    <stringValue>Perdido</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -381,8 +374,8 @@
     <decisions>
         <name>PreLeadStatus2</name>
         <label>PreLeadStatus</label>
-        <locationX>2167</locationX>
-        <locationY>1412</locationY>
+        <locationX>534</locationX>
+        <locationY>998</locationY>
         <defaultConnector>
             <targetReference>LoopPreLeads2</targetReference>
         </defaultConnector>
@@ -394,7 +387,7 @@
                 <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Convertido</stringValue>
+                    <stringValue>Ganho</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -409,21 +402,7 @@
                 <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Em andamento</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Qualificado</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Novo</stringValue>
+                    <stringValue>Coleta de Fatura</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -431,6 +410,13 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Contrato Gerado</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Simulação</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -445,7 +431,7 @@
                 <leftValueReference>LoopPreLeads.Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Desqualificado</stringValue>
+                    <stringValue>Perdido</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -459,9 +445,9 @@
     <label>[Grupo Economico] Pré-Lead Updates</label>
     <loops>
         <name>LoopPreLeads</name>
-        <label>LoopPreLeads</label>
-        <locationX>1978</locationX>
-        <locationY>411</locationY>
+        <label>LoopLeads</label>
+        <locationX>1722</locationX>
+        <locationY>674</locationY>
         <collectionReference>GetAllPreLeads</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -473,9 +459,9 @@
     </loops>
     <loops>
         <name>LoopPreLeads2</name>
-        <label>LoopPreLeads</label>
-        <locationX>1694</locationX>
-        <locationY>1240</locationY>
+        <label>LoopLeads</label>
+        <locationX>50</locationX>
+        <locationY>674</locationY>
         <collectionReference>GetAllPreLeads</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -494,7 +480,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -506,14 +492,14 @@
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
         <name>GetAllPreLeads</name>
-        <label>GetAllPreLeads</label>
-        <locationX>1543</locationX>
-        <locationY>413</locationY>
+        <label>GetAllLeads</label>
+        <locationX>1854</locationX>
+        <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Find_Pre_Leads</targetReference>
         </connector>
-        <filterLogic>or</filterLogic>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>EconomicGroup__c</field>
             <operator>EqualTo</operator>
@@ -522,35 +508,35 @@
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>PreLead__c</object>
+        <object>Lead</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
         <name>GetAllPreLeads2</name>
-        <label>GetAllPreLeads</label>
-        <locationX>1243</locationX>
-        <locationY>1241</locationY>
+        <label>GetAllLeads</label>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Find_Pre_Leads2</targetReference>
         </connector>
-        <filterLogic>or</filterLogic>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>EconomicGroup__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>idOldEconomicGroup</elementReference>
+                <elementReference>idEconomicGroup</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>PreLead__c</object>
+        <object>Lead</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
         <name>GetEconomicGroup</name>
         <label>GetEconomicGroup</label>
-        <locationX>1070</locationX>
-        <locationY>411</locationY>
+        <locationX>2052</locationX>
+        <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Find_Economic_Group</targetReference>
@@ -570,8 +556,8 @@
     <recordLookups>
         <name>GetOldEconomicGroup</name>
         <label>GetOldEconomicGroup</label>
-        <locationX>776</locationX>
-        <locationY>1240</locationY>
+        <locationX>380</locationX>
+        <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Find_Old_Economic_Group</targetReference>
@@ -591,8 +577,8 @@
     <recordUpdates>
         <name>UpdateEconomicGroup</name>
         <label>UpdateEconomicGroup</label>
-        <locationX>1978</locationX>
-        <locationY>646</locationY>
+        <locationX>1722</locationX>
+        <locationY>1382</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -614,19 +600,19 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Pre_Leads_Convertidos__c</field>
+            <field>Leads_Convertidos__c</field>
             <value>
                 <elementReference>varCountPreLeadConverted</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Pre_Leads_Desqualificados__c</field>
+            <field>Leads_Desqualificados__c</field>
             <value>
                 <elementReference>varCountPreLeadDesqualified</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Pre_Leads_Em_Andamento__c</field>
+            <field>Leads_Em_Andamento__c</field>
             <value>
                 <elementReference>varCountPreLeadEmAndamento</elementReference>
             </value>
@@ -642,8 +628,8 @@
     <recordUpdates>
         <name>UpdateOldEconomicGroup</name>
         <label>UpdateOldEconomicGroup</label>
-        <locationX>1694</locationX>
-        <locationY>1475</locationY>
+        <locationX>50</locationX>
+        <locationY>1382</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -665,19 +651,19 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Pre_Leads_Convertidos__c</field>
+            <field>Leads_Convertidos__c</field>
             <value>
                 <elementReference>varCountPreLeadConverted</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Pre_Leads_Desqualificados__c</field>
+            <field>Leads_Desqualificados__c</field>
             <value>
                 <elementReference>varCountPreLeadDesqualified</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Pre_Leads_Em_Andamento__c</field>
+            <field>Leads_Em_Andamento__c</field>
             <value>
                 <elementReference>varCountPreLeadEmAndamento</elementReference>
             </value>
@@ -691,8 +677,8 @@
         <object>EconomicGroup__c</object>
     </recordUpdates>
     <start>
-        <locationX>649</locationX>
-        <locationY>108</locationY>
+        <locationX>1090</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>EconomicGroupRemovedDecision</targetReference>
         </connector>
