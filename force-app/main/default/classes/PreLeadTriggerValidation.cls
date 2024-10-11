@@ -465,6 +465,16 @@ public class PreLeadTriggerValidation {
         lead.Fase__c = preLead.Fase__c;
      	lead.Origem_Temp__c = preLead.InformationSource__c;
      	lead.Filiais__c = preLead.Filiais__c;
+     	lead.CollaboratorId__c = preLead.CollaboratorId__c;
+        lead.Envio_do_contrato_social__c = preLead.Envio_do_contrato_social__c;
+        lead.Data_de_envio_do_contrato_social__c = preLead.Data_de_envio_do_contrato_social__c;
+        lead.Envio_de_documento_de_identifica_o__c = preLead.Envio_de_documento_de_identifica_o__c;
+        lead.Documento_de_identifica_o_validado__c = preLead.Documento_de_identifica_o_validado__c;
+        lead.Data_de_envio_de_documento_de_identifica__c = preLead.Data_envio_documento_de_identificacao__c;
+        lead.Envio_de_foto_com_documento__c = preLead.Envio_de_foto_com_documento__c;
+        lead.Foto_com_documento_validada__c = preLead.Foto_com_documento_validada__c;
+        lead.Data_de_envio_de_foto_com_documento__c = preLead.Data_de_envio_de_foto_com_documento__c;
+     	lead.Mensagem__c = preLead.Mensagem__c;
      
       // Invoke assignment rules
       if(preLead.TipoLead__c == 'DELTA')
