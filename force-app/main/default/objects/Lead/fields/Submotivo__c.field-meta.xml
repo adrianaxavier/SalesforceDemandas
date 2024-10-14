@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submotivo__c</fullName>
+    <externalId>false</externalId>
+    <label>Submotivo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>DisqualifiedLead__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>(1) Fora do ICP - 100% fotovoltaica ou quer colocar 100%</fullName>
+                <default>false</default>
+                <label>(1) Fora do ICP - 100% fotovoltaica ou quer colocar 100%</label>
+            </value>
+            <value>
+                <fullName>(1) Fora do ICP - Hospitais/Associação sem fins lucrativos (ONGs), Igrejas e Órgãos Públicos;</fullName>
+                <default>false</default>
+                <label>(1) Fora do ICP - Hospitais/Associação sem fins lucrativos (ONGs), Igrejas e Órgãos Públicos;</label>
+            </value>
+            <value>
+                <fullName>(1) Fora do ICP - Sem viabilidade técnica (consumo muito baixo em MWh);</fullName>
+                <default>false</default>
+                <label>(1) Fora do ICP - Sem viabilidade técnica (consumo muito baixo em MWh);</label>
+            </value>
+            <value>
+                <fullName>(1) Fora do ICP - Vai abrir empresa já no Mercado Livre e precisa de ajuste técnico no projeto;</fullName>
+                <default>false</default>
+                <label>(1) Fora do ICP - Vai abrir empresa já no Mercado Livre e precisa de ajuste técnico no projeto;</label>
+            </value>
+            <value>
+                <fullName>(1) Fora do ICP - Energia injetada fora da cerca;</fullName>
+                <default>false</default>
+                <label>(1) Fora do ICP - Energia injetada fora da cerca;</label>
+            </value>
+            <value>
+                <fullName>(1) Fora do ICP - Classe de tensão abaixo de 11.400v (não é optante B);</fullName>
+                <default>false</default>
+                <label>(1) Fora do ICP - Classe de tensão abaixo de 11.400v (não é optante B);</label>
+            </value>
+            <value>
+                <fullName>(1) Fora do ICP - Inviabilidade técnica para conlcuir estudo;</fullName>
+                <default>false</default>
+                <label>(1) Fora do ICP - Inviabilidade técnica para conlcuir estudo;</label>
+            </value>
+            <value>
+                <fullName>(1) Fora do ICP - % Fotovoltaica - Tem % percentual fotovoltaica e não quer fazer ajuste técnico;</fullName>
+                <default>false</default>
+                <label>(1) Fora do ICP - % Fotovoltaica - Tem % percentual fotovoltaica e não quer fazer ajuste técnico;</label>
+            </value>
+            <value>
+                <fullName>(1) Fora do ICP - % Fotovoltaica - Tem % percentual fotovoltaica e não quer perder crédito excedente;</fullName>
+                <default>false</default>
+                <label>(1) Fora do ICP - % Fotovoltaica - Tem % percentual fotovoltaica e não quer perder crédito excedente;</label>
+            </value>
+            <value>
+                <fullName>(2) Baixa Tensão - LUZ atende;</fullName>
+                <default>false</default>
+                <label>(2) Baixa Tensão - LUZ atende;</label>
+            </value>
+            <value>
+                <fullName>(2) Baixa Tensão - LUZ NÃO atende;</fullName>
+                <default>false</default>
+                <label>(2) Baixa Tensão - LUZ NÃO atende;</label>
+            </value>
+            <value>
+                <fullName>(2) Média/Alta Tensão - B Optante e não quis migrar para grupo A;</fullName>
+                <default>false</default>
+                <label>(2) Média/Alta Tensão - B Optante e não quis migrar para grupo A;</label>
+            </value>
+            <value>
+                <fullName>(3) Contato futuro - Decisor - Futuro próximo (menor que 3 meses);</fullName>
+                <default>false</default>
+                <label>(3) Contato futuro - Decisor - Futuro próximo (menor que 3 meses);</label>
+            </value>
+            <value>
+                <fullName>(3) Contato futuro - Não Decisor - Futuro próximo (menor que 3 meses);</fullName>
+                <default>false</default>
+                <label>(3) Contato futuro - Não Decisor - Futuro próximo (menor que 3 meses);</label>
+            </value>
+            <value>
+                <fullName>(3) Contato futuro - Decisor - quer implementar no próximo ciclo (mais de 03 meses);</fullName>
+                <default>false</default>
+                <label>(3) Contato futuro - Decisor - quer implementar no próximo ciclo (mais de 03 meses);</label>
+            </value>
+            <value>
+                <fullName>(3) Contato futuro - Não Decisor - quer implementar no próximo ciclo (mais de 03 meses);</fullName>
+                <default>false</default>
+                <label>(3) Contato futuro - Não Decisor - quer implementar no próximo ciclo (mais de 03 meses);</label>
+            </value>
+            <value>
+                <fullName>(7) Lead duplicado - Redundância Positiva - Está ativo no funil de vendas (Oportunidade);</fullName>
+                <default>false</default>
+                <label>(7) Lead duplicado - Redundância Positiva - Está ativo no funil de vendas (Oportunidade);</label>
+            </value>
+            <value>
+                <fullName>(7) Lead duplicado - Redundância Positiva - Está ativo no funil Pré-Vendas (Lead);</fullName>
+                <default>false</default>
+                <label>(7) Lead duplicado - Redundância Positiva - Está ativo no funil Pré-Vendas (Lead);</label>
+            </value>
+            <value>
+                <fullName>(8) Score - Avaliamos o balanço e não foi autorizado;</fullName>
+                <default>false</default>
+                <label>(8) Score - Avaliamos o balanço e não foi autorizado;</label>
+            </value>
+            <value>
+                <fullName>(8) Score - (não aceitou mandar balanço);</fullName>
+                <default>false</default>
+                <label>(8) Score - (não aceitou mandar balanço);</label>
+            </value>
+            <value>
+                <fullName>(8) Score - Default (avaliamos o balanço e não foi aprovado);</fullName>
+                <default>false</default>
+                <label>(8) Score - Default (avaliamos o balanço e não foi aprovado);</label>
+            </value>
+            <value>
+                <fullName>(8) Score - Default (não aceitou mandar o balanço);</fullName>
+                <default>false</default>
+                <label>(8) Score - Default (não aceitou mandar o balanço);</label>
+            </value>
+            <value>
+                <fullName>(9) Sem interesse - Não enviou 12 últimas faturas;</fullName>
+                <default>false</default>
+                <label>(9) Sem interesse - Não enviou 12 últimas faturas;</label>
+            </value>
+            <value>
+                <fullName>(9) Sem interesse - Contato não é decisor;</fullName>
+                <default>false</default>
+                <label>(9) Sem interesse - Contato não é decisor;</label>
+            </value>
+            <value>
+                <fullName>(9) Sem interesse - Não viu valor na proposta da Luz;</fullName>
+                <default>false</default>
+                <label>(9) Sem interesse - Não viu valor na proposta da Luz;</label>
+            </value>
+            <value>
+                <fullName>(9) Sem interesse - Parou de responder após troca de mensagens;</fullName>
+                <default>false</default>
+                <label>(9) Sem interesse - Parou de responder após troca de mensagens;</label>
+            </value>
+            <value>
+                <fullName>(9) Sem interesse - Já tinha falando com a Luz antes e decidiram não seguir;</fullName>
+                <default>false</default>
+                <label>(9) Sem interesse - Já tinha falando com a Luz antes e decidiram não seguir;</label>
+            </value>
+            <value>
+                <fullName>(9) Sem interesse - Decisor;</fullName>
+                <default>false</default>
+                <label>(9) Sem interesse - Decisor;</label>
+            </value>
+            <value>
+                <fullName>(9) Sem interesse -  Não - Decisor;</fullName>
+                <default>false</default>
+                <label>(9) Sem interesse -  Não - Decisor;</label>
+            </value>
+            <value>
+                <fullName>(10) Sem resposta (após 09 FUP&apos;s) - Contato não é decisor - Não consegui avançar contato até o decisor.</fullName>
+                <default>false</default>
+                <label>(10) Sem resposta (após 09 FUP&apos;s) - Contato não é decisor - Não consegui avançar contato até o decisor.</label>
+            </value>
+            <value>
+                <fullName>-</fullName>
+                <default>false</default>
+                <label>-</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>(3) - Contato Futuro</controllingFieldValue>
+            <valueName>(3) Contato futuro - Decisor - Futuro próximo (menor que 3 meses);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(3) - Contato Futuro</controllingFieldValue>
+            <valueName>(3) Contato futuro - Não Decisor - Futuro próximo (menor que 3 meses);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(3) - Contato Futuro</controllingFieldValue>
+            <valueName>(3) Contato futuro - Decisor - quer implementar no próximo ciclo (mais de 03 meses);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(3) - Contato Futuro</controllingFieldValue>
+            <valueName>(3) Contato futuro - Não Decisor - quer implementar no próximo ciclo (mais de 03 meses);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(7) - Lead duplicado (Redundância Positiva)</controllingFieldValue>
+            <valueName>(7) Lead duplicado - Redundância Positiva - Está ativo no funil de vendas (Oportunidade);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(7) - Lead duplicado (Redundância Positiva)</controllingFieldValue>
+            <valueName>(7) Lead duplicado - Redundância Positiva - Está ativo no funil Pré-Vendas (Lead);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(8) - Score - Reprovado por crédito</controllingFieldValue>
+            <valueName>(8) Score - Avaliamos o balanço e não foi autorizado;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(8) - Score - Reprovado por crédito</controllingFieldValue>
+            <valueName>(8) Score - (não aceitou mandar balanço);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(8) - Score - Reprovado por crédito</controllingFieldValue>
+            <valueName>(8) Score - Default (avaliamos o balanço e não foi aprovado);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(8) - Score - Reprovado por crédito</controllingFieldValue>
+            <valueName>(8) Score - Default (não aceitou mandar o balanço);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(9) - Sem interesse</controllingFieldValue>
+            <valueName>(9) Sem interesse - Não enviou 12 últimas faturas;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(9) - Sem interesse</controllingFieldValue>
+            <valueName>(9) Sem interesse - Contato não é decisor;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(9) - Sem interesse</controllingFieldValue>
+            <valueName>(9) Sem interesse - Não viu valor na proposta da Luz;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(9) - Sem interesse</controllingFieldValue>
+            <valueName>(9) Sem interesse - Parou de responder após troca de mensagens;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(9) - Sem interesse</controllingFieldValue>
+            <valueName>(9) Sem interesse - Já tinha falando com a Luz antes e decidiram não seguir;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(9) - Sem interesse</controllingFieldValue>
+            <valueName>(9) Sem interesse - Decisor;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(9) - Sem interesse</controllingFieldValue>
+            <valueName>(9) Sem interesse -  Não - Decisor;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(10) - Sem resposta (após 9 FUP&apos;s)</controllingFieldValue>
+            <valueName>(10) Sem resposta (após 09 FUP&apos;s) - Contato não é decisor - Não consegui avançar contato até o decisor.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(1) - Fora do ICP</controllingFieldValue>
+            <valueName>(1) Fora do ICP - 100% fotovoltaica ou quer colocar 100%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(1) - Fora do ICP</controllingFieldValue>
+            <valueName>(1) Fora do ICP - Hospitais/Associação sem fins lucrativos (ONGs), Igrejas e Órgãos Públicos;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(1) - Fora do ICP</controllingFieldValue>
+            <valueName>(1) Fora do ICP - Sem viabilidade técnica (consumo muito baixo em MWh);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(1) - Fora do ICP</controllingFieldValue>
+            <valueName>(1) Fora do ICP - Vai abrir empresa já no Mercado Livre e precisa de ajuste técnico no projeto;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(1) - Fora do ICP</controllingFieldValue>
+            <valueName>(1) Fora do ICP - Energia injetada fora da cerca;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(1) - Fora do ICP</controllingFieldValue>
+            <valueName>(1) Fora do ICP - Classe de tensão abaixo de 11.400v (não é optante B);</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(1) - Fora do ICP</controllingFieldValue>
+            <valueName>(1) Fora do ICP - Inviabilidade técnica para conlcuir estudo;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(1) - Fora do ICP</controllingFieldValue>
+            <valueName>(1) Fora do ICP - % Fotovoltaica - Tem % percentual fotovoltaica e não quer fazer ajuste técnico;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(1) - Fora do ICP</controllingFieldValue>
+            <valueName>(1) Fora do ICP - % Fotovoltaica - Tem % percentual fotovoltaica e não quer perder crédito excedente;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(2) - Baixa Tensão</controllingFieldValue>
+            <valueName>(2) Baixa Tensão - LUZ atende;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(2) - Baixa Tensão</controllingFieldValue>
+            <valueName>(2) Baixa Tensão - LUZ NÃO atende;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>(2) - Baixa Tensão</controllingFieldValue>
+            <valueName>(2) Média/Alta Tensão - B Optante e não quis migrar para grupo A;</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
