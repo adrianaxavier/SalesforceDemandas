@@ -4,55 +4,58 @@
     <assignments>
         <name>AddToList</name>
         <label>AddToList</label>
-        <locationX>1818</locationX>
-        <locationY>268</locationY>
+        <locationX>1307</locationX>
+        <locationY>1077</locationY>
         <assignmentItems>
-            <assignToReference>varPreLeadsCollection</assignToReference>
+            <assignToReference>LeadCollection</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>LoopPreLeads</elementReference>
+                <elementReference>LoopLeads</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>LoopPreLeads</targetReference>
+            <targetReference>LoopLeads</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>SetLeadFlow</name>
         <label>SetLeadFlow</label>
-        <locationX>1818</locationX>
-        <locationY>93</locationY>
+        <locationX>1394</locationX>
+        <locationY>616</locationY>
         <assignmentItems>
-            <assignToReference>LoopPreLeads.Status__c</assignToReference>
+            <assignToReference>LoopLeads.Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Perdido</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>LoopPreLeads.Data_de_Desqualificacao__c</assignToReference>
+            <assignToReference>LoopLeads.Data_de_Desqualificacao__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>LoopPreLeads.Motivo_Desqualifica_o__c</assignToReference>
+            <assignToReference>LoopLeads.DisqualifiedLead__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>DesqualifiyngReasonTxt</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>LoopPreLeads.Observa_o_da_Desqualifica_o__c</assignToReference>
+            <assignToReference>LoopLeads.Disqualified__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>DesqualifyingObsTxt</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>LoopPreLeads.Tarefa_Horario__c</assignToReference>
+            <assignToReference>LoopLeads.Data_Tarefa__c</assignToReference>
             <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
         </assignmentItems>
         <connector>
             <targetReference>AddToList</targetReference>
@@ -68,19 +71,19 @@
     </dynamicChoiceSets>
     <environments>Default</environments>
     <interviewLabel>[Grupo Economico] Desqualificar Pre Leads em massa {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>[Grupo Economico] Desqualificar Pre Leads em massa</label>
+    <label>[Grupo Economico] Desqualificar Leads em massa</label>
     <loops>
-        <name>LoopPreLeads</name>
-        <label>LoopPreLeads</label>
-        <locationX>1627</locationX>
-        <locationY>268</locationY>
-        <collectionReference>PreLeadsDataTable.selectedRows</collectionReference>
+        <name>LoopLeads</name>
+        <label>LoopLeads</label>
+        <locationX>1149</locationX>
+        <locationY>622</locationY>
+        <collectionReference>LeadsDataTable1.selectedRows</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>SetLeadFlow</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>UpdatePreLeads</targetReference>
+            <targetReference>UpdateLeads</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -105,11 +108,11 @@
     <recordLookups>
         <name>GetEconomyGroup</name>
         <label>GetEconomyGroup</label>
-        <locationX>578</locationX>
-        <locationY>268</locationY>
+        <locationX>776</locationX>
+        <locationY>182</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>getPreLeads</targetReference>
+            <targetReference>getLeads</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -124,10 +127,10 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <name>getPreLeads</name>
-        <label>getPreLeads</label>
-        <locationX>818</locationX>
-        <locationY>268</locationY>
+        <name>getLeads</name>
+        <label>getLeads</label>
+        <locationX>776</locationX>
+        <locationY>290</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Screen_Select_Pre_Leads</targetReference>
@@ -141,44 +144,44 @@
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>PreLead__c</object>
+        <object>Lead</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>UpdatePreLeads</name>
-        <label>UpdatePreLeads</label>
-        <locationX>1629</locationX>
-        <locationY>460</locationY>
+        <name>UpdateLeads</name>
+        <label>UpdateLeads</label>
+        <locationX>981</locationX>
+        <locationY>832</locationY>
         <connector>
             <targetReference>Screen_Success</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Screen_Error</targetReference>
         </faultConnector>
-        <inputReference>varPreLeadsCollection</inputReference>
+        <inputReference>LeadCollection</inputReference>
     </recordUpdates>
     <screens>
         <name>Screen_Confirm_Selection</name>
         <label>Screen Confirm Selection</label>
-        <locationX>1395</locationX>
-        <locationY>268</locationY>
+        <locationX>776</locationX>
+        <locationY>614</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <backButtonLabel>Anterior</backButtonLabel>
         <connector>
-            <targetReference>LoopPreLeads</targetReference>
+            <targetReference>LoopLeads</targetReference>
         </connector>
         <fields>
             <name>ConfirmSelectionTxt</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Confirme a seleção dos Pré-Leads a serem Desqualificados:&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Confirme a seleção dos Leads a serem Desqualificados:&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Selected_PreLeads</name>
             <dataTypeMappings>
                 <typeName>T</typeName>
-                <typeValue>PreLead__c</typeValue>
+                <typeValue>Lead</typeValue>
             </dataTypeMappings>
             <extensionName>flowruntime:datatable</extensionName>
             <fieldType>ComponentInstance</fieldType>
@@ -203,7 +206,7 @@
             <inputParameters>
                 <name>tableData</name>
                 <value>
-                    <elementReference>PreLeadsDataTable.selectedRows</elementReference>
+                    <elementReference>LeadsDataTable1.selectedRows</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -215,7 +218,7 @@
             <inputParameters>
                 <name>columns</name>
                 <value>
-                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-fb56&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Nome do contato&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FantasyName__c&quot;,&quot;guid&quot;:&quot;column-047f&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Nome da UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;PhoneNumber__c&quot;,&quot;guid&quot;:&quot;column-447e&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Telefone/Celular&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Email__c&quot;,&quot;guid&quot;:&quot;column-573a&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;}]</stringValue>
+                    <stringValue>[{&quot;apiName&quot;:&quot;FantasyName__c&quot;,&quot;guid&quot;:&quot;column-cdf2&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Nome do contato&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Nome da UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;UC__c&quot;,&quot;guid&quot;:&quot;column-0c05&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Nome da UC&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Phone&quot;,&quot;guid&quot;:&quot;column-652e&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Telefone&quot;,&quot;type&quot;:&quot;phone&quot;},{&quot;apiName&quot;:&quot;Email&quot;,&quot;guid&quot;:&quot;column-ea36&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;}]</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -229,8 +232,8 @@
     <screens>
         <name>Screen_Desqualifiyng_Info</name>
         <label>Screen Desqualifiyng Info</label>
-        <locationX>1205</locationX>
-        <locationY>268</locationY>
+        <locationX>776</locationX>
+        <locationY>506</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -293,8 +296,8 @@
     <screens>
         <name>Screen_Error</name>
         <label>Screen Error</label>
-        <locationX>1832</locationX>
-        <locationY>461</locationY>
+        <locationX>994</locationX>
+        <locationY>1027</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -309,9 +312,9 @@
     </screens>
     <screens>
         <name>Screen_Select_Pre_Leads</name>
-        <label>Screen Select Pre Leads</label>
-        <locationX>1039</locationX>
-        <locationY>268</locationY>
+        <label>Screen Select Leads</label>
+        <locationX>776</locationX>
+        <locationY>398</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -320,21 +323,21 @@
         </connector>
         <fields>
             <name>SelectionTxt</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Selecione os Pre-Leads a serem desqualificados:&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Selecione os Leads a serem desqualificados:&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>PreLeadsDataTable</name>
+            <name>LeadsDataTable1</name>
             <dataTypeMappings>
                 <typeName>T</typeName>
-                <typeValue>PreLead__c</typeValue>
+                <typeValue>Lead</typeValue>
             </dataTypeMappings>
             <extensionName>flowruntime:datatable</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
                 <name>label</name>
                 <value>
-                    <stringValue>Pre Leads Data Table</stringValue>
+                    <stringValue>Data Table</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -346,25 +349,19 @@
             <inputParameters>
                 <name>minRowSelection</name>
                 <value>
-                    <numberValue>1.0</numberValue>
+                    <numberValue>0.0</numberValue>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>tableData</name>
                 <value>
-                    <elementReference>getPreLeads</elementReference>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>isShowSearchBar</name>
-                <value>
-                    <booleanValue>true</booleanValue>
+                    <elementReference>getLeads</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>columns</name>
                 <value>
-                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-08c6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Nome do contato&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;NumeroInstalacao__c&quot;,&quot;guid&quot;:&quot;column-de47&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Número da Instalação&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FantasyName__c&quot;,&quot;guid&quot;:&quot;column-24fc&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Nome da UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;PhoneNumber__c&quot;,&quot;guid&quot;:&quot;column-0cdd&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Telefone/Celular&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Email__c&quot;,&quot;guid&quot;:&quot;column-51f8&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;Status__c&quot;,&quot;guid&quot;:&quot;column-efe7&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                    <stringValue>[{&quot;apiName&quot;:&quot;FantasyName__c&quot;,&quot;guid&quot;:&quot;column-733e&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Nome do Contato&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Nome da UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;NumeroInstalacao__c&quot;,&quot;guid&quot;:&quot;column-4a63&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Número da Instalação&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;UC__c&quot;,&quot;guid&quot;:&quot;column-738c&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Nome da UC&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Phone&quot;,&quot;guid&quot;:&quot;column-bca5&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Telefone&quot;,&quot;type&quot;:&quot;phone&quot;},{&quot;apiName&quot;:&quot;Email&quot;,&quot;guid&quot;:&quot;column-278d&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;Status__c&quot;,&quot;guid&quot;:&quot;column-0c3b&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -378,14 +375,14 @@
     <screens>
         <name>Screen_Success</name>
         <label>Screen Success</label>
-        <locationX>1453</locationX>
-        <locationY>460</locationY>
+        <locationX>567</locationX>
+        <locationY>1132</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <fields>
             <name>TxtSuccess</name>
-            <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Pré-Leads desqualificados com sucesso!&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Leads desqualificados com sucesso!&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <nextOrFinishButtonLabel>Finalizar</nextOrFinishButtonLabel>
@@ -393,13 +390,21 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>452</locationX>
-        <locationY>55</locationY>
+        <locationX>650</locationX>
+        <locationY>48</locationY>
         <connector>
             <targetReference>GetEconomyGroup</targetReference>
         </connector>
     </start>
     <status>Active</status>
+    <variables>
+        <name>LeadCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>

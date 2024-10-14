@@ -7,14 +7,14 @@
         <locationX>1818</locationX>
         <locationY>268</locationY>
         <assignmentItems>
-            <assignToReference>varPreLeadsCollection</assignToReference>
+            <assignToReference>VarLeadCollection</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>LoopPreLeads</elementReference>
+                <elementReference>LoopLeads</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>LoopPreLeads</targetReference>
+            <targetReference>LoopLeads</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -23,10 +23,10 @@
         <locationX>1818</locationX>
         <locationY>92</locationY>
         <assignmentItems>
-            <assignToReference>LoopPreLeads.Status__c</assignToReference>
+            <assignToReference>LoopLeads.Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>StatusTxt</elementReference>
+                <stringValue>Ganho</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -43,19 +43,19 @@
     </dynamicChoiceSets>
     <environments>Default</environments>
     <interviewLabel>[Grupo Economico] Qualificar Pre Leads em massa {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>[Grupo Economico] Qualificar Pre Leads em massa</label>
+    <label>[Grupo Economico] Qualificar Leads em massa</label>
     <loops>
-        <name>LoopPreLeads</name>
-        <label>LoopPreLeads</label>
+        <name>LoopLeads</name>
+        <label>LoopLeads</label>
         <locationX>1627</locationX>
         <locationY>268</locationY>
-        <collectionReference>PreLeadsDataTable.selectedRows</collectionReference>
+        <collectionReference>LeadsDataTable.selectedRows</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>SetLeadFlow</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>UpdatePreLeads</targetReference>
+            <targetReference>UpdateLeads</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -84,7 +84,7 @@
         <locationY>268</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>getPreLeads</targetReference>
+            <targetReference>getLeads</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -99,13 +99,13 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <name>getPreLeads</name>
-        <label>getPreLeads</label>
+        <name>getLeads</name>
+        <label>getLeads</label>
         <locationX>804</locationX>
         <locationY>268</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Screen_Select_Pre_Leads</targetReference>
+            <targetReference>Screen_Select_Leads</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -116,12 +116,12 @@
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>PreLead__c</object>
+        <object>Lead</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>UpdatePreLeads</name>
-        <label>UpdatePreLeads</label>
+        <name>UpdateLeads</name>
+        <label>UpdateLeads</label>
         <locationX>1629</locationX>
         <locationY>460</locationY>
         <connector>
@@ -130,19 +130,19 @@
         <faultConnector>
             <targetReference>Screen_Error</targetReference>
         </faultConnector>
-        <inputReference>varPreLeadsCollection</inputReference>
+        <inputReference>VarLeadCollection</inputReference>
     </recordUpdates>
     <screens>
         <name>Screen_Confirm_Selection</name>
         <label>Screen Confirm Selection</label>
-        <locationX>1390</locationX>
+        <locationX>1323</locationX>
         <locationY>268</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <backButtonLabel>Anterior</backButtonLabel>
         <connector>
-            <targetReference>LoopPreLeads</targetReference>
+            <targetReference>LoopLeads</targetReference>
         </connector>
         <fields>
             <name>ConfirmSelectionTxt</name>
@@ -150,23 +150,23 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>Selected_PreLeads</name>
+            <name>SelectedLeads</name>
             <dataTypeMappings>
                 <typeName>T</typeName>
-                <typeValue>PreLead__c</typeValue>
+                <typeValue>Lead</typeValue>
             </dataTypeMappings>
             <extensionName>flowruntime:datatable</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
                 <name>label</name>
                 <value>
-                    <stringValue>Selected Pre Leads</stringValue>
+                    <stringValue>Selected Leads</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>selectionMode</name>
                 <value>
-                    <stringValue>NO_SELECTION</stringValue>
+                    <stringValue>MULTI_SELECT</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -178,19 +178,13 @@
             <inputParameters>
                 <name>tableData</name>
                 <value>
-                    <elementReference>PreLeadsDataTable.selectedRows</elementReference>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>maxRowSelection</name>
-                <value>
-                    <numberValue>0.0</numberValue>
+                    <elementReference>LeadsDataTable.selectedRows</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>columns</name>
                 <value>
-                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-fb56&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Nome do contato&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FantasyName__c&quot;,&quot;guid&quot;:&quot;column-047f&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Nome da UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;PhoneNumber__c&quot;,&quot;guid&quot;:&quot;column-447e&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Telefone/Celular&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Email__c&quot;,&quot;guid&quot;:&quot;column-573a&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;}]</stringValue>
+                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-98a6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Nome do Contato&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;UC__c&quot;,&quot;guid&quot;:&quot;column-65c0&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Phone&quot;,&quot;guid&quot;:&quot;column-5561&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Telefone&quot;,&quot;type&quot;:&quot;phone&quot;},{&quot;apiName&quot;:&quot;Email&quot;,&quot;guid&quot;:&quot;column-2970&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;}]</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -204,7 +198,7 @@
     <screens>
         <name>Screen_Error</name>
         <label>Screen Error</label>
-        <locationX>1832</locationX>
+        <locationX>1833</locationX>
         <locationY>461</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -219,10 +213,10 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
-        <name>Screen_Qualifying_Info</name>
-        <label>Screen Qualifying Info</label>
-        <locationX>1194</locationX>
-        <locationY>268</locationY>
+        <name>Screen_Select_Leads</name>
+        <label>Screen Select Leads</label>
+        <locationX>1025</locationX>
+        <locationY>267</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -230,54 +224,22 @@
             <targetReference>Screen_Confirm_Selection</targetReference>
         </connector>
         <fields>
-            <name>QualifyingInfoTxt</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Selecione o Status da qualificação:&lt;/strong&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
-            <name>StatusTxt</name>
-            <choiceReferences>StatusPreLead</choiceReferences>
-            <dataType>String</dataType>
-            <defaultValue>
-                <stringValue>Convertido</stringValue>
-            </defaultValue>
-            <fieldText>StatusTxt</fieldText>
-            <fieldType>DropdownBox</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-        </fields>
-        <nextOrFinishButtonLabel>Avançar</nextOrFinishButtonLabel>
-        <showFooter>true</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
-    <screens>
-        <name>Screen_Select_Pre_Leads</name>
-        <label>Screen Select Pre Leads</label>
-        <locationX>1025</locationX>
-        <locationY>268</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <connector>
-            <targetReference>Screen_Qualifying_Info</targetReference>
-        </connector>
-        <fields>
             <name>SelectionTxt</name>
             <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Selecione os Pre-Leads a serem qualificados (convertidos em Leads):&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>PreLeadsDataTable</name>
+            <name>LeadsDataTable</name>
             <dataTypeMappings>
                 <typeName>T</typeName>
-                <typeValue>PreLead__c</typeValue>
+                <typeValue>Lead</typeValue>
             </dataTypeMappings>
             <extensionName>flowruntime:datatable</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
                 <name>label</name>
                 <value>
-                    <stringValue>Pre Leads Data Table</stringValue>
+                    <stringValue>Leads Data Table</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -289,13 +251,13 @@
             <inputParameters>
                 <name>minRowSelection</name>
                 <value>
-                    <numberValue>1.0</numberValue>
+                    <numberValue>0.0</numberValue>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>tableData</name>
                 <value>
-                    <elementReference>getPreLeads</elementReference>
+                    <elementReference>getLeads</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -307,7 +269,7 @@
             <inputParameters>
                 <name>columns</name>
                 <value>
-                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-08c6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Nome do contato&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;NumeroInstalacao__c&quot;,&quot;guid&quot;:&quot;column-c781&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Número da Instalação&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FantasyName__c&quot;,&quot;guid&quot;:&quot;column-24fc&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Nome da UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;PhoneNumber__c&quot;,&quot;guid&quot;:&quot;column-0cdd&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Telefone/Celular&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Email__c&quot;,&quot;guid&quot;:&quot;column-51f8&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;Status__c&quot;,&quot;guid&quot;:&quot;column-0eb6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-a57e&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Nome do Contato&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;NumeroInstalacao__c&quot;,&quot;guid&quot;:&quot;column-2244&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Número da Instalação&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;UC__c&quot;,&quot;guid&quot;:&quot;column-c83e&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Nome da UC&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;UC&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Phone&quot;,&quot;guid&quot;:&quot;column-e589&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Telefone&quot;,&quot;type&quot;:&quot;phone&quot;},{&quot;apiName&quot;:&quot;Email&quot;,&quot;guid&quot;:&quot;column-bb79&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;Status__c&quot;,&quot;guid&quot;:&quot;column-4bc2&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -349,6 +311,14 @@
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>VarLeadCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
     </variables>
     <variables>
         <name>varPreLeadsCollection</name>
