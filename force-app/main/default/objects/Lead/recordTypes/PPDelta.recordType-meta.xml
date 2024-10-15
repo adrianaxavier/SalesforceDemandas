@@ -37,6 +37,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>%2812%29 Concorrência</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>%282%29 - Baixa Tensão</fullName>
             <default>false</default>
         </values>
