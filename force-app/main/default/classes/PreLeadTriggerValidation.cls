@@ -475,6 +475,10 @@ public class PreLeadTriggerValidation {
         lead.Foto_com_documento_validada__c = preLead.Foto_com_documento_validada__c;
         lead.Data_de_envio_de_foto_com_documento__c = preLead.Data_de_envio_de_foto_com_documento__c;
      	lead.Mensagem__c = preLead.Mensagem__c;
+     	lead.Documentacao_enviada__c = preLead.Documentacao_enviada__c;
+     	lead.Documentacao_validada__c = preLead.Documentacao_validada__c;
+     	lead.Data_Envio_Documentos__c = preLead.Data_Envio_Documentos__c;
+     	lead.Link_Download__c = preLead.Link_Download__c;
      
       // Invoke assignment rules
       if(preLead.TipoLead__c == 'DELTA')
