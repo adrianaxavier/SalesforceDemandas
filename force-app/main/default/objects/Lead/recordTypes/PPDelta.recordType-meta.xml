@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Wisebyte</fullName>
+    <fullName>PPDelta</fullName>
     <active>true</active>
-    <businessProcess>Thymos</businessProcess>
-    <label>Wisebyte</label>
+    <businessProcess>Prospecção Própria</businessProcess>
+    <label>Outros Sté</label>
     <picklistValues>
         <picklist>Cliente_Livre__c</picklist>
         <values>
@@ -25,35 +25,47 @@
     <picklistValues>
         <picklist>DisqualifiedLead__c</picklist>
         <values>
-            <fullName>Baixa Tensão</fullName>
+            <fullName>%281%29 - Fora do ICP</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Cliente Delta</fullName>
+            <fullName>%2810%29 - Sem resposta %28após 9 FUP%27s%29</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Falta de Interesse</fullName>
+            <fullName>%2811%29 - Dados insuficientes para enviar para estudo</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Inviável</fullName>
+            <fullName>%282%29 - Baixa Tensão</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Não Respondeu</fullName>
+            <fullName>%283%29 - Contato Futuro</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Outros</fullName>
+            <fullName>%284%29 - Dados inválidos</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Recuperação Judicial</fullName>
+            <fullName>%285%29 - Interesse em parceria</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Regulatorio</fullName>
+            <fullName>%286%29 - Já está no ACL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%287%29 - Lead duplicado %28Redundância Positiva%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%288%29 - Score - Reprovado por crédito</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%289%29 - Sem interesse</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -155,7 +167,7 @@
         </values>
         <values>
             <fullName>Lead</fullName>
-            <default>false</default>
+            <default>true</default>
         </values>
         <values>
             <fullName>Oportunidade</fullName>
@@ -169,7 +181,59 @@
     <picklistValues>
         <picklist>Fonte__c</picklist>
         <values>
-            <fullName>Parceiros</fullName>
+            <fullName>1 - Inbound - ACL Varejo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 - Indicação Interna %28Colaboradoes%29 - ACL Atacado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11 - Indicação Interna %28Consultores%29- ACL Atacado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 - Indicação Clientes MGM - ACL Atacado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13 - RFQ - ACL Varejo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14 - RFQ - ACL Atacado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Outbound - ACL Varejo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Parcerias - ACL Varejo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Indicação Interna %28Colaboradoes%29 - ACL Varejo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Indicação Interna %28Consultores%29- ACL Varejo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 - Indicação Clientes MGM - ACL Varejo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7 - Inbound - ACL Atacado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8 - Outbound - ACL Atacado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9 - Parcerias - ACL Atacado</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1459,10 +1523,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Lista Scooto</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Lives</fullName>
             <default>false</default>
         </values>
@@ -1490,8 +1550,12 @@
     <picklistValues>
         <picklist>LeadType__c</picklist>
         <values>
+            <fullName>Pessoa Física</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Pessoa Jurídica</fullName>
-            <default>true</default>
+            <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>
@@ -1601,7 +1665,111 @@
     <picklistValues>
         <picklist>Motivo_da_Perda__c</picklist>
         <values>
-            <fullName>-</fullName>
+            <fullName>%281%29 - Fora do ICP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%281%29 Concorrência Direta - Negociação com outra comercializadora %22Desconto Garantido%22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2810%29 - Sem resposta %28após 9 FUP%27s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2810%29 Pediu contato futuro - Sem interesse real no produto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2811%29 - Dados insuficientes para enviar para estudo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2811%29 Pediu contato futuro - Futuro próximo %28menor que 3 meses%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2812%29 Pediu contato futuro - Futuro distante %28maior que 3 meses%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2813%29 Negociação - Não houve acordo com o percentual de desconto %28preço%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2814%29 Negociação - Não houve consenso entre sócios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2815%29 Motivo pessoal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2816%29 Fez comunhão de carga e migrou para o ACL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%282%29 - Baixa Tensão</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%282%29 Concorrência Direta - Negociação com outra comercializadora %22Preço Fixo%22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%283%29 - Contato Futuro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%284%29 - Dados inválidos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%284%29 Concorrência Indireta - Cooperativas de energia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%285%29 - Interesse em parceria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%285%29 Estudo não chegou até o decisor - Não consegui apresentar para o decisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%286%29 - Já está no ACL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%286%29 Não enxergou valor no produto - Mas pediu contato futuro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%287%29 - Lead duplicado %28Redundância Positiva%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%287%29 Sem interesse - Não é uma prioridade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%288%29 - Score - Reprovado por crédito</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%288%29 Insegurança com a LUZ - Não enviou contrato social%2C nem doctos dos sócios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%289%29 - Sem interesse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%289%29 Insegurança com a LUZ - Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1650,8 +1818,12 @@
     <picklistValues>
         <picklist>PFPJ__c</picklist>
         <values>
+            <fullName>PF</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>PJ</fullName>
-            <default>true</default>
+            <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>
@@ -1745,7 +1917,15 @@
     <picklistValues>
         <picklist>Qual_foi_a_base_de_c_lculo__c</picklist>
         <values>
+            <fullName>Consumo do Último mês</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Consumo dos Últimos 12 messes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumo dos Últimos 3 messes</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1819,14 +1999,142 @@
     <picklistValues>
         <picklist>Submercado__c</picklist>
         <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
             <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>
         <picklist>Submotivo__c</picklist>
         <values>
-            <fullName>-</fullName>
+            <fullName>%281%29 Fora do ICP - %25 Fotovoltaica - Tem %25 percentual fotovoltaica e não quer fazer ajuste técnico%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%281%29 Fora do ICP - %25 Fotovoltaica - Tem %25 percentual fotovoltaica e não quer perder crédito excedente%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%281%29 Fora do ICP - 100%25 fotovoltaica ou quer colocar 100%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%281%29 Fora do ICP - Classe de tensão abaixo de 11%2E400v %28não é optante B%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%281%29 Fora do ICP - Energia injetada fora da cerca%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%281%29 Fora do ICP - Hospitais%2FAssociação sem fins lucrativos %28ONGs%29%2C Igrejas e Órgãos Públicos%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%281%29 Fora do ICP - Inviabilidade técnica para conlcuir estudo%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%281%29 Fora do ICP - Sem viabilidade técnica %28consumo muito baixo em MWh%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%281%29 Fora do ICP - Vai abrir empresa já no Mercado Livre e precisa de ajuste técnico no projeto%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2810%29 Sem resposta %28após 09 FUP%27s%29 - Contato não é decisor - Não consegui avançar contato até o decisor%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%282%29 Baixa Tensão - LUZ NÃO atende%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%282%29 Baixa Tensão - LUZ atende%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%282%29 Média%2FAlta Tensão - B Optante e não quis migrar para grupo A%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%283%29 Contato futuro - Decisor - Futuro próximo %28menor que 3 meses%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%283%29 Contato futuro - Decisor - quer implementar no próximo ciclo %28mais de 03 meses%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%283%29 Contato futuro - Não Decisor - Futuro próximo %28menor que 3 meses%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%283%29 Contato futuro - Não Decisor - quer implementar no próximo ciclo %28mais de 03 meses%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%287%29 Lead duplicado - Redundância Positiva - Está ativo no funil Pré-Vendas %28Lead%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%287%29 Lead duplicado - Redundância Positiva - Está ativo no funil de vendas %28Oportunidade%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%288%29 Score - %28não aceitou mandar balanço%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%288%29 Score - Avaliamos o balanço e não foi autorizado%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%288%29 Score - Default %28avaliamos o balanço e não foi aprovado%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%288%29 Score - Default %28não aceitou mandar o balanço%29%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%289%29 Sem interesse -  Não - Decisor%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%289%29 Sem interesse - Contato não é decisor%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%289%29 Sem interesse - Decisor%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%289%29 Sem interesse - Já tinha falando com a Luz antes e decidiram não seguir%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%289%29 Sem interesse - Não enviou 12 últimas faturas%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%289%29 Sem interesse - Não viu valor na proposta da Luz%3B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%289%29 Sem interesse - Parou de responder após troca de mensagens%3B</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -2107,6 +2415,18 @@
         </values>
         <values>
             <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
             <default>false</default>
         </values>
     </picklistValues>

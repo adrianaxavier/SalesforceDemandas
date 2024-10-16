@@ -21,6 +21,31 @@
                 <default>false</default>
                 <label>perdido s/atuação</label>
             </value>
+            <value>
+                <fullName>Desclassificado</fullName>
+                <default>false</default>
+                <label>Desclassificado</label>
+            </value>
+            <value>
+                <fullName>Qualificado Perdido</fullName>
+                <default>false</default>
+                <label>Qualificado Perdido</label>
+            </value>
+            <value>
+                <fullName>Oprotunidade Perdida</fullName>
+                <default>false</default>
+                <label>Oprotunidade Perdida</label>
+            </value>
+            <value>
+                <fullName>Proposta Perdida</fullName>
+                <default>false</default>
+                <label>Proposta Perdida</label>
+            </value>
+            <value>
+                <fullName>Negociação Perdida</fullName>
+                <default>false</default>
+                <label>Negociação Perdida</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
