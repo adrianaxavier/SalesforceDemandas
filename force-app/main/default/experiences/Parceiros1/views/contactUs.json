@@ -1,0 +1,72 @@
+{
+  "appPageId" : "9af302ba-60fd-4432-bb14-5566e074d711",
+  "componentName" : "siteforce:sldsTwoCol66Layout",
+  "dataProviders" : [ ],
+  "id" : "9cc60933-33c0-44ac-97a6-df35dec2c80d",
+  "label" : "Contact Us",
+  "regions" : [ {
+    "id" : "c42ae271-b351-4b83-b95c-b38c1b32e8d4",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "allowAttachments" : true,
+        "attachmentLabel" : "Upload File",
+        "buttonAlignment" : "center",
+        "buttonBgColor" : "",
+        "buttonBgHoverColor" : "",
+        "buttonBorderColor" : "",
+        "buttonMaxWidth" : "",
+        "buttonRadius" : 0,
+        "buttonTextColor" : "",
+        "buttonTextHoverColor" : "",
+        "callToAction" : false,
+        "callToActionButtonText" : "",
+        "callToActionText" : "",
+        "callToActionUrl" : "",
+        "confirmationSubtext" : "We’ll get back to you soon.",
+        "confirmationText" : "Your case was created.",
+        "guestQuickActionName" : "Selecionar ou configurar uma ação global",
+        "headerSubtitle" : "",
+        "headerTitle" : "Contate o Suporte ao Cliente",
+        "quickActionName" : "NewCase",
+        "requestSummaryText" : "Case summary"
+      },
+      "componentName" : "forceCommunity:contactSupportForm",
+      "id" : "021dff2a-3ed8-4e61-8e61-2bc5ccaf6f9b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ba52d026-11cc-49f3-8e52-9590c8289f01",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "9db627bf-31db-4d8a-a55f-e81227faed76",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "f0a795e7-b27c-4d66-a0e0-63ca8e4098c1",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Contact Us"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d184f401-f096-4d20-af65-0e177447c114",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "70ac4b10-7e74-449c-b250-ca18f116c835",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "contactsupport"
+}
