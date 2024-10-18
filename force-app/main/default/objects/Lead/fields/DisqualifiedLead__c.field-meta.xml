@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DisqualifiedLead__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo Desqualificação</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Baixa Tensão</fullName>
+                <default>false</default>
+                <label>Baixa Tensão</label>
+            </value>
+            <value>
+                <fullName>Cliente Delta</fullName>
+                <default>false</default>
+                <label>Cliente Delta</label>
+            </value>
+            <value>
+                <fullName>Falta de Interesse</fullName>
+                <default>false</default>
+                <label>Falta de Interesse</label>
+            </value>
+            <value>
+                <fullName>Inviável</fullName>
+                <default>false</default>
+                <label>Inviável</label>
+            </value>
+            <value>
+                <fullName>Não Respondeu</fullName>
+                <default>false</default>
+                <label>Não Respondeu</label>
+            </value>
+            <value>
+                <fullName>Outros</fullName>
+                <default>false</default>
+                <label>Outros</label>
+            </value>
+            <value>
+                <fullName>Recuperação Judicial</fullName>
+                <default>false</default>
+                <label>Recuperação Judicial</label>
+            </value>
+            <value>
+                <fullName>Regulatorio</fullName>
+                <default>false</default>
+                <label>Regulatorio</label>
+            </value>
+            <value>
+                <fullName>(1) - Fora do ICP</fullName>
+                <default>false</default>
+                <label>(1) - Fora do ICP</label>
+            </value>
+            <value>
+                <fullName>(2) - Baixa Tensão</fullName>
+                <default>false</default>
+                <label>(2) - Baixa Tensão</label>
+            </value>
+            <value>
+                <fullName>(3) - Contato Futuro</fullName>
+                <default>false</default>
+                <label>(3) - Contato Futuro</label>
+            </value>
+            <value>
+                <fullName>(4) - Dados inválidos</fullName>
+                <default>false</default>
+                <label>(4) - Dados inválidos</label>
+            </value>
+            <value>
+                <fullName>(5) - Interesse em parceria</fullName>
+                <default>false</default>
+                <label>(5) - Interesse em parceria</label>
+            </value>
+            <value>
+                <fullName>(6) - Já está no ACL</fullName>
+                <default>false</default>
+                <label>(6) - Já está no ACL</label>
+            </value>
+            <value>
+                <fullName>(7) - Lead duplicado (Redundância Positiva)</fullName>
+                <default>false</default>
+                <label>(7) - Lead duplicado (Redundância Positiva)</label>
+            </value>
+            <value>
+                <fullName>(8) - Score - Reprovado por crédito</fullName>
+                <default>false</default>
+                <label>(8) - Score - Reprovado por crédito</label>
+            </value>
+            <value>
+                <fullName>(9) - Sem interesse</fullName>
+                <default>false</default>
+                <label>(9) - Sem interesse</label>
+            </value>
+            <value>
+                <fullName>(10) - Sem resposta (após 9 FUP&apos;s)</fullName>
+                <default>false</default>
+                <label>(10) - Sem resposta (após 9 FUP&apos;s)</label>
+            </value>
+            <value>
+                <fullName>(11) - Dados insuficientes para enviar para estudo</fullName>
+                <default>false</default>
+                <label>(11) - Dados insuficientes para enviar para estudo</label>
+            </value>
+            <value>
+                <fullName>(12) Concorrência</fullName>
+                <default>false</default>
+                <label>(12) - Concorrência</label>
+            </value>
+            <value>
+                <fullName>Recusa Reclame Aqui</fullName>
+                <default>false</default>
+                <label>Recusa Reclame Aqui</label>
+            </value>
+            <value>
+                <fullName>Baixa Demanda</fullName>
+                <default>false</default>
+                <label>Baixa Demanda</label>
+            </value>
+            <value>
+                <fullName>Consumo abaixo do range</fullName>
+                <default>false</default>
+                <label>Consumo abaixo do range</label>
+            </value>
+            <value>
+                <fullName>Crédito reprovado</fullName>
+                <default>false</default>
+                <label>Crédito reprovado</label>
+            </value>
+            <value>
+                <fullName>Dados inválidos</fullName>
+                <default>false</default>
+                <label>Dados inválidos</label>
+            </value>
+            <value>
+                <fullName>Distribuidora não atendida</fullName>
+                <default>false</default>
+                <label>Distribuidora não atendida</label>
+            </value>
+            <value>
+                <fullName>Enviado para Grandes Clientes</fullName>
+                <default>false</default>
+                <label>Enviado para Grandes Clientes</label>
+            </value>
+            <value>
+                <fullName>Multa da Distribuidora</fullName>
+                <default>false</default>
+                <label>Multa da Distribuidora</label>
+            </value>
+            <value>
+                <fullName>Não é o titular da conta</fullName>
+                <default>false</default>
+                <label>Não é o titular da conta</label>
+            </value>
+            <value>
+                <fullName>Parceria/Quer vender produto</fullName>
+                <default>false</default>
+                <label>Parceria/Quer vender produto</label>
+            </value>
+            <value>
+                <fullName>Possuí benefícios fiscais</fullName>
+                <default>false</default>
+                <label>Possuí benefícios fiscais</label>
+            </value>
+            <value>
+                <fullName>Possui placa solar</fullName>
+                <default>false</default>
+                <label>Possui placa solar</label>
+            </value>
+            <value>
+                <fullName>Pré-lead duplicado</fullName>
+                <default>false</default>
+                <label>Pré-lead duplicado</label>
+            </value>
+            <value>
+                <fullName>SPAM</fullName>
+                <default>false</default>
+                <label>SPAM</label>
+            </value>
+            <value>
+                <fullName>Tarifa Baixa Renda</fullName>
+                <default>false</default>
+                <label>Tarifa Baixa Renda</label>
+            </value>
+            <value>
+                <fullName>Tarifa Branca</fullName>
+                <default>false</default>
+                <label>Tarifa Branca</label>
+            </value>
+            <value>
+                <fullName>Tarifa Rural</fullName>
+                <default>false</default>
+                <label>Tarifa Rural</label>
+            </value>
+            <value>
+                <fullName>Telefone Não existente</fullName>
+                <default>false</default>
+                <label>Telefone Não existente</label>
+            </value>
+            <value>
+                <fullName>Titular falecido</fullName>
+                <default>false</default>
+                <label>Titular falecido</label>
+            </value>
+            <value>
+                <fullName>Não concorda em enviar fotos</fullName>
+                <default>false</default>
+                <label>Não concorda em enviar fotos</label>
+            </value>
+            <value>
+                <fullName>Direcionado para o site</fullName>
+                <default>false</default>
+                <label>Direcionado para o site</label>
+            </value>
+            <value>
+                <fullName>Sem Interesse</fullName>
+                <default>false</default>
+                <label>Sem Interesse</label>
+            </value>
+            <value>
+                <fullName>Sem Retorno</fullName>
+                <default>false</default>
+                <label>Sem Retorno</label>
+            </value>
+            <value>
+                <fullName>Própria Gestão</fullName>
+                <default>false</default>
+                <label>Própria Gestão</label>
+            </value>
+            <value>
+                <fullName>Satisfeito com Gestão Atual</fullName>
+                <default>false</default>
+                <label>Satisfeito com Gestão Atual</label>
+            </value>
+            <value>
+                <fullName>Preço</fullName>
+                <default>false</default>
+                <label>Preço</label>
+            </value>
+            <value>
+                <fullName>Fechou com concorrente</fullName>
+                <default>false</default>
+                <label>Fechou com concorrente</label>
+            </value>
+            <value>
+                <fullName>Restrições Jurídicas</fullName>
+                <default>false</default>
+                <label>Restrições Jurídicas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
