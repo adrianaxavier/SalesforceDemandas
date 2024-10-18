@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Thymos_Comercial</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Padr_o_Thymos</compactLayoutAssignment>
+    <label>Thymos Comercial</label>
+    <picklistValues>
+        <picklist>Empresa_Officer__c</picklist>
+        <values>
+            <fullName>Delta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delta%2FThymos%2FLUZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nottus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scooto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thymos Energia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WiseByte</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motivo_da_Perda__c</picklist>
+        <values>
+            <fullName>Baixa Viabilidade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contrato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crédito não aprovado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fechou com concorrente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outros motivos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prazo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preço alto de energia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preço fixo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>relacionamento</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Aprovado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Em Andamento</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Reprovado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Substituído</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo__c</picklist>
+        <values>
+            <fullName>Nova Proposta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renovação</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>area__c</picklist>
+        <values>
+            <fullName>Comercial</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
