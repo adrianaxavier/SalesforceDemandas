@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Empressa_Officer__c</fullName>
+    <externalId>false</externalId>
+    <label>Empressa Officer</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nottus</fullName>
+                <default>false</default>
+                <label>Nottus</label>
+            </value>
+            <value>
+                <fullName>Scooto</fullName>
+                <default>false</default>
+                <label>Scooto</label>
+            </value>
+            <value>
+                <fullName>Thymos Energia</fullName>
+                <default>false</default>
+                <label>Thymos Energia</label>
+            </value>
+            <value>
+                <fullName>WiseByte</fullName>
+                <default>false</default>
+                <label>WiseByte</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
