@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Wisebyte</fullName>
+    <fullName>ThymosPJ</fullName>
     <active>true</active>
     <businessProcess>Thymos</businessProcess>
-    <label>Wisebyte</label>
+    <compactLayoutAssignment>Leads_Custom_Compact_Layout</compactLayoutAssignment>
+    <description>Pessoa Jurídica Thymos</description>
+    <label>Thymos</label>
     <picklistValues>
         <picklist>Cliente_Livre__c</picklist>
         <values>
@@ -170,25 +172,6 @@
         <picklist>Fonte__c</picklist>
         <values>
             <fullName>Parceiros</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>GenderIdentity</picklist>
-        <values>
-            <fullName>Homem</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Mulher</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Não binário</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Não listado</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1712,33 +1695,6 @@
         </values>
         <values>
             <fullName>Venda de energia</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Pronouns</picklist>
-        <values>
-            <fullName>Ela%2Fdela</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Ela%2Felas</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Ele%2Fdele</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Ele%2Feles</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Ile%2Fdile</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Não listado</fullName>
             <default>false</default>
         </values>
     </picklistValues>

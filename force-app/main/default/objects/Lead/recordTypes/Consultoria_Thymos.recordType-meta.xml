@@ -5,13 +5,6 @@
     <businessProcess>Consultoria Thymos</businessProcess>
     <label>Consultoria Thymos</label>
     <picklistValues>
-        <picklist>CLASSE_DE_TENSAO__c</picklist>
-        <values>
-            <fullName>a</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Cliente_Livre__c</picklist>
         <values>
             <fullName>Não</fullName>
@@ -32,10 +25,6 @@
     <picklistValues>
         <picklist>DisqualifiedLead__c</picklist>
         <values>
-            <fullName>Baixa Demanda</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Baixa Tensão</fullName>
             <default>false</default>
         </values>
@@ -44,19 +33,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Cliente Thymos</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Falta de Interesse</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Inviável</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Luz</fullName>
             <default>false</default>
         </values>
         <values>
@@ -73,6 +54,25 @@
         </values>
         <values>
             <fullName>Regulatorio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Empressa_Officer__c</picklist>
+        <values>
+            <fullName>Nottus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scooto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thymos Energia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WiseByte</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -133,6 +133,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Fase__c</picklist>
+        <values>
+            <fullName>Bifasico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monofasico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trifasico</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Fluxo__c</picklist>
         <values>
             <fullName>Conta</fullName>
@@ -154,15 +169,26 @@
     <picklistValues>
         <picklist>Fonte__c</picklist>
         <values>
-            <fullName>Inbound</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Outbound</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Parceiros</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GenderIdentity</picklist>
+        <values>
+            <fullName>Homem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mulher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Não binário</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Não listado</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1575,19 +1601,7 @@
     <picklistValues>
         <picklist>Motivo_da_Perda__c</picklist>
         <values>
-            <fullName>Concorrência</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Desistência</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Preço</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>S%2Ffeedback</fullName>
+            <fullName>-</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1702,6 +1716,33 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Pronouns</picklist>
+        <values>
+            <fullName>Ela%2Fdela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ela%2Felas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ele%2Fdele</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ele%2Feles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ile%2Fdile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Não listado</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Qual_foi_a_base_de_c_lculo__c</picklist>
         <values>
             <fullName>Consumo dos Últimos 12 messes</fullName>
@@ -1742,6 +1783,40 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Status_Estudo__c</picklist>
+        <values>
+            <fullName>Inviavel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viavel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Coleta de Fatura</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Ganho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perdido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simulação</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Submercado__c</picklist>
         <values>
             <fullName>3</fullName>
@@ -1751,103 +1826,7 @@
     <picklistValues>
         <picklist>Submotivo__c</picklist>
         <values>
-            <fullName>Avaliamos o balanço e não foi autorizado</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Classe de tensão abaixo de 11%2E400v %28não é optante B%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Contato não é decisor</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Decisor pediu contato futuro</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Default %28avaliamos o balanço e não foi autorizado%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Default %28não aceitou mandar balanço%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Energia injetada</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Hospitais%2FAssociação sem fins lucrativos %28ONGs%29%2C Igrejas e Órgãos Públicos</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Já está no Funil de Vendas %28Etapa até Estudo%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Já está no funil de vendas %28Etapa após Estudo%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Já tinha falando com a Luz antes e decidiram não seguir</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Luz atende</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Negociando ou é cliente de comercializadora</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Não consegui avançar contato até o decisor</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Não viu valor na proposta de valor Luz</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Optante B e não quis migrar para grupo A</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Parou de responder após troca de mensagens</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Pediu contato futuro</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Possui outros parceiros</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Precisa de ajuste técnico e não quis fazer ajuste</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Quer implementar no próximo ciclo</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sem viabilidade técnica %28consumo muito baixo em MV%2Fh%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Tem %25 percentual fotovoltaica e não quer fazer ajuste técnico</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Tem %25 percentual fotovoltaica e não quer perder crédito excedente</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Vai abrir empresa já no Mercado Livre e precisa de ajuste técnico no projeto</fullName>
+            <fullName>-</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1904,6 +1883,32 @@
         </values>
         <values>
             <fullName>Mercado Livre</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Negocicao__c</picklist>
+        <values>
+            <fullName>Mista</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parceiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Propria</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_perda__c</picklist>
+        <values>
+            <fullName>perdido c%2F atuação</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>perdido s%2Fatuação</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -3097,17 +3102,6 @@
         </values>
         <values>
             <fullName>ZW</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>m__c</picklist>
-        <values>
-            <fullName>Azul</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verde</fullName>
             <default>false</default>
         </values>
     </picklistValues>
