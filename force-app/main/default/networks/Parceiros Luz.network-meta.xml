@@ -48,12 +48,12 @@
         <recaptchaScoreThreshold>0.0</recaptchaScoreThreshold>
     </networkAuthApiSettings>
     <networkMemberGroups>
-        <profile>Admin</profile>
+        <profile>admin</profile>
         <profile>gestor (parceiro)</profile>
         <profile>partner community user</profile>
         <profile>vendedor (parceiro)</profile>
-        <profile>Key Account %28Varejista%29</profile>
-        <profile>Analista Comercial Luz</profile>
+        <profile>key account (varejista)</profile>
+        <profile>analista comercial luz</profile>
         <profile>parceiros luz</profile>
     </networkMemberGroups>
     <networkPageOverrides>
