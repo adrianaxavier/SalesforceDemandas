@@ -3,12 +3,23 @@ public class TestUpdateEmpresaOfficerOnContract {
 
     @isTest
     static void testInsertContract() {
+        // Tenta buscar a primeira conta existente no sistema
+        Account testAccount;
+        try {
+            testAccount = [SELECT Id FROM Account LIMIT 1];
+        } catch (Exception e) {
+            // Se não houver nenhuma conta, cria uma nova
+            testAccount = new Account(Name = 'Test Account');
+            insert testAccount;
+        }
+
         // Busca o usuário com o e-mail fornecido
         User testUser = [SELECT Id, CompanyName FROM User WHERE Email = 'adriana.xavier@deltaenergia.com.br' LIMIT 1];
 
-        // Criação de um registro de Contract com o OwnerId como o usuário encontrado
+        // Criação de um registro de Contract com o OwnerId e AccountId
         Contract contrato = new Contract(
-            OwnerId = testUser.Id
+            OwnerId = testUser.Id,
+            AccountId = testAccount.Id
         );
         insert contrato;
 
@@ -19,12 +30,23 @@ public class TestUpdateEmpresaOfficerOnContract {
     
     @isTest
     static void testUpdateContract() {
+        // Tenta buscar a primeira conta existente no sistema
+        Account testAccount;
+        try {
+            testAccount = [SELECT Id FROM Account LIMIT 1];
+        } catch (Exception e) {
+            // Se não houver nenhuma conta, cria uma nova
+            testAccount = new Account(Name = 'Test Account');
+            insert testAccount;
+        }
+
         // Busca o usuário com o e-mail fornecido
         User testUser = [SELECT Id, CompanyName FROM User WHERE Email = 'adriana.xavier@deltaenergia.com.br' LIMIT 1];
 
-        // Criação de um registro de Contract com o OwnerId como o usuário encontrado
+        // Criação de um registro de Contract com o OwnerId e AccountId
         Contract contrato = new Contract(
-            OwnerId = testUser.Id
+            OwnerId = testUser.Id,
+            AccountId = testAccount.Id
         );
         insert contrato;
 
