@@ -3,15 +3,8 @@ public class TestUpdateEmpresaOfficerOnContract {
 
     @isTest
     static void testInsertContract() {
-        // Tenta buscar a primeira conta existente no sistema
-        Account testAccount;
-        try {
-            testAccount = [SELECT Id FROM Account LIMIT 1];
-        } catch (Exception e) {
-            // Se não houver nenhuma conta, cria uma nova
-            testAccount = new Account(Name = 'Test Account');
-            insert testAccount;
-        }
+        // Tenta buscar a primeira conta existente no sistema onde CNPJ__c é diferente de nulo
+        Account testAccount = [SELECT Id FROM Account WHERE CNPJ__c != null LIMIT 1];
 
         // Busca o usuário com o e-mail fornecido
         User testUser = [SELECT Id, CompanyName FROM User WHERE Email = 'adriana.xavier@deltaenergia.com.br' LIMIT 1];
@@ -30,15 +23,8 @@ public class TestUpdateEmpresaOfficerOnContract {
     
     @isTest
     static void testUpdateContract() {
-        // Tenta buscar a primeira conta existente no sistema
-        Account testAccount;
-        try {
-            testAccount = [SELECT Id FROM Account LIMIT 1];
-        } catch (Exception e) {
-            // Se não houver nenhuma conta, cria uma nova
-            testAccount = new Account(Name = 'Test Account');
-            insert testAccount;
-        }
+        // Tenta buscar a primeira conta existente no sistema onde CNPJ__c é diferente de nulo
+        Account testAccount = [SELECT Id FROM Account WHERE CNPJ__c != null LIMIT 1];
 
         // Busca o usuário com o e-mail fornecido
         User testUser = [SELECT Id, CompanyName FROM User WHERE Email = 'adriana.xavier@deltaenergia.com.br' LIMIT 1];
